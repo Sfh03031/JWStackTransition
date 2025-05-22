@@ -12,10 +12,11 @@ import JWStackTransition
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let dataList: [JWStackTransitionType] = [
+        .clockWise(duration: 4),
+        .antiClockWise(duration: 4),
         .imageRepeating(percent: 0.1, time: 0.2),
-        .multiFlip(distance: 0.05, time: 0.2),//
+        .multiFlip(distance: 0.05, time: 0.2),
         .blank,
-        .clock(duration: 4),
         .circle,
         .crossFade,
         .rectangler,

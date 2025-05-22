@@ -14,7 +14,8 @@ import UIKit
  Enum of animation types used for stack transition.
 
  - Blank:                       Blank animation.
- - Clock:                       Clock animation.
+ - ClockWise:                   ClockWise animation.
+ - AntiClockWise:               AntiClockWise animation.
  - Circle:                      Circle animation.
  - CrossFade:                   CrossFade animation.
  - Rectangler:                  Rectangler animation.
@@ -40,11 +41,17 @@ public enum JWStackTransitionType {
      */
     case blank
     /**
-     Clock, default animation duration is 0.7.
+     ClockWise, default animation duration is 0.7.
      
-     - returns: Instance of JWStackTransitionAnimationClock.
+     - returns: Instance of JWStackTransitionAnimationClockWise.
      */
-    case clock(duration: TimeInterval? = 0.7)
+    case clockWise(duration: TimeInterval? = 0.7)
+    /**
+     AntiClockWise, default animation duration is 0.7.
+     
+     - returns: Instance of JWStackTransitionAnimationAntiClockWise.
+     */
+    case antiClockWise(duration: TimeInterval? = 0.7)
     /**
      Circle.
      
@@ -134,8 +141,10 @@ public enum JWStackTransitionType {
         switch self {
         case .blank:
             return JWStackTransitionAnimationBlank()
-        case .clock:
-            return JWStackTransitionAnimationClock()
+        case .clockWise:
+            return JWStackTransitionAnimationClockWise()
+        case .antiClockWise:
+            return JWStackTransitionAnimationAntiClockWise()
         case .circle:
             return JWStackTransitionAnimationCircle()
         case .crossFade:
@@ -185,7 +194,10 @@ public class JWStackTransition: NSObject {
         self.duration = duration ?? JWStackTransition.DEFAULT_DURATION
         
         switch self.type {
-        case .clock(let duration):
+        case .clockWise(let duration):
+            self.duration = duration ?? 0.7
+            break
+        case .antiClockWise(let duration):
             self.duration = duration ?? 0.7
             break
         case .tiledFlip(let duration):

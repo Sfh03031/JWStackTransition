@@ -41,7 +41,7 @@ public class JWStackTransitionAnimationClock: JWStackTransitionAnimationDelegate
         
         let shapeLayer = CAShapeLayer.init()
         shapeLayer.bounds = CGRect.init(x: 0, y: 0, width: radius, height: radius)
-        shapeLayer.position = CGPoint(x: (fromW / 2) - (radius / 2), y: (fromH / 2) - (radius / 2))
+        shapeLayer.position = CGPoint(x: (fromW - radius) / 2, y: (fromH - radius) / 2)
         shapeLayer.path = circleFromToAngle(2.0 * Double.pi)
         
         fromVC.view.layer.mask = shapeLayer
