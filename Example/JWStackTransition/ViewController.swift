@@ -12,18 +12,34 @@ import JWStackTransition
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let dataList: [JWStackTransitionType] = [
-        .clockWise(duration: 4),
-        .antiClockWise(duration: 4),
+//        .sector(rectEdge: .left),
+//        .sector(rectEdge: .top),
+//        .sector(rectEdge: .right),
+//        .sector(rectEdge: .bottom),
+//        .sectorLeft,
+//        .sectorTop,
+//        .sectorRight,
+//        .sectorBottom,
+        .angleLine(corner: .allCorners),
+        .angleLine(corner: .topRight),
+        .angleLine(corner: .bottomLeft),
+        .angleLine(corner: .bottomRight),
+        .clockWise(0.5),
+        .antiClockWise(1.5),
+        
+        .circle,
+        
+        
+        
         .imageRepeating(percent: 0.1, time: 0.2),
         .multiFlip(distance: 0.05, time: 0.2),
         .blank,
-        .circle,
         .crossFade,
         .rectangler,
         .multiCircle,
         .flip,
         .tiledFlip(duration: 1.0),
-        .angleLine(corner: .topLeft),
+        
         .straightLine(rectEdge: .left),
         .collidingDiamonds(duration: 1.0, isVertical: true),
         .shrinkingGrowingDiamonds(duration: 1.0),
@@ -72,9 +88,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let vc = StackViewController()
         vc.view.backgroundColor = cell.backgroundColor
-//        self.navigationController?.push(vc, withType: .multiFlip, withDuration: 0.33)
+        self.navigationController?.push(vc, type: dataList[indexPath.item], duration: 2.0)
         
-        self.navigationController?.push(vc, with: JWStackTransition(type: dataList[indexPath.item]))
+//        self.navigationController?.push(vc, transition: JWStackTransition(type: dataList[indexPath.item]))
     }
 
 }

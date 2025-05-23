@@ -11,92 +11,136 @@ import UIKit
 
 public class JWStackTransitionAnimationAngleLine: JWStackTransitionAnimationDelegate {
     
-    private var cornerToSlideFrom : UIRectCorner = .topLeft
+    private var rectCorner : UIRectCorner = .topLeft // animation start corner
+    private var duration: TimeInterval = 0.25 // animation duration
+    private var targetLayer: CAShapeLayer = CAShapeLayer() // animation layer
     
     public init(corner: UIRectCorner = .topLeft) {
-        self.cornerToSlideFrom = corner
+        self.rectCorner = corner
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
+        self.duration = duration
+        
         guard let fromVC = transitionContext.viewController(forKey: .from),
-            let toVC = transitionContext.viewController(forKey: .to)
-            else {
-                return
-        }
+              let toVC = transitionContext.viewController(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
         containerView.addSubview(toVC.view)
         containerView.addSubview(fromVC.view)
         
-        let size: CGSize = fromVC.view.frame.size
+        let fromW = fromVC.view.frame.width
+        let fromH = fromVC.view.frame.height
         
-        let toPath = UIBezierPath()
-        let fromPath = UIBezierPath()
+        let fromPath = makeFromPath(width: fromW, height: fromH)
+        let toPath = makeToPath(width: fromW, height: fromH)
         
-        if (cornerToSlideFrom == .topRight) {
-            toPath.move(to: CGPoint.init(x: -size.width, y: 0))
-            toPath.addLine(to: CGPoint.init(x: size.width, y: size.height * 2))
-            toPath.addLine(to: CGPoint.init(x: -size.width, y: size.height * 2))
-            toPath.close()
-            
-            fromPath.move(to: CGPoint.init(x: 0, y: -size.height))
-            fromPath.addLine(to: CGPoint.init(x: size.width * 2, y: size.height))
-            fromPath.addLine(to: CGPoint.init(x: 0, y: size.height))
-            fromPath.close()
-        } else if (cornerToSlideFrom == .bottomLeft) {
-            toPath.move(to: CGPoint.init(x: size.width * 2, y: size.height))
-            toPath.addLine(to: CGPoint.init(x: 0, y: -size.height))
-            toPath.addLine(to: CGPoint.init(x: size.width * 2, y: -size.height))
-            toPath.close()
-            
-            fromPath.move(to: CGPoint.init(x: size.width, y: size.height * 2))
-            fromPath.addLine(to: CGPoint.init(x: -size.width, y: 0))
-            fromPath.addLine(to: CGPoint.init(x: size.width, y: 0))
-            fromPath.close()
-        } else if (cornerToSlideFrom == .bottomRight) {
-            toPath.move(to: CGPoint.init(x: -size.width, y: size.height))
-            toPath.addLine(to: CGPoint.init(x: size.width, y: -size.height))
-            toPath.addLine(to: CGPoint.init(x: -size.width, y: -size.height))
-            toPath.close()
-            
-            fromPath.move(to: CGPoint.init(x: 0, y: size.height * 2))
-            fromPath.addLine(to: CGPoint.init(x: size.width * 2, y: 0))
-            fromPath.addLine(to: CGPoint.zero)
-            fromPath.close()
-        } else if (cornerToSlideFrom == .topLeft) {
-            toPath.move(to: CGPoint.init(x: size.width * 2, y: size.height))
-            toPath.addLine(to: CGPoint.init(x: 0, y: size.height * 2))
-            toPath.addLine(to: CGPoint.init(x: size.width * 2, y: size.height * 2))
-            toPath.close()
-            
-            fromPath.move(to: CGPoint.init(x: size.width, y: size.height * -2))
-            fromPath.addLine(to: CGPoint.init(x: -size.width, y: size.height))
-            fromPath.addLine(to: CGPoint.init(x: size.width, y: size.height))
-            fromPath.close()
-        }
-        
-        let shapeLayer = CAShapeLayer.init()
-        shapeLayer.path = fromPath.cgPath
-        shapeLayer.bounds = CGRect.init(x: 0, y: 0, width: fromVC.view.bounds.size.width, height: fromVC.view.bounds.size.height)
-        shapeLayer.position = CGPoint(x: fromVC.view.bounds.size.width / 2, y: fromVC.view.bounds.size.height / 2)
-        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = fromPath
+        shapeLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
+        shapeLayer.position = CGPoint(x: fromW / 2, y: fromH / 2)
         fromVC.view.layer.mask = shapeLayer
+        self.targetLayer = shapeLayer
         
-        let animation = JWStackTransitionBasicAnimation()
-        animation.keyPath = "path"
-        animation.fillMode = .forwards
-        animation.isRemovedOnCompletion = false
-        animation.duration = duration
-        animation.fromValue = fromPath.cgPath
-        animation.toValue = toPath.cgPath
-        animation.autoreverses = false
-        animation.animationFinished = {
+        fromVC.view.isUserInteractionEnabled = false
+        addAnimation(from: fromPath, to: toPath) {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            fromVC.view.isUserInteractionEnabled = true
             fromVC.view.layer.mask = nil
         }
-        shapeLayer.add(animation, forKey: "path")
+        
     }
     
+}
+
+extension JWStackTransitionAnimationAngleLine {
+    
+    /// make animation from path
+    func makeFromPath(width: CGFloat, height: CGFloat) -> CGPath {
+        let path = UIBezierPath()
+        
+        switch self.rectCorner {
+        case .topLeft, .allCorners:
+            path.move(to: CGPoint(x: width, y: height * -2))
+            path.addLine(to: CGPoint(x: -width, y: height))
+            path.addLine(to: CGPoint(x: width, y: height))
+            path.close()
+            break
+        case .topRight:
+            path.move(to: CGPoint(x: 0, y: -height))
+            path.addLine(to: CGPoint(x: width * 2, y: height))
+            path.addLine(to: CGPoint(x: 0, y: height))
+            path.close()
+            break
+        case .bottomLeft:
+            path.move(to: CGPoint(x: width, y: height * 2))
+            path.addLine(to: CGPoint(x: -width, y: 0))
+            path.addLine(to: CGPoint(x: width, y: 0))
+            path.close()
+            break
+        case .bottomRight:
+            path.move(to: CGPoint(x: 0, y: height * 2))
+            path.addLine(to: CGPoint(x: width * 2, y: 0))
+            path.addLine(to: CGPoint.zero)
+            path.close()
+            break
+        default:
+            break
+        }
+        
+        return path.cgPath
+    }
+    
+    /// make animation to path
+    func makeToPath(width: CGFloat, height: CGFloat) -> CGPath {
+        let path = UIBezierPath()
+        
+        switch self.rectCorner {
+        case .topLeft, .allCorners:
+            path.move(to: CGPoint(x: width * 2, y: height))
+            path.addLine(to: CGPoint(x: 0, y: height * 2))
+            path.addLine(to: CGPoint(x: width * 2, y: height * 2))
+            path.close()
+            break
+        case .topRight:
+            path.move(to: CGPoint(x: -width, y: 0))
+            path.addLine(to: CGPoint(x: width, y: height * 2))
+            path.addLine(to: CGPoint(x: -width, y: height * 2))
+            path.close()
+            break
+        case .bottomLeft:
+            path.move(to: CGPoint(x: width * 2, y: height))
+            path.addLine(to: CGPoint(x: 0, y: -height))
+            path.addLine(to: CGPoint(x: width * 2, y: -height))
+            path.close()
+            break
+        case .bottomRight:
+            path.move(to: CGPoint(x: -width, y: height))
+            path.addLine(to: CGPoint(x: width, y: -height))
+            path.addLine(to: CGPoint(x: -width, y: -height))
+            path.close()
+            break
+        default:
+            break
+        }
+        
+        return path.cgPath
+    }
+    
+    /// run animations
+    func addAnimation(from: CGPath, to: CGPath, complete: (() -> Void)?) {
+        let animation = JWStackTransitionBasicAnimation()
+        animation.keyPath = "path"
+        animation.duration = self.duration
+        animation.fromValue = from
+        animation.toValue = to
+        animation.isRemovedOnCompletion = false
+        animation.fillMode = .forwards
+        animation.autoreverses = false
+        animation.animationFinished = complete
+        
+        self.targetLayer.add(animation, forKey: "path")
+    }
 }
 
 #endif

@@ -41,23 +41,53 @@ public enum JWStackTransitionType {
      */
     case blank
     /**
-     ClockWise, default animation duration is 0.7.
+     ClockWise, default animation duration is 0.7, angle range is [0.0, 2.0] and default animation start angle is 0.0.
      
      - returns: Instance of JWStackTransitionAnimationClockWise.
      */
-    case clockWise(duration: TimeInterval? = 0.7)
+    case clockWise(_ startAngle: Double = 0.0)
     /**
-     AntiClockWise, default animation duration is 0.7.
+     AntiClockWise, default animation duration is 0.7, angle range is [0.0, 2.0] and default animation start angle is 0.0.
      
      - returns: Instance of JWStackTransitionAnimationAntiClockWise.
      */
-    case antiClockWise(duration: TimeInterval? = 0.7)
+    case antiClockWise(_ startAngle: Double = 0.0)
     /**
      Circle.
      
      - returns: Instance of JWStackTransitionAnimationCircle.
      */
     case circle
+    /**
+     SectorLeft.
+     
+     - returns: Instance of JWStackTransitionAnimationSector, `left` case of UIRectEdge.
+     */
+    case sectorLeft
+    /**
+     SectorTop.
+     
+     - returns: Instance of JWStackTransitionAnimationSector, `top` case of UIRectEdge.
+     */
+    case sectorTop
+    /**
+     SectorRight.
+     
+     - returns: Instance of JWStackTransitionAnimationSector, `right` case of UIRectEdge.
+     */
+    case sectorRight
+    /**
+     SectorBottom.
+     
+     - returns: Instance of JWStackTransitionAnimationSector, `bottom` case of UIRectEdge.
+     */
+    case sectorBottom
+    /**
+     sector.
+     
+     - returns: Instance of JWStackTransitionAnimationSector.
+     */
+    case sector(rectEdge: UIRectEdge = .left)
     /**
      CrossFade.
      
@@ -141,12 +171,22 @@ public enum JWStackTransitionType {
         switch self {
         case .blank:
             return JWStackTransitionAnimationBlank()
-        case .clockWise:
-            return JWStackTransitionAnimationClockWise()
-        case .antiClockWise:
-            return JWStackTransitionAnimationAntiClockWise()
+        case .clockWise(let angle):
+            return JWStackTransitionAnimationClockWise(angle)
+        case .antiClockWise(let angle):
+            return JWStackTransitionAnimationAntiClockWise(angle)
         case .circle:
             return JWStackTransitionAnimationCircle()
+        case .sector(let rectEdge):
+            return JWStackTransitionAnimationSector(rectEdge: rectEdge)
+        case .sectorLeft:
+            return JWStackTransitionAnimationSector(rectEdge: .left)
+        case .sectorTop:
+            return JWStackTransitionAnimationSector(rectEdge: .top)
+        case .sectorRight:
+            return JWStackTransitionAnimationSector(rectEdge: .right)
+        case .sectorBottom:
+            return JWStackTransitionAnimationSector(rectEdge: .bottom)
         case .crossFade:
             return JWStackTransitionAnimationCrossFade()
         case .rectangler:
@@ -194,12 +234,6 @@ public class JWStackTransition: NSObject {
         self.duration = duration ?? JWStackTransition.DEFAULT_DURATION
         
         switch self.type {
-        case .clockWise(let duration):
-            self.duration = duration ?? 0.7
-            break
-        case .antiClockWise(let duration):
-            self.duration = duration ?? 0.7
-            break
         case .tiledFlip(let duration):
             self.duration = duration
             break

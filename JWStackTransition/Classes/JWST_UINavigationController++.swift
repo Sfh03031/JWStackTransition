@@ -7,18 +7,28 @@
 
 public extension UINavigationController {
     
-    func push(_ vc: UIViewController, withType type: JWStackTransitionType, withDuration duration: TimeInterval) {
+    func push(_ vc: UIViewController, type: JWStackTransitionType? = .blank, duration: TimeInterval? = 0.0) {
         let transition = JWStackTransition(type: type, duration: duration)
         JWStackTransitionHijack.default.hook(transition, for: self)
         pushViewController(vc, animated: true)
     }
     
-    func push(_ vc: UIViewController, with transition: JWStackTransition) {
+    func push(_ vc: UIViewController, transition: JWStackTransition) {
         JWStackTransitionHijack.default.hook(transition, for: self)
         pushViewController(vc, animated: true)
     }
     
-    func popViewControllerRetroTransition(_ transition: JWStackTransition) {
+}
+
+public extension UINavigationController {
+    
+    func pop(_ type: JWStackTransitionType? = .blank, duration: TimeInterval? = 0.0) {
+        let transition = JWStackTransition(type: type, duration: duration)
+        JWStackTransitionHijack.default.hook(transition, for: self)
+        popViewController(animated: true)
+    }
+    
+    func pop(_ transition: JWStackTransition) {
         JWStackTransitionHijack.default.hook(transition, for: self)
         popViewController(animated: true)
     }

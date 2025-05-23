@@ -1,18 +1,23 @@
 //
-//  JWStackTransitionAnimationCircle.swift
+//  JWStackTransitionAnimationSector.swift
 //  Pods
 //
-//  Created by sfh on 2025/5/20.
+//  Created by sfh on 2025/5/23.
 //
 
 #if canImport(UIKit)
 
 import UIKit
 
-public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegate {
+public class JWStackTransitionAnimationSector: JWStackTransitionAnimationDelegate {
     
     private var duration: TimeInterval = 0.25 // animation duration
     private var targetLayer: CAShapeLayer = CAShapeLayer() // animation layer
+    private var rectEdge : UIRectEdge = .left // animation sector rect edge
+    
+    public init(rectEdge: UIRectEdge = .left) {
+        self.rectEdge = rectEdge
+    }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
@@ -27,9 +32,8 @@ public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegat
         let fromW = fromVC.view.frame.width
         let fromH = fromVC.view.frame.height
         
-        // pow(x,y) - 取x的y次幂, sqrt() - 取平方根
-        let radius = sqrt(pow(fromW / 2, 2) + pow(fromH / 2, 2))
-        let center = CGPoint(x: fromW / 2, y: fromH / 2)
+        let radius = makePathRadius(width: fromW, height: fromH)
+        let center = makeCenterPoint(width: fromW, height: fromH)
         
         let pathStart = makePath(center, radius: radius)
         let pathEnd = makePath(center, radius: 1.0)
@@ -52,14 +56,68 @@ public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegat
     
 }
 
-extension JWStackTransitionAnimationCircle {
+extension JWStackTransitionAnimationSector {
     
-    /// make animation path
+    /// get animation path radius
+    /// - Parameters:
+    ///   - width: fromVC view width
+    ///   - height: fromVC view height
+    /// - Returns: CGFloat
+    func makePathRadius(width: CGFloat, height: CGFloat) -> CGFloat {
+        var target: CGFloat = 0.0
+        
+        switch self.rectEdge {
+        case .left, .right, .all:
+            target = sqrt(pow(width, 2) + pow(height, 2)) // pow(x,y) - 取x的y次幂, sqrt() - 取平方根
+        case .top, .bottom:
+            target = height
+        default:
+            break
+        }
+        
+        return target
+    }
+    
+    /// get animation center point
+    /// - Parameters:
+    ///   - width: fromVC view width
+    ///   - height: fromVC view height
+    /// - Returns: CGFloat
+    func makeCenterPoint(width: CGFloat, height: CGFloat) -> CGPoint {
+        var point = CGPoint()
+        
+        switch self.rectEdge {
+        case .left, .all:
+            point = CGPoint(x: 0, y: height / 2)
+        case .top:
+            point = CGPoint(x: width / 2, y: width / 2)
+        case .right:
+            point = CGPoint(x: width, y: height / 2)
+        case .bottom:
+            point = CGPoint(x: width / 2, y: height - width / 2)
+        default:
+            break
+        }
+        
+        return point
+    }
+    
+    
+    /// get animation path
+    /// - Parameters:
+    ///   - center: arcCenter of path
+    ///   - radius: radius of path
+    /// - Returns: CGPath
     func makePath(_ center: CGPoint, radius: CGFloat) -> CGPath {
         return UIBezierPath(arcCenter: center, radius: CGFloat(radius), startAngle: CGFloat(0), endAngle:CGFloat(2.0 * .pi), clockwise: true).cgPath
     }
     
+    
     /// run animations
+    /// - Parameters:
+    ///   - from: animation fromValue
+    ///   - to: animation toValue
+    ///   - complete: animation finished call back
     func addAnimation(from: CGPath, to: CGPath, complete: (() -> Void)?) {
         let animation = JWStackTransitionBasicAnimation()
         animation.keyPath = "path"
