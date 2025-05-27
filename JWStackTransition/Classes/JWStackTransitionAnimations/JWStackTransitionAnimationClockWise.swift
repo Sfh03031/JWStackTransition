@@ -38,8 +38,8 @@ public class JWStackTransitionAnimationClockWise: JWStackTransitionAnimationDele
         self.radius = 2 * sqrt(pow(fromW / 2, 2) + pow(fromH / 2, 2))
         self.center = CGPoint(x: self.radius ,y: self.radius)
         
-        let shapeLayer = CAShapeLayer.init()
-        shapeLayer.bounds = CGRect.init(x: 0, y: 0, width: self.radius, height: self.radius)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.bounds = CGRect(x: 0, y: 0, width: self.radius, height: self.radius)
         shapeLayer.position = CGPoint(x: (fromW - self.radius) / 2, y: (fromH - self.radius) / 2)
         shapeLayer.path = makePath(-(self.startAngle + 2.0) * .pi)
         fromVC.view.layer.mask = shapeLayer
@@ -67,6 +67,8 @@ public class JWStackTransitionAnimationClockWise: JWStackTransitionAnimationDele
 extension JWStackTransitionAnimationClockWise {
     
     /// make animation path
+    /// - Parameter endAngle: path end angle
+    /// - Returns: CGPath
     func makePath(_ endAngle: CGFloat) -> CGPath {
         let path = UIBezierPath()
         path.move(to: center)
@@ -76,7 +78,11 @@ extension JWStackTransitionAnimationClockWise {
         return path.cgPath
     }
     
-    /// run animations
+    /// add animations
+    /// - Parameters:
+    ///   - from: animation fromValue
+    ///   - to: animation toValue
+    ///   - complete: animation finished call back
     func addAnimation(from: CGPath, to: CGPath, complete: (() -> Void)?) {
         let animation = JWStackTransitionBasicAnimation()
         animation.keyPath = "path"

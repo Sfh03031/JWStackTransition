@@ -1,5 +1,5 @@
 //
-//  JWStackTransitionAnimationAngleLine.swift
+//  JWStackTransitionAnimationSlant.swift
 //  Pods
 //
 //  Created by sfh on 2025/5/20.
@@ -9,14 +9,14 @@
 
 import UIKit
 
-public class JWStackTransitionAnimationAngleLine: JWStackTransitionAnimationDelegate {
+public class JWStackTransitionAnimationSlant: JWStackTransitionAnimationDelegate {
     
-    private var rectCorner : UIRectCorner = .topLeft // animation start corner
+    private var type: JWStackTransitionAnimationRectCorner = .topLeft // animation start corner
     private var duration: TimeInterval = 0.25 // animation duration
     private var targetLayer: CAShapeLayer = CAShapeLayer() // animation layer
     
-    public init(corner: UIRectCorner = .topLeft) {
-        self.rectCorner = corner
+    public init(_ corner: JWStackTransitionAnimationRectCorner) {
+        self.type = corner
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
@@ -53,14 +53,18 @@ public class JWStackTransitionAnimationAngleLine: JWStackTransitionAnimationDele
     
 }
 
-extension JWStackTransitionAnimationAngleLine {
+extension JWStackTransitionAnimationSlant {
     
-    /// make animation from path
+    /// get animation from path
+    /// - Parameters:
+    ///   - width: fromVC view width
+    ///   - height: fromVC view height
+    /// - Returns: CGPath
     func makeFromPath(width: CGFloat, height: CGFloat) -> CGPath {
         let path = UIBezierPath()
         
-        switch self.rectCorner {
-        case .topLeft, .allCorners:
+        switch self.type {
+        case .topLeft:
             path.move(to: CGPoint(x: width, y: height * -2))
             path.addLine(to: CGPoint(x: -width, y: height))
             path.addLine(to: CGPoint(x: width, y: height))
@@ -84,19 +88,21 @@ extension JWStackTransitionAnimationAngleLine {
             path.addLine(to: CGPoint.zero)
             path.close()
             break
-        default:
-            break
         }
         
         return path.cgPath
     }
     
-    /// make animation to path
+    /// get animation to path
+    /// - Parameters:
+    ///   - width: fromVC view width
+    ///   - height: fromVC view height
+    /// - Returns: CGPath
     func makeToPath(width: CGFloat, height: CGFloat) -> CGPath {
         let path = UIBezierPath()
         
-        switch self.rectCorner {
-        case .topLeft, .allCorners:
+        switch self.type {
+        case .topLeft:
             path.move(to: CGPoint(x: width * 2, y: height))
             path.addLine(to: CGPoint(x: 0, y: height * 2))
             path.addLine(to: CGPoint(x: width * 2, y: height * 2))
@@ -120,14 +126,16 @@ extension JWStackTransitionAnimationAngleLine {
             path.addLine(to: CGPoint(x: -width, y: -height))
             path.close()
             break
-        default:
-            break
         }
         
         return path.cgPath
     }
     
-    /// run animations
+    /// add animation
+    /// - Parameters:
+    ///   - from: animation fromValue
+    ///   - to: animation toValue
+    ///   - complete: animation finished call back
     func addAnimation(from: CGPath, to: CGPath, complete: (() -> Void)?) {
         let animation = JWStackTransitionBasicAnimation()
         animation.keyPath = "path"

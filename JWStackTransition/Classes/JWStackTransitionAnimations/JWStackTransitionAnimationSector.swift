@@ -13,10 +13,10 @@ public class JWStackTransitionAnimationSector: JWStackTransitionAnimationDelegat
     
     private var duration: TimeInterval = 0.25 // animation duration
     private var targetLayer: CAShapeLayer = CAShapeLayer() // animation layer
-    private var rectEdge : UIRectEdge = .left // animation sector rect edge
+    private var rectEdge: JWStackTransitionAnimationRectEdge = .left // animation sector rect edge
     
-    public init(rectEdge: UIRectEdge = .left) {
-        self.rectEdge = rectEdge
+    public init(_ edge: JWStackTransitionAnimationRectEdge) {
+        self.rectEdge = edge
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
@@ -67,12 +67,10 @@ extension JWStackTransitionAnimationSector {
         var target: CGFloat = 0.0
         
         switch self.rectEdge {
-        case .left, .right, .all:
+        case .left, .right:
             target = sqrt(pow(width, 2) + pow(height, 2)) // pow(x,y) - 取x的y次幂, sqrt() - 取平方根
         case .top, .bottom:
             target = height
-        default:
-            break
         }
         
         return target
@@ -82,12 +80,12 @@ extension JWStackTransitionAnimationSector {
     /// - Parameters:
     ///   - width: fromVC view width
     ///   - height: fromVC view height
-    /// - Returns: CGFloat
+    /// - Returns: CGPoint
     func makeCenterPoint(width: CGFloat, height: CGFloat) -> CGPoint {
         var point = CGPoint()
         
         switch self.rectEdge {
-        case .left, .all:
+        case .left:
             point = CGPoint(x: 0, y: height / 2)
         case .top:
             point = CGPoint(x: width / 2, y: width / 2)
@@ -95,25 +93,21 @@ extension JWStackTransitionAnimationSector {
             point = CGPoint(x: width, y: height / 2)
         case .bottom:
             point = CGPoint(x: width / 2, y: height - width / 2)
-        default:
-            break
         }
         
         return point
     }
     
-    
     /// get animation path
     /// - Parameters:
-    ///   - center: arcCenter of path
-    ///   - radius: radius of path
+    ///   - center: path arc center
+    ///   - radius: path radius
     /// - Returns: CGPath
     func makePath(_ center: CGPoint, radius: CGFloat) -> CGPath {
         return UIBezierPath(arcCenter: center, radius: CGFloat(radius), startAngle: CGFloat(0), endAngle:CGFloat(2.0 * .pi), clockwise: true).cgPath
     }
     
-    
-    /// run animations
+    /// add animations
     /// - Parameters:
     ///   - from: animation fromValue
     ///   - to: animation toValue

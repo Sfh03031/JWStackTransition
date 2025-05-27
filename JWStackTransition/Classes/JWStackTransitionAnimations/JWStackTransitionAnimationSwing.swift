@@ -1,5 +1,5 @@
 //
-//  JWStackTransitionAnimationSwingIn.swift
+//  JWStackTransitionAnimationSwing.swift
 //  Pods
 //
 //  Created by sfh on 2025/5/20.
@@ -9,28 +9,38 @@
 
 import UIKit
 
-public class JWStackTransitionAnimationSwingIn: JWStackTransitionAnimationDelegate {
+public class JWStackTransitionAnimationSwing: JWStackTransitionAnimationDelegate {
     
-    private var isLeft: Bool = true
+    private var type: JWStackTransitionAnimationRectEdge = .top
     
-    public init(isLeft: Bool) {
-        self.isLeft = isLeft
+    public init(_ edge: JWStackTransitionAnimationRectEdge) {
+        self.type = edge
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from),
-            let toVC = transitionContext.viewController(forKey: .to)
-            else {
-                return
-        }
+              let toVC = transitionContext.viewController(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
         containerView.addSubview(fromVC.view)
         
+        let fromW = fromVC.view.frame.width
+        let fromH = fromVC.view.frame.height
+        
         let toContainerView = UIView()
         toContainerView.backgroundColor = UIColor.clear
         toContainerView.frame = toVC.view.bounds
-        toContainerView.frame.origin = CGPoint.init(x: isLeft ? -fromVC.view.bounds.width : fromVC.view.bounds.width * 2, y: 0)
+        
+        switch self.type {
+        case .left:
+            toContainerView.frame.origin = CGPoint.init(x: -fromW, y: 0)
+        case .right:
+            toContainerView.frame.origin = CGPoint.init(x: fromW * 2, y: 0)
+        case .top:
+            toContainerView.frame.origin = CGPoint.init(x: 0, y: -fromH)
+        case .bottom:
+            toContainerView.frame.origin = CGPoint.init(x: 0, y: 2 * fromH)
+        }
         
         toContainerView.addSubview(toVC.view)
         containerView.addSubview(toContainerView)

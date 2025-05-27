@@ -12,39 +12,61 @@ import JWStackTransition
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let dataList: [JWStackTransitionType] = [
-//        .sector(rectEdge: .left),
-//        .sector(rectEdge: .top),
-//        .sector(rectEdge: .right),
-//        .sector(rectEdge: .bottom),
+        .swingIn(.left),
+        .swingIn(.right),
+        .swingIn(.top),
+        .swingIn(.bottom),
+        
+        .sector(.left),
+        .sector(.top),
+        .sector(.right),
+        .sector(.bottom),
+        
 //        .sectorLeft,
 //        .sectorTop,
 //        .sectorRight,
 //        .sectorBottom,
-        .angleLine(corner: .allCorners),
-        .angleLine(corner: .topRight),
-        .angleLine(corner: .bottomLeft),
-        .angleLine(corner: .bottomRight),
+        
+        .official(.crossDissolve),
+        .official(.flipFromTop),
+        .official(.flipFromLeft),
+        .official(.flipFromRight),
+        .official(.flipFromBottom),
+        .official(.curlUp),
+        .official(.curlDown),
+        
+        .split(.diamondVertical),
+        .split(.diamondHorizontal),
+        .split(.horizontal),
+        .split(.vertical),
+        .split(.leftDiagonal),
+        .split(.rightDiagonal),
+        .split(.crossDiagonal),
+        
+        .translate(.left),
+        .translate(.right),
+        .translate(.top),
+        .translate(.bottom),
+        
+        .slant(.topLeft),
+        .slant(.topRight),
+        .slant(.bottomLeft),
+        .slant(.bottomRight),
+        
         .clockWise(0.5),
         .antiClockWise(1.5),
         
         .circle,
         
-        
-        
         .imageRepeating(percent: 0.1, time: 0.2),
         .multiFlip(distance: 0.05, time: 0.2),
         .blank,
-        .crossFade,
+        
         .rectangler,
         .multiCircle,
-        .flip,
         .tiledFlip(duration: 1.0),
-        
-        .straightLine(rectEdge: .left),
-        .collidingDiamonds(duration: 1.0, isVertical: true),
         .shrinkingGrowingDiamonds(duration: 1.0),
-        .splitFromCenter,
-        .swingIn(duration: 1.0, isLeft: false)
+        
     ]
     
     override func viewDidLoad() {

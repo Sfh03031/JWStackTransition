@@ -17,7 +17,6 @@ import UIKit
  - ClockWise:                   ClockWise animation.
  - AntiClockWise:               AntiClockWise animation.
  - Circle:                      Circle animation.
- - CrossFade:                   CrossFade animation.
  - Rectangler:                  Rectangler animation.
  - MultiCircle:                 MultiCircle animation.
  - Flip:                        Flip animation.
@@ -25,10 +24,7 @@ import UIKit
  - ImageRepeating:              ImageRepeating animation.
  - MultiFlip:                   MultiFlip animation.
  - AngleLine:                   AngleLine animation.
- - StraightLine:                StraightLine animation.
- - CollidingDiamonds:           CollidingDiamonds animation.
  - ShrinkingGrowingDiamonds:    ShrinkingGrowingDiamonds animation.
- - SplitFromCenter:             SplitFromCenter animation.
  - SwingIn:                     SwingIn animation.
  
  */
@@ -87,13 +83,7 @@ public enum JWStackTransitionType {
      
      - returns: Instance of JWStackTransitionAnimationSector.
      */
-    case sector(rectEdge: UIRectEdge = .left)
-    /**
-     CrossFade.
-     
-     - returns: Instance of JWStackTransitionAnimationCrossFade.
-     */
-    case crossFade
+    case sector(_ edge: JWStackTransitionAnimationRectEdge = .left)
     /**
      Rectangler.
      
@@ -107,11 +97,11 @@ public enum JWStackTransitionType {
      */
     case multiCircle
     /**
-     Flip.
+     Official, default official type is crossDissolve.
      
-     - returns: Instance of JWStackTransitionAnimationFlip.
+     - returns: Instance of JWStackTransitionAnimationOfficial.
      */
-    case flip
+    case official(_ type: JWStackTransitionAnimationOfficialType = .crossDissolve)
     /**
      TiledFlip, default animation duration is 1.0.
      
@@ -131,23 +121,23 @@ public enum JWStackTransitionType {
      */
     case multiFlip(distance: CGFloat = 0.333, time: TimeInterval = 0.333)
     /**
-     AngleLine, default rect corner is topLeft.
+     Slant, default rect corner is topLeft, `allCorners` == `topLeft`.
      
-     - returns: Instance of JWStackTransitionAnimationAngleLine.
+     - returns: Instance of JWStackTransitionAnimationSlant.
      */
-    case angleLine(corner: UIRectCorner = .topLeft)
+    case slant(_ corner: JWStackTransitionAnimationRectCorner = .topLeft)
+    /**
+     Split, default split type is horizontal.
+     
+     - returns: Instance of JWStackTransitionAnimationSplit.
+     */
+    case split(_ type: JWStackTransitionAnimationSplitType = .horizontal)
     /**
      StraightLine, default rect edge is left.
      
      - returns: Instance of JWStackTransitionAnimationStraightLine.
      */
-    case straightLine(rectEdge: UIRectEdge = .left)
-    /**
-     CollidingDiamonds, default animation duration is 1.0 and default orientation is horizontal.
-     
-     - returns: Instance of JWStackTransitionAnimationCollidingDiamonds.
-     */
-    case collidingDiamonds(duration: TimeInterval = 1.0, isVertical: Bool = false)
+    case translate(_ edge: JWStackTransitionAnimationRectEdge = .left)
     /**
      ShrinkingGrowingDiamonds, default animation duration is 1.0.
      
@@ -155,17 +145,11 @@ public enum JWStackTransitionType {
      */
     case shrinkingGrowingDiamonds(duration: TimeInterval = 1.0)
     /**
-     SplitFromCenter.
-     
-     - returns: Instance of JWStackTransitionAnimationSplitFromCenter.
-     */
-    case splitFromCenter
-    /**
      SwingIn, default animation duration is 1.0 and default initial direction is left.
      
      - returns: Instance of JWStackTransitionAnimationSwingIn.
      */
-    case swingIn(duration: TimeInterval = 1.0, isLeft: Bool = true)
+    case swing(_ edge: JWStackTransitionAnimationRectEdge = .left)
     
     func animation() -> JWStackTransitionAnimationDelegate {
         switch self {
@@ -177,42 +161,38 @@ public enum JWStackTransitionType {
             return JWStackTransitionAnimationAntiClockWise(angle)
         case .circle:
             return JWStackTransitionAnimationCircle()
-        case .sector(let rectEdge):
-            return JWStackTransitionAnimationSector(rectEdge: rectEdge)
+        case .split(let type):
+            return JWStackTransitionAnimationSplit(type)
+        case .sector(let edge):
+            return JWStackTransitionAnimationSector(edge)
         case .sectorLeft:
-            return JWStackTransitionAnimationSector(rectEdge: .left)
+            return JWStackTransitionAnimationSector(.left)
         case .sectorTop:
-            return JWStackTransitionAnimationSector(rectEdge: .top)
+            return JWStackTransitionAnimationSector(.top)
         case .sectorRight:
-            return JWStackTransitionAnimationSector(rectEdge: .right)
+            return JWStackTransitionAnimationSector(.right)
         case .sectorBottom:
-            return JWStackTransitionAnimationSector(rectEdge: .bottom)
-        case .crossFade:
-            return JWStackTransitionAnimationCrossFade()
+            return JWStackTransitionAnimationSector(.bottom)
         case .rectangler:
             return JWStackTransitionAnimationRectangler()
         case .multiCircle:
             return JWStackTransitionAnimationMultiCircle()
-        case .flip:
-            return JWStackTransitionAnimationFlip()
+        case .official(let type):
+            return JWStackTransitionAnimationOfficial(type)
         case .tiledFlip:
             return JWStackTransitionAnimationTiledFlip()
         case .imageRepeating(let percent, let time):
             return JWStackTransitionAnimationImageRepeating(stepPercent: percent, stepTime: time)
         case .multiFlip(let distance, let time):
             return JWStackTransitionAnimationMultiFlip(distance: distance, time: time)
-        case .angleLine(let corner):
-            return JWStackTransitionAnimationAngleLine(corner: corner)
-        case .straightLine(let rectEdge):
-            return JWStackTransitionAnimationStraightLine(rectEdge: rectEdge)
-        case .collidingDiamonds(_, let isV):
-            return JWStackTransitionAnimationCollidingDiamonds(isVertical: isV)
+        case .slant(let type):
+            return JWStackTransitionAnimationSlant(type)
+        case .translate(let edge):
+            return JWStackTransitionAnimationTranslate(edge)
         case .shrinkingGrowingDiamonds:
             return JWStackTransitionAnimationShrinkingGrowingDiamonds()
-        case .splitFromCenter:
-            return JWStackTransitionAnimationSplitFromCenter()
-        case .swingIn(_, let isLeft):
-            return JWStackTransitionAnimationSwingIn(isLeft: isLeft)
+        case .swing(let edge):
+            return JWStackTransitionAnimationSwing(edge)
         }
     }
     
@@ -220,7 +200,7 @@ public enum JWStackTransitionType {
 
 public class JWStackTransition: NSObject {
     /// Default type. Default value is .flip.
-    public static var DEFAULT_TYPE: JWStackTransitionType = .flip
+    public static var DEFAULT_TYPE: JWStackTransitionType = .official(.crossDissolve)
     /// Default time duration of animation. Default value is 0.33 seconds.
     public static var DEFAULT_DURATION: TimeInterval = 0.33
     
@@ -244,13 +224,7 @@ public class JWStackTransition: NSObject {
         case .multiFlip(let distance, let time):
             self.duration = TimeInterval(1.0 / distance) * time
             break
-        case .collidingDiamonds(let duration, _):
-            self.duration = duration
-            break
         case .shrinkingGrowingDiamonds(let duration):
-            self.duration = duration
-            break
-        case .swingIn(let duration, _):
             self.duration = duration
             break
         default:

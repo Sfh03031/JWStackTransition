@@ -1,5 +1,5 @@
 //
-//  JWStackTransitionAnimationCircle.swift
+//  JWStackTransitionAnimationTranslate.swift
 //  Pods
 //
 //  Created by sfh on 2025/5/20.
@@ -9,10 +9,15 @@
 
 import UIKit
 
-public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegate {
+public class JWStackTransitionAnimationTranslate: JWStackTransitionAnimationDelegate {
     
-    private var duration: TimeInterval = 0.25 // animation duration
+    private var type: JWStackTransitionAnimationRectEdge = .left // animation translate direction type
+    private var duration: TimeInterval = 0.7 // animation duration
     private var targetLayer: CAShapeLayer = CAShapeLayer() // animation layer
+    
+    public init(_ edge: JWStackTransitionAnimationRectEdge) {
+        self.type = edge
+    }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
@@ -27,43 +32,38 @@ public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegat
         let fromW = fromVC.view.frame.width
         let fromH = fromVC.view.frame.height
         
-        // pow(x,y) - 取x的y次幂, sqrt() - 取平方根
-        let radius = sqrt(pow(fromW / 2, 2) + pow(fromH / 2, 2))
-        let center = CGPoint(x: fromW / 2, y: fromH / 2)
+        let fromPath = UIBezierPath(rect: fromVC.view.bounds)
+        var toPath = UIBezierPath()
+        switch self.type {
+        case .top:
+            toPath = UIBezierPath(rect: CGRect(x: 0, y: fromH, width: fromW, height: 0))
+        case .left:
+            toPath = UIBezierPath(rect: CGRect(x: fromW, y: 0, width: fromW, height: fromH))
+        case .right:
+            toPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: 0, height: fromH))
+        case .bottom:
+            toPath = UIBezierPath(rect: CGRect(x: 0, y: 0, width: fromW, height: 0))
+        }
         
-        let pathStart = makePath(center, radius: radius)
-        let pathEnd = makePath(center, radius: 1.0)
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = fromPath.cgPath
+        maskLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
+        maskLayer.position = CGPoint(x: fromW / 2, y: fromH / 2)
+        fromVC.view.layer.mask = maskLayer
+        self.targetLayer = maskLayer
         
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = pathStart
-        shapeLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
-        shapeLayer.position = center
-        fromVC.view.layer.mask = shapeLayer
-        self.targetLayer = shapeLayer
-        
-        fromVC.view.isUserInteractionEnabled = false
-        addAnimation(from: pathStart, to: pathEnd) {
+        addAnimation(from: fromPath.cgPath, to: toPath.cgPath) {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            fromVC.view.isUserInteractionEnabled = true
             fromVC.view.layer.mask = nil
         }
-
+        
     }
     
 }
 
-extension JWStackTransitionAnimationCircle {
+extension JWStackTransitionAnimationTranslate {
     
-    /// get animation path
-    /// - Parameters:
-    ///   - center: path arc ceter
-    ///   - radius: path radius
-    /// - Returns: CGPath
-    func makePath(_ center: CGPoint, radius: CGFloat) -> CGPath {
-        return UIBezierPath(arcCenter: center, radius: CGFloat(radius), startAngle: CGFloat(0), endAngle:CGFloat(2.0 * .pi), clockwise: true).cgPath
-    }
-    
-    /// add animation
+    /// add animations
     /// - Parameters:
     ///   - from: animation fromValue
     ///   - to: animation toValue
@@ -81,6 +81,7 @@ extension JWStackTransitionAnimationCircle {
         
         self.targetLayer.add(animation, forKey: "path")
     }
+    
 }
 
 #endif
