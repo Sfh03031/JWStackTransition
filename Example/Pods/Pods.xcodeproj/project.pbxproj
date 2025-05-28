@@ -42,6 +42,7 @@
 		AE86AD142DE0412C00F770F1 /* JWStackTransitionAnimationSector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE86AD132DE0412800F770F1 /* JWStackTransitionAnimationSector.swift */; };
 		AEDE2DD72DE46D2500C12BC6 /* JWStackTransitionAnimationSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE2DD62DE46C6100C12BC6 /* JWStackTransitionAnimationSplit.swift */; };
 		AEDE2DD92DE5B7D700C12BC6 /* JWStackTransitionAnimationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE2DD82DE5B7D000C12BC6 /* JWStackTransitionAnimationEnums.swift */; };
+		AEDE2DDB2DE70C6400C12BC6 /* JWStackTransitionAnimationRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE2DDA2DE70C5100C12BC6 /* JWStackTransitionAnimationRotate.swift */; };
 		AEFB700F9EE77EE9848A8AC8C3F00A7F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
 		B7233D5F0AD8A4E4DE083752C6F0B705 /* JWStackTransitionAnimationMultiFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationMultiFlip.swift */; };
 		B7BED1788EE88DA5170636C5C2491BF7 /* JWStackTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E92789823CE18DACA54524EAEFBF6B10 /* JWStackTransition-dummy.m */; };
@@ -152,6 +153,7 @@
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		AEDE2DD62DE46C6100C12BC6 /* JWStackTransitionAnimationSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSplit.swift; sourceTree = "<group>"; };
 		AEDE2DD82DE5B7D000C12BC6 /* JWStackTransitionAnimationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationEnums.swift; sourceTree = "<group>"; };
+		AEDE2DDA2DE70C5100C12BC6 /* JWStackTransitionAnimationRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRotate.swift; sourceTree = "<group>"; };
 		B00DB7E890F3F8820917979B3368AD96 /* JWStackTransitionAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationBlank.swift; sourceTree = "<group>"; };
 		B43ED7F26C3BA774D4BB79C0E4344583 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationImageRepeating.swift */,
 				86429531754AFDC7A137B4FDEBD36F45 /* JWStackTransitionAnimationMultiCircle.swift */,
 				75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationMultiFlip.swift */,
+				AEDE2DDA2DE70C5100C12BC6 /* JWStackTransitionAnimationRotate.swift */,
 				144B036C3186E1ED330B5049158CD05F /* JWStackTransitionAnimationRectangler.swift */,
 				AE86AD132DE0412800F770F1 /* JWStackTransitionAnimationSector.swift */,
 				5F6922EF9564BC6EAEDBA3B14EE0934B /* JWStackTransitionAnimationShrinkingGrowingDiamonds.swift */,
@@ -659,6 +662,7 @@
 				8F704A3E09D3BAFECD9BB9EBA63F5C77 /* JWStackTransition.swift in Sources */,
 				B7BED1788EE88DA5170636C5C2491BF7 /* JWStackTransition-dummy.m in Sources */,
 				25A2968538952B2DB85769616F486353 /* JWStackTransitionAnimationSlant.swift in Sources */,
+				AEDE2DDB2DE70C6400C12BC6 /* JWStackTransitionAnimationRotate.swift in Sources */,
 				CC5C0B612CB6CCF27EF9538D15B23493 /* JWStackTransitionAnimationBlank.swift in Sources */,
 				2E12E5ABD08693D743A23E1FDD8C384B /* JWStackTransitionAnimationCircle.swift in Sources */,
 				AEDE2DD92DE5B7D700C12BC6 /* JWStackTransitionAnimationEnums.swift in Sources */,

@@ -1,15 +1,15 @@
 //
-//  JWStackTransitionAnimationMultiFlip.swift
+//  JWStackTransitionAnimationRotate.swift
 //  Pods
 //
-//  Created by sfh on 2025/5/20.
+//  Created by sfh on 2025/5/28.
 //
 
 #if canImport(UIKit)
 
 import UIKit
 
-public class JWStackTransitionAnimationMultiFlip: JWStackTransitionAnimationDelegate {
+public class JWStackTransitionAnimationRotate: JWStackTransitionAnimationDelegate {
     
     fileprivate var stepDistance : CGFloat = 0.25
     fileprivate var animationStepTime : TimeInterval = 0.2
@@ -35,7 +35,23 @@ public class JWStackTransitionAnimationMultiFlip: JWStackTransitionAnimationDele
         
         fromContainer.addSubview(fromVC.view)
         
-        flipTo(transitionContext: transitionContext, view: fromVC.view, scale: 1.0 - stepDistance)
+//        flipTo(transitionContext: transitionContext, view: fromVC.view, scale: 1.0 - stepDistance)
+        
+        
+        
+        fromContainer.alpha = 1
+        var transform = fromVC.view.layer.transform
+        transform = CATransform3DRotate(transform, .pi, 0.0, 0.0, 1.0)
+        
+        UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear]) {
+            fromContainer.alpha = 0
+            fromVC.view.layer.transform = transform
+        } completion: { _ in
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            fromVC.view.layer.transform = CATransform3DIdentity
+        }
+
+
     }
     
     private func flipTo(transitionContext: UIViewControllerContextTransitioning, view: UIView, scale: CGFloat) {

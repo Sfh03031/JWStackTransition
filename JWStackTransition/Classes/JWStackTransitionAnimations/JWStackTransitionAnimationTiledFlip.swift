@@ -11,95 +11,132 @@ import UIKit
 
 public class JWStackTransitionAnimationTiledFlip: JWStackTransitionAnimationDelegate {
     
+    private var type: JWStackTransitionAnimationOfficialType = .flipFromRight // animation type
+    private var row: Int = 10 // tiled animation row number, range is (0, 20]
+    private var column: Int = 5 // tiled animation column number, range is (0, 10]
     
-    
-//    override func defaultDuration() -> TimeInterval {
-//        return 1.0
-//    }
+    init(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int) {
+        self.type = type
+        if tiledRow > 0 && tiledRow <= 20 {
+            self.row = tiledRow
+        }
+        if tiledColumn > 0 && tiledColumn <= 10 {
+            self.column = tiledColumn
+        }
+    }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         guard let fromVC = transitionContext.viewController(forKey: .from),
-            let toVC = transitionContext.viewController(forKey: .to),
-              let snapshotToVc = toVC.view.viewShot(),
-              let snapshotFromVc = fromVC.view.viewShot()
-            else {
-                return
-        }
+              let toVC = transitionContext.viewController(forKey: .to),
+              let fromShotImg = fromVC.view.viewShot(),
+              let toShotImg = toVC.view.viewShot() else { return }
         
         let containerView = transitionContext.containerView
         fromVC.view.removeFromSuperview()
         
-        let parentView = UIView()
-        parentView.backgroundColor = UIColor.clear
-        parentView.frame = fromVC.view.frame
-        containerView.addSubview(parentView)
+        let tempView = UIView()
+        tempView.backgroundColor = .clear
+        tempView.frame = fromVC.view.frame
+        containerView.addSubview(tempView)
+
+        let blockW:CGFloat = fromVC.view.bounds.width / CGFloat(self.column)
+        let blockH:CGFloat = fromVC.view.bounds.height / CGFloat(self.row)
         
-        let cleanup = {
-            containerView.addSubview(toVC.view)
-            parentView.removeFromSuperview()
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        }
-        
-        let squareSizeWidth : CGFloat = fromVC.view.bounds.size.width / 5
-        let squareSizeHeight : CGFloat = fromVC.view.bounds.size.height / 10
-        
-        let numRows = 1 + Int(toVC.view.bounds.size.width / squareSizeWidth)
-        let numCols = 1 + Int(toVC.view.bounds.size.height / squareSizeWidth)
-        for x in (0...numRows) {
-            for y in (0...numCols) {
-                let rect = CGRect(x: (CGFloat(x) * squareSizeWidth),y: (CGFloat(y) * squareSizeHeight), width:squareSizeWidth, height: squareSizeHeight)
+        let columnNum = 1 + Int(toVC.view.bounds.width / blockW)
+        let rowNum = 1 + Int(toVC.view.bounds.height / blockH)
+        for i in 0...columnNum { // 0..<n, [0, n); 0...n, [0, n]
+            for j in 0...rowNum {
+                let blockFrame = CGRect(x: CGFloat(i) * blockW, y: CGFloat(j) * blockH, width: blockW, height: blockH)
                 
-                let randomPercent = Float(arc4random()) / Float(UINT32_MAX)
-                let delay = TimeInterval(Float(duration * 0.5) * randomPercent)
+                let random = Float(arc4random()) / Float(UInt32.max)
+                let delay = TimeInterval(Float(duration * 0.5) * random)
                 
-                flipSegment(toViewImage: snapshotToVc, fromViewImage: snapshotFromVc, delay: delay, rect: rect, animationTime: CGFloat(duration / 2), parentView: parentView)
+                self.makeTiledFlipAnimation(fromShot: fromShotImg, toShot: toShotImg, delay: delay, tiledSize: blockFrame, duration: duration / 2, superView: tempView)
             }
         }
         
-        JWStackTransition.delay(second: TimeInterval(duration)) {
-            cleanup()
+        JWStackTransition.delay(second: duration) {
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            containerView.addSubview(toVC.view)
+            tempView.removeFromSuperview()
         }
     }
     
-    private func flipSegment(toViewImage: UIImage, fromViewImage: UIImage, delay: TimeInterval, rect: CGRect, animationTime: CGFloat, parentView: UIView) {
-        guard let cgToImage = toViewImage.cgImage,
-            let cgFromImage = fromViewImage.cgImage,
-            let toImageRef = cgToImage.cropping(to: CGRect(x: toViewImage.scale * rect.origin.x, y: toViewImage.scale * rect.origin.y,width: toViewImage.scale * rect.size.width, height: toViewImage.scale * rect.size.height)),
-            let fromImageRef = cgFromImage.cropping(to: CGRect(x: fromViewImage.scale * rect.origin.x, y: fromViewImage.scale * rect.origin.y,width: fromViewImage.scale * rect.size.width, height: fromViewImage.scale * rect.size.height)) else {
-            return
-        }
+}
+
+extension JWStackTransitionAnimationTiledFlip {
+    
+    /// add single tiled flip animation
+    /// - Parameters:
+    ///   - fromShot: fromVC view shot image
+    ///   - toShot: toVC view shot image
+    ///   - delay: animation delay time duration
+    ///   - tiledSize: single tiled size
+    ///   - duration: animation duration
+    ///   - super: super view of tiled
+    func makeTiledFlipAnimation(fromShot: UIImage, toShot: UIImage, delay: TimeInterval, tiledSize: CGRect, duration: TimeInterval, superView: UIView) {
+        guard let fromCGImg = fromShot.cgImage,
+              let toCGImg = toShot.cgImage,
+              let fromImgRef = fromCGImg.cropping(to: CGRect(x: fromShot.scale * tiledSize.origin.x, y: fromShot.scale * tiledSize.origin.y, width: fromShot.scale * tiledSize.size.width, height: fromShot.scale * tiledSize.size.height)),
+              let toImgRef = toCGImg.cropping(to: CGRect(x: toShot.scale * tiledSize.origin.x, y: toShot.scale * tiledSize.origin.y, width: toShot.scale * tiledSize.size.width, height: toShot.scale * tiledSize.size.height)) else { return }
         
-        let toImage = UIImage.init(cgImage: toImageRef)
-        let toImageView = UIImageView()
-        toImageView.clipsToBounds = true
-        toImageView.frame = rect
-        toImageView.image = toImage
+        let fromImgView = UIImageView(image: UIImage(cgImage: fromImgRef))
+        fromImgView.frame = tiledSize
+        fromImgView.clipsToBounds = true
         
-        let fromImage = UIImage.init(cgImage: fromImageRef)
-        let fromImageView = UIImageView()
-        fromImageView.clipsToBounds = true
-        fromImageView.frame = rect
-        fromImageView.image = fromImage
+        let toImgView = UIImageView(image: UIImage(cgImage: toImgRef))
+        toImgView.frame = tiledSize
+        toImgView.clipsToBounds = true
         
         let containerView = UIView()
-        containerView.frame = fromImageView.frame
-        containerView.backgroundColor = UIColor.clear
+        containerView.frame = fromImgView.frame
+        containerView.backgroundColor = .clear
         
-        fromImageView.frame.origin = CGPoint.zero
-        toImageView.frame.origin = CGPoint.zero
+        fromImgView.frame.origin = .zero
+        toImgView.frame.origin = .zero
         
-        containerView.addSubview(fromImageView)
-        parentView.addSubview(containerView)
+        containerView.addSubview(fromImgView)
+        superView.addSubview(containerView)
         
-        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .curveEaseInOut]
+        let options = self.getAnimationOptions()
         JWStackTransition.delay(second: delay) {
-            UIView.transition(with: containerView, duration: TimeInterval(animationTime), options: transitionOptions, animations: {
-                containerView.addSubview(toImageView)
-                fromImageView.removeFromSuperview()
+            UIView.transition(with: containerView, duration: duration, options: options, animations: {
+                containerView.addSubview(toImgView)
+                fromImgView.removeFromSuperview()
             })
         }
     }
     
+    /// get animation options
+    /// - Returns: UIView.AnimationOptions
+    func getAnimationOptions() -> UIView.AnimationOptions {
+        var options: UIView.AnimationOptions = []
+        switch self.type {
+        case .flipFromTop:
+            options = [.transitionFlipFromTop, .curveEaseInOut]
+            break
+        case .flipFromLeft:
+            options = [.transitionFlipFromLeft, .curveEaseInOut]
+            break
+        case .flipFromRight:
+            options = [.transitionFlipFromRight, .curveEaseInOut]
+            break
+        case .flipFromBottom:
+            options = [.transitionFlipFromBottom, .curveEaseInOut]
+            break
+        case .curlUp:
+            options = [.transitionCurlUp, .curveEaseInOut]
+            break
+        case .curlDown:
+            options = [.transitionCurlDown, .curveEaseInOut]
+            break
+        case .crossDissolve:
+            options = [.transitionCrossDissolve, .curveEaseInOut]
+            break
+        }
+        
+        return options
+    }
 }
 
 #endif

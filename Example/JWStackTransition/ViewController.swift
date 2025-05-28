@@ -12,10 +12,29 @@ import JWStackTransition
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let dataList: [JWStackTransitionType] = [
-        .swingIn(.left),
-        .swingIn(.right),
-        .swingIn(.top),
-        .swingIn(.bottom),
+        .rotate,
+        .multiCircle(10),
+        .multiFlip(distance: 0.1, time: 0.2),
+        .rectangler,
+        .imageRepeating(percent: 0.1, time: 0.2),
+        .shrinkingGrowingDiamonds(duration: 1.0),
+        
+        .tiledFlip,
+        .tiledFlipCustomized(.crossDissolve, tiledRow: 2, tiledColumn: 1),
+        .tiledFlipCustomized(.curlDown, tiledRow: 4, tiledColumn: 2),
+        .tiledFlipCustomized(.curlUp, tiledRow: 6, tiledColumn: 3),
+        .tiledFlipCustomized(.flipFromBottom, tiledRow: 8, tiledColumn: 4),
+        .tiledFlipCustomized(.flipFromTop, tiledRow: 10, tiledColumn: 5),
+        .tiledFlipCustomized(.flipFromLeft, tiledRow: 12, tiledColumn: 6),
+        .tiledFlipCustomized(.flipFromRight, tiledRow: 14, tiledColumn: 7),
+        .tiledFlipCustomized(.flipFromRight, tiledRow: 16, tiledColumn: 8),
+        .tiledFlipCustomized(.flipFromRight, tiledRow: 18, tiledColumn: 9),
+        .tiledFlipCustomized(.flipFromRight, tiledRow: 20, tiledColumn: 10),
+        
+        .swing(.left),
+        .swing(.right),
+        .swing(.top),
+        .swing(.bottom),
         
         .sector(.left),
         .sector(.top),
@@ -58,15 +77,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         .circle,
         
-        .imageRepeating(percent: 0.1, time: 0.2),
-        .multiFlip(distance: 0.05, time: 0.2),
         .blank,
-        
-        .rectangler,
-        .multiCircle,
-        .tiledFlip(duration: 1.0),
-        .shrinkingGrowingDiamonds(duration: 1.0),
-        
     ]
     
     override func viewDidLoad() {

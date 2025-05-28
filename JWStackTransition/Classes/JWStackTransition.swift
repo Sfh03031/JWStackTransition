@@ -57,25 +57,25 @@ public enum JWStackTransitionType {
     /**
      SectorLeft.
      
-     - returns: Instance of JWStackTransitionAnimationSector, `left` case of UIRectEdge.
+     - returns: Instance of JWStackTransitionAnimationSector, `left` case of JWStackTransitionAnimationRectEdge.
      */
     case sectorLeft
     /**
      SectorTop.
      
-     - returns: Instance of JWStackTransitionAnimationSector, `top` case of UIRectEdge.
+     - returns: Instance of JWStackTransitionAnimationSector, `top` case of JWStackTransitionAnimationRectEdge.
      */
     case sectorTop
     /**
      SectorRight.
      
-     - returns: Instance of JWStackTransitionAnimationSector, `right` case of UIRectEdge.
+     - returns: Instance of JWStackTransitionAnimationSector, `right` case of JWStackTransitionAnimationRectEdge.
      */
     case sectorRight
     /**
      SectorBottom.
      
-     - returns: Instance of JWStackTransitionAnimationSector, `bottom` case of UIRectEdge.
+     - returns: Instance of JWStackTransitionAnimationSector, `bottom` case of JWStackTransitionAnimationRectEdge.
      */
     case sectorBottom
     /**
@@ -91,23 +91,29 @@ public enum JWStackTransitionType {
      */
     case rectangler
     /**
-     MultiCircle.
+     MultiCircle, default single circle diameter is 20.0 and range is (0, 100].
      
      - returns: Instance of JWStackTransitionAnimationMultiCircle.
      */
-    case multiCircle
+    case multiCircle(_ diameter: CGFloat)
     /**
-     Official, default official type is crossDissolve.
+     Official, default animation type is crossDissolve.
      
      - returns: Instance of JWStackTransitionAnimationOfficial.
      */
     case official(_ type: JWStackTransitionAnimationOfficialType = .crossDissolve)
     /**
-     TiledFlip, default animation duration is 1.0.
+     TiledFlipCustomized, default animation type is flipFromRight, default tiled row is 10 and range is (0, 20], default tiled column is 5 and range is (0, 10].
      
      - returns: Instance of JWStackTransitionAnimationTiledFlip.
      */
-    case tiledFlip(duration: TimeInterval = 1.0)
+    case tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)
+    /**
+     TiledFlip, animation type is flipFromRight, tiled row is 10 and column is 5.
+     
+     - returns: Instance of JWStackTransitionAnimationTiledFlip.
+     */
+    case tiledFlip
     /**
      ImageRepeating, default step percent is 0.05 and default step time is 0.2.
      
@@ -151,6 +157,8 @@ public enum JWStackTransitionType {
      */
     case swing(_ edge: JWStackTransitionAnimationRectEdge = .left)
     
+    case rotate
+    
     func animation() -> JWStackTransitionAnimationDelegate {
         switch self {
         case .blank:
@@ -175,12 +183,14 @@ public enum JWStackTransitionType {
             return JWStackTransitionAnimationSector(.bottom)
         case .rectangler:
             return JWStackTransitionAnimationRectangler()
-        case .multiCircle:
-            return JWStackTransitionAnimationMultiCircle()
+        case .multiCircle(let diameter):
+            return JWStackTransitionAnimationMultiCircle(diameter)
         case .official(let type):
             return JWStackTransitionAnimationOfficial(type)
         case .tiledFlip:
-            return JWStackTransitionAnimationTiledFlip()
+            return JWStackTransitionAnimationTiledFlip(.flipFromRight, tiledRow: 0, tiledColumn: 0)
+        case .tiledFlipCustomized(let type, let row, let column):
+            return JWStackTransitionAnimationTiledFlip(type, tiledRow: row, tiledColumn: column)
         case .imageRepeating(let percent, let time):
             return JWStackTransitionAnimationImageRepeating(stepPercent: percent, stepTime: time)
         case .multiFlip(let distance, let time):
@@ -193,6 +203,8 @@ public enum JWStackTransitionType {
             return JWStackTransitionAnimationShrinkingGrowingDiamonds()
         case .swing(let edge):
             return JWStackTransitionAnimationSwing(edge)
+        case .rotate:
+            return JWStackTransitionAnimationRotate()
         }
     }
     
@@ -214,9 +226,6 @@ public class JWStackTransition: NSObject {
         self.duration = duration ?? JWStackTransition.DEFAULT_DURATION
         
         switch self.type {
-        case .tiledFlip(let duration):
-            self.duration = duration
-            break
         case .imageRepeating(let percent, let time):
             let imgNum = Int(0.5 / percent)
             self.duration = time * TimeInterval(imgNum * 2)

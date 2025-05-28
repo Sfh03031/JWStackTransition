@@ -11,75 +11,87 @@ import UIKit
 
 public class JWStackTransitionAnimationMultiCircle: JWStackTransitionAnimationDelegate {
     
-    func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-            let toVC = transitionContext.viewController(forKey: .to)
-            else {
-                return
+    private var duration: TimeInterval = 0.25 // animation duration
+    private var diameter: CGFloat = 20.0 // circle diameter, range is (0, 100]
+    
+    public init(_ diameter: CGFloat) {
+        if diameter > 0 {
+            self.diameter = diameter
         }
+    }
+    
+    func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
+        self.duration = duration
+        
+        guard let fromVC = transitionContext.viewController(forKey: .from),
+              let toVC = transitionContext.viewController(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
         containerView.addSubview(toVC.view)
         containerView.addSubview(fromVC.view)
         
-        let cleanup = {
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            fromVC.view.removeFromSuperview()
-            fromVC.view.layer.mask = nil
-        }
+        let fromW = fromVC.view.frame.width
+        let fromH = fromVC.view.frame.height
+        self.diameter = min(self.diameter, 100)
         
+        let maskLayer = CALayer()
+        maskLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
+        maskLayer.position = CGPoint(x: fromW / 2, y: fromH / 2)
         
-        let createRectOutlinePath : ((CGPoint, CGSize, CGFloat, (() -> (Void))?) -> (CAShapeLayer)) = { circleCenter, circleSize, circleRadius, completion in
-            let pathStart = UIBezierPath()
-            pathStart.addArc(withCenter: circleCenter, radius: circleRadius, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
-            
-            let pathEnd = UIBezierPath()
-            pathEnd.addArc(withCenter: circleCenter, radius: circleSize.width, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2), clockwise: true)
-            
-            let rect = CGRect.init(x: circleCenter.x - (circleSize.width / 2), y: circleCenter.y - (circleSize.height / 2), width: circleSize.width, height: circleSize.height)
-            
-            let shapeLayer = CAShapeLayer.init()
-            shapeLayer.bounds = CGRect.init(x: 0, y: 0, width: circleSize.width, height: circleSize.height)
-            shapeLayer.position = CGPoint(x: (rect.origin.x + rect.size.width) - (circleSize.width / 2), y: (rect.origin.y + rect.size.height) - (circleSize.height / 2))
-            shapeLayer.path = pathStart.cgPath
-            
-            let animation = JWStackTransitionBasicAnimation()
-            animation.keyPath = "path"
-            animation.duration = duration
-            animation.fromValue = pathEnd.cgPath
-            animation.toValue = pathStart.cgPath
-            animation.autoreverses = false
-            animation.animationFinished = {
-                if let completion = completion {
-                    completion()
-                }
-            }
-            shapeLayer.add(animation, forKey: "path")
-            
-            return shapeLayer
-        }
-        
-        guard let view = fromVC.view else {
-            transitionContext.completeTransition(false)
-            return
-        }
-        
-        let maskLayer = CALayer.init()
-        maskLayer.bounds = CGRect.init(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
-        maskLayer.position = CGPoint(x: (view.frame.size.width / 2), y: (view.frame.size.height / 2))
-        
-        let circleSize = CGSize(width: 20, height: 20)
-        for rowIndex in (0..<Int(1 + ceilf(Float(view.bounds.size.height / circleSize.height)))) {
-            for colIndex in (0..<Int(2 + ceilf(Float(view.bounds.size.width / circleSize.width)))) {
-                let circleCenter = CGPoint(x: (circleSize.width / 2) + (CGFloat(colIndex) * circleSize.width), y: (circleSize.height / 2) + (CGFloat(rowIndex) * circleSize.height))
+        let circleSize = CGSize(width: self.diameter, height: self.diameter)
+        let rowNum = Int(ceil(fromH / self.diameter))
+        let columnNum = Int(ceil(fromW / self.diameter))
+
+        for i in 0..<rowNum {
+            for j in 0..<columnNum {
+                let center = CGPoint(x: self.diameter / 2 + CGFloat(j) * self.diameter, y: self.diameter / 2 + CGFloat(i) * self.diameter)
                 
-                maskLayer.addSublayer(createRectOutlinePath(circleCenter, circleSize, 1, rowIndex == 0 && colIndex == 0 ? cleanup : nil))
+                let layer = getAnimationLayer(center: center, size: circleSize) {
+                    if i == 0 && j == 0 {
+                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                        fromVC.view.layer.mask = nil
+                    }
+                }
+                maskLayer.addSublayer(layer)
             }
         }
         
         fromVC.view.layer.mask = maskLayer
+        
     }
     
+}
+
+extension JWStackTransitionAnimationMultiCircle {
+    
+    /// get single circle animation layer
+    /// - Parameters:
+    ///   - center: center of CAShapeLayer
+    ///   - size: size of CAShapeLayer
+    ///   - complete: animation finished call back
+    /// - Returns: CAShapeLayer
+    func getAnimationLayer(center: CGPoint, size: CGSize, complete: (() -> Void)? = nil) -> CAShapeLayer {
+        let fromPath = UIBezierPath(arcCenter: center, radius: size.width, startAngle: 0.0, endAngle: CGFloat(2.0 * .pi), clockwise: true)
+        let toPath = UIBezierPath(arcCenter: center, radius: 1.0, startAngle: 0.0, endAngle: CGFloat(2.0 * .pi), clockwise: true)
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.bounds = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        maskLayer.position = center
+        maskLayer.path = toPath.cgPath
+        
+        let animation = JWStackTransitionBasicAnimation()
+        animation.keyPath = "path"
+        animation.duration = self.duration
+        animation.fromValue = fromPath.cgPath
+        animation.toValue = toPath.cgPath
+        animation.autoreverses = false
+        animation.fillMode = .forwards
+        animation.animationFinished = complete
+        
+        maskLayer.add(animation, forKey: "path")
+        
+        return maskLayer
+    }
 }
 
 #endif
