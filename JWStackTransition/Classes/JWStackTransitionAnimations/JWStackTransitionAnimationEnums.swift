@@ -38,3 +38,14 @@ public enum JWStackTransitionAnimationSplitType {
     case diamondVertical
     case diamondHorizontal
 }
+
+public enum JWStackTransitionAnimationRollAxis {
+    case x
+    case y
+    case z
+}
+
+public enum JWStackTransitionAnimationRectanglerWave {
+    case waveIn
+    case waveOut
+}

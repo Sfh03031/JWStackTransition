@@ -13,7 +13,7 @@
 		163F3D88DDD0188499A638DC28A15534 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
 		25A2968538952B2DB85769616F486353 /* JWStackTransitionAnimationSlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB61CE4FCBB894E135B798044ADA2494 /* JWStackTransitionAnimationSlant.swift */; };
 		267AEE0BF1514767DD64B50559013EB3 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
-		2A584FD2CDECE34911EBB70FA1AE1958 /* JWStackTransitionAnimationImageRepeating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationImageRepeating.swift */; };
+		2A584FD2CDECE34911EBB70FA1AE1958 /* JWStackTransitionAnimationMultinest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationMultinest.swift */; };
 		2E12E5ABD08693D743A23E1FDD8C384B /* JWStackTransitionAnimationCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70797C9FD3DBEAA5623710CBF24C5574 /* JWStackTransitionAnimationCircle.swift */; };
 		33E349E32C64A93B3CAC6A2667583E98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6B5E773973965C73BC40D4388B4C07 /* QuartzCore.framework */; };
 		3777A70A61ED49FCDDB07BE5F0A1C4B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4138A0A13FF7F7B73435E87E54C56C18 /* UIKit.framework */; };
@@ -44,7 +44,7 @@
 		AEDE2DD92DE5B7D700C12BC6 /* JWStackTransitionAnimationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE2DD82DE5B7D000C12BC6 /* JWStackTransitionAnimationEnums.swift */; };
 		AEDE2DDB2DE70C6400C12BC6 /* JWStackTransitionAnimationRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE2DDA2DE70C5100C12BC6 /* JWStackTransitionAnimationRotate.swift */; };
 		AEFB700F9EE77EE9848A8AC8C3F00A7F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
-		B7233D5F0AD8A4E4DE083752C6F0B705 /* JWStackTransitionAnimationMultiFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationMultiFlip.swift */; };
+		B7233D5F0AD8A4E4DE083752C6F0B705 /* JWStackTransitionAnimationRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationRoll.swift */; };
 		B7BED1788EE88DA5170636C5C2491BF7 /* JWStackTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E92789823CE18DACA54524EAEFBF6B10 /* JWStackTransition-dummy.m */; };
 		B97BECE0CAB9DB2F0F85F2B02A7E1D36 /* JWStackTransitionAnimationMultiCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86429531754AFDC7A137B4FDEBD36F45 /* JWStackTransitionAnimationMultiCircle.swift */; };
 		BF4C7712D8A393DB85E4DD4B8A955DCF /* JWStackTransitionAnimationTiledFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9423ED429FC3786278081F80E9141502 /* JWStackTransitionAnimationTiledFlip.swift */; };
@@ -127,7 +127,7 @@
 		692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		70797C9FD3DBEAA5623710CBF24C5574 /* JWStackTransitionAnimationCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationCircle.swift; sourceTree = "<group>"; };
-		75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationMultiFlip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationMultiFlip.swift; sourceTree = "<group>"; };
+		75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationRoll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRoll.swift; sourceTree = "<group>"; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		7ED824C903213D2315278852C037F504 /* JWStackTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWStackTransition-prefix.pch"; sourceTree = "<group>"; };
 		80B63C1371F28727F51B3CC13B91D656 /* JWStackTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWStackTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +162,7 @@
 		C99EC8A90B8299B6B066151593D07F65 /* Pods-JWStackTransition_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWStackTransition_Tests-Info.plist"; sourceTree = "<group>"; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-		D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationImageRepeating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationImageRepeating.swift; sourceTree = "<group>"; };
+		D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationMultinest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationMultinest.swift; sourceTree = "<group>"; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		DB61CE4FCBB894E135B798044ADA2494 /* JWStackTransitionAnimationSlant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSlant.swift; sourceTree = "<group>"; };
 		E14096514DC7575BB051048212A99D94 /* JWStackTransitionBasicAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionBasicAnimation.swift; sourceTree = "<group>"; };
@@ -416,12 +416,13 @@
 				AE86AD112DDDC4EA00F770F1 /* JWStackTransitionAnimationAntiClockWise.swift */,
 				B00DB7E890F3F8820917979B3368AD96 /* JWStackTransitionAnimationBlank.swift */,
 				70797C9FD3DBEAA5623710CBF24C5574 /* JWStackTransitionAnimationCircle.swift */,
+				5B02A50D34F346CB00D27DF4A7A6996A /* JWStackTransitionAnimationSwing.swift */,
 				AE86AD0F2DDDC49700F770F1 /* JWStackTransitionAnimationClockWise.swift */,
 				5E181D75072CCB5CABE48825F148E007 /* JWStackTransitionAnimationDelegate.swift */,
 				E8CA27173B43E924B3F76866AC935EAD /* JWStackTransitionAnimationOfficial.swift */,
-				D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationImageRepeating.swift */,
+				D1E4AA9E78014E126BEC4F76D8D58243 /* JWStackTransitionAnimationMultinest.swift */,
 				86429531754AFDC7A137B4FDEBD36F45 /* JWStackTransitionAnimationMultiCircle.swift */,
-				75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationMultiFlip.swift */,
+				75FD00C07B48AC647BF8ABE5256D108A /* JWStackTransitionAnimationRoll.swift */,
 				AEDE2DDA2DE70C5100C12BC6 /* JWStackTransitionAnimationRotate.swift */,
 				144B036C3186E1ED330B5049158CD05F /* JWStackTransitionAnimationRectangler.swift */,
 				AE86AD132DE0412800F770F1 /* JWStackTransitionAnimationSector.swift */,
@@ -429,7 +430,6 @@
 				DB61CE4FCBB894E135B798044ADA2494 /* JWStackTransitionAnimationSlant.swift */,
 				AEDE2DD62DE46C6100C12BC6 /* JWStackTransitionAnimationSplit.swift */,
 				5F380458C3A1E977E123079E5EE68621 /* JWStackTransitionAnimationTranslate.swift */,
-				5B02A50D34F346CB00D27DF4A7A6996A /* JWStackTransitionAnimationSwing.swift */,
 				9423ED429FC3786278081F80E9141502 /* JWStackTransitionAnimationTiledFlip.swift */,
 				E14096514DC7575BB051048212A99D94 /* JWStackTransitionBasicAnimation.swift */,
 				AEDE2DD82DE5B7D000C12BC6 /* JWStackTransitionAnimationEnums.swift */,
@@ -670,9 +670,9 @@
 				AE86AD142DE0412C00F770F1 /* JWStackTransitionAnimationSector.swift in Sources */,
 				978ADC6177D196553D5338EFDA20DD3D /* JWStackTransitionAnimationDelegate.swift in Sources */,
 				C0612D716CC85245BC65D9E5B383E4BF /* JWStackTransitionAnimationOfficial.swift in Sources */,
-				2A584FD2CDECE34911EBB70FA1AE1958 /* JWStackTransitionAnimationImageRepeating.swift in Sources */,
+				2A584FD2CDECE34911EBB70FA1AE1958 /* JWStackTransitionAnimationMultinest.swift in Sources */,
 				B97BECE0CAB9DB2F0F85F2B02A7E1D36 /* JWStackTransitionAnimationMultiCircle.swift in Sources */,
-				B7233D5F0AD8A4E4DE083752C6F0B705 /* JWStackTransitionAnimationMultiFlip.swift in Sources */,
+				B7233D5F0AD8A4E4DE083752C6F0B705 /* JWStackTransitionAnimationRoll.swift in Sources */,
 				971743C4EC972F3361B69C8394912967 /* JWStackTransitionAnimationRectangler.swift in Sources */,
 				D15D9C08FB4E433C2F5B981085A49460 /* JWStackTransitionAnimationShrinkingGrowingDiamonds.swift in Sources */,
 				021161AEB58B8365AF5337BAC8EA9603 /* JWStackTransitionAnimationTranslate.swift in Sources */,

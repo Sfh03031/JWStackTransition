@@ -12,12 +12,16 @@ import JWStackTransition
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let dataList: [JWStackTransitionType] = [
+        .multinest,
+        .shrinkingGrowingDiamonds(duration: 1.0),
+        
+        .rectangler(.waveIn),
+        .rectangler(.waveOut),
+        .roll(.x),
+        .roll(.y),
+        .roll(.z),
         .rotate,
         .multiCircle(10),
-        .multiFlip(distance: 0.1, time: 0.2),
-        .rectangler,
-        .imageRepeating(percent: 0.1, time: 0.2),
-        .shrinkingGrowingDiamonds(duration: 1.0),
         
         .tiledFlip,
         .tiledFlipCustomized(.crossDissolve, tiledRow: 2, tiledColumn: 1),
@@ -121,7 +125,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let vc = StackViewController()
         vc.view.backgroundColor = cell.backgroundColor
-        self.navigationController?.push(vc, type: dataList[indexPath.item], duration: 2.0)
+        self.navigationController?.push(vc, type: dataList[indexPath.item], duration: 1.0)
         
 //        self.navigationController?.push(vc, transition: JWStackTransition(type: dataList[indexPath.item]))
     }
