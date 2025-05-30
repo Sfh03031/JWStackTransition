@@ -11,8 +11,8 @@ import UIKit
 
 public class JWStackTransitionAnimationMultinest: JWStackTransitionAnimationDelegate {
     
-    private var percent: CGFloat = 0.05
-    private var duration: TimeInterval = TimeInterval(0.1)
+    private var percent: CGFloat = 0.05 // animation step percent
+    private var duration: TimeInterval = TimeInterval(0.1) // animation step duration
     
     private var imageViews: [UIImageView] = []
 

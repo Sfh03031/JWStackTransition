@@ -27,7 +27,7 @@ public class JWStackTransitionAnimationSplit: JWStackTransitionAnimationDelegate
         let containerView = transitionContext.containerView
         
         switch self.type {
-        case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal:
+        case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal, .cross:
             containerView.addSubview(toVC.view)
             containerView.addSubview(fromVC.view)
             fromVC.view.isUserInteractionEnabled = false
@@ -51,7 +51,7 @@ public class JWStackTransitionAnimationSplit: JWStackTransitionAnimationDelegate
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             
             switch self.type {
-            case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal:
+            case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal, .cross:
                 fromVC.view.isUserInteractionEnabled = true
                 fromVC.view.layer.mask = nil
                 break
@@ -217,10 +217,51 @@ public class JWStackTransitionAnimationSplit: JWStackTransitionAnimationDelegate
             let rightLayer = getAnimationLayer(size: maskSize, fromPath: from1, toPath: to1, complete: complete)
             maskLayer.addSublayer(rightLayer)
             break
+        case .cross:
+            let from = UIBezierPath()
+            from.move(to: CGPoint(x: 0, y: 0))
+            from.addLine(to: CGPoint(x: fromW / 2, y: 0))
+            from.addLine(to: CGPoint(x: fromW / 2, y: fromH / 2))
+            from.addLine(to: CGPoint(x: 0, y: fromH / 2))
+            
+            let to = UIBezierPath(rect: CGRect(x: fromW / 2, y: 0, width: 0, height: fromH / 2))
+            let topLeftLayer = getAnimationLayer(size: maskSize, fromPath: from, toPath: to, complete: nil)
+            maskLayer.addSublayer(topLeftLayer)
+            
+            let from1 = UIBezierPath()
+            from1.move(to: CGPoint(x: fromW / 2, y: 0))
+            from1.addLine(to: CGPoint(x: fromW, y: 0))
+            from1.addLine(to: CGPoint(x: fromW, y: fromH / 2))
+            from1.addLine(to: CGPoint(x: fromW / 2, y: fromH / 2))
+            
+            let to1 = UIBezierPath(rect: CGRect(x: fromW / 2, y: fromH / 2, width: fromW / 2, height: 0))
+            let topRightLayer = getAnimationLayer(size: maskSize, fromPath: from1, toPath: to1, complete: nil)
+            maskLayer.addSublayer(topRightLayer)
+            
+            let from2 = UIBezierPath()
+            from2.move(to: CGPoint(x: fromW / 2, y: fromH / 2))
+            from2.addLine(to: CGPoint(x: fromW, y: fromH / 2))
+            from2.addLine(to: CGPoint(x: fromW, y: fromH))
+            from2.addLine(to: CGPoint(x: fromW / 2, y: fromH))
+            
+            let to2 = UIBezierPath(rect: CGRect(x: fromW / 2, y: fromH / 2, width: 0, height: fromH / 2))
+            let bottomRightLayer = getAnimationLayer(size: maskSize, fromPath: from2, toPath: to2, complete: nil)
+            maskLayer.addSublayer(bottomRightLayer)
+            
+            let from3 = UIBezierPath()
+            from3.move(to: CGPoint(x: 0, y: fromH / 2))
+            from3.addLine(to: CGPoint(x: fromW / 2, y: fromH / 2))
+            from3.addLine(to: CGPoint(x: fromW / 2, y: fromH))
+            from3.addLine(to: CGPoint(x: 0, y: fromH))
+            
+            let to3 = UIBezierPath(rect: CGRect(x: 0, y: fromH / 2, width: fromW / 2, height: 0))
+            let bottomLeftLayer = getAnimationLayer(size: maskSize, fromPath: from3, toPath: to3, complete: complete)
+            maskLayer.addSublayer(bottomLeftLayer)
+            break
         }
         
         switch self.type {
-        case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal:
+        case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal, .cross:
             fromVC.view.layer.mask = maskLayer
             break
         case .diamondVertical, .diamondHorizontal:

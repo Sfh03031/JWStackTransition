@@ -29,7 +29,18 @@ import UIKit
  
  */
 public enum JWStackTransitionType {
-    
+    /**
+     AntiClockWise, default animation start angle is `0.0`, angle range is `[0.0, 2.0]`.
+     
+     - returns: Instance of JWStackTransitionAnimationAntiClockWise.
+     */
+    case antiClockWise(_ startAngle: Double)
+    /**
+     Barrier, default animation type is `toTop`, default barrier width is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationBarrier.
+     */
+    case barrier(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)
     /**
      Blank.
 
@@ -37,23 +48,104 @@ public enum JWStackTransitionType {
      */
     case blank
     /**
-     ClockWise, default animation duration is 0.7, angle range is [0.0, 2.0] and default animation start angle is 0.0.
-     
-     - returns: Instance of JWStackTransitionAnimationClockWise.
-     */
-    case clockWise(_ startAngle: Double = 0.0)
-    /**
-     AntiClockWise, default animation duration is 0.7, angle range is [0.0, 2.0] and default animation start angle is 0.0.
-     
-     - returns: Instance of JWStackTransitionAnimationAntiClockWise.
-     */
-    case antiClockWise(_ startAngle: Double = 0.0)
-    /**
      Circle.
      
      - returns: Instance of JWStackTransitionAnimationCircle.
      */
     case circle
+    /**
+     ClockWise, default animation start angle is `0.0`, angle range is `[0.0, 2.0]`.
+     
+     - returns: Instance of JWStackTransitionAnimationClockWise.
+     */
+    case clockWise(_ startAngle: Double)
+    /**
+     Fence, default animation type is `verticalLeft`, default fence width is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationFence.
+     */
+    case fence(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)
+    /**
+     MultiCircle, default single circle diameter is `20.0`, diameter range is `(0, 100]`.
+     
+     - returns: Instance of JWStackTransitionAnimationMultiCircle.
+     */
+    case multiCircle(_ diameter: CGFloat)
+    /**
+     Multinest.
+     
+     - returns: Instance of JWStackTransitionAnimationMultinest.
+     */
+    case multinest
+    /**
+     Official, default animation type is `crossDissolve`.
+     
+     - returns: Instance of JWStackTransitionAnimationOfficial.
+     */
+    case official(_ type: JWStackTransitionAnimationOfficialType)
+    /**
+     Rectangler, default animation type is `waveIn`.
+     
+     - returns: Instance of JWStackTransitionAnimationRectangler.
+     */
+    case rectangler(_ wave: JWStackTransitionAnimationRectanglerWave)
+    /**
+     Roll, default animation roll axis is `y`.
+     
+     - returns: Instance of JWStackTransitionAnimationRoll.
+     */
+    case roll(_ axis: JWStackTransitionAnimationRollAxis)
+    /**
+     Rotate.
+     
+     - returns: Instance of JWStackTransitionAnimationRotate.
+     */
+    case rotate
+    /**
+     Sector, default animation rect edge is `left`.
+     
+     - returns: Instance of JWStackTransitionAnimationSector.
+     */
+    case sector(_ edge: JWStackTransitionAnimationRectEdge)
+    /**
+     Slant, default animation rect corner is `topLeft`.
+     
+     - returns: Instance of JWStackTransitionAnimationSlant.
+     */
+    case slant(_ corner: JWStackTransitionAnimationRectCorner)
+    /**
+     Split, default split type is `horizontal`.
+     
+     - returns: Instance of JWStackTransitionAnimationSplit.
+     */
+    case split(_ type: JWStackTransitionAnimationSplitType)
+    /**
+     Swing, default animation rect edge is `left`.
+     
+     - returns: Instance of JWStackTransitionAnimationSwing.
+     */
+    case swing(_ edge: JWStackTransitionAnimationRectEdge)
+    /**
+     TiledFlip, animation type is flipFromRight, tiled row is 10 and column is 5.
+     
+     - returns: Instance of JWStackTransitionAnimationTiledFlip.
+     */
+    case tiledFlip
+    /**
+     Translate, default animation rect edge is `left`.
+     
+     - returns: Instance of JWStackTransitionAnimationTranslate.
+     */
+    case translate(_ edge: JWStackTransitionAnimationRectEdge)
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      SectorLeft.
      
@@ -78,86 +170,29 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationSector, `bottom` case of JWStackTransitionAnimationRectEdge.
      */
     case sectorBottom
-    /**
-     sector.
-     
-     - returns: Instance of JWStackTransitionAnimationSector.
-     */
-    case sector(_ edge: JWStackTransitionAnimationRectEdge = .left)
-    /**
-     Rectangler.
-     
-     - returns: Instance of JWStackTransitionAnimationRectangler.
-     */
-    case rectangler(_ wave: JWStackTransitionAnimationRectanglerWave)
-    /**
-     MultiCircle, default single circle diameter is 20.0 and range is (0, 100].
-     
-     - returns: Instance of JWStackTransitionAnimationMultiCircle.
-     */
-    case multiCircle(_ diameter: CGFloat)
-    /**
-     Official, default animation type is crossDissolve.
-     
-     - returns: Instance of JWStackTransitionAnimationOfficial.
-     */
-    case official(_ type: JWStackTransitionAnimationOfficialType = .crossDissolve)
+    
+    
+    
+    
     /**
      TiledFlipCustomized, default animation type is flipFromRight, default tiled row is 10 and range is (0, 20], default tiled column is 5 and range is (0, 10].
      
      - returns: Instance of JWStackTransitionAnimationTiledFlip.
      */
     case tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)
-    /**
-     TiledFlip, animation type is flipFromRight, tiled row is 10 and column is 5.
-     
-     - returns: Instance of JWStackTransitionAnimationTiledFlip.
-     */
-    case tiledFlip
-    /**
-     Multinest.
-     
-     - returns: Instance of JWStackTransitionAnimationMultinest.
-     */
-    case multinest
-    /**
-     Roll.
-     
-     - returns: Instance of JWStackTransitionAnimationRoll.
-     */
-    case roll(_ axis: JWStackTransitionAnimationRollAxis)
-    /**
-     Slant, default rect corner is topLeft.
-     
-     - returns: Instance of JWStackTransitionAnimationSlant.
-     */
-    case slant(_ corner: JWStackTransitionAnimationRectCorner)
-    /**
-     Split, default split type is horizontal.
-     
-     - returns: Instance of JWStackTransitionAnimationSplit.
-     */
-    case split(_ type: JWStackTransitionAnimationSplitType = .horizontal)
-    /**
-     StraightLine, default rect edge is left.
-     
-     - returns: Instance of JWStackTransitionAnimationStraightLine.
-     */
-    case translate(_ edge: JWStackTransitionAnimationRectEdge = .left)
-    /**
-     ShrinkingGrowingDiamonds, default animation duration is 1.0.
-     
-     - returns: Instance of JWStackTransitionAnimationShrinkingGrowingDiamonds.
-     */
-    case shrinkingGrowingDiamonds(duration: TimeInterval = 1.0)
-    /**
-     SwingIn, default animation duration is 1.0 and default initial direction is left.
-     
-     - returns: Instance of JWStackTransitionAnimationSwingIn.
-     */
-    case swing(_ edge: JWStackTransitionAnimationRectEdge = .left)
     
-    case rotate
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func animation() -> JWStackTransitionAnimationDelegate {
         switch self {
@@ -199,12 +234,14 @@ public enum JWStackTransitionType {
             return JWStackTransitionAnimationSlant(type)
         case .translate(let edge):
             return JWStackTransitionAnimationTranslate(edge)
-        case .shrinkingGrowingDiamonds:
-            return JWStackTransitionAnimationShrinkingGrowingDiamonds()
         case .swing(let edge):
             return JWStackTransitionAnimationSwing(edge)
         case .rotate:
             return JWStackTransitionAnimationRotate()
+        case .fence(let type, let width):
+            return JWStackTransitionAnimationFence(type, width: width)
+        case .barrier(let type, let width):
+            return JWStackTransitionAnimationBarrier(type, width: width)
         }
     }
     
@@ -224,14 +261,6 @@ public class JWStackTransition: NSObject {
     public init(type: JWStackTransitionType? = nil, duration: TimeInterval? = nil) {
         self.type = type ?? JWStackTransition.DEFAULT_TYPE
         self.duration = duration ?? JWStackTransition.DEFAULT_DURATION
-        
-        switch self.type {
-        case .shrinkingGrowingDiamonds(let duration):
-            self.duration = duration
-            break
-        default:
-            break
-        }
     }
 }
 
@@ -242,7 +271,7 @@ extension JWStackTransition: UIViewControllerAnimatedTransitioning {
     }
     
     public func animateTransition(using transitionContext: any UIViewControllerContextTransitioning) {
-        let animation:JWStackTransitionAnimationDelegate = type.animation()
+        let animation: JWStackTransitionAnimationDelegate = type.animation()
         animation.setUpAnimation(duration: duration, transitionContext: transitionContext)
     }
     

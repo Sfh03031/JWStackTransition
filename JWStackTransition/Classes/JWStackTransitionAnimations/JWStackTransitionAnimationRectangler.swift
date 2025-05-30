@@ -64,6 +64,9 @@ public class JWStackTransitionAnimationRectangler: JWStackTransitionAnimationDel
 
 extension JWStackTransitionAnimationRectangler {
     
+    /// get animation layer
+    /// - Parameter outerRect: rect
+    /// - Returns: CAShapeLayer
     func getAnimationLayer(_ outerRect: CGRect) -> CAShapeLayer? {
         let increment = self.increment * 0.2
         if self.increment >= outerRect.width || self.increment >= outerRect.height { return nil }

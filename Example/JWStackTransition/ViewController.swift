@@ -12,8 +12,31 @@ import JWStackTransition
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let dataList: [JWStackTransitionType] = [
+        
+        .barrier(.toTop, width: 20),
+        .barrier(.toLeft, width: 20),
+        .barrier(.toRight, width: 20),
+        .barrier(.toBottom, width: 20),
+        .barrier(.toHorizontalCenter, width: 20),
+        .barrier(.toVerticalCenter, width: 20),
+        
+        .fence(.verticalCross, width: 20),
+        .fence(.horizontalCross, width: 20),
+        .fence(.verticalLeft, width: 40),
+        .fence(.verticalRight, width: 40),
+        .fence(.horizontalTop, width: 40),
+        .fence(.horizontalBottom, width: 40),
+        
+        
+        .split(.cross),
+        .split(.diamondVertical),
+        .split(.diamondHorizontal),
+        .split(.horizontal),
+        .split(.vertical),
+        .split(.leftDiagonal),
+        .split(.rightDiagonal),
+        .split(.crossDiagonal),
         .multinest,
-        .shrinkingGrowingDiamonds(duration: 1.0),
         
         .rectangler(.waveIn),
         .rectangler(.waveOut),
@@ -58,13 +81,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         .official(.curlUp),
         .official(.curlDown),
         
-        .split(.diamondVertical),
-        .split(.diamondHorizontal),
-        .split(.horizontal),
-        .split(.vertical),
-        .split(.leftDiagonal),
-        .split(.rightDiagonal),
-        .split(.crossDiagonal),
+        
         
         .translate(.left),
         .translate(.right),
@@ -83,6 +100,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         .blank,
     ]
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.backgroundColor = .white
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

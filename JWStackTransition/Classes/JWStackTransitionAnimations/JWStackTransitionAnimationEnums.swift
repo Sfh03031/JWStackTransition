@@ -37,6 +37,25 @@ public enum JWStackTransitionAnimationSplitType {
     case crossDiagonal
     case diamondVertical
     case diamondHorizontal
+    case cross
+}
+
+public enum JWStackTransitionAnimationFenceType {
+    case verticalLeft
+    case verticalRight
+    case horizontalTop
+    case horizontalBottom
+    case verticalCross
+    case horizontalCross
+}
+
+public enum JWStackTransitionAnimationBarrierFadeDirectionType {
+    case toTop
+    case toBottom
+    case toLeft
+    case toRight
+    case toVerticalCenter
+    case toHorizontalCenter
 }
 
 public enum JWStackTransitionAnimationRollAxis {

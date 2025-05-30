@@ -9,17 +9,25 @@
 import UIKit
 
 class StackViewController: UIViewController {
-    
+//
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .darkContent
+//    }
+//    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = true
+        
+        print("viewWillAppear - hide navigationBar")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = false
+        
+        print("viewDidAppear - show navigationBar")
     }
 
     override func viewDidLoad() {
