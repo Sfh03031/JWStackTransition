@@ -34,5 +34,4 @@ extension JWStackTransitionHijack: UINavigationControllerDelegate {
         
         return transition
     }
-    
 }

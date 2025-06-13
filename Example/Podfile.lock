@@ -5,14 +5,17 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - JWStackTransition (0.1.0)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
   - JWStackTransition (from `../`)
+  - SnapKit
 
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - SnapKit
 
 EXTERNAL SOURCES:
   JWStackTransition:
@@ -21,7 +24,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   JWStackTransition: 71994a36d788b7ec79f8042658ec4d21807eee46
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: d0a3fff45cbb1e6029595340c0e32c6b43e70f35
+PODFILE CHECKSUM: 12d3bd5e0a04e85d6b39da156680f36040c0bd86
 
 COCOAPODS: 1.16.2

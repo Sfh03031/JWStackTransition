@@ -22,17 +22,17 @@ public class JWStackTransitionAnimationTranslate: JWStackTransitionAnimationDele
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
         
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(toView)
+        containerView.addSubview(fromView)
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         
-        let fromPath = UIBezierPath(rect: fromVC.view.bounds)
+        let fromPath = UIBezierPath(rect: fromView.bounds)
         var toPath = UIBezierPath()
         switch self.type {
         case .top:
@@ -49,12 +49,12 @@ public class JWStackTransitionAnimationTranslate: JWStackTransitionAnimationDele
         maskLayer.path = fromPath.cgPath
         maskLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
         maskLayer.position = CGPoint(x: fromW / 2, y: fromH / 2)
-        fromVC.view.layer.mask = maskLayer
+        fromView.layer.mask = maskLayer
         self.targetLayer = maskLayer
         
         addAnimation(from: fromPath.cgPath, to: toPath.cgPath) {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            fromVC.view.layer.mask = nil
+            fromView.layer.mask = nil
         }
         
     }

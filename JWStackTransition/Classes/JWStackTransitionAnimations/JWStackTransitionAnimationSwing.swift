@@ -18,18 +18,18 @@ public class JWStackTransitionAnimationSwing: JWStackTransitionAnimationDelegate
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(fromView)
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         
         let toContainerView = UIView()
-        toContainerView.backgroundColor = UIColor.clear
-        toContainerView.frame = toVC.view.bounds
+        toContainerView.backgroundColor = .clear
+        toContainerView.frame = toView.bounds
         
         switch self.type {
         case .left:
@@ -42,20 +42,21 @@ public class JWStackTransitionAnimationSwing: JWStackTransitionAnimationDelegate
             toContainerView.frame.origin = CGPoint.init(x: 0, y: 2 * fromH)
         }
         
-        toContainerView.addSubview(toVC.view)
+        toContainerView.addSubview(toView)
         containerView.addSubview(toContainerView)
         
-        toVC.view.transform = CGAffineTransform.identity.scaledBy(x: 0.1, y: 0.1)
+        toView.transform = CGAffineTransform.identity.scaledBy(x: 0.1, y: 0.1)
         
         UIView.animate(withDuration: duration, delay: 0.0, options: [.curveEaseOut], animations: {
-            toVC.view.transform = CGAffineTransform.identity
+            toView.transform = CGAffineTransform.identity
         }) { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: [.curveEaseInOut], animations: {
-            toContainerView.frame = fromVC.view.bounds
+            toContainerView.frame = fromView.bounds
         }, completion: nil)
+        
     }
     
 }

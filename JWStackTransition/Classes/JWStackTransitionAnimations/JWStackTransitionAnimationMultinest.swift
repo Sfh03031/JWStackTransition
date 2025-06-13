@@ -17,13 +17,13 @@ public class JWStackTransitionAnimationMultinest: JWStackTransitionAnimationDele
     private var imageViews: [UIImageView] = []
 
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
+        containerView.addSubview(toView)
         
-        if let image = fromVC.view.viewShot() {
+        if let image = fromView.viewShot() {
             add(transitionContext, img: image, imgRect: containerView.bounds)
         }
         

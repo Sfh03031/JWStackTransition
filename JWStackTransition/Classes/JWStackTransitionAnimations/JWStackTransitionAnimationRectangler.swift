@@ -22,15 +22,15 @@ public class JWStackTransitionAnimationRectangler: JWStackTransitionAnimationDel
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
         
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(toView)
+        containerView.addSubview(fromView)
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         
         let maskLayer = CALayer()
         maskLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
@@ -39,22 +39,22 @@ public class JWStackTransitionAnimationRectangler: JWStackTransitionAnimationDel
         for i in 0...10 {
             let magnitude = CGFloat(i) * self.increment
             if magnitude <= fromW && magnitude <= fromH {
-                let startRect = fromVC.view.bounds.toIncrement(magnitude)
+                let startRect = fromView.bounds.toIncrement(magnitude)
                 if let sublayer = getAnimationLayer(startRect) {
                     maskLayer.addSublayer(sublayer)
                 }
             }
         }
         
-        fromVC.view.layer.mask = maskLayer
+        fromView.layer.mask = maskLayer
         
         UIView.animate(withDuration: duration) {
-            fromVC.view.alpha = 0.0
+            fromView.alpha = 0.0
         } completion: { finished in
             if finished {
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-                fromVC.view.alpha = 1
-                fromVC.view.layer.mask = nil
+                fromView.alpha = 1
+                fromView.layer.mask = nil
             }
         }
 

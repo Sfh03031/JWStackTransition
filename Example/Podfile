@@ -4,6 +4,8 @@ platform :ios, '12.0'
 
 target 'JWStackTransition_Example' do
   pod 'JWStackTransition', :path => '../'
+  
+  pod 'SnapKit'
 
   target 'JWStackTransition_Tests' do
     inherit! :search_paths

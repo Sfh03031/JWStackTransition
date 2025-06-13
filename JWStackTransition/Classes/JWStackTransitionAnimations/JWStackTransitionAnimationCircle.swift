@@ -17,15 +17,15 @@ public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegat
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
         
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(toView)
+        containerView.addSubview(fromView)
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         
         // pow(x,y) - 取x的y次幂, sqrt() - 取平方根
         let radius = sqrt(pow(fromW / 2, 2) + pow(fromH / 2, 2))
@@ -38,14 +38,14 @@ public class JWStackTransitionAnimationCircle: JWStackTransitionAnimationDelegat
         shapeLayer.path = pathStart
         shapeLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
         shapeLayer.position = center
-        fromVC.view.layer.mask = shapeLayer
+        fromView.layer.mask = shapeLayer
         self.targetLayer = shapeLayer
         
-        fromVC.view.isUserInteractionEnabled = false
+        fromView.isUserInteractionEnabled = false
         addAnimation(from: pathStart, to: pathEnd) {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            fromVC.view.isUserInteractionEnabled = true
-            fromVC.view.layer.mask = nil
+            fromView.isUserInteractionEnabled = true
+            fromView.layer.mask = nil
         }
 
     }

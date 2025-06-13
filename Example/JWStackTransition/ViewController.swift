@@ -9,102 +9,149 @@
 import UIKit
 import JWStackTransition
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+struct Examples {
+    var title: String
+    var list: [ExampleItem]
+    
+    init(title: String, list: [ExampleItem]) {
+        self.title = title
+        self.list = list
+    }
+}
 
-    let dataList: [JWStackTransitionType] = [
-        
-        .barrier(.toTop, width: 20),
-        .barrier(.toLeft, width: 20),
-        .barrier(.toRight, width: 20),
-        .barrier(.toBottom, width: 20),
-        .barrier(.toHorizontalCenter, width: 20),
-        .barrier(.toVerticalCenter, width: 20),
-        
-        .fence(.verticalCross, width: 20),
-        .fence(.horizontalCross, width: 20),
-        .fence(.verticalLeft, width: 40),
-        .fence(.verticalRight, width: 40),
-        .fence(.horizontalTop, width: 40),
-        .fence(.horizontalBottom, width: 40),
-        
-        
-        .split(.cross),
-        .split(.diamondVertical),
-        .split(.diamondHorizontal),
-        .split(.horizontal),
-        .split(.vertical),
-        .split(.leftDiagonal),
-        .split(.rightDiagonal),
-        .split(.crossDiagonal),
-        .multinest,
-        
-        .rectangler(.waveIn),
-        .rectangler(.waveOut),
-        .roll(.x),
-        .roll(.y),
-        .roll(.z),
-        .rotate,
-        .multiCircle(10),
-        
-        .tiledFlip,
-        .tiledFlipCustomized(.crossDissolve, tiledRow: 2, tiledColumn: 1),
-        .tiledFlipCustomized(.curlDown, tiledRow: 4, tiledColumn: 2),
-        .tiledFlipCustomized(.curlUp, tiledRow: 6, tiledColumn: 3),
-        .tiledFlipCustomized(.flipFromBottom, tiledRow: 8, tiledColumn: 4),
-        .tiledFlipCustomized(.flipFromTop, tiledRow: 10, tiledColumn: 5),
-        .tiledFlipCustomized(.flipFromLeft, tiledRow: 12, tiledColumn: 6),
-        .tiledFlipCustomized(.flipFromRight, tiledRow: 14, tiledColumn: 7),
-        .tiledFlipCustomized(.flipFromRight, tiledRow: 16, tiledColumn: 8),
-        .tiledFlipCustomized(.flipFromRight, tiledRow: 18, tiledColumn: 9),
-        .tiledFlipCustomized(.flipFromRight, tiledRow: 20, tiledColumn: 10),
-        
-        .swing(.left),
-        .swing(.right),
-        .swing(.top),
-        .swing(.bottom),
-        
-        .sector(.left),
-        .sector(.top),
-        .sector(.right),
-        .sector(.bottom),
-        
-//        .sectorLeft,
-//        .sectorTop,
-//        .sectorRight,
-//        .sectorBottom,
-        
-        .official(.crossDissolve),
-        .official(.flipFromTop),
-        .official(.flipFromLeft),
-        .official(.flipFromRight),
-        .official(.flipFromBottom),
-        .official(.curlUp),
-        .official(.curlDown),
-        
-        
-        
-        .translate(.left),
-        .translate(.right),
-        .translate(.top),
-        .translate(.bottom),
-        
-        .slant(.topLeft),
-        .slant(.topRight),
-        .slant(.bottomLeft),
-        .slant(.bottomRight),
-        
-        .clockWise(0.5),
-        .antiClockWise(1.5),
-        
-        .circle,
-        
-        .blank,
+struct ExampleItem {
+    var name: String
+    var type: JWStackTransitionType
+    
+    init(name: String, type: JWStackTransitionType) {
+        self.name = name
+        self.type = type
+    }
+}
+
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let imgList = ["galleryImage01", "galleryImage02", "galleryImage03", "galleryImage04", "galleryImage05", "galleryImage06", "galleryImage07", "galleryImage08", "lightning1", "lightning2", "moon1", "moon2", "snow1", "snow2", "sun1", "sun2", "tornado1", "tornado2"]
+    
+    let dataList = [
+        Examples(title: "AntiClockWise", list: [
+            ExampleItem(name: "default, start angle is 1.5", type: .antiClockWise),
+            ExampleItem(name: "start angle is 0.0", type: .antiClockWiseCustomized(0.0)),
+            ExampleItem(name: "start angle is 0.5", type: .antiClockWiseCustomized(0.5)),
+            ExampleItem(name: "start angle is 1.0", type: .antiClockWiseCustomized(1.0)),
+            ExampleItem(name: "start angle is 2.0", type: .antiClockWiseCustomized(2.0))
+        ]),
+        Examples(title: "Barrier", list: [
+            ExampleItem(name: "default, toTop and width is 20", type: .barrier),
+            ExampleItem(name: "toLeft and width is 20", type: .barrierCustomized(.toLeft, width: 5)),
+            ExampleItem(name: "toRight and width is 20", type: .barrierCustomized(.toRight, width: 10.0)),
+            ExampleItem(name: "toBottom and width is 20", type: .barrierCustomized(.toBottom, width: 15.0)),
+            ExampleItem(name: "toVerticalCenter and width is 20", type: .barrierCustomized(.toVerticalCenter, width: 20.0)),
+            ExampleItem(name: "toHorizontalCenter and width is 20", type: .barrierCustomized(.toHorizontalCenter, width: 25.0)),
+        ]),
+        Examples(title: "Circle", list: [
+            ExampleItem(name: "default", type: .circle)
+        ]),
+        Examples(title: "ClockWise", list: [
+            ExampleItem(name: "default, start angle is 0.5", type: .clockWise),
+            ExampleItem(name: "start angle is 0.0", type: .clockWiseCustomized(0.0)),
+            ExampleItem(name: "start angle is 1.0", type: .clockWiseCustomized(1.0)),
+            ExampleItem(name: "start angle is 1.5", type: .clockWiseCustomized(1.5)),
+            ExampleItem(name: "start angle is 2.0", type: .clockWiseCustomized(2.0))
+        ]),
+        Examples(title: "Fence", list: [
+            ExampleItem(name: "default, verticalLeft and width is 20", type: .fence),
+            ExampleItem(name: "verticalRight and width is 5", type: .fenceCustomized(.verticalRight, width: 5.0)),
+            ExampleItem(name: "verticalCross and width is 10", type: .fenceCustomized(.verticalCross, width: 10.0)),
+            ExampleItem(name: "horizontalTop and width is 15", type: .fenceCustomized(.horizontalTop, width: 15.0)),
+            ExampleItem(name: "horizontalBottom and width is 20", type: .fenceCustomized(.horizontalBottom, width: 20.0)),
+            ExampleItem(name: "horizontalCross and width is 25", type: .fenceCustomized(.horizontalCross, width: 25.0)),
+        ]),
+        Examples(title: "MultiCircle", list: [
+            ExampleItem(name: "default, diameter is 20", type: .multiCircle),
+            ExampleItem(name: "diameter is 30", type: .multiCircleCustomized(30)),
+            ExampleItem(name: "diameter is 40", type: .multiCircleCustomized(40)),
+            ExampleItem(name: "diameter is 50", type: .multiCircleCustomized(50)),
+            ExampleItem(name: "diameter is 60", type: .multiCircleCustomized(60)),
+            ExampleItem(name: "diameter is 80", type: .multiCircleCustomized(80)),
+        ]),
+        Examples(title: "Multinest", list: [
+            ExampleItem(name: "default", type: .multinest)
+        ]),
+        Examples(title: "Official", list: [
+            ExampleItem(name: "default, crossDissolve", type: .official),
+            ExampleItem(name: "curlUp", type: .officialCustomized(.curlUp)),
+            ExampleItem(name: "curlDown", type: .officialCustomized(.curlDown)),
+            ExampleItem(name: "flipFromLeft", type: .officialCustomized(.flipFromLeft)),
+            ExampleItem(name: "flipFromRight", type: .officialCustomized(.flipFromRight)),
+            ExampleItem(name: "flipFromTop", type: .officialCustomized(.flipFromTop)),
+            ExampleItem(name: "flipFromBottom", type: .officialCustomized(.flipFromBottom)),
+        ]),
+        Examples(title: "Rectangler", list: [
+            ExampleItem(name: "default, waveIn", type: .rectangler),
+            ExampleItem(name: "waveOut", type: .rectanglerCustomized(.waveOut)),
+        ]),
+        Examples(title: "Roll", list: [
+            ExampleItem(name: "default, axis is y", type: .roll),
+            ExampleItem(name: "axis is x", type: .rollCustomized(.x)),
+            ExampleItem(name: "axis is z", type: .rollCustomized(.z)),
+        ]),
+        Examples(title: "Rotate", list: [
+            ExampleItem(name: "default", type: .rotate),
+        ]),
+        Examples(title: "Sector", list: [
+            ExampleItem(name: "default, left", type: .sector),
+            ExampleItem(name: "right", type: .sectorCustomized(.right)),
+            ExampleItem(name: "top", type: .sectorCustomized(.top)),
+            ExampleItem(name: "bottom", type: .sectorCustomized(.bottom)),
+        ]),
+        Examples(title: "Slant", list: [
+            ExampleItem(name: "default, topLeft", type: .slant),
+            ExampleItem(name: "topRight", type: .slantCustomized(.topRight)),
+            ExampleItem(name: "bottomLeft", type: .slantCustomized(.bottomLeft)),
+            ExampleItem(name: "bottomRight", type: .slantCustomized(.bottomRight)),
+        ]),
+        Examples(title: "Split", list: [
+            ExampleItem(name: "default, horizontal", type: .split),
+            ExampleItem(name: "vertical", type: .splitCustomized(.vertical)),
+            ExampleItem(name: "diamondHorizontal", type: .splitCustomized(.diamondHorizontal)),
+            ExampleItem(name: "diamondVertical", type: .splitCustomized(.diamondVertical)),
+            ExampleItem(name: "cross", type: .splitCustomized(.cross)),
+            ExampleItem(name: "leftDiagonal", type: .splitCustomized(.leftDiagonal)),
+            ExampleItem(name: "rightDiagonal", type: .splitCustomized(.rightDiagonal)),
+            ExampleItem(name: "crossDiagonal", type: .splitCustomized(.crossDiagonal)),
+        ]),
+        Examples(title: "Swing", list: [
+            ExampleItem(name: "default, left", type: .swing),
+            ExampleItem(name: "right", type: .swingCustomized(.right)),
+            ExampleItem(name: "top", type: .swingCustomized(.top)),
+            ExampleItem(name: "bottom", type: .swingCustomized(.bottom)),
+        ]),
+        Examples(title: "TiledFlip", list: [
+            ExampleItem(name: "default, flipFromRight, row is 10 and column is 5", type: .tiledFlip),
+            ExampleItem(name: "flipFromLeft, row is 10 and column is 10", type: .tiledFlipCustomized(.flipFromLeft, tiledRow: 10, tiledColumn: 10)),
+            ExampleItem(name: "flipFromTop, row is 15 and column is 5", type: .tiledFlipCustomized(.flipFromTop, tiledRow: 15, tiledColumn: 5)),
+            ExampleItem(name: "flipFromBottom, row is 15 and column is 10", type: .tiledFlipCustomized(.flipFromBottom, tiledRow: 15, tiledColumn: 10)),
+            ExampleItem(name: "crossDissolve, row is 20 and column is 5", type: .tiledFlipCustomized(.crossDissolve, tiledRow: 20, tiledColumn: 5)),
+            ExampleItem(name: "curlUp, row is 20 and column is 10", type: .tiledFlipCustomized(.curlUp, tiledRow: 20, tiledColumn: 10)),
+            ExampleItem(name: "curlDown, row is 15 and column is 10", type: .tiledFlipCustomized(.curlDown, tiledRow: 15, tiledColumn: 10)),
+        ]),
+        Examples(title: "translate", list: [
+            ExampleItem(name: "default, left", type: .translate),
+            ExampleItem(name: "right", type: .translateCustomized(.right)),
+            ExampleItem(name: "top", type: .translateCustomized(.top)),
+            ExampleItem(name: "bottom", type: .translateCustomized(.bottom)),
+        ]),
     ]
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidLoad() {
@@ -115,42 +162,68 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        let cellWidth = view.bounds.width / 2
-        layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
+        layout.itemSize = CGSize(width: view.bounds.width, height: view.bounds.width)
+        layout.headerReferenceSize = CGSize(width: view.bounds.width, height: 60)
         
-        let collectionView : UICollectionView = UICollectionView(frame: CGRect(x:0, y: 100, width: view.bounds.size.width, height: view.bounds.size.height - 134), collectionViewLayout: layout)
+        let collectionView : UICollectionView = UICollectionView(frame: CGRect(x:0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height), collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PhotoCell")
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "PhotoCell")
+        collectionView.register(HeadView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: String(describing: UICollectionReusableView.self))
         view.addSubview(collectionView)
     }
 
-    // MARK: - UICollectionViewDataSource
+    // MARK: UICollectionViewDataSource
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return dataList.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataList[section].list.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath as IndexPath) 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell
         
-        cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(256)) / 255.0, green: CGFloat(arc4random_uniform(256)) / 255.0, blue: CGFloat(arc4random_uniform(256)) / 255.0, alpha: 1.0)
+        cell?.imgView.image = UIImage(named: imgList.randomElement() ?? "")
+        cell?.infoLabel.text = dataList[indexPath.section].list[indexPath.item].name
         
-        return cell
+        return cell!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionHeader {
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! HeadView
+            
+            header.infoLabel.text = dataList[indexPath.section].title
+            
+            return header
+        } else {
+            let footer: UICollectionReusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: UICollectionReusableView.self), for: indexPath)
+            footer.backgroundColor = .clear
+            
+            return footer
+        }
     }
  
-    // MARK: - UICollectionViewDelegate
+    // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
+        guard let cell = collectionView.cellForItem(at: indexPath) as? PhotoCell else { return }
+        
+        let type = dataList[indexPath.section].list[indexPath.item].type
         
         let vc = StackViewController()
-        vc.view.backgroundColor = cell.backgroundColor
-        self.navigationController?.push(vc, type: dataList[indexPath.item], duration: 1.0)
+        vc.image = cell.imgView.image ?? UIImage()
+        self.navigationController?.push(vc, type: type, duration: 1.0)
         
-//        self.navigationController?.push(vc, transition: JWStackTransition(type: dataList[indexPath.item]))
+        // another way
+//        self.navigationController?.push(vc, transition: JWStackTransition(type: type, duration: 1.0))
     }
 
 }

@@ -26,24 +26,24 @@ public class JWStackTransitionAnimationTiledFlip: JWStackTransitionAnimationDele
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to),
-              let fromShotImg = fromVC.view.viewShot(),
-              let toShotImg = toVC.view.viewShot() else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to),
+              let fromShotImg = fromView.viewShot(),
+              let toShotImg = toView.viewShot() else { return }
         
         let containerView = transitionContext.containerView
-        fromVC.view.removeFromSuperview()
+        fromView.removeFromSuperview()
         
         let tempView = UIView()
         tempView.backgroundColor = .clear
-        tempView.frame = fromVC.view.frame
+        tempView.frame = fromView.frame
         containerView.addSubview(tempView)
 
-        let blockW:CGFloat = fromVC.view.bounds.width / CGFloat(self.column)
-        let blockH:CGFloat = fromVC.view.bounds.height / CGFloat(self.row)
+        let blockW:CGFloat = fromView.bounds.width / CGFloat(self.column)
+        let blockH:CGFloat = fromView.bounds.height / CGFloat(self.row)
         
-        let columnNum = 1 + Int(toVC.view.bounds.width / blockW)
-        let rowNum = 1 + Int(toVC.view.bounds.height / blockH)
+        let columnNum = 1 + Int(toView.bounds.width / blockW)
+        let rowNum = 1 + Int(toView.bounds.height / blockH)
         for i in 0...columnNum { // 0..<n, [0, n); 0...n, [0, n]
             for j in 0...rowNum {
                 let blockFrame = CGRect(x: CGFloat(i) * blockW, y: CGFloat(j) * blockH, width: blockW, height: blockH)
@@ -57,7 +57,7 @@ public class JWStackTransitionAnimationTiledFlip: JWStackTransitionAnimationDele
         
         JWStackTransition.delay(second: duration) {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            containerView.addSubview(toVC.view)
+            containerView.addSubview(toView)
             tempView.removeFromSuperview()
         }
     }

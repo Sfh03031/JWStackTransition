@@ -5,6 +5,8 @@
 //  Created by sfh on 2025/5/27.
 //
 
+#if canImport(UIKit)
+
 public enum JWStackTransitionAnimationRectCorner {
     case topLeft
     case topRight
@@ -68,3 +70,5 @@ public enum JWStackTransitionAnimationRectanglerWave {
     case waveIn
     case waveOut
 }
+
+#endif

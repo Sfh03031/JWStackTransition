@@ -21,42 +21,42 @@ public class JWStackTransitionAnimationSplit: JWStackTransitionAnimationDelegate
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
         
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
 
         let containerView = transitionContext.containerView
         
         switch self.type {
         case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal, .cross:
-            containerView.addSubview(toVC.view)
-            containerView.addSubview(fromVC.view)
-            fromVC.view.isUserInteractionEnabled = false
+            containerView.addSubview(toView)
+            containerView.addSubview(fromView)
+            fromView.isUserInteractionEnabled = false
             break
         case .diamondVertical, .diamondHorizontal:
-            containerView.addSubview(fromVC.view)
-            containerView.addSubview(toVC.view)
+            containerView.addSubview(fromView)
+            containerView.addSubview(toView)
             break
         }
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         
         let maskLayer = CALayer()
         maskLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
         maskLayer.position = CGPoint(x: fromW / 2, y: fromH / 2)
         
-        let maskSize = fromVC.view.bounds.size
+        let maskSize = fromView.bounds.size
         
         let complete = {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             
             switch self.type {
             case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal, .cross:
-                fromVC.view.isUserInteractionEnabled = true
-                fromVC.view.layer.mask = nil
+                fromView.isUserInteractionEnabled = true
+                fromView.layer.mask = nil
                 break
             case .diamondVertical, .diamondHorizontal:
-                toVC.view.layer.mask = nil
+                toView.layer.mask = nil
                 break
             }
         }
@@ -262,10 +262,10 @@ public class JWStackTransitionAnimationSplit: JWStackTransitionAnimationDelegate
         
         switch self.type {
         case .vertical, .horizontal, .leftDiagonal, .rightDiagonal, .crossDiagonal, .cross:
-            fromVC.view.layer.mask = maskLayer
+            fromView.layer.mask = maskLayer
             break
         case .diamondVertical, .diamondHorizontal:
-            toVC.view.layer.mask = maskLayer
+            toView.layer.mask = maskLayer
             break
         }
 

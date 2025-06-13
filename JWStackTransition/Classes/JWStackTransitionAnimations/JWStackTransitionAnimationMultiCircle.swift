@@ -23,15 +23,15 @@ public class JWStackTransitionAnimationMultiCircle: JWStackTransitionAnimationDe
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         self.duration = duration
         
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(toView)
+        containerView.addSubview(fromView)
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         self.diameter = min(self.diameter, 100)
         
         let maskLayer = CALayer()
@@ -49,14 +49,14 @@ public class JWStackTransitionAnimationMultiCircle: JWStackTransitionAnimationDe
                 let layer = getAnimationLayer(center: center, size: circleSize) {
                     if i == 0 && j == 0 {
                         transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-                        fromVC.view.layer.mask = nil
+                        fromView.layer.mask = nil
                     }
                 }
                 maskLayer.addSublayer(layer)
             }
         }
         
-        fromVC.view.layer.mask = maskLayer
+        fromView.layer.mask = maskLayer
         
     }
     

@@ -15,6 +15,8 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8E304F0A7A4D1610FD67F169 /* Pods_JWStackTransition_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D4280DE57C9475A2BB8F25 /* Pods_JWStackTransition_Example.framework */; };
 		9244535E651BCFA59DF7E691 /* Pods_JWStackTransition_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86199A56D5FA820838410DF /* Pods_JWStackTransition_Tests.framework */; };
+		AE07988D2DFBBAAC00F818B6 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07988C2DFBBAAC00F818B6 /* PhotoCell.swift */; };
+		AE07988F2DFBC44A00F818B6 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE07988E2DFBC44A00F818B6 /* HeadView.swift */; };
 		AE86AD0A2DDC814E00F770F1 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE86AD092DDC814E00F770F1 /* StackViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		6681607D0409A04FB9B060A3 /* JWStackTransition.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JWStackTransition.podspec; path = ../JWStackTransition.podspec; sourceTree = "<group>"; };
 		82D4280DE57C9475A2BB8F25 /* Pods_JWStackTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWStackTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A570548988AE98C106F5631E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AE07988C2DFBBAAC00F818B6 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		AE07988E2DFBC44A00F818B6 /* HeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
 		AE86AD092DDC814E00F770F1 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		E86199A56D5FA820838410DF /* Pods_JWStackTransition_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWStackTransition_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFEC9A72E9BA428A7ED7494 /* Pods-JWStackTransition_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWStackTransition_Example.debug.xcconfig"; path = "Target Support Files/Pods-JWStackTransition_Example/Pods-JWStackTransition_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				AE86AD092DDC814E00F770F1 /* StackViewController.swift */,
+				AE07988C2DFBBAAC00F818B6 /* PhotoCell.swift */,
+				AE07988E2DFBC44A00F818B6 /* HeadView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -276,10 +282,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JWStackTransition_Example/Pods-JWStackTransition_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JWStackTransition/JWStackTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWStackTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,7 +364,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE86AD0A2DDC814E00F770F1 /* StackViewController.swift in Sources */,
+				AE07988D2DFBBAAC00F818B6 /* PhotoCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				AE07988F2DFBC44A00F818B6 /* HeadView.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

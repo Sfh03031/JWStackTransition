@@ -1,0 +1,339 @@
+//
+//  JWStackTransitionType.swift
+//  Pods
+//
+//  Created by sfh on 2025/6/12.
+//
+
+#if canImport(UIKit)
+
+import UIKit
+
+/**
+ Enum of animation types used for stack transition.
+
+ - AntiClockWise:               AntiClockWise animation.
+ - Barrier:                     Barrier animation.
+ - Blank:                       Blank animation.
+ - Circle:                      Circle animation.
+ - ClockWise:                   ClockWise animation.
+ - Fence:                       Fence animation.
+ - MultiCircle:                 MultiCircle animation.
+ - Multinest:                   Multinest animation.
+ - Official:                    Official animation.
+ - Rectangler:                  Rectangler animation.
+ - Roll:                        Roll animation.
+ - Rotate                       Rotate animation.
+ - Sector                       Sector animation.
+ - Slant                        Slant animation.
+ - Split                        Split animation.
+ - Swing                        Swing animation.
+ - TiledFlip                    TiledFlip animation.
+ - Translate                    Translate animation.
+ 
+ - AntiClockWiseCustomized:     AntiClockWiseCustomized animation.
+ - BarrierCustomized:           BarrierCustomized animation.
+ - ClockWiseCustomized:         ClockWiseCustomized animation.
+ - FenceCustomized:             FenceCustomized animation.
+ - MultiCircleCustomized:       MultiCircleCustomized animation.
+ - OfficialCustomized:          OfficialCustomized animation.
+ - RectanglerCustomized:        RectanglerCustomized animation.
+ - RollCustomized:              RollCustomized animation.
+ - SectorCustomized             SectorCustomized animation.
+ - SlantCustomized              SlantCustomized animation.
+ - SplitCustomized              SplitCustomized animation.
+ - SwingCustomized              SwingCustomized animation.
+ - TiledFlipCustomized          TiledFlipCustomized animation.
+ - TranslateCustomized          TranslateCustomized animation.
+ 
+ */
+public enum JWStackTransitionType {
+    
+    /// All default animation types
+    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .fence, .multiCircle, .multinest, .official, .rectangler, .roll, .rotate, .sector, .slant, .split, .swing, .tiledFlip, .translate]
+    
+    /**
+     AntiClockWise, start angle is `1.5`.
+     
+     - returns: Instance of JWStackTransitionAnimationAntiClockWise.
+     */
+    case antiClockWise
+    /**
+     AntiClockWiseCustomized, default animation start angle is `1.5`, angle range is `[0.0, 2.0]`.
+     
+     - returns: Instance of JWStackTransitionAnimationAntiClockWise.
+     */
+    case antiClockWiseCustomized(_ startAngle: Double)
+    
+    /**
+     Barrier, case `toTop` of JWStackTransitionAnimationBarrierFadeDirectionType and barrier width is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationBarrier.
+     */
+    case barrier
+    /**
+     BarrierCustomized, default animation type is `toTop`, default barrier width is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationBarrier.
+     */
+    case barrierCustomized(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)
+    
+    /**
+     Blank.
+
+     - returns: Instance of JWStackTransitionAnimationBlank.
+     */
+    case blank
+    
+    /**
+     Circle.
+     
+     - returns: Instance of JWStackTransitionAnimationCircle.
+     */
+    case circle
+    
+    /**
+     ClockWise, start angle is `0.5`.
+     
+     - returns: Instance of JWStackTransitionAnimationClockWise.
+     */
+    case clockWise
+    /**
+     ClockWiseCustomized, default animation start angle is `0.5`, angle range is `[0.0, 2.0]`.
+     
+     - returns: Instance of JWStackTransitionAnimationClockWise.
+     */
+    case clockWiseCustomized(_ startAngle: Double)
+    
+    /**
+     Fence, case `verticalLeft` of JWStackTransitionAnimationFenceType and fence width is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationFence.
+     */
+    case fence
+    /**
+     FenceCustomized, default animation type is `verticalLeft`, default fence width is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationFence.
+     */
+    case fenceCustomized(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)
+    
+    /**
+     MultiCircle, circle diameter is `20.0`.
+     
+     - returns: Instance of JWStackTransitionAnimationMultiCircle.
+     */
+    case multiCircle
+    /**
+     MultiCircleCustomized, default single circle diameter is `20.0`, diameter range is `(0, 100]`.
+     
+     - returns: Instance of JWStackTransitionAnimationMultiCircle.
+     */
+    case multiCircleCustomized(_ diameter: CGFloat)
+    
+    /**
+     Multinest.
+     
+     - returns: Instance of JWStackTransitionAnimationMultinest.
+     */
+    case multinest
+    
+    /**
+     Official, case `crossDissolve` of JWStackTransitionAnimationOfficialType.
+     
+     - returns: Instance of JWStackTransitionAnimationOfficial.
+     */
+    case official
+    /**
+     OfficialCustomized, default animation type is `crossDissolve`.
+     
+     - returns: Instance of JWStackTransitionAnimationOfficial.
+     */
+    case officialCustomized(_ type: JWStackTransitionAnimationOfficialType)
+    
+    /**
+     Rectangler, case `waveIn` of JWStackTransitionAnimationRectanglerWave.
+     
+     - returns: Instance of JWStackTransitionAnimationRectangler.
+     */
+    case rectangler
+    /**
+     RectanglerCustomized, default animation type is `waveIn`.
+     
+     - returns: Instance of JWStackTransitionAnimationRectangler.
+     */
+    case rectanglerCustomized(_ wave: JWStackTransitionAnimationRectanglerWave)
+    
+    /**
+     Roll, case `y` of JWStackTransitionAnimationRollAxis.
+     
+     - returns: Instance of JWStackTransitionAnimationRoll.
+     */
+    case roll
+    /**
+     RollCustomized, default animation roll axis is `y`.
+     
+     - returns: Instance of JWStackTransitionAnimationRoll.
+     */
+    case rollCustomized(_ axis: JWStackTransitionAnimationRollAxis)
+    
+    /**
+     Rotate.
+     
+     - returns: Instance of JWStackTransitionAnimationRotate.
+     */
+    case rotate
+    
+    /**
+     Sector, case `left` of JWStackTransitionAnimationRectEdge.
+     
+     - returns: Instance of JWStackTransitionAnimationSector.
+     */
+    case sector
+    /**
+     sectorCustomized, default animation rect edge is `left`.
+     
+     - returns: Instance of JWStackTransitionAnimationSector.
+     */
+    case sectorCustomized(_ edge: JWStackTransitionAnimationRectEdge)
+    
+    /**
+     Slant, case `topLeft` of JWStackTransitionAnimationRectCorner.
+     
+     - returns: Instance of JWStackTransitionAnimationSlant.
+     */
+    case slant
+    /**
+     SlantCustomized, default animation rect corner is `topLeft`.
+     
+     - returns: Instance of JWStackTransitionAnimationSlant.
+     */
+    case slantCustomized(_ corner: JWStackTransitionAnimationRectCorner)
+    
+    /**
+     Split, case `horizontal` of JWStackTransitionAnimationSplitType.
+     
+     - returns: Instance of JWStackTransitionAnimationSplit.
+     */
+    case split
+    /**
+     SplitCustomized, default split type is `horizontal`.
+     
+     - returns: Instance of JWStackTransitionAnimationSplit.
+     */
+    case splitCustomized(_ type: JWStackTransitionAnimationSplitType)
+    
+    /**
+     Swing, case `left` of JWStackTransitionAnimationRectEdge.
+     
+     - returns: Instance of JWStackTransitionAnimationSwing.
+     */
+    case swing
+    /**
+     SwingCustomized, default animation rect edge is `left`.
+     
+     - returns: Instance of JWStackTransitionAnimationSwing.
+     */
+    case swingCustomized(_ edge: JWStackTransitionAnimationRectEdge)
+    
+    /**
+     TiledFlip, case `flipFromRight` of JWStackTransitionAnimationOfficialType, tiled row is 10 and column is 5.
+     
+     - returns: Instance of JWStackTransitionAnimationTiledFlip.
+     */
+    case tiledFlip
+    /**
+     TiledFlipCustomized, default animation type is flipFromRight, default tiled row is 10 and range is (0, 20], default tiled column is 5 and range is (0, 10].
+     
+     - returns: Instance of JWStackTransitionAnimationTiledFlip.
+     */
+    case tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)
+    
+    /**
+     Translate, case `left` of JWStackTransitionAnimationRectEdge.
+     
+     - returns: Instance of JWStackTransitionAnimationTranslate.
+     */
+    case translate
+    /**
+     TranslateCustomized, default animation rect edge is `left`.
+     
+     - returns: Instance of JWStackTransitionAnimationTranslate.
+     */
+    case translateCustomized(_ edge: JWStackTransitionAnimationRectEdge)
+}
+
+extension JWStackTransitionType {
+    
+    func animation() -> JWStackTransitionAnimationDelegate {
+        switch self {
+        case .antiClockWise:
+            return JWStackTransitionAnimationAntiClockWise(1.5)
+        case .antiClockWiseCustomized(let angle):
+            return JWStackTransitionAnimationAntiClockWise(angle)
+        case .barrier:
+            return JWStackTransitionAnimationBarrier(.toTop, width: 20.0)
+        case .barrierCustomized(let type, let width):
+            return JWStackTransitionAnimationBarrier(type, width: width)
+        case .blank:
+            return JWStackTransitionAnimationBlank()
+        case .circle:
+            return JWStackTransitionAnimationCircle()
+        case .clockWise:
+            return JWStackTransitionAnimationClockWise(0.5)
+        case .clockWiseCustomized(let angle):
+            return JWStackTransitionAnimationClockWise(angle)
+        case .fence:
+            return JWStackTransitionAnimationFence(.verticalLeft, width: 20.0)
+        case .fenceCustomized(let type, let width):
+            return JWStackTransitionAnimationFence(type, width: width)
+        case .multiCircle:
+            return JWStackTransitionAnimationMultiCircle(20.0)
+        case .multiCircleCustomized(let diameter):
+            return JWStackTransitionAnimationMultiCircle(diameter)
+        case .multinest:
+            return JWStackTransitionAnimationMultinest()
+        case .official:
+            return JWStackTransitionAnimationOfficial(.crossDissolve)
+        case .officialCustomized(let type):
+            return JWStackTransitionAnimationOfficial(type)
+        case .rectangler:
+            return JWStackTransitionAnimationRectangler(.waveIn)
+        case .rectanglerCustomized(let wave):
+            return JWStackTransitionAnimationRectangler(wave)
+        case .roll:
+            return JWStackTransitionAnimationRoll(.y)
+        case .rollCustomized(let axis):
+            return JWStackTransitionAnimationRoll(axis)
+        case .rotate:
+            return JWStackTransitionAnimationRotate()
+        case .sector:
+            return JWStackTransitionAnimationSector(.left)
+        case .sectorCustomized(let edge):
+            return JWStackTransitionAnimationSector(edge)
+        case .slant:
+            return JWStackTransitionAnimationSlant(.topLeft)
+        case .slantCustomized(let type):
+            return JWStackTransitionAnimationSlant(type)
+        case .split:
+            return JWStackTransitionAnimationSplit(.horizontal)
+        case .splitCustomized(let type):
+            return JWStackTransitionAnimationSplit(type)
+        case .swing:
+            return JWStackTransitionAnimationSwing(.left)
+        case .swingCustomized(let edge):
+            return JWStackTransitionAnimationSwing(edge)
+        case .tiledFlip:
+            return JWStackTransitionAnimationTiledFlip(.flipFromRight, tiledRow: 0, tiledColumn: 0)
+        case .tiledFlipCustomized(let type, let row, let column):
+            return JWStackTransitionAnimationTiledFlip(type, tiledRow: row, tiledColumn: column)
+        case .translate:
+            return JWStackTransitionAnimationTranslate(.left)
+        case .translateCustomized(let edge):
+            return JWStackTransitionAnimationTranslate(edge)
+        }
+    }
+    
+}
+
+#endif

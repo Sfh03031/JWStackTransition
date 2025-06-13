@@ -19,16 +19,16 @@ public class JWStackTransitionAnimationRoll: JWStackTransitionAnimationDelegate 
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(toView)
+        containerView.addSubview(fromView)
         
         let tempView = UIView()
-        tempView.frame = fromVC.view.bounds
-        tempView.addSubview(fromVC.view)
+        tempView.frame = fromView.bounds
+        tempView.addSubview(fromView)
         containerView.addSubview(tempView)
         
         toRoll(tempView, scale: 1.0 - self.step, transitionContext: transitionContext)

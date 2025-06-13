@@ -18,11 +18,11 @@ public class JWStackTransitionAnimationOfficial: JWStackTransitionAnimationDeleg
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(fromView)
         
         var options: UIView.AnimationOptions = []
         switch self.type {
@@ -50,7 +50,7 @@ public class JWStackTransitionAnimationOfficial: JWStackTransitionAnimationDeleg
         }
         
         UIView.transition(with: containerView, duration: duration, options: options, animations: {
-            containerView.addSubview(toVC.view)
+            containerView.addSubview(toView)
         }, completion: { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })

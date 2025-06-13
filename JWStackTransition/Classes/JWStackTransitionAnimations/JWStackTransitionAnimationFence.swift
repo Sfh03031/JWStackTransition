@@ -24,22 +24,21 @@ public class JWStackTransitionAnimationFence: JWStackTransitionAnimationDelegate
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromVC = transitionContext.viewController(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to) else { return }
+        guard let fromView = transitionContext.view(forKey: .from),
+              let toView = transitionContext.view(forKey: .to) else { return }
 
         let containerView = transitionContext.containerView
-        containerView.addSubview(toVC.view)
-        containerView.addSubview(fromVC.view)
+        containerView.addSubview(toView)
+        containerView.addSubview(fromView)
         
-        let fromW = fromVC.view.frame.width
-        let fromH = fromVC.view.frame.height
+        let fromW = fromView.frame.width
+        let fromH = fromView.frame.height
         
         let maskLayer = CALayer()
         maskLayer.bounds = CGRect(x: 0, y: 0, width: fromW, height: fromH)
         maskLayer.position = CGPoint(x: fromW / 2, y: fromH / 2)
         
-        let maskSize = fromVC.view.bounds.size
-        
+        let maskSize = fromView.bounds.size
         
         switch self.type {
         case .verticalLeft, .verticalRight:
@@ -108,15 +107,14 @@ public class JWStackTransitionAnimationFence: JWStackTransitionAnimationDelegate
             break
         }
         
-        fromVC.view.isUserInteractionEnabled = false
+        fromView.isUserInteractionEnabled = false
         JWStackTransition.delay(second: duration) {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            fromVC.view.isUserInteractionEnabled = true
-            fromVC.view.layer.mask = nil
+            fromView.isUserInteractionEnabled = true
+            fromView.layer.mask = nil
         }
         
-        fromVC.view.layer.mask = maskLayer
-
+        fromView.layer.mask = maskLayer
     }
     
 }
