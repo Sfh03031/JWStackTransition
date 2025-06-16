@@ -71,4 +71,14 @@ public enum JWStackTransitionAnimationRectanglerWave {
     case waveOut
 }
 
+public enum JWStackTransitionAnimationFoldDirectionType {
+    case fromLeftToRight
+    case fromRightToLeft
+}
+
+public enum JWStackTransitionAnimationDoorType {
+    case open
+    case close
+}
+
 #endif

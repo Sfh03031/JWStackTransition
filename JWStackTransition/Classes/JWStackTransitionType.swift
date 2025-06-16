@@ -18,6 +18,8 @@ import UIKit
  - Circle:                      Circle animation.
  - ClockWise:                   ClockWise animation.
  - Fence:                       Fence animation.
+ - Flip:                        Flip animation.
+ - Fold:                        Fold animation.
  - MultiCircle:                 MultiCircle animation.
  - Multinest:                   Multinest animation.
  - Official:                    Official animation.
@@ -35,6 +37,8 @@ import UIKit
  - BarrierCustomized:           BarrierCustomized animation.
  - ClockWiseCustomized:         ClockWiseCustomized animation.
  - FenceCustomized:             FenceCustomized animation.
+ - FlipCustomized:              FlipCustomized animation.
+ - FoldCustomized:              FoldCustomized animation.
  - MultiCircleCustomized:       MultiCircleCustomized animation.
  - OfficialCustomized:          OfficialCustomized animation.
  - RectanglerCustomized:        RectanglerCustomized animation.
@@ -106,6 +110,32 @@ public enum JWStackTransitionType {
     case clockWiseCustomized(_ startAngle: Double)
     
     /**
+     Door, case `open` of JWStackTransitionAnimationDoorType.
+     
+     - returns: Instance of JWStackTransitionAnimationDoor.
+     */
+    case door
+    /**
+     DoorCustomized, default animation type is `open`.
+     
+     - returns: Instance of JWStackTransitionAnimationDoor.
+     */
+    case doorCustomized(_ type: JWStackTransitionAnimationDoorType)
+    
+    /**
+     Explode, piece width is 30.0.
+     
+     - returns: Instance of JWStackTransitionAnimationExplode.
+     */
+    case explode
+    /**
+     ExplodeCustomized, default explode piece width is 30.0.
+     
+     - returns: Instance of JWStackTransitionAnimationExplode.
+     */
+    case explodeCustomized(_ pieceWidth: CGFloat)
+    
+    /**
      Fence, case `verticalLeft` of JWStackTransitionAnimationFenceType and fence width is `20.0`.
      
      - returns: Instance of JWStackTransitionAnimationFence.
@@ -117,6 +147,32 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationFence.
      */
     case fenceCustomized(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)
+    
+    /**
+     Flip, case `fromLeftToRight` of JWStackTransitionAnimationFoldDirectionType.
+     
+     - returns: Instance of JWStackTransitionAnimationFlip.
+     */
+    case Flip
+    /**
+     FlipCustomized, default animation type is `fromLeftToRight`.
+     
+     - returns: Instance of JWStackTransitionAnimationFlip.
+     */
+    case FlipCustomized(_ type: JWStackTransitionAnimationFoldDirectionType)
+    
+    /**
+     Fold, case `fromLeftToRight` of JWStackTransitionAnimationFoldDirectionType and fold number is `2`.
+     
+     - returns: Instance of JWStackTransitionAnimationFold.
+     */
+    case fold
+    /**
+     FoldCustomized, default animation type is `fromLeftToRight`, default fold number is `2`.
+     
+     - returns: Instance of JWStackTransitionAnimationFold.
+     */
+    case foldCustomized(_ type: JWStackTransitionAnimationFoldDirectionType, foldNum: Int)
     
     /**
      MultiCircle, circle diameter is `20.0`.
@@ -283,10 +339,26 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationClockWise(0.5)
         case .clockWiseCustomized(let angle):
             return JWStackTransitionAnimationClockWise(angle)
+        case .door:
+            return JWStackTransitionAnimationDoor(.open)
+        case .doorCustomized(let type):
+            return JWStackTransitionAnimationDoor(type)
+        case .explode:
+            return JWStackTransitionAnimationExplode(30.0)
+        case .explodeCustomized(let width):
+            return JWStackTransitionAnimationExplode(width)
         case .fence:
             return JWStackTransitionAnimationFence(.verticalLeft, width: 20.0)
         case .fenceCustomized(let type, let width):
             return JWStackTransitionAnimationFence(type, width: width)
+        case .Flip:
+            return JWStackTransitionAnimationFlip(.fromLeftToRight)
+        case .FlipCustomized(let type):
+            return JWStackTransitionAnimationFlip(type)
+        case .fold:
+            return JWStackTransitionAnimationFold(.fromLeftToRight, foldNum: 2)
+        case .foldCustomized(let type, let number):
+            return JWStackTransitionAnimationFold(type, foldNum: number)
         case .multiCircle:
             return JWStackTransitionAnimationMultiCircle(20.0)
         case .multiCircleCustomized(let diameter):

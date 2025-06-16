@@ -34,6 +34,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let imgList = ["galleryImage01", "galleryImage02", "galleryImage03", "galleryImage04", "galleryImage05", "galleryImage06", "galleryImage07", "galleryImage08", "lightning1", "lightning2", "moon1", "moon2", "snow1", "snow2", "sun1", "sun2", "tornado1", "tornado2"]
     
     let dataList = [
+        Examples(title: "Door", list: [
+            ExampleItem(name: "default, door open", type: .door),
+            ExampleItem(name: "door colse", type: .doorCustomized(.close)),
+        ]),
+        Examples(title: "Explode", list: [
+            ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
+            ExampleItem(name: "random in [20.0, 200.0]", type: .explodeCustomized(CGFloat.random(in: 20.0...200.0))),
+        ]),
+        Examples(title: "Flip", list: [
+            ExampleItem(name: "default, fromLeftToRight", type: .Flip),
+            ExampleItem(name: "fromRightToLeft", type: .FlipCustomized(.fromRightToLeft))
+        ]),
+        Examples(title: "Fold", list: [
+            ExampleItem(name: "default, fromLeftToRight and fold number is 2", type: .fold),
+            ExampleItem(name: "fromLeftToRight and fold number is 4", type: .foldCustomized(.fromLeftToRight, foldNum: 4)),
+            ExampleItem(name: "fromRightToLeft and fold number is 2", type: .foldCustomized(.fromRightToLeft, foldNum: 2)),
+            ExampleItem(name: "fromRightToLeft and fold number is 4", type: .foldCustomized(.fromRightToLeft, foldNum: 4))
+        ]),
         Examples(title: "AntiClockWise", list: [
             ExampleItem(name: "default, start angle is 1.5", type: .antiClockWise),
             ExampleItem(name: "start angle is 0.0", type: .antiClockWiseCustomized(0.0)),
@@ -67,6 +85,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "horizontalBottom and width is 20", type: .fenceCustomized(.horizontalBottom, width: 20.0)),
             ExampleItem(name: "horizontalCross and width is 25", type: .fenceCustomized(.horizontalCross, width: 25.0)),
         ]),
+        
         Examples(title: "MultiCircle", list: [
             ExampleItem(name: "default, diameter is 20", type: .multiCircle),
             ExampleItem(name: "diameter is 30", type: .multiCircleCustomized(30)),

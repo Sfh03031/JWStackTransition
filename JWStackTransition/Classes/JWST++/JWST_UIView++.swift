@@ -16,4 +16,20 @@ extension UIView {
         
         return img
     }
+    
+    /// make gradient
+    /// - Parameters:
+    ///   - colors: gradient colors
+    ///   - locations: gradient locations
+    ///   - start: gradient start point
+    ///   - end: gradient end point
+    func makeGradient(_ colors: [Any], locations: [NSNumber], start: CGPoint, end: CGPoint) {
+        let gradient = CAGradientLayer()
+        gradient.colors = colors
+//        gradient.locations = locations
+        gradient.startPoint = start
+        gradient.endPoint = end
+        gradient.frame = self.bounds
+        self.layer.insertSublayer(gradient, at: 1)
+    }
 }
