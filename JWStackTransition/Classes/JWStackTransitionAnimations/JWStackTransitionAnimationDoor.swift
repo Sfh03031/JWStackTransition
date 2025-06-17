@@ -95,7 +95,8 @@ extension JWStackTransitionAnimationDoor {
         
         // add the toView and send offscreen, in order to allow snapshotting
         toView.frame = transitionContext.finalFrame(for: toVC)
-        toView.frame = CGRectOffset(toView.frame, 2.0 * toView.frame.width, 0) // set 2.0 times the width offscreen
+        // TODO: set -2.0 times the width offscreen
+        toView.frame = CGRectOffset(toView.frame, -2.0 * toView.frame.width, 0)
         containerView.addSubview(toView)
         
         // add left door view to the container
@@ -189,7 +190,8 @@ extension JWStackTransitionAnimationDoor {
         
         // add the toView and send offscreen, in order to allow snapshotting
         toView.frame = transitionContext.finalFrame(for: toVC)
-        toView.frame = CGRectOffset(toView.frame, 2.0 * toView.frame.width, 0) // set 2.0 times the width offscreen
+        // TODO: set 1.0 times the height offscreen
+        toView.frame = CGRectOffset(toView.frame, 0, toView.frame.height)
         containerView.addSubview(toView)
         
         // add top door view to the container

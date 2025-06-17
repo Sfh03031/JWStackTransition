@@ -11,9 +11,9 @@ import UIKit
 
 public class JWStackTransitionAnimationFlip: JWStackTransitionAnimationDelegate {
     
-    private var type: JWStackTransitionAnimationFoldDirectionType = .fromLeftToRight // animation fold direction type
+    private var type: JWStackTransitionAnimationFoldType = .fromLeftToRight // animation fold direction type
     
-    public init(_ type: JWStackTransitionAnimationFoldDirectionType) {
+    public init(_ type: JWStackTransitionAnimationFoldType) {
         self.type = type
     }
     
@@ -43,7 +43,7 @@ public class JWStackTransitionAnimationFlip: JWStackTransitionAnimationDelegate 
         var fromFlipView = fromShotList[self.type == .fromRightToLeft ? 1 : 0]
         var toFlipView = toShotList[self.type == .fromRightToLeft ? 0 : 1]
         
-        // replace the from- and to- views with container views that include gradients
+        // replace the fromView and toView with container views that include gradients
         fromFlipView = self.addGradient(fromFlipView, reverse: self.type != .fromRightToLeft)
         let fromFlipGradientView = fromFlipView.subviews[1]
         fromFlipGradientView.alpha = 0.0
@@ -61,7 +61,7 @@ public class JWStackTransitionAnimationFlip: JWStackTransitionAnimationDelegate 
         
         // animate
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: []) {
-            // rotate the from- view to 90 degrees
+            // rotate to 90 degrees
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.5) {
                 fromFlipView.layer.transform = self.rotate(self.type == .fromRightToLeft ? -0.5 * .pi : 0.5 * .pi)
                 fromFlipGradientView.alpha = 1.0
@@ -100,7 +100,6 @@ extension JWStackTransitionAnimationFlip {
         let leftView = view.resizableSnapshotView(from: leftRegin, afterScreenUpdates: afterUpdate, withCapInsets: .zero) ?? UIView()
         leftView.frame = leftRegin
         containerView.addSubview(leftView)
-        
         
         // snapshot the right-hand side of the view
         let rightRegin = CGRectMake(size.width / 2, 0, size.width / 2, size.height)

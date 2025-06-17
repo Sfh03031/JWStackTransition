@@ -11,25 +11,25 @@ import UIKit
 
 public class JWStackTransitionAnimationFold: JWStackTransitionAnimationDelegate {
     
+    private var type: JWStackTransitionAnimationFoldType = .fromLeftToRight // animation fold direction type
     private var foldNum: Int = 2 // animation fold number
-    private var type: JWStackTransitionAnimationFoldDirectionType = .fromLeftToRight // animation fold direction type
     
-    public init(_ type: JWStackTransitionAnimationFoldDirectionType, foldNum: Int) {
+    public init(_ type: JWStackTransitionAnimationFoldType, foldNum: Int) {
         self.type = type
         self.foldNum = foldNum
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromView = transitionContext.view(forKey: .from),
-              let toVC = transitionContext.viewController(forKey: .to),
+        guard let toVC = transitionContext.viewController(forKey: .to),
+              let fromView = transitionContext.view(forKey: .from),
               let toView = transitionContext.view(forKey: .to) else { return }
         
         let containerView = transitionContext.containerView
         
         // final frame of toView
         toView.frame = transitionContext.finalFrame(for: toVC)
-        // toView rect move offset
-        toView.frame = CGRectOffset(toView.frame, toView.frame.width, 0)
+        // TODO: toView rect move offset, set 2.0 times the height offscreen
+        toView.frame = CGRectOffset(toView.frame, 0, 2.0 * toView.frame.height)
         containerView.addSubview(toView)
         
         // add a perspective transform
@@ -48,7 +48,7 @@ public class JWStackTransitionAnimationFold: JWStackTransitionAnimationDelegate 
         for i in 0..<self.foldNum {
             let offset = CGFloat(i) * foldW * 2
             
-            // the left and right side of the fold for the from- view, with identity transform and 0.0 alpha
+            // the left and right side of the fold for the fromView, with identity transform and 0.0 alpha
             // on the shadow, with each view at its initial position
             let leftFromView = self.creatShot(fromView, afterUpdate: false, offset: offset, left: true)
             leftFromView.layer.position = CGPoint(x: offset, y: size.height / 2)
@@ -60,7 +60,7 @@ public class JWStackTransitionAnimationFold: JWStackTransitionAnimationDelegate 
             fromFoldList.append(rightFromView)
             rightFromView.subviews[1].alpha = 0.0
             
-            // the left and right side of the fold for the to- view, with a 90-degree transform and 1.0 alpha
+            // the left and right side of the fold for the toView, with a 90-degree transform and 1.0 alpha
             // on the shadow, with each view positioned at the very edge of the screen
             let leftToView = self.creatShot(toView, afterUpdate: true, offset: offset, left: true)
             leftToView.layer.position = CGPoint(x: self.type == .fromRightToLeft ? size.width : 0.0, y: size.height / 2)
@@ -73,8 +73,8 @@ public class JWStackTransitionAnimationFold: JWStackTransitionAnimationDelegate 
             toFoldList.append(rightToView)
         }
         
-        // move the from- view off screen
-        fromView.frame = CGRectOffset(fromView.frame, fromView.frame.width, 0)
+        // move the fromView off screen
+        fromView.frame = CGRectOffset(fromView.frame, -2.0 * fromView.frame.width, 0)
         
         // create the animation, set the final state for each fold
         UIView.animate(withDuration: duration) {

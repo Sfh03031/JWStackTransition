@@ -36,6 +36,7 @@ class StackViewController: UIViewController {
     lazy var imgView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         return view

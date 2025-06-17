@@ -11,10 +11,10 @@ import UIKit
 
 public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelegate {
     
-    private var explodePiceWidth: CGFloat = 50.0 // explode pice width
+    private var explodePieceWidth: CGFloat = 50.0 // explode pice width
     
-    init(_ explodePiceWidth: CGFloat) {
-        self.explodePiceWidth = explodePiceWidth
+    init(_ explodePieceWidth: CGFloat) {
+        self.explodePieceWidth = explodePieceWidth
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
@@ -30,7 +30,7 @@ public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelega
         
         var tempList: [UIView] = []
         
-        let factorW = self.explodePiceWidth
+        let factorW = self.explodePieceWidth
         let factorH = factorW * size.height / size.width
         
         let fromShot = fromView.snapshotView(afterScreenUpdates: false) ?? UIView()
@@ -40,10 +40,12 @@ public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelega
         for i in 0..<columnNum {
             for j in 0..<rowNum {
                 let rect = CGRect(x: CGFloat(i) * factorW, y: CGFloat(j) * factorH, width: factorW, height: factorH)
-                let shot = fromShot.resizableSnapshotView(from: rect, afterScreenUpdates: false, withCapInsets: .zero) ?? UIView()
-                shot.frame = rect
-                containerView.addSubview(shot)
-                tempList.append(shot)
+                // FIXME: Snapshotting a view (0x126cf1680, _UIReplicantView) that has not been rendered at least once requires afterScreenUpdates:YES
+                if let shot = fromShot.resizableSnapshotView(from: rect, afterScreenUpdates: false, withCapInsets: .zero) {
+                    shot.frame = rect
+                    containerView.addSubview(shot)
+                    tempList.append(shot)
+                }
             }
         }
         
@@ -55,7 +57,10 @@ public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelega
                 let offsetY = self.randomBetween(small: -100.0, big: 100.0)
                 view.frame = CGRectOffset(view.frame, CGFloat(offsetX), CGFloat(offsetY))
                 view.alpha = 0.0
-                view.transform = CGAffineTransformScale(CGAffineTransformMakeRotation(CGFloat(self.randomBetween(small: -10.0, big: 10.0))), 0.01, 0.01)
+                
+                let offsetR = self.randomBetween(small: -10.0, big: 10.0)
+                let rotation = CGAffineTransformMakeRotation(CGFloat(offsetR))
+                view.transform = CGAffineTransformScale(rotation, 0.01, 0.01)
             }
         } completion: { _ in
             for view in tempList {

@@ -110,6 +110,19 @@ public enum JWStackTransitionType {
     case clockWiseCustomized(_ startAngle: Double)
     
     /**
+     Cube, case `fromLeftToRight` of JWStackTransitionAnimationCubeType.
+     
+     - returns: Instance of JWStackTransitionAnimationCube.
+     */
+    case cube
+    /**
+     CubeCustomized, default animation case is `fromLeftToRight` of JWStackTransitionAnimationCubeType.
+     
+     - returns: Instance of JWStackTransitionAnimationCube.
+     */
+    case cubeCustomized(_ type: JWStackTransitionAnimationCubeType)
+    
+    /**
      Door, case `horizontalOpen` of JWStackTransitionAnimationDoorType and animation scale is `0.8`.
      
      - returns: Instance of JWStackTransitionAnimationDoor.
@@ -159,7 +172,7 @@ public enum JWStackTransitionType {
      
      - returns: Instance of JWStackTransitionAnimationFlip.
      */
-    case FlipCustomized(_ type: JWStackTransitionAnimationFoldDirectionType)
+    case FlipCustomized(_ type: JWStackTransitionAnimationFoldType)
     
     /**
      Fold, case `fromLeftToRight` of JWStackTransitionAnimationFoldDirectionType and fold number is `2`.
@@ -172,7 +185,7 @@ public enum JWStackTransitionType {
      
      - returns: Instance of JWStackTransitionAnimationFold.
      */
-    case foldCustomized(_ type: JWStackTransitionAnimationFoldDirectionType, foldNum: Int)
+    case foldCustomized(_ type: JWStackTransitionAnimationFoldType, foldNum: Int)
     
     /**
      MultiCircle, circle diameter is `20.0`.
@@ -339,6 +352,10 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationClockWise(0.5)
         case .clockWiseCustomized(let angle):
             return JWStackTransitionAnimationClockWise(angle)
+        case .cube:
+            return JWStackTransitionAnimationCube(.fromLeftToRight)
+        case .cubeCustomized(let type):
+            return JWStackTransitionAnimationCube(type)
         case .door:
             return JWStackTransitionAnimationDoor(.horizontalOpen, scale: 0.8)
         case .doorCustomized(let type, let scale):

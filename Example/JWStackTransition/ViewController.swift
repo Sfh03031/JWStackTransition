@@ -34,26 +34,33 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let imgList = ["galleryImage01", "galleryImage02", "galleryImage03", "galleryImage04", "galleryImage05", "galleryImage06", "galleryImage07", "galleryImage08", "lightning1", "lightning2", "moon1", "moon2", "snow1", "snow2", "sun1", "sun2", "tornado1", "tornado2"]
     
     let dataList = [
+        Examples(title: "Cube", list: [
+            ExampleItem(name: "default, fromLeftToRight", type: .cube),
+            ExampleItem(name: "fromRightToLeft", type: .cubeCustomized(.fromRightToLeft)),
+            ExampleItem(name: "fromTopToBottom", type: .cubeCustomized(.fromTopToBottom)),
+            ExampleItem(name: "fromBottomToTop", type: .cubeCustomized(.fromBottomToTop))
+        ]),
+        Examples(title: "Fold", list: [
+            ExampleItem(name: "default, fromLeftToRight and fold number is 2", type: .fold),
+            ExampleItem(name: "fromLeftToRight and fold number is 4", type: .foldCustomized(.fromLeftToRight, foldNum: 4)),
+            ExampleItem(name: "fromRightToLeft and fold number is 6", type: .foldCustomized(.fromRightToLeft, foldNum: 6)),
+            ExampleItem(name: "fromRightToLeft and fold number is 8", type: .foldCustomized(.fromRightToLeft, foldNum: 8))
+        ]),
         Examples(title: "Door", list: [
             ExampleItem(name: "default, horizontalClose and scale is 0.8", type: .door),
-            ExampleItem(name: "horizontalClose and scale is 0.5", type: .doorCustomized(.horizontalClose, scale: 0.5)),
-            ExampleItem(name: "verticalOpen and scale is 0.5", type: .doorCustomized(.verticalOpen, scale: 0.5)),
-            ExampleItem(name: "verticalClose and scale is 0.5", type: .doorCustomized(.verticalClose, scale: 0.5)),
+            ExampleItem(name: "horizontalClose and scale is 0.6", type: .doorCustomized(.horizontalClose, scale: 0.6)),
+            ExampleItem(name: "verticalOpen and scale is 0.4", type: .doorCustomized(.verticalOpen, scale: 0.4)),
+            ExampleItem(name: "verticalClose and scale is 0.2", type: .doorCustomized(.verticalClose, scale: 0.2)),
         ]),
         Examples(title: "Explode", list: [
             ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
-            ExampleItem(name: "random in [20.0, 200.0]", type: .explodeCustomized(CGFloat.random(in: 20.0...200.0))),
+            ExampleItem(name: "random in [20.0, 200.0]", type: .explodeCustomized(80.0)),
         ]),
         Examples(title: "Flip", list: [
             ExampleItem(name: "default, fromLeftToRight", type: .Flip),
             ExampleItem(name: "fromRightToLeft", type: .FlipCustomized(.fromRightToLeft))
         ]),
-        Examples(title: "Fold", list: [
-            ExampleItem(name: "default, fromLeftToRight and fold number is 2", type: .fold),
-            ExampleItem(name: "fromLeftToRight and fold number is 4", type: .foldCustomized(.fromLeftToRight, foldNum: 4)),
-            ExampleItem(name: "fromRightToLeft and fold number is 2", type: .foldCustomized(.fromRightToLeft, foldNum: 2)),
-            ExampleItem(name: "fromRightToLeft and fold number is 4", type: .foldCustomized(.fromRightToLeft, foldNum: 4))
-        ]),
+        
         Examples(title: "AntiClockWise", list: [
             ExampleItem(name: "default, start angle is 1.5", type: .antiClockWise),
             ExampleItem(name: "start angle is 0.0", type: .antiClockWiseCustomized(0.0)),
