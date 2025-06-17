@@ -110,17 +110,17 @@ public enum JWStackTransitionType {
     case clockWiseCustomized(_ startAngle: Double)
     
     /**
-     Door, case `open` of JWStackTransitionAnimationDoorType.
+     Door, case `horizontalOpen` of JWStackTransitionAnimationDoorType and animation scale is `0.8`.
      
      - returns: Instance of JWStackTransitionAnimationDoor.
      */
     case door
     /**
-     DoorCustomized, default animation type is `open`.
+     DoorCustomized, default animation type is `horizontalOpen`, default animation scale is `0.8` and range is `(0.0, 1.0]`.
      
      - returns: Instance of JWStackTransitionAnimationDoor.
      */
-    case doorCustomized(_ type: JWStackTransitionAnimationDoorType)
+    case doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat)
     
     /**
      Explode, piece width is 30.0.
@@ -340,9 +340,9 @@ extension JWStackTransitionType {
         case .clockWiseCustomized(let angle):
             return JWStackTransitionAnimationClockWise(angle)
         case .door:
-            return JWStackTransitionAnimationDoor(.open)
-        case .doorCustomized(let type):
-            return JWStackTransitionAnimationDoor(type)
+            return JWStackTransitionAnimationDoor(.horizontalOpen, scale: 0.8)
+        case .doorCustomized(let type, let scale):
+            return JWStackTransitionAnimationDoor(type, scale: scale)
         case .explode:
             return JWStackTransitionAnimationExplode(30.0)
         case .explodeCustomized(let width):

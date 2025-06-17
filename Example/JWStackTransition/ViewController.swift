@@ -35,8 +35,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let dataList = [
         Examples(title: "Door", list: [
-            ExampleItem(name: "default, door open", type: .door),
-            ExampleItem(name: "door colse", type: .doorCustomized(.close)),
+            ExampleItem(name: "default, horizontalClose and scale is 0.8", type: .door),
+            ExampleItem(name: "horizontalClose and scale is 0.5", type: .doorCustomized(.horizontalClose, scale: 0.5)),
+            ExampleItem(name: "verticalOpen and scale is 0.5", type: .doorCustomized(.verticalOpen, scale: 0.5)),
+            ExampleItem(name: "verticalClose and scale is 0.5", type: .doorCustomized(.verticalClose, scale: 0.5)),
         ]),
         Examples(title: "Explode", list: [
             ExampleItem(name: "default, explode piece width is 30.0", type: .explode),

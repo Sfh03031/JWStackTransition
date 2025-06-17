@@ -77,8 +77,10 @@ public enum JWStackTransitionAnimationFoldDirectionType {
 }
 
 public enum JWStackTransitionAnimationDoorType {
-    case open
-    case close
+    case verticalOpen
+    case verticalClose
+    case horizontalOpen
+    case horizontalClose
 }
 
 #endif
