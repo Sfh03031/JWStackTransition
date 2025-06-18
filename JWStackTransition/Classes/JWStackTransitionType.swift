@@ -221,6 +221,19 @@ public enum JWStackTransitionType {
     case officialCustomized(_ type: JWStackTransitionAnimationOfficialType)
     
     /**
+     Pan, case `panLeft` of JWStackTransitionAnimationPanType.
+     
+     - returns: Instance of JWStackTransitionAnimationPan.
+     */
+    case pan
+    /**
+     PanCustomized, default animation type is `panLeft`.
+     
+     - returns: Instance of JWStackTransitionAnimationPan.
+     */
+    case panCustomized(_ type: JWStackTransitionAnimationPanType)
+    
+    /**
      Rectangler, case `waveIn` of JWStackTransitionAnimationRectanglerWave.
      
      - returns: Instance of JWStackTransitionAnimationRectangler.
@@ -386,6 +399,10 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationOfficial(.crossDissolve)
         case .officialCustomized(let type):
             return JWStackTransitionAnimationOfficial(type)
+        case .pan:
+            return JWStackTransitionAnimationPan(.panLeft)
+        case .panCustomized(let type):
+            return JWStackTransitionAnimationPan(type)
         case .rectangler:
             return JWStackTransitionAnimationRectangler(.waveIn)
         case .rectanglerCustomized(let wave):

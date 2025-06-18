@@ -90,5 +90,12 @@ public enum JWStackTransitionAnimationCubeType {
     case fromBottomToTop
 }
 
+public enum JWStackTransitionAnimationPanType {
+    case panLeft
+    case panRight
+    case panTop
+    case panBottom
+}
+
 
 #endif

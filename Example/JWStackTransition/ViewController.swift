@@ -34,6 +34,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let imgList = ["galleryImage01", "galleryImage02", "galleryImage03", "galleryImage04", "galleryImage05", "galleryImage06", "galleryImage07", "galleryImage08", "lightning1", "lightning2", "moon1", "moon2", "snow1", "snow2", "sun1", "sun2", "tornado1", "tornado2"]
     
     let dataList = [
+        Examples(title: "Pan", list: [
+            ExampleItem(name: "default, panLeft", type: .pan),
+            ExampleItem(name: "panRight", type: .panCustomized(.panRight)),
+            ExampleItem(name: "panTop", type: .panCustomized(.panTop)),
+            ExampleItem(name: "panBottom", type: .panCustomized(.panBottom))
+        ]),
         Examples(title: "Cube", list: [
             ExampleItem(name: "default, fromLeftToRight", type: .cube),
             ExampleItem(name: "fromRightToLeft", type: .cubeCustomized(.fromRightToLeft)),
@@ -70,11 +76,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         ]),
         Examples(title: "Barrier", list: [
             ExampleItem(name: "default, toTop and width is 20", type: .barrier),
-            ExampleItem(name: "toLeft and width is 20", type: .barrierCustomized(.toLeft, width: 5)),
-            ExampleItem(name: "toRight and width is 20", type: .barrierCustomized(.toRight, width: 10.0)),
-            ExampleItem(name: "toBottom and width is 20", type: .barrierCustomized(.toBottom, width: 15.0)),
-            ExampleItem(name: "toVerticalCenter and width is 20", type: .barrierCustomized(.toVerticalCenter, width: 20.0)),
-            ExampleItem(name: "toHorizontalCenter and width is 20", type: .barrierCustomized(.toHorizontalCenter, width: 25.0)),
+            ExampleItem(name: "toLeft and width is 5", type: .barrierCustomized(.toLeft, width: 5)),
+            ExampleItem(name: "toRight and width is 10", type: .barrierCustomized(.toRight, width: 10)),
+            ExampleItem(name: "toBottom and width is 15", type: .barrierCustomized(.toBottom, width: 15)),
+            ExampleItem(name: "toVerticalCenter and width is 20", type: .barrierCustomized(.toVerticalCenter, width: 20)),
+            ExampleItem(name: "toHorizontalCenter and width is 25", type: .barrierCustomized(.toHorizontalCenter, width: 25)),
         ]),
         Examples(title: "Circle", list: [
             ExampleItem(name: "default", type: .circle)
