@@ -15,7 +15,7 @@ The library currently contains the following animations
 
 <table>
 <tr>
-<th>start angle is 1.5</th>
+<th width="20%">start angle is 1.5</th>
 <th>start angle is 0.0</th>
 <th>start angle is 0.5</th>
 <th>start angle is 1.0</th>
@@ -23,13 +23,13 @@ The library currently contains the following animations
 </tr>
 <tr>
 <td width="20%"><img src="image/animations/AntiClockWise/default.gif"></td>
-<td width="20%"><img src="image/animations/AntiClockWise/custom_0.gif"></td>
-<td width="20%"><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
-<td width="20%"><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
-<td width="20%"><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
 </tr>
 <tr>
-<th>.anticlockwise - default</th>
+<th width="20%">.anticlockwise</th>
 <th>.antiClockWiseCustomized(0.0)</th>
 <th>.antiClockWiseCustomized(0.5)</th>
 <th>.antiClockWiseCustomized(1.0)</th>
