@@ -17,12 +17,17 @@ import UIKit
  - Blank:                       Blank animation.
  - Circle:                      Circle animation.
  - ClockWise:                   ClockWise animation.
+ - Cube:                        Cube animation.
+ - Door:                        Door animation.
+ - Explode:                     Explode animation.
  - Fence:                       Fence animation.
  - Flip:                        Flip animation.
  - Fold:                        Fold animation.
  - MultiCircle:                 MultiCircle animation.
  - Multinest:                   Multinest animation.
+ - NatGeo:                      NatGeo animation.
  - Official:                    Official animation.
+ - Pan:                         Pan animation.
  - Rectangler:                  Rectangler animation.
  - Roll:                        Roll animation.
  - Rotate                       Rotate animation.
@@ -36,11 +41,16 @@ import UIKit
  - AntiClockWiseCustomized:     AntiClockWiseCustomized animation.
  - BarrierCustomized:           BarrierCustomized animation.
  - ClockWiseCustomized:         ClockWiseCustomized animation.
+ - CubeCustomized:              CubeCustomized animation.
+ - DoorCustomized:              DoorCustomized animation.
+ - ExplodeCustomized:           ExplodeCustomized animation.
  - FenceCustomized:             FenceCustomized animation.
  - FlipCustomized:              FlipCustomized animation.
  - FoldCustomized:              FoldCustomized animation.
  - MultiCircleCustomized:       MultiCircleCustomized animation.
+ - NatGeoCustomized:            NatGeoCustomized animation.
  - OfficialCustomized:          OfficialCustomized animation.
+ - PanCustomized:               PanCustomized animation.
  - RectanglerCustomized:        RectanglerCustomized animation.
  - RollCustomized:              RollCustomized animation.
  - SectorCustomized             SectorCustomized animation.
@@ -54,7 +64,7 @@ import UIKit
 public enum JWStackTransitionType {
     
     /// All default animation types
-    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .fence, .multiCircle, .multinest, .official, .rectangler, .roll, .rotate, .sector, .slant, .split, .swing, .tiledFlip, .translate]
+    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .cube, .door, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .sector, .slant, .split, .swing, .tiledFlip, .translate]
     
     /**
      AntiClockWise, start angle is `1.5`.
@@ -68,7 +78,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationAntiClockWise.
      */
     case antiClockWiseCustomized(_ startAngle: Double)
-    
     /**
      Barrier, case `toTop` of JWStackTransitionAnimationBarrierFadeDirectionType and barrier width is `20.0`.
      
@@ -81,21 +90,18 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationBarrier.
      */
     case barrierCustomized(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)
-    
     /**
      Blank.
 
      - returns: Instance of JWStackTransitionAnimationBlank.
      */
     case blank
-    
     /**
      Circle.
      
      - returns: Instance of JWStackTransitionAnimationCircle.
      */
     case circle
-    
     /**
      ClockWise, start angle is `0.5`.
      
@@ -108,7 +114,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationClockWise.
      */
     case clockWiseCustomized(_ startAngle: Double)
-    
     /**
      Cube, case `fromLeftToRight` of JWStackTransitionAnimationCubeType.
      
@@ -121,7 +126,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationCube.
      */
     case cubeCustomized(_ type: JWStackTransitionAnimationCubeType)
-    
     /**
      Door, case `horizontalOpen` of JWStackTransitionAnimationDoorType and animation scale is `0.8`.
      
@@ -134,7 +138,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationDoor.
      */
     case doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat)
-    
     /**
      Explode, piece width is 30.0.
      
@@ -147,7 +150,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationExplode.
      */
     case explodeCustomized(_ pieceWidth: CGFloat)
-    
     /**
      Fence, case `verticalLeft` of JWStackTransitionAnimationFenceType and fence width is `20.0`.
      
@@ -160,20 +162,18 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationFence.
      */
     case fenceCustomized(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)
-    
     /**
      Flip, case `fromLeftToRight` of JWStackTransitionAnimationFoldDirectionType.
      
      - returns: Instance of JWStackTransitionAnimationFlip.
      */
-    case Flip
+    case flip
     /**
      FlipCustomized, default animation type is `fromLeftToRight`.
      
      - returns: Instance of JWStackTransitionAnimationFlip.
      */
-    case FlipCustomized(_ type: JWStackTransitionAnimationFoldType)
-    
+    case flipCustomized(_ type: JWStackTransitionAnimationFoldType)
     /**
      Fold, case `fromLeftToRight` of JWStackTransitionAnimationFoldDirectionType and fold number is `2`.
      
@@ -186,7 +186,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationFold.
      */
     case foldCustomized(_ type: JWStackTransitionAnimationFoldType, foldNum: Int)
-    
     /**
      MultiCircle, circle diameter is `20.0`.
      
@@ -199,14 +198,24 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationMultiCircle.
      */
     case multiCircleCustomized(_ diameter: CGFloat)
-    
     /**
      Multinest.
      
      - returns: Instance of JWStackTransitionAnimationMultinest.
      */
     case multinest
-    
+    /**
+     NatGeo, case `geoLeft` of JWStackTransitionAnimationNatGeoType.
+     
+     - returns: Instance of JWStackTransitionAnimationNatGeo.
+     */
+    case natGeo
+    /**
+     NatGeoCustomized, default animation type is `geoLeft`.
+     
+     - returns: Instance of JWStackTransitionAnimationNatGeo.
+     */
+    case natGeoCustomized(_ type: JWStackTransitionAnimationNatGeoType)
     /**
      Official, case `crossDissolve` of JWStackTransitionAnimationOfficialType.
      
@@ -219,7 +228,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationOfficial.
      */
     case officialCustomized(_ type: JWStackTransitionAnimationOfficialType)
-    
     /**
      Pan, case `panLeft` of JWStackTransitionAnimationPanType.
      
@@ -232,7 +240,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationPan.
      */
     case panCustomized(_ type: JWStackTransitionAnimationPanType)
-    
     /**
      Rectangler, case `waveIn` of JWStackTransitionAnimationRectanglerWave.
      
@@ -245,7 +252,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationRectangler.
      */
     case rectanglerCustomized(_ wave: JWStackTransitionAnimationRectanglerWave)
-    
     /**
      Roll, case `y` of JWStackTransitionAnimationRollAxis.
      
@@ -258,14 +264,12 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationRoll.
      */
     case rollCustomized(_ axis: JWStackTransitionAnimationRollAxis)
-    
     /**
      Rotate.
      
      - returns: Instance of JWStackTransitionAnimationRotate.
      */
     case rotate
-    
     /**
      Sector, case `left` of JWStackTransitionAnimationRectEdge.
      
@@ -278,7 +282,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationSector.
      */
     case sectorCustomized(_ edge: JWStackTransitionAnimationRectEdge)
-    
     /**
      Slant, case `topLeft` of JWStackTransitionAnimationRectCorner.
      
@@ -291,7 +294,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationSlant.
      */
     case slantCustomized(_ corner: JWStackTransitionAnimationRectCorner)
-    
     /**
      Split, case `horizontal` of JWStackTransitionAnimationSplitType.
      
@@ -304,7 +306,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationSplit.
      */
     case splitCustomized(_ type: JWStackTransitionAnimationSplitType)
-    
     /**
      Swing, case `left` of JWStackTransitionAnimationRectEdge.
      
@@ -317,7 +318,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationSwing.
      */
     case swingCustomized(_ edge: JWStackTransitionAnimationRectEdge)
-    
     /**
      TiledFlip, case `flipFromRight` of JWStackTransitionAnimationOfficialType, tiled row is 10 and column is 5.
      
@@ -330,7 +330,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationTiledFlip.
      */
     case tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)
-    
     /**
      Translate, case `left` of JWStackTransitionAnimationRectEdge.
      
@@ -381,9 +380,9 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationFence(.verticalLeft, width: 20.0)
         case .fenceCustomized(let type, let width):
             return JWStackTransitionAnimationFence(type, width: width)
-        case .Flip:
+        case .flip:
             return JWStackTransitionAnimationFlip(.fromLeftToRight)
-        case .FlipCustomized(let type):
+        case .flipCustomized(let type):
             return JWStackTransitionAnimationFlip(type)
         case .fold:
             return JWStackTransitionAnimationFold(.fromLeftToRight, foldNum: 2)
@@ -395,6 +394,10 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationMultiCircle(diameter)
         case .multinest:
             return JWStackTransitionAnimationMultinest()
+        case .natGeo:
+            return JWStackTransitionAnimationNatGeo(.geoLeft)
+        case .natGeoCustomized(let type):
+            return JWStackTransitionAnimationNatGeo(type)
         case .official:
             return JWStackTransitionAnimationOfficial(.crossDissolve)
         case .officialCustomized(let type):

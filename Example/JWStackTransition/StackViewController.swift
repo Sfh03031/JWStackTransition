@@ -33,7 +33,7 @@ class StackViewController: UIViewController {
         self.navigationController?.pop(JWStackTransitionType.allCases.randomElement())
     }
 
-    lazy var imgView: UIImageView = {
+    private lazy var imgView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true

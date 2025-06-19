@@ -34,39 +34,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let imgList = ["galleryImage01", "galleryImage02", "galleryImage03", "galleryImage04", "galleryImage05", "galleryImage06", "galleryImage07", "galleryImage08", "lightning1", "lightning2", "moon1", "moon2", "snow1", "snow2", "sun1", "sun2", "tornado1", "tornado2"]
     
     let dataList = [
-        Examples(title: "Pan", list: [
-            ExampleItem(name: "default, panLeft", type: .pan),
-            ExampleItem(name: "panRight", type: .panCustomized(.panRight)),
-            ExampleItem(name: "panTop", type: .panCustomized(.panTop)),
-            ExampleItem(name: "panBottom", type: .panCustomized(.panBottom))
-        ]),
-        Examples(title: "Cube", list: [
-            ExampleItem(name: "default, fromLeftToRight", type: .cube),
-            ExampleItem(name: "fromRightToLeft", type: .cubeCustomized(.fromRightToLeft)),
-            ExampleItem(name: "fromTopToBottom", type: .cubeCustomized(.fromTopToBottom)),
-            ExampleItem(name: "fromBottomToTop", type: .cubeCustomized(.fromBottomToTop))
-        ]),
-        Examples(title: "Fold", list: [
-            ExampleItem(name: "default, fromLeftToRight and fold number is 2", type: .fold),
-            ExampleItem(name: "fromLeftToRight and fold number is 4", type: .foldCustomized(.fromLeftToRight, foldNum: 4)),
-            ExampleItem(name: "fromRightToLeft and fold number is 6", type: .foldCustomized(.fromRightToLeft, foldNum: 6)),
-            ExampleItem(name: "fromRightToLeft and fold number is 8", type: .foldCustomized(.fromRightToLeft, foldNum: 8))
-        ]),
-        Examples(title: "Door", list: [
-            ExampleItem(name: "default, horizontalClose and scale is 0.8", type: .door),
-            ExampleItem(name: "horizontalClose and scale is 0.6", type: .doorCustomized(.horizontalClose, scale: 0.6)),
-            ExampleItem(name: "verticalOpen and scale is 0.4", type: .doorCustomized(.verticalOpen, scale: 0.4)),
-            ExampleItem(name: "verticalClose and scale is 0.2", type: .doorCustomized(.verticalClose, scale: 0.2)),
-        ]),
-        Examples(title: "Explode", list: [
-            ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
-            ExampleItem(name: "random in [20.0, 200.0]", type: .explodeCustomized(80.0)),
-        ]),
-        Examples(title: "Flip", list: [
-            ExampleItem(name: "default, fromLeftToRight", type: .Flip),
-            ExampleItem(name: "fromRightToLeft", type: .FlipCustomized(.fromRightToLeft))
-        ]),
-        
         Examples(title: "AntiClockWise", list: [
             ExampleItem(name: "default, start angle is 1.5", type: .antiClockWise),
             ExampleItem(name: "start angle is 0.0", type: .antiClockWiseCustomized(0.0)),
@@ -92,6 +59,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "start angle is 1.5", type: .clockWiseCustomized(1.5)),
             ExampleItem(name: "start angle is 2.0", type: .clockWiseCustomized(2.0))
         ]),
+        Examples(title: "Cube", list: [
+            ExampleItem(name: "default, fromLeftToRight", type: .cube),
+            ExampleItem(name: "fromRightToLeft", type: .cubeCustomized(.fromRightToLeft)),
+            ExampleItem(name: "fromTopToBottom", type: .cubeCustomized(.fromTopToBottom)),
+            ExampleItem(name: "fromBottomToTop", type: .cubeCustomized(.fromBottomToTop))
+        ]),
+        Examples(title: "Door", list: [
+            ExampleItem(name: "default, horizontalOpen and scale is 0.8", type: .door),
+            ExampleItem(name: "horizontalClose and scale is 0.6", type: .doorCustomized(.horizontalClose, scale: 0.6)),
+            ExampleItem(name: "verticalOpen and scale is 0.4", type: .doorCustomized(.verticalOpen, scale: 0.4)),
+            ExampleItem(name: "verticalClose and scale is 0.2", type: .doorCustomized(.verticalClose, scale: 0.2)),
+        ]),
+        Examples(title: "Explode", list: [
+            ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
+            ExampleItem(name: "customized explode piece width, now is 80.0", type: .explodeCustomized(80.0)),
+        ]),
         Examples(title: "Fence", list: [
             ExampleItem(name: "default, verticalLeft and width is 20", type: .fence),
             ExampleItem(name: "verticalRight and width is 5", type: .fenceCustomized(.verticalRight, width: 5.0)),
@@ -100,7 +83,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "horizontalBottom and width is 20", type: .fenceCustomized(.horizontalBottom, width: 20.0)),
             ExampleItem(name: "horizontalCross and width is 25", type: .fenceCustomized(.horizontalCross, width: 25.0)),
         ]),
-        
+        Examples(title: "Flip", list: [
+            ExampleItem(name: "default, fromLeftToRight", type: .flip),
+            ExampleItem(name: "fromRightToLeft", type: .flipCustomized(.fromRightToLeft))
+        ]),
+        Examples(title: "Fold", list: [
+            ExampleItem(name: "default, fromLeftToRight and fold number is 2", type: .fold),
+            ExampleItem(name: "fromLeftToRight and fold number is 4", type: .foldCustomized(.fromLeftToRight, foldNum: 4)),
+            ExampleItem(name: "fromRightToLeft and fold number is 6", type: .foldCustomized(.fromRightToLeft, foldNum: 6)),
+            ExampleItem(name: "fromRightToLeft and fold number is 8", type: .foldCustomized(.fromRightToLeft, foldNum: 8))
+        ]),
         Examples(title: "MultiCircle", list: [
             ExampleItem(name: "default, diameter is 20", type: .multiCircle),
             ExampleItem(name: "diameter is 30", type: .multiCircleCustomized(30)),
@@ -112,6 +104,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         Examples(title: "Multinest", list: [
             ExampleItem(name: "default", type: .multinest)
         ]),
+        Examples(title: "NatGeo", list: [
+            ExampleItem(name: "default, geoLeft", type: .natGeo),
+            ExampleItem(name: "geoRight", type: .natGeoCustomized(.geoRight)),
+        ]),
         Examples(title: "Official", list: [
             ExampleItem(name: "default, crossDissolve", type: .official),
             ExampleItem(name: "curlUp", type: .officialCustomized(.curlUp)),
@@ -120,6 +116,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "flipFromRight", type: .officialCustomized(.flipFromRight)),
             ExampleItem(name: "flipFromTop", type: .officialCustomized(.flipFromTop)),
             ExampleItem(name: "flipFromBottom", type: .officialCustomized(.flipFromBottom)),
+        ]),
+        Examples(title: "Pan", list: [
+            ExampleItem(name: "default, panLeft", type: .pan),
+            ExampleItem(name: "panRight", type: .panCustomized(.panRight)),
+            ExampleItem(name: "panTop", type: .panCustomized(.panTop)),
+            ExampleItem(name: "panBottom", type: .panCustomized(.panBottom))
         ]),
         Examples(title: "Rectangler", list: [
             ExampleItem(name: "default, waveIn", type: .rectangler),

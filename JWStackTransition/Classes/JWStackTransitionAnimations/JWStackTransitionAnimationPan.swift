@@ -11,7 +11,7 @@ import UIKit
 
 public class JWStackTransitionAnimationPan: JWStackTransitionAnimationDelegate {
     
-    private var type: JWStackTransitionAnimationPanType = .panLeft // animation cube type
+    private var type: JWStackTransitionAnimationPanType = .panLeft // animation pan type
     
     public init(_ type: JWStackTransitionAnimationPanType) {
         self.type = type
@@ -91,6 +91,5 @@ public class JWStackTransitionAnimationPan: JWStackTransitionAnimationDelegate {
         }
     }
 }
-
 
 #endif

@@ -97,5 +97,9 @@ public enum JWStackTransitionAnimationPanType {
     case panBottom
 }
 
+public enum JWStackTransitionAnimationNatGeoType {
+    case geoLeft
+    case geoRight
+}
 
 #endif
