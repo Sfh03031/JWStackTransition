@@ -5,11 +5,46 @@
 [![License](https://img.shields.io/cocoapods/l/JWStackTransition.svg?style=flat)](https://cocoapods.org/pods/JWStackTransition)
 [![Platform](https://img.shields.io/cocoapods/p/JWStackTransition.svg?style=flat)](https://cocoapods.org/pods/JWStackTransition)
 
+## Introduction
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+The library currently contains the following animations
+
+*AntiClockWise
+
+<table>
+<tr>
+<th>.anticlockwise, default</th>
+<th>.antiClockWiseCustomized(0.0)</th>
+<th>.antiClockWiseCustomized(0.5)</th>
+<th>.antiClockWiseCustomized(1.0)</th>
+<th>.antiClockWiseCustomized(2.0)</th>
+</tr>
+<tr>
+<td><img src="image/animations/AntiClockWise/default.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
+<td><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
+</tr>
+</table>
+
+## Tree
+
+Directory structure of SFStyleKit:
+
+<div align="center" >
+  <img width="85%" src="image/tree.png" />
+</div>
+
+also, [DeepWiki](https://deepwiki.com/Sfh03031/SFStyleKit/) may help you better understand SFStyleKit
 
 ## Requirements
+
+* iOS 12.0 or later
+* Swift 5.9.2
+* Xcode 15.1
 
 ## Installation
 
@@ -17,12 +52,18 @@ JWStackTransition is available through [CocoaPods](https://cocoapods.org). To in
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JWStackTransition'
+
+pod 'JWStackTransition', :git => 'https://github.com/Sfh03031/JWStackTransition.git'
+
 ```
+
+## Usage
+
+## Change log
 
 ## Author
 
-Sfh03031, sfhery@foxmail.com
+Sfh03031, sfh894645252@163.com
 
 ## License
 
