@@ -13,9 +13,9 @@ The library currently contains the following animations
 
 + **AntiClockWise**
 
-  + **anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`
+  + **anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`.
     
-  + **anticlockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
+  + **anticlockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`.
 
 <table>
     <tr>
@@ -38,9 +38,9 @@ The library currently contains the following animations
 
 + **Barrier**
 
-  + **barrier** - default case which is the same as `barrierCustomized(.toTop, width: 20.0)`
+  + **barrier** - default case which is the same as `barrierCustomized(.toTop, width: 20.0)`.
   
-  + **barrierCustomized(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)** - default animation type is `toTop`, default barrier width is `20.0`
+  + **barrierCustomized(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)** - default animation type is `toTop`, default barrier width is `20.0`.
 
 <table>
     <tr>
@@ -74,11 +74,7 @@ The library currently contains the following animations
 
   + **circle**
   
-  
 <div align="center" >
-  <img width="20%" src="image/animations/Circle/default.gif" />
-  <img width="20%" src="image/animations/Circle/default.gif" />
-  <img width="20%" src="image/animations/Circle/default.gif" />
   <img width="20%" src="image/animations/Circle/default.gif" />
 </div>
   
@@ -86,9 +82,9 @@ The library currently contains the following animations
 
 + **ClockWise**
 
-  + **clockwise** - default case which is the same as `clockwiseCustomized(1.5)`
+  + **clockwise** - default case which is the same as `clockwiseCustomized(0.5)`.
     
-  + **clockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
+  + **clockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `0.5`, angle range is `[0.0, 2.0]`.
 
 <table>
     <tr>
@@ -104,6 +100,29 @@ The library currently contains the following animations
         <th>start angle is 1.0</th>
         <th>start angle is 1.5</th>
         <th>start angle is 2.0</th>
+    </tr>
+</table>
+
+****
+
++ **Cube**
+
+  + **cube** - default case which is the same as `cubeCustomized(.fromLeftToRight)`
+    
+  + **cubeCustomized(_ type: JWStackTransitionAnimationCubeType)** - default animation case is `fromLeftToRight`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Cube/fromLeftToRight.gif"></td>
+        <td><img src="image/animations/Cube/fromRightToLeft.gif"></td>
+        <td><img src="image/animations/Cube/fromTopToBottom.gif"></td>
+        <td><img src="image/animations/Cube/fromBottomToTop.gif"></td>
+    </tr>
+        <tr>
+        <th>fromLeftToRight</th>
+        <th>fromRightToLeft</th>
+        <th>fromTopToBottom</th>
+        <th>fromBottomToTop</th>
     </tr>
 </table>
 
