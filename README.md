@@ -208,6 +208,48 @@ The library currently contains the following animations
 
 ****
 
++ **Flip**
+
+  + **flip** - default case which is the same as `flipCustomized(.fromLeftToRight)`
+    
+  + **flipCustomized(_ type: JWStackTransitionAnimationFoldType)** - default animation type is `fromLeftToRight`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Flip/fromLeftToRight.gif"></td>
+        <td><img src="image/animations/Flip/fromRightToLeft.gif"></td>
+    </tr>
+        <tr>
+        <th>fromLeftToRight</th>
+        <th>fromRightToLeft</th>
+    </tr>
+</table>
+
+****
+
++ **Fold**
+
+  + **fold** - default case which is the same as `foldCustomized(.fromLeftToRight, foldNum: 2)`
+    
+  + **foldCustomized(_ type: JWStackTransitionAnimationFoldType, foldNum: Int)** - default animation type is `fromLeftToRight`, default fold number is `2`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Fold/lr2.gif"></td>
+        <td><img src="image/animations/Fold/lr4.gif"></td>
+        <td><img src="image/animations/Fold/rl6.gif"></td>
+        <td><img src="image/animations/Fold/rl8.gif"></td>
+    </tr>
+        <tr>
+        <th>fromLeftToRight and fold number is 2</th>
+        <th>fromLeftToRight and fold number is 4</th>
+        <th>fromRightToLeft and fold number is 6</th>
+        <th>fromRightToLeft and fold number is 8</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
