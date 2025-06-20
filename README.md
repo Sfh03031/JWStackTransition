@@ -11,11 +11,11 @@
 
 The library currently contains the following animations
 
-** >>AntiClockWise<< **
++ **AntiClockWise**
 
-**anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`
+ **anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`
     
-**anticlockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
+ **anticlockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
 
 <table>
     <tr>
