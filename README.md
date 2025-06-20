@@ -70,6 +70,45 @@ The library currently contains the following animations
 
 ****
 
++ **Circle**
+
+  + **circle**
+  
+  
+<div align="center" >
+  <img width="20%" src="image/animations/Circle/default.gif" />
+  <img width="20%" src="image/animations/Circle/default.gif" />
+  <img width="20%" src="image/animations/Circle/default.gif" />
+  <img width="20%" src="image/animations/Circle/default.gif" />
+</div>
+  
+****
+
++ **ClockWise**
+
+  + **clockwise** - default case which is the same as `clockwiseCustomized(1.5)`
+    
+  + **clockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
+
+<table>
+    <tr>
+        <td><img src="image/animations/ClockWise/custom_00.gif"></td>
+        <td><img src="image/animations/ClockWise/default.gif"></td>
+        <td><img src="image/animations/ClockWise/custom_10.gif"></td>
+        <td><img src="image/animations/ClockWise/custom_15.gif"></td>
+        <td><img src="image/animations/ClockWise/custom_20.gif"></td>
+    </tr>
+        <tr>
+        <th>start angle is 0.0</th>
+        <th>start angle is 0.5</th>
+        <th>start angle is 1.0</th>
+        <th>start angle is 1.5</th>
+        <th>start angle is 2.0</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
