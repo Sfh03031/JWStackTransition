@@ -11,7 +11,7 @@
 
 The library currently contains the following animations
 
-#### AntiClockWise
+    + **AntiClockWise**
 
     + **anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`
     
