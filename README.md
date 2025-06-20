@@ -25,7 +25,7 @@ The library currently contains the following animations
         <td><img src="image/animations/AntiClockWise/default.gif"></td>
         <td><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>start angle is 0.0</th>
         <th>start angle is 0.5</th>
         <th>start angle is 1.0</th>
@@ -94,7 +94,7 @@ The library currently contains the following animations
         <td><img src="image/animations/ClockWise/custom_15.gif"></td>
         <td><img src="image/animations/ClockWise/custom_20.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>start angle is 0.0</th>
         <th>start angle is 0.5</th>
         <th>start angle is 1.0</th>
@@ -118,7 +118,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Cube/fromTopToBottom.gif"></td>
         <td><img src="image/animations/Cube/fromBottomToTop.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>fromLeftToRight</th>
         <th>fromRightToLeft</th>
         <th>fromTopToBottom</th>
@@ -141,7 +141,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Door/verOpen.gif"></td>
         <td><img src="image/animations/Door/verClose.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>horizontalOpen and scale is 0.8</th>
         <th>horizontalClose and scale is 0.6</th>
         <th>verticalOpen and scale is 0.4</th>
@@ -164,7 +164,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Explode/width45.gif"></td>
         <td><img src="image/animations/Explode/width60.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>explode piece width is 30.0</th>
         <th>explode piece width is 10.0</th>
         <th>explode piece width is 45.0</th>
@@ -186,7 +186,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Fence/verRight.gif"></td>
         <td><img src="image/animations/Fence/verCross.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>verticalLeft and width is 20.0</th>
         <th>verticalRight and width is 5.0</th>
         <th>verticalCross and width is 10.0</th>
@@ -199,7 +199,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Fence/horBottom.gif"></td>
         <td><img src="image/animations/Fence/horCross.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>horizontalTop and width is 15.0</th>
         <th>horizontalBottom and width is 20.0</th>
         <th>horizontalCross and width is 25.0</th>
@@ -219,7 +219,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Flip/fromLeftToRight.gif"></td>
         <td><img src="image/animations/Flip/fromRightToLeft.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>fromLeftToRight</th>
         <th>fromRightToLeft</th>
     </tr>
@@ -240,7 +240,7 @@ The library currently contains the following animations
         <td><img src="image/animations/Fold/rl6.gif"></td>
         <td><img src="image/animations/Fold/rl8.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>fromLeftToRight and fold number is 2</th>
         <th>fromLeftToRight and fold number is 4</th>
         <th>fromRightToLeft and fold number is 6</th>
@@ -263,7 +263,7 @@ The library currently contains the following animations
         <td><img src="image/animations/MultiCircle/diameter60.gif"></td>
         <td><img src="image/animations/MultiCircle/diameter5.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>diameter is 20.0</th>
         <th>diameter is 40.0</th>
         <th>diameter is 60.0</th>
@@ -294,9 +294,45 @@ The library currently contains the following animations
         <td><img src="image/animations/NatGeo/geoLeft.gif"></td>
         <td><img src="image/animations/NatGeo/geoRight.gif"></td>
     </tr>
-        <tr>
+    <tr>
         <th>geoLeft</th>
         <th>geoRight</th>
+    </tr>
+</table>
+
+****
+
++ **Official**
+
+  + **official** - default case which is the same as `officialCustomized(.crossDissolve)`
+    
+  + **officialCustomized(_ type: JWStackTransitionAnimationOfficialType)** - default animation type is `crossDissolve`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Official/crossDissolve.gif"></td>
+        <td><img src="image/animations/Official/curlUp.gif"></td>
+        <td><img src="image/animations/Official/curlDown.gif"></td>
+    </tr>
+    <tr>
+        <th>crossDissolve</th>
+        <th>curlUp</th>
+        <th>curlDown</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Official/flipFromLeft.gif"></td>
+        <td><img src="image/animations/Official/flipFromRight.gif"></td>
+        <td><img src="image/animations/Official/flipFromTop.gif"></td>
+        <td><img src="image/animations/Official/flipFromBottom.gif"></td>
+    </tr>
+    <tr>
+        <th>flipFromLeft</th>
+        <th>flipFromRight</th>
+        <th>flipFromTop</th>
+        <th>flipFromBottom</th>
     </tr>
 </table>
 
