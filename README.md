@@ -7,7 +7,7 @@
 
 ## Introduction
 
-## Example
+## All animation types and some examples
 
 The library currently contains the following animations
 
@@ -61,14 +61,10 @@ The library currently contains the following animations
     <tr>
         <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
         <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
-        <th>toVerticalCenter and width is 20</th>
-        <th>toHorizontalCenter and width is 25</th>
-        <th></th>
-        <th></th>
+        <th>toVerticalCenter, 20</th>
+        <th>toHorizontalCenter, 25</th>
     </tr>
 </table>
 
