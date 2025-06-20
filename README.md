@@ -411,6 +411,29 @@ The library currently contains the following animations
   
 ****
 
++ **Sector**
+
+  + **sector** - default case which is the same as `sectorCustomized(.left)`
+    
+  + **sectorCustomized(_ edge: JWStackTransitionAnimationRectEdge)** - default animation rect edge is `left`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Sector/left.gif"></td>
+        <td><img src="image/animations/Sector/right.gif"></td>
+        <td><img src="image/animations/Sector/top.gif"></td>
+        <td><img src="image/animations/Sector/bottom.gif"></td>
+    </tr>
+    <tr>
+        <th>left</th>
+        <th>right</th>
+        <th>top</th>
+        <th>bottom</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
