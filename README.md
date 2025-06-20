@@ -74,7 +74,7 @@ The library currently contains the following animations
 
   + **circle**
   
-<div align="center" >
+<div align="left" >
   <img width="20%" src="image/animations/Circle/default.gif" />
 </div>
   
@@ -123,6 +123,29 @@ The library currently contains the following animations
         <th>fromRightToLeft</th>
         <th>fromTopToBottom</th>
         <th>fromBottomToTop</th>
+    </tr>
+</table>
+
+****
+
++ **Door**
+
+  + **door** - default case which is the same as `doorCustomized(.horizontalOpen, scale: 0.8)`
+    
+  + **doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat)** - default animation case is `horizontalOpen`, default animation scale is `0.8` and range is `(0.0, 1.0]`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Door/horOpen.gif"></td>
+        <td><img src="image/animations/Door/horClose.gif"></td>
+        <td><img src="image/animations/Door/verOpen.gif"></td>
+        <td><img src="image/animations/Door/verClose.gif"></td>
+    </tr>
+        <tr>
+        <th>horizontalOpen and scale is 0.8</th>
+        <th>horizontalClose and scale is 0.6</th>
+        <th>verticalOpen and scale is 0.4</th>
+        <th>verticalClose and scale is 0.2</th>
     </tr>
 </table>
 
