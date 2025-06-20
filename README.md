@@ -15,10 +15,10 @@ The library currently contains the following animations
 
 <table width="100%">
     <colgroup>
-        <col width="25%">
-        <col width="25%">
-        <col width="25%">
-        <col width="25%">
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
     </colgroup>
     <tr>
         <th>start angle is 1.5</th>
