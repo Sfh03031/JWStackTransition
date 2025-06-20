@@ -292,7 +292,7 @@ The library currently contains the following animations
 <table>
     <tr>
         <td><img src="image/animations/NatGeo/geoLeft.gif"></td>
-        <td><img src="image/animations/NatGeo/geoLeft.gif"></td>
+        <td><img src="image/animations/NatGeo/geoRight.gif"></td>
     </tr>
         <tr>
         <th>geoLeft</th>
