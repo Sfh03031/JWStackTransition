@@ -34,6 +34,8 @@ The library currently contains the following animations
     </tr>
 </table>
 
+——————
+
 + **Barrier**
 
   + **barrier** - default case which is the same as `barrierCustomized(.toTop, width: 20.0)`
