@@ -174,6 +174,40 @@ The library currently contains the following animations
 
 ****
 
++ **Fence**
+
+  + **fence** - default case which is the same as `fenceCustomized(verticalLeft, width: 20.0)`
+    
+  + **fenceCustomized(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)** - default animation type is `verticalLeft`, default fence width is `20.0`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Fence/verLeft.gif"></td>
+        <td><img src="image/animations/Fence/verRight.gif"></td>
+        <td><img src="image/animations/Fence/verCross.gif"></td>
+    </tr>
+        <tr>
+        <th>verticalLeft and width is 20.0</th>
+        <th>verticalRight and width is 5.0</th>
+        <th>verticalCross and width is 10.0</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Fence/horLeft.gif"></td>
+        <td><img src="image/animations/Fence/horRight.gif"></td>
+        <td><img src="image/animations/Fence/horCross.gif"></td>
+    </tr>
+        <tr>
+        <th>horizontalTop and width is 15.0</th>
+        <th>horizontalBottom and width is 20.0</th>
+        <th>horizontalCross and width is 25.0</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
