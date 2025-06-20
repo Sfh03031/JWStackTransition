@@ -338,6 +338,29 @@ The library currently contains the following animations
 
 ****
 
++ **Pan**
+
+  + **pan** - default case which is the same as `panCustomized(.panLeft)`
+    
+  + **panCustomized(_ type: JWStackTransitionAnimationPanType)** - default animation type is `panLeft`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Pan/panLeft.gif"></td>
+        <td><img src="image/animations/Pan/panRight.gif"></td>
+        <td><img src="image/animations/Pan/panTop.gif"></td>
+        <td><img src="image/animations/Pan/panBottom.gif"></td>
+    </tr>
+    <tr>
+        <th>panLeft</th>
+        <th>panRight</th>
+        <th>panTop</th>
+        <th>panBottom</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
