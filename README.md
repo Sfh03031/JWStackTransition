@@ -19,21 +19,47 @@ The library currently contains the following animations
 <th>start angle is 0.0</th>
 <th>start angle is 0.5</th>
 <th>start angle is 1.0</th>
-<th>start angle is 2.0</th>
 </tr>
 <tr>
 <td width="20%"><img src="image/animations/AntiClockWise/default.gif"></td>
 <td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
 <td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
 <td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
-<td><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
 </tr>
 <tr>
 <th width="20%">.anticlockwise</th>
 <th>.antiClockWiseCustomized(0.0)</th>
 <th>.antiClockWiseCustomized(0.5)</th>
 <th>.antiClockWiseCustomized(1.0)</th>
-<th>.antiClockWiseCustomized(2.0)</th>
+</tr>
+</table>
+
++ **Barrier**
+
+<table>
+<tr>
+<th width="20%">default, toTop and width is 20</th>
+<th>toLeft and width is 5</th>
+<th>toRight and width is 10</th>
+<th>toBottom and width is 15</th>
+<th>toVerticalCenter and width is 20</th>
+<th>toHorizontalCenter and width is 25</th>
+</tr>
+<tr>
+<td width="20%"><img src="image/animations/Barrier/default.gif"></td>
+<td><img src="image/animations/Barrier/custom_toLeft.gif"></td>
+<td><img src="image/animations/Barrier/custom_toRight.gif"></td>
+<td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
+<td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
+<td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
+</tr>
+<tr>
+<th width="20%">.barrier</th>
+<th>.barrierCustomized(.toLeft, width: 5)</th>
+<th>.barrierCustomized(.toRight, width: 10)</th>
+<th>.barrierCustomized(.toBottom, width: 15)</th>
+<th>.barrierCustomized(.toVerticalCenter, width: 20)</th>
+<th>.barrierCustomized(.toHorizontalCenter, width: 25)</th>
 </tr>
 </table>
 
