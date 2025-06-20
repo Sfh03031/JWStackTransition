@@ -82,9 +82,9 @@ The library currently contains the following animations
 
 + **ClockWise**
 
-  + **clockwise** - default case which is the same as `clockwiseCustomized(0.5)`.
+  + **clockWise** - default case which is the same as `clockWiseCustomized(0.5)`.
     
-  + **clockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `0.5`, angle range is `[0.0, 2.0]`.
+  + **clockWiseCustomized(_ startAngle: Double)** - default animation start angle is `0.5`, angle range is `[0.0, 2.0]`.
 
 <table>
     <tr>
@@ -195,8 +195,8 @@ The library currently contains the following animations
 
 <table>
     <tr>
-        <td><img src="image/animations/Fence/horLeft.gif"></td>
-        <td><img src="image/animations/Fence/horRight.gif"></td>
+        <td><img src="image/animations/Fence/horTop.gif"></td>
+        <td><img src="image/animations/Fence/horBottom.gif"></td>
         <td><img src="image/animations/Fence/horCross.gif"></td>
     </tr>
         <tr>
