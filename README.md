@@ -159,7 +159,7 @@ The library currently contains the following animations
 
 <table>
     <tr>
-        <td><img src="image/animations/Explode/width30.gif"></td>
+        <td><img src="image/animations/Explode/width_30.gif"></td>
         <td><img src="image/animations/Explode/width10.gif"></td>
         <td><img src="image/animations/Explode/width45.gif"></td>
         <td><img src="image/animations/Explode/width60.gif"></td>
