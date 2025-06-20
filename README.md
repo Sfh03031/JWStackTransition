@@ -34,7 +34,7 @@ The library currently contains the following animations
     </tr>
 </table>
 
-——————
+****
 
 + **Barrier**
 
