@@ -250,6 +250,29 @@ The library currently contains the following animations
 
 ****
 
++ **MultiCircle**
+
+  + **multiCircle** - default case which is the same as `multiCircleCustomized(20.0)`
+    
+  + **multiCircleCustomized(_ diameter: CGFloat)** - default single circle diameter is `20.0`, diameter range is `(0, 100]`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/MultiCircle/diameter20.gif"></td>
+        <td><img src="image/animations/MultiCircle/diameter40.gif"></td>
+        <td><img src="image/animations/MultiCircle/diameter60.gif"></td>
+        <td><img src="image/animations/MultiCircle/diameter5.gif"></td>
+    </tr>
+        <tr>
+        <th>diameter is 20.0</th>
+        <th>diameter is 40.0</th>
+        <th>diameter is 60.0</th>
+        <th>diameter is 5.0</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:

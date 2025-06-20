@@ -96,12 +96,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "fromRightToLeft and fold number is 8", type: .foldCustomized(.fromRightToLeft, foldNum: 8))
         ]),
         Examples(title: "MultiCircle", list: [
-            ExampleItem(name: "default, diameter is 20", type: .multiCircle),
-            ExampleItem(name: "diameter is 30", type: .multiCircleCustomized(30)),
-            ExampleItem(name: "diameter is 40", type: .multiCircleCustomized(40)),
-            ExampleItem(name: "diameter is 50", type: .multiCircleCustomized(50)),
-            ExampleItem(name: "diameter is 60", type: .multiCircleCustomized(60)),
-            ExampleItem(name: "diameter is 80", type: .multiCircleCustomized(80)),
+            ExampleItem(name: "default, diameter is 20.0", type: .multiCircle),
+            ExampleItem(name: "diameter is 40.0", type: .multiCircleCustomized(40.0)),
+            ExampleItem(name: "diameter is 60.0", type: .multiCircleCustomized(60.0)),
+            ExampleItem(name: "diameter is 5.0", type: .multiCircleCustomized(5.0)),
         ]),
         Examples(title: "Multinest", list: [
             ExampleItem(name: "default", type: .multinest)
