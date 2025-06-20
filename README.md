@@ -13,7 +13,7 @@ The library currently contains the following animations
 
 + **AntiClockWise**
 
-<table>
+<table width="100%">
     <colgroup>
         <col width="25%">
         <col width="25%">
