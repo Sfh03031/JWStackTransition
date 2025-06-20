@@ -36,31 +36,27 @@ The library currently contains the following animations
 
 + **Barrier**
 
+  + **barrier** - default case which is the same as `barrierCustomized(.toTop, width: 20.0)`
+  
+  + **barrierCustomized(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)** - default animation type is `toTop`, default barrier width is `20.0`
+
 <table>
-<tr>
-<th width="20%">default, toTop and width is 20</th>
-<th>toLeft and width is 5</th>
-<th>toRight and width is 10</th>
-<th>toBottom and width is 15</th>
-<th>toVerticalCenter and width is 20</th>
-<th>toHorizontalCenter and width is 25</th>
-</tr>
-<tr>
-<td width="20%"><img src="image/animations/Barrier/default.gif"></td>
-<td><img src="image/animations/Barrier/custom_toLeft.gif"></td>
-<td><img src="image/animations/Barrier/custom_toRight.gif"></td>
-<td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
-<td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
-<td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
-</tr>
-<tr>
-<th width="20%">.barrier</th>
-<th>.barrierCustomized(.toLeft, width: 5)</th>
-<th>.barrierCustomized(.toRight, width: 10)</th>
-<th>.barrierCustomized(.toBottom, width: 15)</th>
-<th>.barrierCustomized(.toVerticalCenter, width: 20)</th>
-<th>.barrierCustomized(.toHorizontalCenter, width: 25)</th>
-</tr>
+    <tr>
+        <td><img src="image/animations/Barrier/default.gif"></td>
+        <td><img src="image/animations/Barrier/custom_toLeft.gif"></td>
+        <td><img src="image/animations/Barrier/custom_toRight.gif"></td>
+        <td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
+        <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
+        <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
+    </tr>
+    <tr>
+        <th>toTop and width is 20</th>
+        <th>toLeft and width is 5</th>
+        <th>toRight and width is 10</th>
+        <th>toBottom and width is 15</th>
+        <th>toVerticalCenter and width is 20</th>
+        <th>toHorizontalCenter and width is 25</th>
+    </tr>
 </table>
 
 ## Tree
