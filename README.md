@@ -176,7 +176,7 @@ The library currently contains the following animations
 
 + **Fence**
 
-  + **fence** - default case which is the same as `fenceCustomized(verticalLeft, width: 20.0)`
+  + **fence** - default case which is the same as `fenceCustomized(.verticalLeft, width: 20.0)`
     
   + **fenceCustomized(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)** - default animation type is `verticalLeft`, default fence width is `20.0`.
 
@@ -268,6 +268,35 @@ The library currently contains the following animations
         <th>diameter is 40.0</th>
         <th>diameter is 60.0</th>
         <th>diameter is 5.0</th>
+    </tr>
+</table>
+
+****
+
++ **Multinest**
+
+  + **multinest**
+  
+<div align="left" >
+  <img width="20%" src="image/animations/Multinest/default.gif" />
+</div>
+  
+****
+
++ **NatGeo**
+
+  + **natGeo** - default case which is the same as `natGeoCustomized(.geoLeft)`
+    
+  + **natGeoCustomized(_ type: JWStackTransitionAnimationNatGeoType)** - default animation type is `geoLeft`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/NatGeo/geoLeft.gif"></td>
+        <td><img src="image/animations/NatGeo/geoLeft.gif"></td>
+    </tr>
+        <tr>
+        <th>geoLeft</th>
+        <th>geoRight</th>
     </tr>
 </table>
 
