@@ -361,6 +361,56 @@ The library currently contains the following animations
 
 ****
 
++ **Rectangler**
+
+  + **rectangler** - default case which is the same as `rectanglerCustomized(.waveIn)`
+    
+  + **rectanglerCustomized(_ wave: JWStackTransitionAnimationRectanglerWave)** - default animation type is `waveIn`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Rectangler/waveIn.gif"></td>
+        <td><img src="image/animations/Rectangler/waveOut.gif"></td>
+    </tr>
+    <tr>
+        <th>waveIn</th>
+        <th>waveOut</th>
+    </tr>
+</table>
+
+****
+
++ **Roll**
+
+  + **roll** - default case which is the same as `rollCustomized(.y)`
+    
+  + **rollCustomized(_ axis: JWStackTransitionAnimationRollAxis)** - default animation roll axis is `y`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Roll/x.gif"></td>
+        <td><img src="image/animations/Roll/y.gif"></td>
+        <td><img src="image/animations/Roll/z.gif"></td>
+    </tr>
+    <tr>
+        <th>x</th>
+        <th>y</th>
+        <th>z</th>
+    </tr>
+</table>
+
+****
+
++ **Rotate**
+
+  + **rotate**
+  
+<div align="left" >
+  <img width="20%" src="image/animations/Rotate/default.gif" />
+</div>
+  
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
