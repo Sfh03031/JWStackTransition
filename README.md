@@ -12,32 +12,25 @@
 The library currently contains the following animations
 
 + **AntiClockWise**
-    * anticlockwise *, start angle is `1.5`
+    *anticlockwise, default case which is the same as `anticlockwiseCustomized(1.5)`
     
-    * anticlockwiseCustomized(startAngle: CGFloat)
+    *anticlockwiseCustomized(startAngle: CGFloat), default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
 
-default case is ``anticlockwise`` which is the same as ``anticlockwiseCustomized(1.5)``
+
 <table>
-    <colgroup>
-        <col width="20%" />
-        <col width="20%" />
-        <col width="20%" />
-        <col width="20%" />
-        <col width="20%" />
-    </colgroup>
     <tr>
-        <th width="20%">anticlockwise <br> default, start angle is 1.5</th>
-        <th width="20%">antiClockWiseCustomized(0.0) <br> start angle is 0.0</th>
-        <th width="20%">antiClockWiseCustomized(0.5) <br> start angle is 0.5</th>
-        <th width="20%">antiClockWiseCustomized(1.0) <br> start angle is 1.0</th>
-        <th width="20%">antiClockWiseCustomized(2.0) <br> start angle is 2.0</th>
+        <th>antiClockWiseCustomized(0.0) <br> start angle is 0.0</th>
+        <th>antiClockWiseCustomized(0.5) <br> start angle is 0.5</th>
+        <th>antiClockWiseCustomized(1.0) <br> start angle is 1.0</th>
+        <th>antiClockWiseCustomized(1.5) <br> start angle is 1.5</th>
+        <th>antiClockWiseCustomized(2.0) <br> start angle is 2.0</th>
     </tr>
     <tr>
-        <td width="20%"><img src="image/animations/AntiClockWise/default.gif"></td>
-        <td width="20%"><img src="image/animations/AntiClockWise/custom_0.gif"></td>
-        <td width="20%"><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
-        <td width="20%"><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
-        <td width="20%"><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
+        <td><img src="image/animations/AntiClockWise/default.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_2.0.gif"></td>
     </tr>
 </table>
 
