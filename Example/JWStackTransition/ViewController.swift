@@ -73,7 +73,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         ]),
         Examples(title: "Explode", list: [
             ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
-            ExampleItem(name: "customized explode piece width, now is 80.0", type: .explodeCustomized(80.0)),
+            ExampleItem(name: "customized explode piece width, now is 10.0", type: .explodeCustomized(10.0)),
+            ExampleItem(name: "customized explode piece width, now is 45.0", type: .explodeCustomized(45.0)),
+            ExampleItem(name: "customized explode piece width, now is 60.0", type: .explodeCustomized(60.0)),
         ]),
         Examples(title: "Fence", list: [
             ExampleItem(name: "default, verticalLeft and width is 20", type: .fence),
