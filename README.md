@@ -14,24 +14,30 @@ The library currently contains the following animations
 + **AntiClockWise**
 
 <table>
-<tr>
-<th width="20%">start angle is 1.5</th>
-<th>start angle is 0.0</th>
-<th>start angle is 0.5</th>
-<th>start angle is 1.0</th>
-</tr>
-<tr>
-<td width="20%"><img src="image/animations/AntiClockWise/default.gif"></td>
-<td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
-<td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
-<td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
-</tr>
-<tr>
-<th width="20%">.anticlockwise</th>
-<th>.antiClockWiseCustomized(0.0)</th>
-<th>.antiClockWiseCustomized(0.5)</th>
-<th>.antiClockWiseCustomized(1.0)</th>
-</tr>
+    <colgroup>
+        <col width="25%">
+        <col width="25%">
+        <col width="25%">
+        <col width="25%">
+    </colgroup>
+    <tr>
+        <th width="20%">start angle is 1.5</th>
+        <th>start angle is 0.0</th>
+        <th>start angle is 0.5</th>
+        <th>start angle is 1.0</th>
+    </tr>
+    <tr>
+        <td width="20%"><img src="image/animations/AntiClockWise/default.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
+        <td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
+    </tr>
+    <tr>
+        <th width="20%">.anticlockwise</th>
+        <th>.antiClockWiseCustomized(0.0)</th>
+        <th>.antiClockWiseCustomized(0.5)</th>
+        <th>.antiClockWiseCustomized(1.0)</th>
+    </tr>
 </table>
 
 + **Barrier**
