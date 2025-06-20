@@ -13,13 +13,13 @@ The library currently contains the following animations
 
 + **AntiClockWise**
 
-<table width="100%">
-    <colgroup>
-        <col width="25%" />
-        <col width="25%" />
-        <col width="25%" />
-        <col width="25%" />
-    </colgroup>
+<table>
+<!--    <colgroup>-->
+<!--        <col width="25%" />-->
+<!--        <col width="25%" />-->
+<!--        <col width="25%" />-->
+<!--        <col width="25%" />-->
+<!--    </colgroup>-->
     <tr>
         <th>start angle is 1.5</th>
         <th>start angle is 0.0</th>
@@ -32,12 +32,12 @@ The library currently contains the following animations
         <td><img src="image/animations/AntiClockWise/custom_0.5.gif"></td>
         <td><img src="image/animations/AntiClockWise/custom_1.0.gif"></td>
     </tr>
-    <tr>
-        <th>.anticlockwise</th>
-        <th>.antiClockWiseCustomized(0.0)</th>
-        <th>.antiClockWiseCustomized(0.5)</th>
-        <th>.antiClockWiseCustomized(1.0)</th>
-    </tr>
+<!--    <tr>-->
+<!--        <th>.anticlockwise</th>-->
+<!--        <th>.antiClockWiseCustomized(0.0)</th>-->
+<!--        <th>.antiClockWiseCustomized(0.5)</th>-->
+<!--        <th>.antiClockWiseCustomized(1.0)</th>-->
+<!--    </tr>-->
 </table>
 
 + **Barrier**
