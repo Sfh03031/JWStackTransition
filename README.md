@@ -434,6 +434,29 @@ The library currently contains the following animations
 
 ****
 
++ **Slant**
+
+  + **slant** - default case which is the same as `slantCustomized(.topLeft)`
+    
+  + **slantCustomized(_ corner: JWStackTransitionAnimationRectCorner)** - default animation rect corner is `topLeft`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Slant/topLeft.gif"></td>
+        <td><img src="image/animations/Slant/topRight.gif"></td>
+        <td><img src="image/animations/Slant/bottomLeft.gif"></td>
+        <td><img src="image/animations/Slant/bottomRight.gif"></td>
+    </tr>
+    <tr>
+        <th>topLeft</th>
+        <th>topRight</th>
+        <th>bottomLeft</th>
+        <th>bottomRight</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
