@@ -159,13 +159,13 @@ The library currently contains the following animations
 
 <table>
     <tr>
-        <td><img src="image/animations/Explode/width30.gif"></td>
+<!--        <td><img src="image/animations/Explode/width30.gif"></td>-->
         <td><img src="image/animations/Explode/width10.gif"></td>
         <td><img src="image/animations/Explode/width45.gif"></td>
         <td><img src="image/animations/Explode/width60.gif"></td>
     </tr>
         <tr>
-        <th>explode piece width is 30.0</th>
+<!--        <th>explode piece width is 30.0</th>-->
         <th>explode piece width is 10.0</th>
         <th>explode piece width is 45.0</th>
         <th>explode piece width is 60.0</th>
