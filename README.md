@@ -44,28 +44,27 @@ The library currently contains the following animations
 
 <table>
     <tr>
-        <th>toTop</th>
-        <th>toLeft</th>
-        <th>toRight</th>
-        <th>toBottom</th>
-<!--        <th>toVerticalCenter</th>-->
-<!--        <th>toHorizontalCenter</th>-->
-    </tr>
-    <tr>
         <td><img src="image/animations/Barrier/default.gif"></td>
         <td><img src="image/animations/Barrier/custom_toLeft.gif"></td>
         <td><img src="image/animations/Barrier/custom_toRight.gif"></td>
         <td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
-<!--        <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>-->
-<!--        <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>-->
     </tr>
     <tr>
-        <th>width is 20</th>
-        <th>width is 5</th>
-        <th>width is 10</th>
-        <th>width is 15</th>
-<!--        <th>width is 20</th>-->
-<!--        <th>width is 25</th>-->
+        <th>toTop and width is 20</th>
+        <th>toLeft and width is 5</th>
+        <th>toRight and width is 10</th>
+        <th>toBottom and width is 15</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
+        <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
+    </tr>
+    <tr>
+        <th>toVerticalCenter and width is 20</th>
+        <th>toHorizontalCenter and width is 25</th>
     </tr>
 </table>
 
