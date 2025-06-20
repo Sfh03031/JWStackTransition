@@ -48,26 +48,28 @@ The library currently contains the following animations
         <th>toLeft</th>
         <th>toRight</th>
         <th>toBottom</th>
-        <th>toVerticalCenter</th>
-        <th>toHorizontalCenter</th>
+<!--        <th>toVerticalCenter</th>-->
+<!--        <th>toHorizontalCenter</th>-->
     </tr>
     <tr>
         <td><img src="image/animations/Barrier/default.gif"></td>
         <td><img src="image/animations/Barrier/custom_toLeft.gif"></td>
         <td><img src="image/animations/Barrier/custom_toRight.gif"></td>
         <td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
-        <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
-        <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
+<!--        <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>-->
+<!--        <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>-->
     </tr>
     <tr>
         <th>width is 20</th>
         <th>width is 5</th>
         <th>width is 10</th>
         <th>width is 15</th>
-        <th>width is 20</th>
-        <th>width is 25</th>
+<!--        <th>width is 20</th>-->
+<!--        <th>width is 25</th>-->
     </tr>
 </table>
+
+****
 
 ## Tree
 
