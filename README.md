@@ -12,18 +12,22 @@
 The library currently contains the following animations
 
 + **AntiClockWise**
-    *anticlockwise, default case which is the same as `anticlockwiseCustomized(1.5)`
-    
-    *anticlockwiseCustomized(startAngle: CGFloat), default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
 
+    *anticlockwise
+    
+    default case which is the same as `anticlockwiseCustomized(1.5)`
+    
+    *anticlockwiseCustomized(startAngle: CGFloat)
+    
+    default animation start angle is `1.5`, angle range is `[0.0, 2.0]`
 
 <table>
     <tr>
-        <th>antiClockWiseCustomized(0.0) <br> start angle is 0.0</th>
-        <th>antiClockWiseCustomized(0.5) <br> start angle is 0.5</th>
-        <th>antiClockWiseCustomized(1.0) <br> start angle is 1.0</th>
-        <th>antiClockWiseCustomized(1.5) <br> start angle is 1.5</th>
-        <th>antiClockWiseCustomized(2.0) <br> start angle is 2.0</th>
+        <th>antiClockWiseCustomized(0.0)</th>
+        <th>antiClockWiseCustomized(0.5)</th>
+        <th>antiClockWiseCustomized(1.0)</th>
+        <th>antiClockWiseCustomized(1.5)</th>
+        <th>antiClockWiseCustomized(2.0)</th>
     </tr>
     <tr>
         <td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
