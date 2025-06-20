@@ -12,14 +12,19 @@
 The library currently contains the following animations
 
 + **AntiClockWise**
+    * anticlockwise *, start angle is `1.5`
+    
+    * anticlockwiseCustomized(startAngle: CGFloat)
 
+default case is ``anticlockwise`` which is the same as ``anticlockwiseCustomized(1.5)``
 <table>
-<!--    <colgroup>-->
-<!--        <col width="25%" />-->
-<!--        <col width="25%" />-->
-<!--        <col width="25%" />-->
-<!--        <col width="25%" />-->
-<!--    </colgroup>-->
+    <colgroup>
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+    </colgroup>
     <tr>
         <th width="20%">anticlockwise <br> default, start angle is 1.5</th>
         <th width="20%">antiClockWiseCustomized(0.0) <br> start angle is 0.0</th>
