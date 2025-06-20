@@ -50,11 +50,11 @@ The library currently contains the following animations
         <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
     </tr>
     <tr>
-        <th>toTop and width is 20</th>
-        <th>toLeft and width is 5</th>
-        <th>toRight and width is 10</th>
-        <th>toBottom and width is 15</th>
-        <th>toVerticalCenter and width is 20</th>
+        <th>             toTop and width is 20</th>
+        <th>            toLeft and width is 5</th>
+        <th>           toRight and width is 10</th>
+        <th>          toBottom and width is 15</th>
+        <th>  toVerticalCenter and width is 20</th>
         <th>toHorizontalCenter and width is 25</th>
     </tr>
 </table>
