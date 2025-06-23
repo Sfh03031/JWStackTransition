@@ -18,29 +18,29 @@ This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEber
 ## All animation types and some examples
 
   * [AntiClockWise](#AntiClockWise)
-  * [Barrier](#a-Barrier)
-  * [Circle](#a-Circle)
-  * [ClockWise](#a-ClockWise)
-  * [Cube](#a-Cube)
-  * [Door](#a-Door)
-  * [Explode](#a-Explode)
-  * [Fence](#a-Fence)
-  * [Flip](#a-Flip)
-  * [Fold](#a-Fold)
-  * [MultiCircle](#a-MultiCircle)
-  * [Multinest](#a-Multinest)
-  * [NatGeo](#a-NatGeo)
-  * [Official](#a-Official)
-  * [Pan](#a-Pan)
-  * [Rectangler](#a-Rectangler)
-  * [Roll](#a-Roll)
-  * [Rotate](#a-Rotate)
-  * [Sector](#a-Sector)
-  * [Slant](#a-Slant)
-  * [Split](#a-Split)
-  * [Swing](#a-Swing)
-  * [TiledFlip](#a-TiledFlip)
-  * [Translate](#a-Translate)
+  * [Barrier](#Barrier)
+  * [Circle](#Circle)
+  * [ClockWise](#ClockWise)
+  * [Cube](#Cube)
+  * [Door](#Door)
+  * [Explode](#Explode)
+  * [Fence](#Fence)
+  * [Flip](#Flip)
+  * [Fold](#Fold)
+  * [MultiCircle](#MultiCircle)
+  * [Multinest](#Multinest)
+  * [NatGeo](#NatGeo)
+  * [Official](#Official)
+  * [Pan](#Pan)
+  * [Rectangler](#Rectangler)
+  * [Roll](#Roll)
+  * [Rotate](#Rotate)
+  * [Sector](#Sector)
+  * [Slant](#Slant)
+  * [Split](#Split)
+  * [Swing](#Swing)
+  * [TiledFlip](#TiledFlip)
+  * [Translate](#Translate)
 
 The library currently contains the following animations
 
@@ -69,7 +69,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Barrier**
+### <a id="Barrier"></a>Barrier
 
   + **barrier** - default case which is the same as `barrierCustomized(.toTop, width: 20.0)`.
   
@@ -103,7 +103,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Circle**
+### <a id="Circle"></a>Circle
 
   + **circle**
   
@@ -113,7 +113,7 @@ The library currently contains the following animations
   
 ****
 
-+ **ClockWise**
+### <a id="ClockWise"></a>ClockWise
 
   + **clockWise** - default case which is the same as `clockWiseCustomized(0.5)`.
     
@@ -138,7 +138,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Cube**
+### <a id="Cube"></a>Cube
 
   + **cube** - default case which is the same as `cubeCustomized(.fromLeftToRight)`
     
@@ -161,7 +161,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Door**
+### <a id="Door"></a>Door
 
   + **door** - default case which is the same as `doorCustomized(.horizontalOpen, scale: 0.8)`
     
@@ -184,7 +184,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Explode**
+### <a id="Explode"></a>Explode
 
   + **explode** - default case which is the same as `explodeCustomized(30.0)`
     
@@ -207,7 +207,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Fence**
+### <a id="Fence"></a>Fence
 
   + **fence** - default case which is the same as `fenceCustomized(.verticalLeft, width: 20.0)`
     
@@ -241,7 +241,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Flip**
+### <a id="Flip"></a>Flip
 
   + **flip** - default case which is the same as `flipCustomized(.fromLeftToRight)`
     
@@ -260,7 +260,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Fold**
+### <a id="Fold"></a>Fold
 
   + **fold** - default case which is the same as `foldCustomized(.fromLeftToRight, foldNum: 2)`
     
@@ -283,7 +283,7 @@ The library currently contains the following animations
 
 ****
 
-+ **MultiCircle**
+### <a id="MultiCircle"></a>MultiCircle
 
   + **multiCircle** - default case which is the same as `multiCircleCustomized(20.0)`
     
@@ -306,7 +306,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Multinest**
+### <a id="Multinest"></a>Multinest
 
   + **multinest**
   
@@ -316,7 +316,7 @@ The library currently contains the following animations
   
 ****
 
-+ **NatGeo**
+### <a id="NatGeo"></a>NatGeo
 
   + **natGeo** - default case which is the same as `natGeoCustomized(.geoLeft)`
     
@@ -335,7 +335,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Official**
+### <a id="Official"></a>Official
 
   + **official** - default case which is the same as `officialCustomized(.crossDissolve)`
     
@@ -371,7 +371,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Pan**
+### <a id="Pan"></a>Pan
 
   + **pan** - default case which is the same as `panCustomized(.panLeft)`
     
@@ -394,7 +394,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Rectangler**
+### <a id="Rectangler"></a>Rectangler
 
   + **rectangler** - default case which is the same as `rectanglerCustomized(.waveIn)`
     
@@ -413,7 +413,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Roll**
+### <a id="Roll"></a>Roll
 
   + **roll** - default case which is the same as `rollCustomized(.y)`
     
@@ -434,7 +434,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Rotate**
+### <a id="Rotate"></a>Rotate
 
   + **rotate**
   
@@ -444,7 +444,7 @@ The library currently contains the following animations
   
 ****
 
-+ **Sector**
+### <a id="Sector"></a>Sector
 
   + **sector** - default case which is the same as `sectorCustomized(.left)`
     
@@ -467,7 +467,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Slant**
+### <a id="Slant"></a>Slant
 
   + **slant** - default case which is the same as `slantCustomized(.topLeft)`
     
@@ -490,7 +490,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Split**
+### <a id="Split"></a>Split
 
   + **split** - default case which is the same as `splitCustomized(.horizontal)`
     
@@ -528,7 +528,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Swing**
+### <a id="Swing"></a>Swing
 
   + **swing** - default case which is the same as `swingCustomized(.left)`
     
@@ -551,7 +551,7 @@ The library currently contains the following animations
 
 ****
 
-+ **TiledFlip**
+### <a id="TiledFlip"></a>TiledFlip
 
   + **tiledFlip** - default case which is the same as `tiledFlipCustomized(.flipFromRight, tiledRow: 10, tiledColumn: 5)`
     
@@ -587,7 +587,7 @@ The library currently contains the following animations
 
 ****
 
-+ **Translate**
+### <a id="Translate"></a>Translate
 
   + **translate** - default case which is the same as `translateCustomized(.left)`
     
