@@ -7,7 +7,40 @@
 
 ## Introduction
 
+JWStackTransition is a library that provides transition animations for navigation controllers, offering various transition effects such as clocks, fences, flips, and folds. 
+
+Its principle is provide transition classes that comply with the `UIViewControlAnimatedTransitioning` protocol for the delegate method `navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController)` of UINavigationController. 
+
+It currently has 24 different kind of transition animation types, most of them can be customized.
+
+This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) and [RetroTransition](https://github.com/wcgray/RetroTransition)
+
 ## All animation types and some examples
+
+  * [AntiClockWise](#a-AntiClockWise)
+  * [Barrier](#a-Barrier)
+  * [Circle](#a-Circle)
+  * [ClockWise](#a-ClockWise)
+  * [Cube](#a-Cube)
+  * [Door](#a-Door)
+  * [Explode](#a-Explode)
+  * [Fence](#a-Fence)
+  * [Flip](#a-Flip)
+  * [Fold](#a-Fold)
+  * [MultiCircle](#a-MultiCircle)
+  * [Multinest](#a-Multinest)
+  * [NatGeo](#a-NatGeo)
+  * [Official](#a-Official)
+  * [Pan](#a-Pan)
+  * [Rectangler](#a-Rectangler)
+  * [Roll](#a-Roll)
+  * [Rotate](#a-Rotate)
+  * [Sector](#a-Sector)
+  * [Slant](#a-Slant)
+  * [Split](#a-Split)
+  * [Swing](#a-Swing)
+  * [TiledFlip](#a-TiledFlip)
+  * [Translate](#a-Translate)
 
 The library currently contains the following animations
 
