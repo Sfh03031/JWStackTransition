@@ -457,6 +457,44 @@ The library currently contains the following animations
 
 ****
 
++ **Split**
+
+  + **split** - default case which is the same as `splitCustomized(.horizontal)`
+    
+  + **splitCustomized(_ type: JWStackTransitionAnimationSplitType)** - default split type is `horizontal`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Split/horizontal.gif"></td>
+        <td><img src="image/animations/Split/vertical.gif"></td>
+        <td><img src="image/animations/Split/diamondHorizontal.gif"></td>
+        <td><img src="image/animations/Split/diamondVertical.gif"></td>
+    </tr>
+    <tr>
+        <th>horizontal</th>
+        <th>vertical</th>
+        <th>diamondHorizontal</th>
+        <th>diamondVertical</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Split/cross.gif"></td>
+        <td><img src="image/animations/Split/leftDiagonal.gif"></td>
+        <td><img src="image/animations/Split/rightDiagonal.gif"></td>
+        <td><img src="image/animations/Split/crossDiagonal.gif"></td>
+    </tr>
+    <tr>
+        <th>cross</th>
+        <th>leftDiagonal</th>
+        <th>rightDiagonal</th>
+        <th>crossDiagonal</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
