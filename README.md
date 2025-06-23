@@ -562,10 +562,10 @@ The library currently contains the following animations
 
 <table>
     <tr>
-        <td><img src="image/animations/Swing/left.gif"></td>
-        <td><img src="image/animations/Swing/right.gif"></td>
-        <td><img src="image/animations/Swing/top.gif"></td>
-        <td><img src="image/animations/Swing/bottom.gif"></td>
+        <td><img src="image/animations/Translate/left.gif"></td>
+        <td><img src="image/animations/Translate/right.gif"></td>
+        <td><img src="image/animations/Translate/top.gif"></td>
+        <td><img src="image/animations/Translate/bottom.gif"></td>
     </tr>
     <tr>
         <th>left</th>
