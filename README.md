@@ -17,7 +17,7 @@ This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEber
 
 ## All animation types and some examples
 
-  * [AntiClockWise](#a-AntiClockWise)
+  * [AntiClockWise](#AntiClockWise)
   * [Barrier](#a-Barrier)
   * [Circle](#a-Circle)
   * [ClockWise](#a-ClockWise)
@@ -44,7 +44,7 @@ This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEber
 
 The library currently contains the following animations
 
-+ **AntiClockWise**
+### <a id="AntiClockWise"></a>AntiClockWise
 
   + **anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`.
     
