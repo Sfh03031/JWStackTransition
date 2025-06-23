@@ -325,7 +325,7 @@ public enum JWStackTransitionType {
      */
     case tiledFlip
     /**
-     TiledFlipCustomized, default animation type is flipFromRight, default tiled row is 10 and range is (0, 20], default tiled column is 5 and range is (0, 10].
+     TiledFlipCustomized, default animation type is `flipFromRight`, default tiled row is `10` and range is `(0, 20]`, default tiled column is `5` and range is `(0, 10]`.
      
      - returns: Instance of JWStackTransitionAnimationTiledFlip.
      */

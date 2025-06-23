@@ -495,6 +495,65 @@ The library currently contains the following animations
 
 ****
 
++ **Swing**
+
+  + **swing** - default case which is the same as `swingCustomized(.left)`
+    
+  + **swingCustomized(_ edge: JWStackTransitionAnimationRectEdge)** - default animation rect edge is `left`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Swing/left.gif"></td>
+        <td><img src="image/animations/Swing/right.gif"></td>
+        <td><img src="image/animations/Swing/top.gif"></td>
+        <td><img src="image/animations/Swing/bottom.gif"></td>
+    </tr>
+    <tr>
+        <th>left</th>
+        <th>right</th>
+        <th>top</th>
+        <th>bottom</th>
+    </tr>
+</table>
+
+****
+
++ **TiledFlip**
+
+  + **tiledFlip** - default case which is the same as `tiledFlipCustomized(.flipFromRight, tiledRow: 10, tiledColumn: 5)`
+    
+  + **tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)** - default animation type is `flipFromRight`, default tiled row is `10` and range is `(0, 20]`, default tiled column is `5` and range is `(0, 10]`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/TiledFlip/flipFromRight.gif"></td>
+        <td><img src="image/animations/TiledFlip/flipFromLeft.gif"></td>
+        <td><img src="image/animations/TiledFlip/flipFromTop.gif"></td>
+        <td><img src="image/animations/TiledFlip/flipFromBottom.gif"></td>
+    </tr>
+    <tr>
+        <th>flipFromRight</th>
+        <th>flipFromLeft</th>
+        <th>flipFromTop</th>
+        <th>flipFromBottom</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/TiledFlip/crossDissolve.gif"></td>
+        <td><img src="image/animations/TiledFlip/curlUp.gif"></td>
+        <td><img src="image/animations/TiledFlip/curlDown.gif"></td>
+    </tr>
+    <tr>
+        <th>crossDissolve</th>
+        <th>curlUp</th>
+        <th>curlDown</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
