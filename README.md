@@ -603,10 +603,45 @@ it, simply add the following line to your Podfile:
 pod 'JWStackTransition', :git => 'https://github.com/Sfh03031/JWStackTransition.git'
 
 ```
-
 ## Usage
 
+Install and import JWStackTransition
+
+```swift
+
+import JWStackTransition
+
+```
+
+JWStackTransition extends the `push` and `pop` methods of UINavigationController, so it can be used as follows:
+
+```swift
+
+/// push
+self.navigationController?.push(vc, type: type, duration: 1.0)
+
+#another way
+// self.navigationController?.push(vc, transition: JWStackTransition(type: type, duration: 1.0))
+
+/// pop
+self.navigationController?.pop(.antiClockWise, duration: 1.0)
+
+#another way
+self.navigationController?.pop(JWStackTransition(type: .antiClockWise, duration: 1.0))
+
+```
+
 ## Change log
+
+2025.05.20, 0.1.1
+
+- Initial version
+
+## Contributing
+
+Please make an issue or pull request if you have any request.
+
+Bug reports, Documentation, or tests, are always welcome as well.
 
 ## Author
 
