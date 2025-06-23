@@ -172,7 +172,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "curlUp, row is 20 and column is 10", type: .tiledFlipCustomized(.curlUp, tiledRow: 20, tiledColumn: 10)),
             ExampleItem(name: "curlDown, row is 15 and column is 10", type: .tiledFlipCustomized(.curlDown, tiledRow: 15, tiledColumn: 10)),
         ]),
-        Examples(title: "translate", list: [
+        Examples(title: "Translate", list: [
             ExampleItem(name: "default, left", type: .translate),
             ExampleItem(name: "right", type: .translateCustomized(.right)),
             ExampleItem(name: "top", type: .translateCustomized(.top)),

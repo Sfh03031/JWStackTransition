@@ -554,6 +554,29 @@ The library currently contains the following animations
 
 ****
 
++ **Translate**
+
+  + **translate** - default case which is the same as `translateCustomized(.left)`
+    
+  + **translateCustomized(_ edge: JWStackTransitionAnimationRectEdge)** - default animation rect edge is `left`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Swing/left.gif"></td>
+        <td><img src="image/animations/Swing/right.gif"></td>
+        <td><img src="image/animations/Swing/top.gif"></td>
+        <td><img src="image/animations/Swing/bottom.gif"></td>
+    </tr>
+    <tr>
+        <th>left</th>
+        <th>right</th>
+        <th>top</th>
+        <th>bottom</th>
+    </tr>
+</table>
+
+****
+
 ## Tree
 
 Directory structure of SFStyleKit:
