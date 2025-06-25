@@ -144,11 +144,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "top", type: .sectorCustomized(.top)),
             ExampleItem(name: "bottom", type: .sectorCustomized(.bottom)),
         ]),
-        Examples(title: "Slant", list: [
-            ExampleItem(name: "default, topLeft", type: .slant),
-            ExampleItem(name: "topRight", type: .slantCustomized(.topRight)),
-            ExampleItem(name: "bottomLeft", type: .slantCustomized(.bottomLeft)),
-            ExampleItem(name: "bottomRight", type: .slantCustomized(.bottomRight)),
+        Examples(title: "ShiftLine", list: [
+            ExampleItem(name: "default, toRight", type: .shiftLine),
+            ExampleItem(name: "toTop", type: .shiftLineCustomized(.toTop)),
+            ExampleItem(name: "toBottom", type: .shiftLineCustomized(.toBottom)),
+            ExampleItem(name: "toLeft", type: .shiftLineCustomized(.toLeft)),
+            ExampleItem(name: "toTopRight", type: .shiftLineCustomized(.toTopRight)),
+            ExampleItem(name: "toBottomRight", type: .shiftLineCustomized(.toBottomRight)),
+            ExampleItem(name: "toBottomLeft", type: .shiftLineCustomized(.toBottomLeft)),
+            ExampleItem(name: "toTopLeft", type: .shiftLineCustomized(.toTopLeft)),
         ]),
         Examples(title: "Split", list: [
             ExampleItem(name: "default, horizontal", type: .split),
@@ -174,13 +178,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "crossDissolve, row is 20 and column is 5", type: .tiledFlipCustomized(.crossDissolve, tiledRow: 20, tiledColumn: 5)),
             ExampleItem(name: "curlUp, row is 20 and column is 10", type: .tiledFlipCustomized(.curlUp, tiledRow: 20, tiledColumn: 10)),
             ExampleItem(name: "curlDown, row is 15 and column is 10", type: .tiledFlipCustomized(.curlDown, tiledRow: 15, tiledColumn: 10)),
-        ]),
-        Examples(title: "Translate", list: [
-            ExampleItem(name: "default, left", type: .translate),
-            ExampleItem(name: "right", type: .translateCustomized(.right)),
-            ExampleItem(name: "top", type: .translateCustomized(.top)),
-            ExampleItem(name: "bottom", type: .translateCustomized(.bottom)),
-        ]),
+        ])
     ]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

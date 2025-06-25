@@ -17,6 +17,8 @@ This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEber
 
 ## All animation types and some examples
 
+The library currently contains the following animations, contents:
+
   * [AntiClockWise](#AntiClockWise)
   * [Barrier](#Barrier)
   * [Circle](#Circle)
@@ -36,13 +38,10 @@ This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEber
   * [Roll](#Roll)
   * [Rotate](#Rotate)
   * [Sector](#Sector)
-  * [Slant](#Slant)
+  * [ShiftLine](#ShiftLine)
   * [Split](#Split)
   * [Swing](#Swing)
   * [TiledFlip](#TiledFlip)
-  * [Translate](#Translate)
-
-The library currently contains the following animations
 
 ### <a id="AntiClockWise"></a>AntiClockWise
 
@@ -484,24 +483,39 @@ The library currently contains the following animations
 
 ****
 
-### <a id="Slant"></a>Slant
+### <a id="ShiftLine"></a>ShiftLine
 
-  + **slant** - default case which is the same as `slantCustomized(.topLeft)`
+  + **shiftLine** - default case which is the same as `shiftLineCustomized(.toRight)`
     
-  + **slantCustomized(_ corner: JWStackTransitionAnimationRectCorner)** - default animation rect corner is `topLeft`.
+  + **shiftLineCustomized(_ type: JWStackTransitionAnimationShiftLineType)** - default animation type is `toRight`.
 
 <table>
     <tr>
-        <td><img src="image/animations/Slant/topLeft.gif"></td>
-        <td><img src="image/animations/Slant/topRight.gif"></td>
-        <td><img src="image/animations/Slant/bottomLeft.gif"></td>
-        <td><img src="image/animations/Slant/bottomRight.gif"></td>
+        <td><img src="image/animations/ShiftLine/toRight.gif"></td>
+        <td><img src="image/animations/ShiftLine/toTop.gif"></td>
+        <td><img src="image/animations/ShiftLine/toBottom.gif"></td>
+        <td><img src="image/animations/ShiftLine/toLeft.gif"></td>
     </tr>
     <tr>
-        <th>topLeft</th>
-        <th>topRight</th>
-        <th>bottomLeft</th>
-        <th>bottomRight</th>
+        <th>toRight</th>
+        <th>toTop</th>
+        <th>toBottom</th>
+        <th>toLeft</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/ShiftLine/toTopRight.gif"></td>
+        <td><img src="image/animations/ShiftLine/toBottomRight.gif"></td>
+        <td><img src="image/animations/ShiftLine/toBottomLeft.gif"></td>
+        <td><img src="image/animations/ShiftLine/toTopLeft.gif"></td>
+    </tr>
+    <tr>
+        <th>toTopRight</th>
+        <th>toBottomRight</th>
+        <th>toBottomLeft</th>
+        <th>toTopLeft</th>
     </tr>
 </table>
 
@@ -599,29 +613,6 @@ The library currently contains the following animations
         <th>crossDissolve</th>
         <th>curlUp</th>
         <th>curlDown</th>
-    </tr>
-</table>
-
-****
-
-### <a id="Translate"></a>Translate
-
-  + **translate** - default case which is the same as `translateCustomized(.left)`
-    
-  + **translateCustomized(_ edge: JWStackTransitionAnimationRectEdge)** - default animation rect edge is `left`.
-
-<table>
-    <tr>
-        <td><img src="image/animations/Translate/left.gif"></td>
-        <td><img src="image/animations/Translate/right.gif"></td>
-        <td><img src="image/animations/Translate/top.gif"></td>
-        <td><img src="image/animations/Translate/bottom.gif"></td>
-    </tr>
-    <tr>
-        <th>left</th>
-        <th>right</th>
-        <th>top</th>
-        <th>bottom</th>
     </tr>
 </table>
 

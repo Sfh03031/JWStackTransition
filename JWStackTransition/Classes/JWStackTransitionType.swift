@@ -32,11 +32,10 @@ import UIKit
  - Roll:                        Roll animation.
  - Rotate                       Rotate animation.
  - Sector                       Sector animation.
- - Slant                        Slant animation.
+ - ShiftLine                    ShiftLine animation.
  - Split                        Split animation.
  - Swing                        Swing animation.
  - TiledFlip                    TiledFlip animation.
- - Translate                    Translate animation.
  
  - AntiClockWiseCustomized:     AntiClockWiseCustomized animation.
  - BarrierCustomized:           BarrierCustomized animation.
@@ -54,17 +53,16 @@ import UIKit
  - RectanglerCustomized:        RectanglerCustomized animation.
  - RollCustomized:              RollCustomized animation.
  - SectorCustomized             SectorCustomized animation.
- - SlantCustomized              SlantCustomized animation.
+ - ShiftLineCustomized          ShiftLineCustomized animation.
  - SplitCustomized              SplitCustomized animation.
  - SwingCustomized              SwingCustomized animation.
  - TiledFlipCustomized          TiledFlipCustomized animation.
- - TranslateCustomized          TranslateCustomized animation.
  
  */
 public enum JWStackTransitionType {
     
     /// All default animation types
-    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .cube, .door, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .sector, .slant, .split, .swing, .tiledFlip, .translate]
+    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .cube, .door, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .sector, .shiftLine, .split, .swing, .tiledFlip]
     
     /**
      AntiClockWise, start angle is `1.5`.
@@ -289,17 +287,17 @@ public enum JWStackTransitionType {
      */
     case sectorCustomized(_ edge: JWStackTransitionAnimationRectEdge)
     /**
-     Slant, case `topLeft` of JWStackTransitionAnimationRectCorner.
+     ShiftLine, case `toRight` of JWStackTransitionAnimationShiftLineType.
      
-     - returns: Instance of JWStackTransitionAnimationSlant.
+     - returns: Instance of JWStackTransitionAnimationShiftLine.
      */
-    case slant
+    case shiftLine
     /**
-     SlantCustomized, default animation rect corner is `topLeft`.
+     ShiftLineCustomized, default animation type is `toRight`.
      
-     - returns: Instance of JWStackTransitionAnimationSlant.
+     - returns: Instance of JWStackTransitionAnimationShiftLine.
      */
-    case slantCustomized(_ corner: JWStackTransitionAnimationRectCorner)
+    case shiftLineCustomized(_ type: JWStackTransitionAnimationShiftLineType)
     /**
      Split, case `horizontal` of JWStackTransitionAnimationSplitType.
      
@@ -336,18 +334,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationTiledFlip.
      */
     case tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)
-    /**
-     Translate, case `left` of JWStackTransitionAnimationRectEdge.
-     
-     - returns: Instance of JWStackTransitionAnimationTranslate.
-     */
-    case translate
-    /**
-     TranslateCustomized, default animation rect edge is `left`.
-     
-     - returns: Instance of JWStackTransitionAnimationTranslate.
-     */
-    case translateCustomized(_ edge: JWStackTransitionAnimationRectEdge)
 }
 
 extension JWStackTransitionType {
@@ -428,10 +414,10 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationSector(.left)
         case .sectorCustomized(let edge):
             return JWStackTransitionAnimationSector(edge)
-        case .slant:
-            return JWStackTransitionAnimationSlant(.topLeft)
-        case .slantCustomized(let type):
-            return JWStackTransitionAnimationSlant(type)
+        case .shiftLine:
+            return JWStackTransitionAnimationShiftLine(.toRight)
+        case .shiftLineCustomized(let type):
+            return JWStackTransitionAnimationShiftLine(type)
         case .split:
             return JWStackTransitionAnimationSplit(.horizontal)
         case .splitCustomized(let type):
@@ -444,10 +430,6 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationTiledFlip(.flipFromRight, tiledRow: 0, tiledColumn: 0)
         case .tiledFlipCustomized(let type, let row, let column):
             return JWStackTransitionAnimationTiledFlip(type, tiledRow: row, tiledColumn: column)
-        case .translate:
-            return JWStackTransitionAnimationTranslate(.left)
-        case .translateCustomized(let edge):
-            return JWStackTransitionAnimationTranslate(edge)
         }
     }
     

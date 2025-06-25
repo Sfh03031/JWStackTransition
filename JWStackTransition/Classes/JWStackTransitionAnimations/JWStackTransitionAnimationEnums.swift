@@ -107,4 +107,16 @@ public enum JWStackTransitionAnimationRotateType {
     case antiClockWise
 }
 
+public enum JWStackTransitionAnimationShiftLineType {
+    case toTop
+    case toRight
+    case toBottom
+    case toLeft
+    case toTopRight
+    case toBottomRight
+    case toBottomLeft
+    case toTopLeft
+}
+
+
 #endif
