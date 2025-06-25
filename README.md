@@ -612,13 +612,13 @@ The library currently contains the following animations
 
 ## Tree
 
-Directory structure of SFStyleKit:
+Directory structure of JWStackTransition:
 
 <div align="center" >
   <img width="85%" src="image/tree.png" />
 </div>
 
-also, [DeepWiki](https://deepwiki.com/Sfh03031/SFStyleKit/) may help you better understand SFStyleKit
+also, [DeepWiki](https://deepwiki.com/Sfh03031/SFStyleKit/) may help you better understand JWStackTransition.
 
 ## Requirements
 

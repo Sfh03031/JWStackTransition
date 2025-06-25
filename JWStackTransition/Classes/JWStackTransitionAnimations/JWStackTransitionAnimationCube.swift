@@ -97,29 +97,24 @@ public class JWStackTransitionAnimationCube: JWStackTransitionAnimationDelegate 
             
             fromShadow.alpha = 1.0
             toShadow.alpha = 0.0
-        } completion: { _ in
-            containerView.transform = CGAffineTransformIdentity
-            fromView.layer.transform = CATransform3DIdentity
-            toView.layer.transform = CATransform3DIdentity
-            
-            fromView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-            toView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-            
-            fromShadow.removeFromSuperview()
-            toShadow.removeFromSuperview()
-            
-//            if transitionContext.transitionWasCancelled {
-//                toView.removeFromSuperview()
-//            } else {
-//                fromView.removeFromSuperview()
-//            }
-            
-            fromView.frame = containerView.bounds
-            toView.frame = containerView.bounds
-            
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        } completion: { finished in
+            if finished {
+                containerView.transform = CGAffineTransformIdentity
+                fromView.layer.transform = CATransform3DIdentity
+                toView.layer.transform = CATransform3DIdentity
+                
+                fromView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+                toView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+                
+                fromShadow.removeFromSuperview()
+                toShadow.removeFromSuperview()
+                
+                fromView.frame = containerView.bounds
+                toView.frame = containerView.bounds
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            }
         }
-        
     }
     
 }
