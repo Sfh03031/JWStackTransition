@@ -11,7 +11,7 @@ JWStackTransition is a library that provides transition animations for navigatio
 
 Its principle is provide transition classes that comply with the `UIViewControlAnimatedTransitioning` protocol for the delegate method `navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController)` of UINavigationController. 
 
-It currently has 24 different kind of transition animation types, most of them can be customized.
+It currently has 23 different kind of transition animation types, most of them can be customized.
 
 This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) and [RetroTransition](https://github.com/wcgray/RetroTransition)
 
@@ -641,7 +641,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'JWStackTransition', :git => 'https://github.com/Sfh03031/JWStackTransition.git'
+pod 'JWStackTransition'
 
 ```
 ## Usage
