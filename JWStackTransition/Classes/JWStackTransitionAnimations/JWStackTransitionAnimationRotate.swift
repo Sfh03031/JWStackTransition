@@ -39,9 +39,11 @@ public class JWStackTransitionAnimationRotate: JWStackTransitionAnimationDelegat
         UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear]) {
             fromContainer.alpha = 0
             fromView.layer.transform = transform
-        } completion: { _ in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            fromView.layer.transform = CATransform3DIdentity
+        } completion: { finished in
+            if finished {
+                fromView.layer.transform = CATransform3DIdentity
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            }
         }
     }
     

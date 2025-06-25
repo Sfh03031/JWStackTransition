@@ -52,9 +52,9 @@ public class JWStackTransitionAnimationRectangler: JWStackTransitionAnimationDel
             fromView.alpha = 0.0
         } completion: { finished in
             if finished {
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 fromView.alpha = 1
                 fromView.layer.mask = nil
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
 

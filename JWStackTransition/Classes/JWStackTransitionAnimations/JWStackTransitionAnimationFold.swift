@@ -105,27 +105,30 @@ public class JWStackTransitionAnimationFold: JWStackTransitionAnimationDelegate 
                 rightToView.layer.transform = CATransform3DIdentity
                 rightToView.subviews[1].alpha = 0.0
             }
-        } completion: { _ in
-            // remove the snapshot views
-            for view in toFoldList {
-                view.removeFromSuperview()
-            }
-            
-            for view in fromFoldList {
-                view.removeFromSuperview()
-            }
-            
-            let finished = !transitionContext.transitionWasCancelled
+        } completion: { finished in
             if finished {
-                // restore the to- and from- to the initial location
-                toView.frame = containerView.bounds
-                fromView.frame = containerView.bounds
-            } else {
-                // restore the from- to the initial location if cancelled
-                fromView.frame = containerView.bounds
+                // remove the snapshot views
+                for view in toFoldList {
+                    view.removeFromSuperview()
+                }
+                
+                for view in fromFoldList {
+                    view.removeFromSuperview()
+                }
+                
+                if transitionContext.transitionWasCancelled {
+                    // restore the from- to the initial location if cancelled
+                    fromView.frame = containerView.bounds
+                } else {
+                    // restore the to- and from- to the initial location
+                    toView.frame = containerView.bounds
+                    fromView.frame = containerView.bounds
+                }
+                
+                containerView.layer.sublayerTransform = CATransform3DIdentity
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
-            
-            transitionContext.completeTransition(finished)
         }
 
     }

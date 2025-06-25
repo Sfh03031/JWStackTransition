@@ -30,10 +30,9 @@ class StackViewController: UIViewController {
     }
     
     @objc func tap(_ sender: UITapGestureRecognizer) {
-        self.navigationController?.pop(JWStackTransitionType.allCases.randomElement())
+//        self.navigationController?.pop(JWStackTransitionType.allCases.randomElement())
         
-        self.navigationController?.pop(.antiClockWise, duration: 1.0)
-        self.navigationController?.pop(JWStackTransition(type: .antiClockWise, duration: 1.0))
+        self.navigationController?.pop(.flip, duration: 1.0)
     }
 
     private lazy var imgView: UIImageView = {

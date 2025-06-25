@@ -62,11 +62,13 @@ public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelega
                 let rotation = CGAffineTransformMakeRotation(CGFloat(offsetR))
                 view.transform = CGAffineTransformScale(rotation, 0.01, 0.01)
             }
-        } completion: { _ in
-            for view in tempList {
-                view.removeFromSuperview()
+        } completion: { finished in
+            if finished {
+                for view in tempList {
+                    view.removeFromSuperview()
+                }
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
         
     }

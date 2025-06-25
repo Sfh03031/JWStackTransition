@@ -73,17 +73,19 @@ extension JWStackTransitionAnimationDoor {
             // zoom in
             toViewShot.center = toView.center
             toViewShot.frame = toView.frame
-        } completion: { _ in
-            let cancelled = transitionContext.transitionWasCancelled
-            if cancelled {
-                containerView.addSubview(fromView)
-                self.removeOther(fromView)
-            } else {
-                containerView.addSubview(toView)
-                self.removeOther(toView)
+        } completion: { finished in
+            if finished {
+                if transitionContext.transitionWasCancelled {
+                    containerView.addSubview(fromView)
+                    self.removeOther(fromView)
+                } else {
+                    containerView.addSubview(toView)
+                    self.removeOther(toView)
+                }
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
             
-            transitionContext.completeTransition(!cancelled)
         }
     }
     
@@ -120,19 +122,20 @@ extension JWStackTransitionAnimationDoor {
             
             // zoom out
             fromView.transform = CGAffineTransform(scaleX: self.scale, y: self.scale)
-        } completion: { _ in
-            // reset the transform
-            fromView.transform = CGAffineTransform.identity
-            let cancelled = transitionContext.transitionWasCancelled
-            if cancelled {
-                self.removeOther(fromView)
-            } else {
-                fromView.frame = containerView.bounds
-                toView.frame = containerView.bounds
-                self.removeOther(toView)
+        } completion: { finished in
+            if finished {
+                fromView.transform = CGAffineTransform.identity
+                if transitionContext.transitionWasCancelled {
+                    self.removeOther(fromView)
+                } else {
+                    fromView.frame = containerView.bounds
+                    toView.frame = containerView.bounds
+                    self.removeOther(toView)
+                }
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
             
-            transitionContext.completeTransition(!cancelled)
         }
     }
     
@@ -168,17 +171,18 @@ extension JWStackTransitionAnimationDoor {
             // zoom in
             toViewShot.center = toView.center
             toViewShot.frame = toView.frame
-        } completion: { _ in
-            let cancelled = transitionContext.transitionWasCancelled
-            if cancelled {
-                containerView.addSubview(fromView)
-                self.removeOther(fromView)
-            } else {
-                containerView.addSubview(toView)
-                self.removeOther(toView)
+        } completion: { finished in
+            if finished {
+                if transitionContext.transitionWasCancelled {
+                    containerView.addSubview(fromView)
+                    self.removeOther(fromView)
+                } else {
+                    containerView.addSubview(toView)
+                    self.removeOther(toView)
+                }
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
-            
-            transitionContext.completeTransition(!cancelled)
         }
     }
     
@@ -215,19 +219,20 @@ extension JWStackTransitionAnimationDoor {
             
             // zoom out
             fromView.transform = CGAffineTransform(scaleX: self.scale, y: self.scale)
-        } completion: { _ in
-            // reset the transform
-            fromView.transform = CGAffineTransform.identity
-            let cancelled = transitionContext.transitionWasCancelled
-            if cancelled {
-                self.removeOther(fromView)
-            } else {
-                fromView.frame = containerView.bounds
-                toView.frame = containerView.bounds
-                self.removeOther(toView)
+        } completion: { finished in
+            if finished {
+                // reset the transform
+                fromView.transform = CGAffineTransform.identity
+                if transitionContext.transitionWasCancelled {
+                    self.removeOther(fromView)
+                } else {
+                    fromView.frame = containerView.bounds
+                    toView.frame = containerView.bounds
+                    self.removeOther(toView)
+                }
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
-            
-            transitionContext.completeTransition(!cancelled)
         }
     }
     

@@ -76,11 +76,13 @@ public class JWStackTransitionAnimationNatGeo: JWStackTransitionAnimationDelegat
                     transform = CATransform3DRotate(transform, 0.0, 1.0, 0.0, 0.0)
                     toLayer.transform = transform
                 }
-            } completion: { _ in
-                fromView.layer.transform = CATransform3DIdentity
-                toView.layer.transform = CATransform3DIdentity
-                containerView.layer.transform = CATransform3DIdentity
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            } completion: { finished in
+                if finished {
+                    fromView.layer.transform = CATransform3DIdentity
+                    toView.layer.transform = CATransform3DIdentity
+                    containerView.layer.transform = CATransform3DIdentity
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                }
             }
         case .geoRight:
             let oldFrame = fromLayer.frame
@@ -122,11 +124,13 @@ public class JWStackTransitionAnimationNatGeo: JWStackTransitionAnimationDelegat
                     transform = CATransform3DRotate(transform, 0.0, 1.0, 0.0, 0.0)
                     toLayer.transform = transform
                 }
-            } completion: { _ in
-                fromView.layer.transform = CATransform3DIdentity
-                toView.layer.transform = CATransform3DIdentity
-                containerView.layer.transform = CATransform3DIdentity
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            } completion: { finished in
+                if finished {
+                    fromView.layer.transform = CATransform3DIdentity
+                    toView.layer.transform = CATransform3DIdentity
+                    containerView.layer.transform = CATransform3DIdentity
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                }
             }
 
         }

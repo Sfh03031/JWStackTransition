@@ -70,14 +70,18 @@ public class JWStackTransitionAnimationFlip: JWStackTransitionAnimationDelegate 
                 toFlipView.layer.transform = self.rotate(self.type == .fromRightToLeft ? 0.001 : -0.001)
                 toFlipGradientView.alpha = 0.0
             }
-        } completion: { _ in
-            if transitionContext.transitionWasCancelled {
-                self.removeOther(fromView)
-            } else {
-                self.removeOther(toView)
+        } completion: { finished in
+            if finished {
+                if transitionContext.transitionWasCancelled {
+                    self.removeOther(fromView)
+                } else {
+                    self.removeOther(toView)
+                }
+                
+                containerView.layer.sublayerTransform = CATransform3DIdentity
+                
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
-            
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
         
     }

@@ -49,8 +49,10 @@ public class JWStackTransitionAnimationSwing: JWStackTransitionAnimationDelegate
         
         UIView.animate(withDuration: duration, delay: 0.0, options: [.curveEaseOut], animations: {
             toView.transform = CGAffineTransform.identity
-        }) { (_) in
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }) { finished in
+            if finished {
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            }
         }
         
         UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: [.curveEaseInOut], animations: {

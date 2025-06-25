@@ -64,9 +64,9 @@ extension JWStackTransitionAnimationRoll {
                     if next > 0 {
                         self.toRoll(rollView, scale: next, transitionContext: transitionContext)
                     } else {
-                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                         rollView.layer.transform = CATransform3DIdentity
                         rollView.removeFromSuperview()
+                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                     }
                 }
             }

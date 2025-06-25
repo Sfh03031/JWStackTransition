@@ -38,13 +38,15 @@ public class JWStackTransitionAnimationPan: JWStackTransitionAnimationDelegate {
             UIView.animate(withDuration: duration) {
                 fromView.frame = CGRectOffset(fromView.frame, -fromView.frame.width, 0)
                 toView.frame = CGRectOffset(toView.frame, -toView.frame.width, 0)
-            } completion: { _ in
-                if transitionContext.transitionWasCancelled {
-                    fromView.frame = fromOriginRect
-                    toView.frame = toOriginRect
+            } completion: { finished in
+                if finished {
+                    if transitionContext.transitionWasCancelled {
+                        fromView.frame = fromOriginRect
+                        toView.frame = toOriginRect
+                    }
+                    
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 }
-                
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         case .panRight:
             toView.frame = CGRectOffset(toView.frame, -toView.frame.width, 0)
@@ -52,13 +54,15 @@ public class JWStackTransitionAnimationPan: JWStackTransitionAnimationDelegate {
             UIView.animate(withDuration: duration) {
                 fromView.frame = CGRectOffset(fromView.frame, fromView.frame.width, 0)
                 toView.frame = CGRectOffset(toView.frame, toView.frame.width, 0)
-            } completion: { _ in
-                if transitionContext.transitionWasCancelled {
-                    fromView.frame = fromOriginRect
-                    toView.frame = toOriginRect
+            } completion: { finished in
+                if finished {
+                    if transitionContext.transitionWasCancelled {
+                        fromView.frame = fromOriginRect
+                        toView.frame = toOriginRect
+                    }
+                    
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 }
-                
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         case .panTop:
             toView.frame = CGRectOffset(toView.frame, 0, toView.frame.height)
@@ -66,13 +70,15 @@ public class JWStackTransitionAnimationPan: JWStackTransitionAnimationDelegate {
             UIView.animate(withDuration: duration) {
                 fromView.frame = CGRectOffset(fromView.frame, 0, -fromView.frame.height)
                 toView.frame = CGRectOffset(toView.frame, 0, -toView.frame.height)
-            } completion: { _ in
-                if transitionContext.transitionWasCancelled {
-                    fromView.frame = fromOriginRect
-                    toView.frame = toOriginRect
+            } completion: { finished in
+                if finished {
+                    if transitionContext.transitionWasCancelled {
+                        fromView.frame = fromOriginRect
+                        toView.frame = toOriginRect
+                    }
+                    
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 }
-                
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         case .panBottom:
             toView.frame = CGRectOffset(toView.frame, 0, -toView.frame.height)
@@ -80,13 +86,15 @@ public class JWStackTransitionAnimationPan: JWStackTransitionAnimationDelegate {
             UIView.animate(withDuration: duration) {
                 fromView.frame = CGRectOffset(fromView.frame, 0, fromView.frame.height)
                 toView.frame = CGRectOffset(toView.frame, 0, toView.frame.height)
-            } completion: { _ in
-                if transitionContext.transitionWasCancelled {
-                    fromView.frame = fromOriginRect
-                    toView.frame = toOriginRect
+            } completion: { finished in
+                if finished {
+                    if transitionContext.transitionWasCancelled {
+                        fromView.frame = fromOriginRect
+                        toView.frame = toOriginRect
+                    }
+                    
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
                 }
-                
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
     }
