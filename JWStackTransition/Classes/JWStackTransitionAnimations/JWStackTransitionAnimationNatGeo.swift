@@ -25,9 +25,6 @@ public class JWStackTransitionAnimationNatGeo: JWStackTransitionAnimationDelegat
         fromView.frame = transitionContext.finalFrame(for: toVC)
         toView.frame = transitionContext.finalFrame(for: toVC)
         
-        let fromOriginRect = fromView.frame
-        let toOriginRect = toView.frame
-        
         let containerView = transitionContext.containerView
         containerView.addSubview(fromView)
         containerView.addSubview(toView)
