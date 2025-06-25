@@ -133,7 +133,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "axis is z", type: .rollCustomized(.z)),
         ]),
         Examples(title: "Rotate", list: [
-            ExampleItem(name: "default", type: .rotate),
+            ExampleItem(name: "default, clockWise and rotate angle is 0.99", type: .rotate),
+            ExampleItem(name: "clockWise and rotate angle is 0.5", type: .rotateCustomized(.clockWise, rotateAngle: 0.5)),
+            ExampleItem(name: "antiClockWise and rotate angle is 0.99", type: .rotateCustomized(.antiClockWise, rotateAngle: 0.99)),
+            ExampleItem(name: "antiClockWise and rotate angle is 0.5", type: .rotateCustomized(.antiClockWise, rotateAngle: 0.5))
         ]),
         Examples(title: "Sector", list: [
             ExampleItem(name: "default, left", type: .sector),

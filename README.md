@@ -46,9 +46,9 @@ The library currently contains the following animations
 
 ### <a id="AntiClockWise"></a>AntiClockWise
 
-  + **anticlockwise** - default case which is the same as `anticlockwiseCustomized(1.5)`.
+  + **antiClockWise** - default case which is the same as `antiClockWiseCustomized(1.5)`.
     
-  + **anticlockwiseCustomized(startAngle: CGFloat)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`.
+  + **antiClockWiseCustomized(_ startAngle: Double)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`.
 
 <table>
     <tr>
@@ -436,11 +436,28 @@ The library currently contains the following animations
 
 ### <a id="Rotate"></a>Rotate
 
-  + **rotate**
+  + **rotate** - default case which is the same as `rotateCustomized(.clockWise, rotateAngle: 0.99)`
+    
+  + **rotateCustomized(_ type: JWStackTransitionAnimationRotateType, rotateAngle: Double)** - default animation rotate type is `clockWise`, default rotate angle is `0.99`, angle range is `(0.0, 1.0)`.
   
 <div align="left" >
   <img width="20%" src="image/animations/Rotate/default.gif" />
 </div>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Rotate/clockWise099.gif"></td>
+        <td><img src="image/animations/Rotate/clockWise050.gif"></td>
+        <td><img src="image/animations/Rotate/antiClockWise099.gif"></td>
+        <td><img src="image/animations/Rotate/antiClockWise050.gif"></td>
+    </tr>
+    <tr>
+        <th>clockWise and rotate angle is 0.99</th>
+        <th>clockWise and rotate angle is 0.5</th>
+        <th>antiClockWise and rotate angle is 0.99</th>
+        <th>antiClockWise and rotate angle is 0.5</th>
+    </tr>
+</table>
   
 ****
 

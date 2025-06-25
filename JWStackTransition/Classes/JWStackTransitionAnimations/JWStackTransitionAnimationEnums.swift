@@ -102,4 +102,9 @@ public enum JWStackTransitionAnimationNatGeoType {
     case geoRight
 }
 
+public enum JWStackTransitionAnimationRotateType {
+    case clockWise
+    case antiClockWise
+}
+
 #endif

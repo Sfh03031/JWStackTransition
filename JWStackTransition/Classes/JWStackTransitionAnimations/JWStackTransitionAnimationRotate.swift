@@ -11,12 +11,14 @@ import UIKit
 
 public class JWStackTransitionAnimationRotate: JWStackTransitionAnimationDelegate {
     
-    fileprivate var stepDistance : CGFloat = 0.25
-    fileprivate var animationStepTime : TimeInterval = 0.2
+    private var type: JWStackTransitionAnimationRotateType = .clockWise // animation rotate type
+    private var angle: Double = 0.99 // animation rotate angle, (0.0, 1.0)
     
-    public init(distance: CGFloat = 0.333, time: TimeInterval = 0.333) {
-        self.stepDistance = distance
-        self.animationStepTime = time
+    public init(_ type: JWStackTransitionAnimationRotateType, rotateAngle: Double) {
+        self.type = type
+        if rotateAngle > 0.0 && rotateAngle <= 1.0 {
+            self.angle = rotateAngle
+        }
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
@@ -32,9 +34,11 @@ public class JWStackTransitionAnimationRotate: JWStackTransitionAnimationDelegat
         
         fromContainer.addSubview(fromView)
         
+        let angle = self.type == .clockWise ? (self.angle * .pi) : -(self.angle * .pi)
+        
         fromContainer.alpha = 1
         var transform = fromView.layer.transform
-        transform = CATransform3DRotate(transform, .pi, 0.0, 0.0, 1.0)
+        transform = CATransform3DRotate(transform, angle, 0.0, 0.0, 1.0)
         
         UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear]) {
             fromContainer.alpha = 0

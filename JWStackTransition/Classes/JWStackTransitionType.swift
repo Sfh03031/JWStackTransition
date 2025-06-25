@@ -265,11 +265,17 @@ public enum JWStackTransitionType {
      */
     case rollCustomized(_ axis: JWStackTransitionAnimationRollAxis)
     /**
-     Rotate.
+     Rotate, case `clockWise` of JWStackTransitionAnimationRotateType and rotate angle is `0.99`.
      
      - returns: Instance of JWStackTransitionAnimationRotate.
      */
     case rotate
+    /**
+     RotateCustomized, default animation rotate type is `clockWise`, default rotate angle is `0.99`, angle range is `(0.0, 1.0)`.
+     
+     - returns: Instance of JWStackTransitionAnimationRotate.
+     */
+    case rotateCustomized(_ type: JWStackTransitionAnimationRotateType, rotateAngle: Double)
     /**
      Sector, case `left` of JWStackTransitionAnimationRectEdge.
      
@@ -415,7 +421,9 @@ extension JWStackTransitionType {
         case .rollCustomized(let axis):
             return JWStackTransitionAnimationRoll(axis)
         case .rotate:
-            return JWStackTransitionAnimationRotate()
+            return JWStackTransitionAnimationRotate(.clockWise, rotateAngle: 0.99)
+        case .rotateCustomized(let type, let angle):
+            return JWStackTransitionAnimationRotate(type, rotateAngle: angle)
         case .sector:
             return JWStackTransitionAnimationSector(.left)
         case .sectorCustomized(let edge):
