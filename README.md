@@ -623,7 +623,7 @@ The library currently contains the following animations, contents:
 Directory structure of JWStackTransition:
 
 <div align="center" >
-  <img width="85%" src="image/tree.png" />
+  <img width="85%" src="image/tree0.png" />
 </div>
 
 also, [DeepWiki](https://deepwiki.com/Sfh03031/SFStyleKit/) may help you better understand JWStackTransition.
