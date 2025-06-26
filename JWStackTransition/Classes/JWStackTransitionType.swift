@@ -15,7 +15,6 @@ import UIKit
  - AntiClockWise:               AntiClockWise animation.
  - Barrier:                     Barrier animation.
  - Blank:                       Blank animation.
- - Circle:                      Circle animation.
  - ClockWise:                   ClockWise animation.
  - Cube:                        Cube animation.
  - Door:                        Door animation.
@@ -64,7 +63,7 @@ import UIKit
 public enum JWStackTransitionType {
     
     /// All default animation types
-    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .cube, .door, .expand, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .shiftLine, .shrink, .split, .swing, .tiledFlip]
+    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .clockWise, .cube, .door, .expand, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .shiftLine, .shrink, .split, .swing, .tiledFlip]
     
     /**
      AntiClockWise, start angle is `1.5`.
@@ -96,12 +95,6 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationBlank.
      */
     case blank
-    /**
-     Circle.
-     
-     - returns: Instance of JWStackTransitionAnimationCircle.
-     */
-    case circle
     /**
      ClockWise, start angle is `0.5`.
      
@@ -364,8 +357,6 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationBarrier(type, width: width)
         case .blank:
             return JWStackTransitionAnimationBlank()
-        case .circle:
-            return JWStackTransitionAnimationCircle()
         case .clockWise:
             return JWStackTransitionAnimationClockWise(0.5)
         case .clockWiseCustomized(let angle):

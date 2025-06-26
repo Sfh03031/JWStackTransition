@@ -21,7 +21,6 @@ The library currently contains the following animations, contents:
 
   * [AntiClockWise](#AntiClockWise)
   * [Barrier](#Barrier)
-  * [Circle](#Circle)
   * [ClockWise](#ClockWise)
   * [Cube](#Cube)
   * [Door](#Door)
@@ -103,16 +102,6 @@ The library currently contains the following animations, contents:
 
 ****
 
-### <a id="Circle"></a>Circle
-
-  + **circle**
-  
-<div align="left" >
-  <img width="20%" src="image/animations/Circle/default.gif" />
-</div>
-  
-****
-
 ### <a id="ClockWise"></a>ClockWise
 
   + **clockWise** - default case which is the same as `clockWiseCustomized(0.5)`.
@@ -122,7 +111,7 @@ The library currently contains the following animations, contents:
 <table>
     <tr>
         <td><img src="image/animations/ClockWise/custom_00.gif"></td>
-        <td><img src="image/animations/ClockWise/default.gif"></td>
+        <td><img src="image/animations/ClockWise/custom_05.gif"></td>
         <td><img src="image/animations/ClockWise/custom_10.gif"></td>
         <td><img src="image/animations/ClockWise/custom_15.gif"></td>
         <td><img src="image/animations/ClockWise/custom_20.gif"></td>
