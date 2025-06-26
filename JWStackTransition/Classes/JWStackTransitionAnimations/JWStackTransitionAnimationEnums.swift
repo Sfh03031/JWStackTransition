@@ -118,5 +118,4 @@ public enum JWStackTransitionAnimationShiftLineType {
     case toTopLeft
 }
 
-
 #endif

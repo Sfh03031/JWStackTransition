@@ -29,6 +29,9 @@ struct ExampleItem {
     }
 }
 
+let screenWidth = UIScreen.main.bounds.width
+let screenHeight = UIScreen.main.bounds.height
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let imgList = ["galleryImage01", "galleryImage02", "galleryImage03", "galleryImage04", "galleryImage05", "galleryImage06", "galleryImage07", "galleryImage08", "lightning1", "lightning2", "moon1", "moon2", "snow1", "snow2", "sun1", "sun2", "tornado1", "tornado2"]
@@ -70,6 +73,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "horizontalClose and scale is 0.6", type: .doorCustomized(.horizontalClose, scale: 0.6)),
             ExampleItem(name: "verticalOpen and scale is 0.4", type: .doorCustomized(.verticalOpen, scale: 0.4)),
             ExampleItem(name: "verticalClose and scale is 0.2", type: .doorCustomized(.verticalClose, scale: 0.2)),
+        ]),
+        Examples(title: "Expand", list: [
+            ExampleItem(name: "default, CGRect.zero", type: .expand),
+            ExampleItem(name: "x: screenWidth, y: 0, width: 0, height: 0", type: .expandCustomized(CGRect(x: screenWidth, y: 0, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth, y: screenHeight, width: 0, height: 0", type: .expandCustomized(CGRect(x: screenWidth, y: screenHeight, width: 0, height: 0))),
+            ExampleItem(name: "x: 0, y: screenHeight, width: 0, height: 0", type: .expandCustomized(CGRect(x: 0, y: screenHeight, width: 0, height: 0))),
+            
+            ExampleItem(name: "x: screenWidth / 2, y: 0, width: 0, height: 0", type: .expandCustomized(CGRect(x: screenWidth / 2, y: 0, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth, y: screenHeight / 2, width: 0, height: 0", type: .expandCustomized(CGRect(x: screenWidth, y: screenHeight / 2, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth / 2, y: screenHeight, width: 0, height: 0", type: .expandCustomized(CGRect(x: screenWidth / 2, y: screenHeight, width: 0, height: 0))),
+            ExampleItem(name: "x: 0, y: screenHeight / 2, width: 0, height: 0", type: .expandCustomized(CGRect(x: 0, y: screenHeight / 2, width: 0, height: 0))),
+            
+            ExampleItem(name: "x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0", type: .expandCustomized(CGRect(x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100", type: .expandCustomized(CGRect(x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100))),
+            ExampleItem(name: "x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100", type: .expandCustomized(CGRect(x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100))),
+            ExampleItem(name: "x: -screenWidth, y: -screenHeight, width: 100, height: 100", type: .expandCustomized(CGRect(x: -screenWidth, y: -screenHeight, width: 100, height: 100))),
         ]),
         Examples(title: "Explode", list: [
             ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
@@ -138,12 +157,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "antiClockWise and rotate angle is 0.99", type: .rotateCustomized(.antiClockWise, rotateAngle: 0.99)),
             ExampleItem(name: "antiClockWise and rotate angle is 0.5", type: .rotateCustomized(.antiClockWise, rotateAngle: 0.5))
         ]),
-        Examples(title: "Sector", list: [
-            ExampleItem(name: "default, left", type: .sector),
-            ExampleItem(name: "right", type: .sectorCustomized(.right)),
-            ExampleItem(name: "top", type: .sectorCustomized(.top)),
-            ExampleItem(name: "bottom", type: .sectorCustomized(.bottom)),
-        ]),
         Examples(title: "ShiftLine", list: [
             ExampleItem(name: "default, toRight", type: .shiftLine),
             ExampleItem(name: "toTop", type: .shiftLineCustomized(.toTop)),
@@ -153,6 +166,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "toBottomRight", type: .shiftLineCustomized(.toBottomRight)),
             ExampleItem(name: "toBottomLeft", type: .shiftLineCustomized(.toBottomLeft)),
             ExampleItem(name: "toTopLeft", type: .shiftLineCustomized(.toTopLeft)),
+        ]),
+        Examples(title: "Shrink", list: [
+            ExampleItem(name: "default, CGRect.zero", type: .shrink),
+            ExampleItem(name: "x: screenWidth, y: 0, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: screenWidth, y: 0, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth, y: screenHeight, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: screenWidth, y: screenHeight, width: 0, height: 0))),
+            ExampleItem(name: "x: 0, y: screenHeight, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: 0, y: screenHeight, width: 0, height: 0))),
+            
+            ExampleItem(name: "x: screenWidth / 2, y: 0, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: screenWidth / 2, y: 0, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth, y: screenHeight / 2, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: screenWidth, y: screenHeight / 2, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth / 2, y: screenHeight, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: screenWidth / 2, y: screenHeight, width: 0, height: 0))),
+            ExampleItem(name: "x: 0, y: screenHeight / 2, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: 0, y: screenHeight / 2, width: 0, height: 0))),
+            
+            ExampleItem(name: "x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0", type: .shrinkCustomized(CGRect(x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0))),
+            ExampleItem(name: "x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100", type: .shrinkCustomized(CGRect(x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100))),
+            ExampleItem(name: "x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100", type: .shrinkCustomized(CGRect(x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100))),
+            ExampleItem(name: "x: -screenWidth, y: -screenHeight, width: 100, height: 100", type: .shrinkCustomized(CGRect(x: -screenWidth, y: -screenHeight, width: 100, height: 100))),
         ]),
         Examples(title: "Split", list: [
             ExampleItem(name: "default, horizontal", type: .split),

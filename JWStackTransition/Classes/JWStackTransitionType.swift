@@ -19,6 +19,7 @@ import UIKit
  - ClockWise:                   ClockWise animation.
  - Cube:                        Cube animation.
  - Door:                        Door animation.
+ - Expand:                      Expand animation.
  - Explode:                     Explode animation.
  - Fence:                       Fence animation.
  - Flip:                        Flip animation.
@@ -31,8 +32,8 @@ import UIKit
  - Rectangler:                  Rectangler animation.
  - Roll:                        Roll animation.
  - Rotate                       Rotate animation.
- - Sector                       Sector animation.
  - ShiftLine                    ShiftLine animation.
+ - Shrink                       Shrink animation.
  - Split                        Split animation.
  - Swing                        Swing animation.
  - TiledFlip                    TiledFlip animation.
@@ -42,6 +43,7 @@ import UIKit
  - ClockWiseCustomized:         ClockWiseCustomized animation.
  - CubeCustomized:              CubeCustomized animation.
  - DoorCustomized:              DoorCustomized animation.
+ - ExpandCustomized:            ExpandCustomized animation.
  - ExplodeCustomized:           ExplodeCustomized animation.
  - FenceCustomized:             FenceCustomized animation.
  - FlipCustomized:              FlipCustomized animation.
@@ -52,8 +54,8 @@ import UIKit
  - PanCustomized:               PanCustomized animation.
  - RectanglerCustomized:        RectanglerCustomized animation.
  - RollCustomized:              RollCustomized animation.
- - SectorCustomized             SectorCustomized animation.
  - ShiftLineCustomized          ShiftLineCustomized animation.
+ - ShrinkCustomized             ShrinkCustomized animation.
  - SplitCustomized              SplitCustomized animation.
  - SwingCustomized              SwingCustomized animation.
  - TiledFlipCustomized          TiledFlipCustomized animation.
@@ -62,7 +64,7 @@ import UIKit
 public enum JWStackTransitionType {
     
     /// All default animation types
-    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .cube, .door, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .sector, .shiftLine, .split, .swing, .tiledFlip]
+    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .circle, .clockWise, .cube, .door, .expand, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .shiftLine, .shrink, .split, .swing, .tiledFlip]
     
     /**
      AntiClockWise, start angle is `1.5`.
@@ -136,6 +138,18 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationDoor.
      */
     case doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat)
+    /**
+     Expand, from rect is `CGRect.zero`.
+     
+     - returns: Instance of JWStackTransitionAnimationExpand.
+     */
+    case expand
+    /**
+     ExpandCustomized, default from rect is `CGRect.zero`.
+     
+     - returns: Instance of JWStackTransitionAnimationExpand.
+     */
+    case expandCustomized(_ fromRect: CGRect)
     /**
      Explode, piece width is 30.0.
      
@@ -275,18 +289,6 @@ public enum JWStackTransitionType {
      */
     case rotateCustomized(_ type: JWStackTransitionAnimationRotateType, rotateAngle: Double)
     /**
-     Sector, case `left` of JWStackTransitionAnimationRectEdge.
-     
-     - returns: Instance of JWStackTransitionAnimationSector.
-     */
-    case sector
-    /**
-     sectorCustomized, default animation rect edge is `left`.
-     
-     - returns: Instance of JWStackTransitionAnimationSector.
-     */
-    case sectorCustomized(_ edge: JWStackTransitionAnimationRectEdge)
-    /**
      ShiftLine, case `toRight` of JWStackTransitionAnimationShiftLineType.
      
      - returns: Instance of JWStackTransitionAnimationShiftLine.
@@ -298,6 +300,18 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationShiftLine.
      */
     case shiftLineCustomized(_ type: JWStackTransitionAnimationShiftLineType)
+    /**
+     Shrink, from rect is `CGRect.zero`.
+     
+     - returns: Instance of JWStackTransitionAnimationShrink.
+     */
+    case shrink
+    /**
+     ShrinkCustomized, default from rect is `CGRect.zero`.
+     
+     - returns: Instance of JWStackTransitionAnimationShrink.
+     */
+    case shrinkCustomized(_ fromRect: CGRect)
     /**
      Split, case `horizontal` of JWStackTransitionAnimationSplitType.
      
@@ -364,6 +378,10 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationDoor(.horizontalOpen, scale: 0.8)
         case .doorCustomized(let type, let scale):
             return JWStackTransitionAnimationDoor(type, scale: scale)
+        case .expand:
+            return JWStackTransitionAnimationExpand(CGRect.zero)
+        case .expandCustomized(let rect):
+            return JWStackTransitionAnimationExpand(rect)
         case .explode:
             return JWStackTransitionAnimationExplode(30.0)
         case .explodeCustomized(let width):
@@ -410,14 +428,14 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationRotate(.clockWise, rotateAngle: 0.99)
         case .rotateCustomized(let type, let angle):
             return JWStackTransitionAnimationRotate(type, rotateAngle: angle)
-        case .sector:
-            return JWStackTransitionAnimationSector(.left)
-        case .sectorCustomized(let edge):
-            return JWStackTransitionAnimationSector(edge)
         case .shiftLine:
             return JWStackTransitionAnimationShiftLine(.toRight)
         case .shiftLineCustomized(let type):
             return JWStackTransitionAnimationShiftLine(type)
+        case .shrink:
+            return JWStackTransitionAnimationShrink(.zero)
+        case .shrinkCustomized(let rect):
+            return JWStackTransitionAnimationShrink(rect)
         case .split:
             return JWStackTransitionAnimationSplit(.horizontal)
         case .splitCustomized(let type):

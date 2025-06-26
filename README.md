@@ -25,6 +25,7 @@ The library currently contains the following animations, contents:
   * [ClockWise](#ClockWise)
   * [Cube](#Cube)
   * [Door](#Door)
+  * [Expand](#Expand)
   * [Explode](#Explode)
   * [Fence](#Fence)
   * [Flip](#Flip)
@@ -37,8 +38,8 @@ The library currently contains the following animations, contents:
   * [Rectangler](#Rectangler)
   * [Roll](#Roll)
   * [Rotate](#Rotate)
-  * [Sector](#Sector)
   * [ShiftLine](#ShiftLine)
+  * [Shrink](#Shrink)
   * [Split](#Split)
   * [Swing](#Swing)
   * [TiledFlip](#TiledFlip)
@@ -178,6 +179,59 @@ The library currently contains the following animations, contents:
         <th>horizontalClose and scale is 0.6</th>
         <th>verticalOpen and scale is 0.4</th>
         <th>verticalClose and scale is 0.2</th>
+    </tr>
+</table>
+
+****
+
+### <a id="Expand"></a>Expand
+
+  + **expand** - default case which is the same as `expandCustomized(.zero)`
+    
+  + **expandCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Expand/1.gif"></td>
+        <td><img src="image/animations/Expand/2.gif"></td>
+        <td><img src="image/animations/Expand/3.gif"></td>
+        <td><img src="image/animations/Expand/4.gif"></td>
+    </tr>
+    <tr>
+        <th>default, CGRect.zero</th>
+        <th>x: screenWidth, y: 0, width: 0, height: 0</th>
+        <th>x: screenWidth, y: screenHeight, width: 0, height: 0</th>
+        <th>x: 0, y: screenHeight, width: 0, height: 0</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Expand/5.gif"></td>
+        <td><img src="image/animations/Expand/6.gif"></td>
+        <td><img src="image/animations/Expand/7.gif"></td>
+        <td><img src="image/animations/Expand/8.gif"></td>
+    </tr>
+    <tr>
+        <th>x: screenWidth / 2, y: 0, width: 0, height: 0</th>
+        <th>x: screenWidth, y: screenHeight / 2, width: 0, height: 0</th>
+        <th>x: screenWidth / 2, y: screenHeight, width: 0, height: 0</th>
+        <th>x: 0, y: screenHeight / 2, width: 0, height: 0</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Expand/9.gif"></td>
+        <td><img src="image/animations/Expand/10.gif"></td>
+        <td><img src="image/animations/Expand/11.gif"></td>
+        <td><img src="image/animations/Expand/12.gif"></td>
+    </tr>
+    <tr>
+        <th>x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0</th>
+        <th>x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100</th>
+        <th>x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100</th>
+        <th>x: -screenWidth, y: -screenHeight, width: 100, height: 100</th>
     </tr>
 </table>
 
@@ -460,29 +514,6 @@ The library currently contains the following animations, contents:
   
 ****
 
-### <a id="Sector"></a>Sector
-
-  + **sector** - default case which is the same as `sectorCustomized(.left)`
-    
-  + **sectorCustomized(_ edge: JWStackTransitionAnimationRectEdge)** - default animation rect edge is `left`.
-
-<table>
-    <tr>
-        <td><img src="image/animations/Sector/left.gif"></td>
-        <td><img src="image/animations/Sector/right.gif"></td>
-        <td><img src="image/animations/Sector/top.gif"></td>
-        <td><img src="image/animations/Sector/bottom.gif"></td>
-    </tr>
-    <tr>
-        <th>left</th>
-        <th>right</th>
-        <th>top</th>
-        <th>bottom</th>
-    </tr>
-</table>
-
-****
-
 ### <a id="ShiftLine"></a>ShiftLine
 
   + **shiftLine** - default case which is the same as `shiftLineCustomized(.toRight)`
@@ -516,6 +547,59 @@ The library currently contains the following animations, contents:
         <th>toBottomRight</th>
         <th>toBottomLeft</th>
         <th>toTopLeft</th>
+    </tr>
+</table>
+
+****
+
+### <a id="Shrink"></a>Shrink
+
+  + **shrink** - default case which is the same as `shrinkCustomized(.zero)`
+    
+  + **shrinkCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Shrink/1.gif"></td>
+        <td><img src="image/animations/Shrink/2.gif"></td>
+        <td><img src="image/animations/Shrink/3.gif"></td>
+        <td><img src="image/animations/Shrink/4.gif"></td>
+    </tr>
+    <tr>
+        <th>default, CGRect.zero</th>
+        <th>x: screenWidth, y: 0, width: 0, height: 0</th>
+        <th>x: screenWidth, y: screenHeight, width: 0, height: 0</th>
+        <th>x: 0, y: screenHeight, width: 0, height: 0</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Shrink/5.gif"></td>
+        <td><img src="image/animations/Shrink/6.gif"></td>
+        <td><img src="image/animations/Shrink/7.gif"></td>
+        <td><img src="image/animations/Shrink/8.gif"></td>
+    </tr>
+    <tr>
+        <th>x: screenWidth / 2, y: 0, width: 0, height: 0</th>
+        <th>x: screenWidth, y: screenHeight / 2, width: 0, height: 0</th>
+        <th>x: screenWidth / 2, y: screenHeight, width: 0, height: 0</th>
+        <th>x: 0, y: screenHeight / 2, width: 0, height: 0</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Shrink/9.gif"></td>
+        <td><img src="image/animations/Shrink/10.gif"></td>
+        <td><img src="image/animations/Shrink/11.gif"></td>
+        <td><img src="image/animations/Shrink/12.gif"></td>
+    </tr>
+    <tr>
+        <th>x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0</th>
+        <th>x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100</th>
+        <th>x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100</th>
+        <th>x: -screenWidth, y: -screenHeight, width: 100, height: 100</th>
     </tr>
 </table>
 
@@ -623,7 +707,7 @@ The library currently contains the following animations, contents:
 Directory structure of JWStackTransition:
 
 <div align="center" >
-  <img width="85%" src="image/tree0.png" />
+  <img width="85%" src="image/tree.png" />
 </div>
 
 also, [DeepWiki](https://deepwiki.com/Sfh03031/SFStyleKit/) may help you better understand JWStackTransition.
