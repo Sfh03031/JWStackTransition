@@ -11,48 +11,50 @@ import UIKit
 
 public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelegate {
     
-    private var explodePieceWidth: CGFloat = 50.0 // explode pice width
+    private var explodePieceSize: CGSize = CGSize(width: 50, height: 100) // explode pice size
     
-    init(_ explodePieceWidth: CGFloat) {
-        self.explodePieceWidth = explodePieceWidth
+    init(_ explodeSize: CGSize) {
+        self.explodePieceSize = explodeSize
     }
     
     func setUpAnimation(duration: TimeInterval, transitionContext: UIViewControllerContextTransitioning) {
         guard let fromView = transitionContext.view(forKey: .from),
-              let toView = transitionContext.view(forKey: .to) else { return }
+              let toView = transitionContext.view(forKey: .to),
+              let fromShot = fromView.viewShot() else { return }
         
-        // add the toView to the container
         let containerView = transitionContext.containerView
+        containerView.addSubview(fromView)
         containerView.addSubview(toView)
-        containerView.sendSubviewToBack(toView)
         
-        let size = toView.frame.size
+        let tempView = UIView(frame: containerView.bounds)
+        containerView.addSubview(tempView)
         
-        var tempList: [UIView] = []
-        
-        let factorW = self.explodePieceWidth
-        let factorH = factorW * size.height / size.width
-        
-        let fromShot = fromView.snapshotView(afterScreenUpdates: false) ?? UIView()
-        
-        let columnNum = Int(ceil(size.width / factorW))
-        let rowNum = Int(ceil(size.height / factorH))
+        let columnNum = Int(ceil(fromView.frame.width / self.explodePieceSize.width))
+        let rowNum = Int(ceil(fromView.frame.height / self.explodePieceSize.height))
         for i in 0..<columnNum {
             for j in 0..<rowNum {
-                let rect = CGRect(x: CGFloat(i) * factorW, y: CGFloat(j) * factorH, width: factorW, height: factorH)
-                // FIXME: Snapshotting a view (0x126cf1680, _UIReplicantView) that has not been rendered at least once requires afterScreenUpdates:YES
-                if let shot = fromShot.resizableSnapshotView(from: rect, afterScreenUpdates: false, withCapInsets: .zero) {
-                    shot.frame = rect
-                    containerView.addSubview(shot)
-                    tempList.append(shot)
+                let x = self.explodePieceSize.width * CGFloat(i)
+                let y = self.explodePieceSize.height * CGFloat(j)
+                
+                let tiledRect = CGRect(x: x, y: y, width: self.explodePieceSize.width, height: self.explodePieceSize.height)
+                
+                guard let fromCGImg = fromShot.cgImage,
+                      let fromImgRef = fromCGImg.cropping(to: CGRect(x: fromShot.scale * tiledRect.origin.x, y: fromShot.scale * tiledRect.origin.y, width: fromShot.scale * tiledRect.width, height: fromShot.scale * tiledRect.height)) else {
+                    print("cropping image failed")
+                    return
                 }
+                
+                // create a UIImageView for the piece
+                let pieceImgView = UIImageView(image: UIImage(cgImage: fromImgRef))
+                pieceImgView.frame = tiledRect
+                pieceImgView.clipsToBounds = true
+                pieceImgView.alpha = 1.0
+                tempView.addSubview(pieceImgView)
             }
         }
         
-        containerView.sendSubviewToBack(fromView)
-        
         UIView.animate(withDuration: duration) {
-            for view in tempList {
+            for (_, view) in tempView.subviews.enumerated() {
                 let offsetX = self.randomBetween(small: -100.0, big: 100.0)
                 let offsetY = self.randomBetween(small: -100.0, big: 100.0)
                 view.frame = CGRectOffset(view.frame, CGFloat(offsetX), CGFloat(offsetY))
@@ -64,9 +66,7 @@ public class JWStackTransitionAnimationExplode: JWStackTransitionAnimationDelega
             }
         } completion: { finished in
             if finished {
-                for view in tempList {
-                    view.removeFromSuperview()
-                }
+                tempView.removeFromSuperview()
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }

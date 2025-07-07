@@ -81,6 +81,13 @@ public enum JWStackTransitionAnimationDoorType {
     case verticalClose
     case horizontalOpen
     case horizontalClose
+    case horizontal
+    case vertical
+}
+
+public enum JWStackTransitionAnimationSerrateType {
+    case vertical
+    case horizontal
 }
 
 public enum JWStackTransitionAnimationCubeType {
@@ -95,6 +102,10 @@ public enum JWStackTransitionAnimationPanType {
     case panRight
     case panTop
     case panBottom
+    case panLeftWithShake
+    case panRightWithShake
+    case panTopWithShake
+    case panBottomWithShake
 }
 
 public enum JWStackTransitionAnimationNatGeoType {
@@ -116,6 +127,23 @@ public enum JWStackTransitionAnimationShiftLineType {
     case toBottomRight
     case toBottomLeft
     case toTopLeft
+}
+
+public enum JWStackTransitionAnimationPuzzleType {
+    case random
+    case fromTop
+    case fromRight
+    case fromBottom
+    case fromLeft
+    case fromTopRight
+    case fromBottomRight
+    case fromBottomLeft
+    case fromTopLeft
+    case fromHorizontalBoth
+    case fromVerticalBoth
+    case vertical
+    case horizontal
+    case quadrant
 }
 
 #endif

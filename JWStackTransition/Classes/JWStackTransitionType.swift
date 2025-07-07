@@ -28,9 +28,12 @@ import UIKit
  - NatGeo:                      NatGeo animation.
  - Official:                    Official animation.
  - Pan:                         Pan animation.
+ - Particle:                    Particle animation.
+ - Puzzle:                      Puzzle animation.
  - Rectangler:                  Rectangler animation.
  - Roll:                        Roll animation.
  - Rotate                       Rotate animation.
+ - Serrate                      Serrate animation.
  - ShiftLine                    ShiftLine animation.
  - Shrink                       Shrink animation.
  - Split                        Split animation.
@@ -51,8 +54,12 @@ import UIKit
  - NatGeoCustomized:            NatGeoCustomized animation.
  - OfficialCustomized:          OfficialCustomized animation.
  - PanCustomized:               PanCustomized animation.
+ - ParticleCustomized:          ParticleCustomized animation.
+ - PuzzleCustomized:            PuzzleCustomized animation.
  - RectanglerCustomized:        RectanglerCustomized animation.
  - RollCustomized:              RollCustomized animation.
+ - RotateCustomized             RotateCustomized  animation.
+ - SerrateCustomized            SerrateCustomized animation.
  - ShiftLineCustomized          ShiftLineCustomized animation.
  - ShrinkCustomized             ShrinkCustomized animation.
  - SplitCustomized              SplitCustomized animation.
@@ -63,7 +70,7 @@ import UIKit
 public enum JWStackTransitionType {
     
     /// All default animation types
-    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .clockWise, .cube, .door, .expand, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .rectangler, .roll, .rotate, .shiftLine, .shrink, .split, .swing, .tiledFlip]
+    public static var allCases: [JWStackTransitionType] = [.antiClockWise, .barrier, .blank, .clockWise, .cube, .door, .expand, .explode, .fence, .flip, .fold, .multiCircle, .multinest, .natGeo, .official, .pan, .particle, .puzzle, .rectangler, .roll, .rotate, .serrate, .shiftLine, .shrink, .split, .swing, .tiledFlip]
     
     /**
      AntiClockWise, start angle is `1.5`.
@@ -130,7 +137,7 @@ public enum JWStackTransitionType {
      
      - returns: Instance of JWStackTransitionAnimationDoor.
      */
-    case doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat)
+    case doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat?)
     /**
      Expand, from rect is `CGRect.zero`.
      
@@ -144,17 +151,17 @@ public enum JWStackTransitionType {
      */
     case expandCustomized(_ fromRect: CGRect)
     /**
-     Explode, piece width is 30.0.
+     Explode, explode piece width is 50 and height is 100.
      
      - returns: Instance of JWStackTransitionAnimationExplode.
      */
     case explode
     /**
-     ExplodeCustomized, default explode piece width is 30.0.
+     ExplodeCustomized, default explode piece width is 50 and height is 100.
      
      - returns: Instance of JWStackTransitionAnimationExplode.
      */
-    case explodeCustomized(_ pieceWidth: CGFloat)
+    case explodeCustomized(_ pieceSize: CGSize)
     /**
      Fence, case `verticalLeft` of JWStackTransitionAnimationFenceType and fence width is `20.0`.
      
@@ -246,6 +253,30 @@ public enum JWStackTransitionType {
      */
     case panCustomized(_ type: JWStackTransitionAnimationPanType)
     /**
+     Particle, particle ejected from point is `CGPoint.zero`, particle width is `20` and height is `20`.
+     
+     - returns: Instance of JWStackTransitionAnimationParticle.
+     */
+    case particle
+    /**
+     ParticleCustomized, default particle ejected from point is `CGPoint.zero`, particle width is `20` and height is `20`.
+     
+     - returns: Instance of JWStackTransitionAnimationParticle.
+     */
+    case particleCustomized(_ from: CGPoint, size: CGSize)
+    /**
+     Puzzle, case `random` of JWStackTransitionAnimationPuzzleType, column is `5` and row is `10`.
+     
+     - returns: Instance of JWStackTransitionAnimationPuzzle.
+     */
+    case puzzle
+    /**
+     PuzzleCustomized, default animation type is `random`, column is `5` and row is `10`.
+     
+     - returns: Instance of JWStackTransitionAnimationPuzzle.
+     */
+    case puzzleCustomized(_ type: JWStackTransitionAnimationPuzzleType, column: Int, row: Int)
+    /**
      Rectangler, case `waveIn` of JWStackTransitionAnimationRectanglerWave.
      
      - returns: Instance of JWStackTransitionAnimationRectangler.
@@ -281,6 +312,18 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationRotate.
      */
     case rotateCustomized(_ type: JWStackTransitionAnimationRotateType, rotateAngle: Double)
+    /**
+     Serrate, case `horizontal` of JWStackTransitionAnimationSerrateType and serrate count is `7`.
+     
+     - returns: Instance of JWStackTransitionAnimationSerrate.
+     */
+    case serrate
+    /**
+     SerrateCustomized, default animation type is `horizontal` and default serrate count is `7`.
+     
+     - returns: Instance of JWStackTransitionAnimationSerrate.
+     */
+    case serrateCustomized(_ type: JWStackTransitionAnimationSerrateType, count: Int)
     /**
      ShiftLine, case `toRight` of JWStackTransitionAnimationShiftLineType.
      
@@ -374,9 +417,9 @@ extension JWStackTransitionType {
         case .expandCustomized(let rect):
             return JWStackTransitionAnimationExpand(rect)
         case .explode:
-            return JWStackTransitionAnimationExplode(30.0)
-        case .explodeCustomized(let width):
-            return JWStackTransitionAnimationExplode(width)
+            return JWStackTransitionAnimationExplode(CGSize(width: 50, height: 100))
+        case .explodeCustomized(let size):
+            return JWStackTransitionAnimationExplode(size)
         case .fence:
             return JWStackTransitionAnimationFence(.verticalLeft, width: 20.0)
         case .fenceCustomized(let type, let width):
@@ -407,6 +450,14 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationPan(.panLeft)
         case .panCustomized(let type):
             return JWStackTransitionAnimationPan(type)
+        case .particle:
+            return JWStackTransitionAnimationParticle(.zero, particleSize: CGSize(width: 20, height: 20))
+        case .particleCustomized(let point, let size):
+            return JWStackTransitionAnimationParticle(point, particleSize: size)
+        case .puzzle:
+            return JWStackTransitionAnimationPuzzle(.random, column: 5, row: 10)
+        case .puzzleCustomized(let type, let column, let row):
+            return JWStackTransitionAnimationPuzzle(type, column: column, row: row)
         case .rectangler:
             return JWStackTransitionAnimationRectangler(.waveIn)
         case .rectanglerCustomized(let wave):
@@ -419,6 +470,10 @@ extension JWStackTransitionType {
             return JWStackTransitionAnimationRotate(.clockWise, rotateAngle: 0.99)
         case .rotateCustomized(let type, let angle):
             return JWStackTransitionAnimationRotate(type, rotateAngle: angle)
+        case .serrate:
+            return JWStackTransitionAnimationSerrate(.horizontal, count: 7)
+        case .serrateCustomized(let type, let count):
+            return JWStackTransitionAnimationSerrate(type, count: count)
         case .shiftLine:
             return JWStackTransitionAnimationShiftLine(.toRight)
         case .shiftLineCustomized(let type):

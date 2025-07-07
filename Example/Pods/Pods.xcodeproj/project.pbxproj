@@ -7,192 +7,193 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05CA0FDA885812E56D35247C8CBDEDEE /* JWStackTransitionAnimationShiftLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A178A75F90FC19B6665959ECF7EE2C98 /* JWStackTransitionAnimationShiftLine.swift */; };
 		064D909CD827405E8DCC309DB1B7775A /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB81B22EDD124284079BFC46623B012B /* ConstraintLayoutSupportDSL.swift */; };
-		09B3813BBA366B747609A02EDE0D4EC8 /* JWStackTransitionAnimationBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2856338BCF0D56D3CF62F4A3228C63 /* JWStackTransitionAnimationBarrier.swift */; };
 		09E1F569A93FAD4B9149E30B9301F44A /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EB7C82F1255B9D67EF1933471EADF9 /* ConstraintPriority.swift */; };
 		0AE1FFAA4390B36294D9A3C1E9A2D181 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BC96F34E43FA0A3AE93B3C2C4595E5 /* XCTest.framework */; };
 		0CA7A132ABE7018DE9295456732F38BB /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1EB3728F46330ABB7F11B6980F370B /* ConstraintAttributes.swift */; };
+		0DB5AE8A2CF38D5F5CF699DD7955F5FB /* JWStackTransitionAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B706A875B5F061006CC16EE5D81650 /* JWStackTransitionAnimationDelegate.swift */; };
 		0DE5DB9C6227B3416778D8417DD95EA9 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D93D9E216FE5D077B2FF3E0DBAD138 /* ConstraintView+Extensions.swift */; };
-		0FAEC021AC582372AA6CE4B8B20B325B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
 		1194E62AA3F6F506799B1A43B16942B5 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B802FD33231598633AC39DABB694D071 /* ConstraintDirectionalInsets.swift */; };
 		12C8FD3D06F867281B3C87497145DC65 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F8A4271805264FF6D7AF27BEC285AA /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17FC42D9F1A57C0800BE2043985BFB89 /* JWStackTransitionAnimationClockWise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80F35E74E92314EB4990ED059BC80CE /* JWStackTransitionAnimationClockWise.swift */; };
 		187EB5DED8A7FAED2F2F33D3676AC338 /* Pods-JWStackTransition_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 627AFD6FAD108FC2EBD8AE6C709DB440 /* Pods-JWStackTransition_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18D832F40A46DAE7FB516309731DB573 /* JWStackTransitionAnimationSwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C60C9D7ADEC5464D3A8317E65BC8A3 /* JWStackTransitionAnimationSwing.swift */; };
+		1CA9E02E8C835BC59C8279D71252624F /* JWStackTransitionAnimationFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A3DBD170C4D1ADA994101215D5789 /* JWStackTransitionAnimationFlip.swift */; };
 		205EB01AED14BB574DD54EAFE26E4786 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
-		23617F9CC5B2FD08035265E82C534F70 /* JWST_UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634C0F98DC1A5F6D55834323E306CE6B /* JWST_UIView++.swift */; };
+		260B495E0FDB4675BE41CC676B1C9A0D /* JWStackTransitionAnimationNatGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429EAAAB8ADF2BA2338FE0A27CF4EA3 /* JWStackTransitionAnimationNatGeo.swift */; };
 		267AEE0BF1514767DD64B50559013EB3 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3B4890451ABA7222993A62DEE682E1 /* FBSnapshotTestController.m */; };
+		28F77EBDAA4DC0BC7E0016F081E94A19 /* JWStackTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B121AD721DEBCC3536FB7B8406399 /* JWStackTransition-dummy.m */; };
 		2B2EB369550CE92CEEFCBFD3D32B8A3F /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87688B4793F3FC0E3DAD5C8296343729 /* ConstraintInsetTarget.swift */; };
-		2C6530EACEB499F3024FB96409D570B4 /* JWStackTransitionAnimationMultiCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7452B25ACD7F9AAF493BC760AF0A71BC /* JWStackTransitionAnimationMultiCircle.swift */; };
+		323C4007FB0BA22A033E50D16269FE79 /* JWStackTransitionAnimationOfficial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64FADC143BCC6501CF73C5D0AA0ABDF /* JWStackTransitionAnimationOfficial.swift */; };
+		33453990BE16258DF635109BCDD618B6 /* JWStackTransitionAnimationDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30DF0E511F70278DEAAD6A705848CB /* JWStackTransitionAnimationDoor.swift */; };
 		33E349E32C64A93B3CAC6A2667583E98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6B5E773973965C73BC40D4388B4C07 /* QuartzCore.framework */; };
 		3577F172FA68CBAE47CFEE6FE25C5404 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B92491E915ED9DA1FADC13CEB2BDE6 /* ConstraintOffsetTarget.swift */; };
 		3777A70A61ED49FCDDB07BE5F0A1C4B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4138A0A13FF7F7B73435E87E54C56C18 /* UIKit.framework */; };
 		3BF27A2A6F27DCE9645039383FCE19F0 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0981DAB946780B49926B7BF57248401 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3B646B4988314275B40E97BEB16C7F /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C6E1ECD8F1CB937F6935949A998C /* ConstraintLayoutGuideDSL.swift */; };
-		3F38111D12E2CF775CF8AED57A01FD11 /* JWST_UINavigationController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB1B2B6E3558D8CF6C512A74A2102A /* JWST_UINavigationController++.swift */; };
-		4F459DFF9E9F0C2C6AD002845DD241D4 /* JWStackTransitionAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2D5064A7443C75CCB24F7163A8204B /* JWStackTransitionAnimationBlank.swift */; };
+		3E161780EBAD28471563D0A3C5FB659E /* JWStackTransitionAnimationExplode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3684E5F3E3E94B1038BCC4824FEAE7F8 /* JWStackTransitionAnimationExplode.swift */; };
+		471B88FE7A029B22AE687B2128DDE9A5 /* JWStackTransitionAnimationBlank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D8EA2C223140D755D17E75550F4B6F /* JWStackTransitionAnimationBlank.swift */; };
+		4AFA6BA96B922ABFBF4523BC31300684 /* JWStackTransitionBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F01F9EB40D402E7FB6E02BC67F7BC7 /* JWStackTransitionBasicAnimation.swift */; };
+		4B5957FA8E755686864BE6A66B8C10F8 /* JWStackTransitionHijack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D79B5C58584D170F507734C1439AC20 /* JWStackTransitionHijack.swift */; };
 		4F4DEB687C0E4834A5B291DEE0651D6A /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5C9848D11DEA9504AED85614BA5DC8 /* ConstraintMaker.swift */; };
 		529A4F46650DEBED632E64277F3FAC16 /* Pods-JWStackTransition_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CA8FA41F913C9BC659F58F371171CB /* Pods-JWStackTransition_Example-dummy.m */; };
-		55BD83CD3BCB94E0986C6F89DB5626AB /* JWStackTransitionBasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB80F537674E8B06E8C78AF11DA83E /* JWStackTransitionBasicAnimation.swift */; };
+		533D950E127F4B81BCC52F3A7154B329 /* JWStackTransitionAnimationBarrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995DC15592B6F6AC92C0CDC2379519E9 /* JWStackTransitionAnimationBarrier.swift */; };
+		552B7641D5AA1BA67F509F3EBC048DD8 /* JWStackTransitionAnimationCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96BE4821880E26856121CE457391911 /* JWStackTransitionAnimationCube.swift */; };
 		55D9D4D1609F1F4929E1BA1A1B562445 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 612F9E327A10D3EB9DEB67E42012B410 /* FBSnapshotTestCase.m */; };
 		57C4F6EFB30DDD14E960AC2D6B34F904 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E2EA0DF4A0CD9610D96B7AB73473B5 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57FEC3A293BD7D87CD0EE1EA2CBBBD6A /* JWStackTransitionHijack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD91E888CA906089E56388C33D6AABA /* JWStackTransitionHijack.swift */; };
 		5922A6A0AE7152CF436356B3556F1835 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56034E209EEE1C9A0F5A38CF50091B6C /* ConstraintItem.swift */; };
 		593CC778281D0C5DAFD70A5E285DA86A /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = C5501E5D2C7E3056372AFE0A04C85A55 /* UIImage+Compare.m */; };
 		59F34874DA4ABB2F5C4E09EA6865936B /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393C56DFD1E2CBD18F9C745C7105EEE /* ConstraintLayoutGuide.swift */; };
+		5B9236B350AFA44ABAA80604092C836F /* JWStackTransitionAnimationMultiCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154560CB2866AB9702374F697D44583F /* JWStackTransitionAnimationMultiCircle.swift */; };
+		5E9420EC4117EDEB7F07BEA0029DFF36 /* JWStackTransitionAnimationShrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289BCF82C7B2D45AFFFD6977016325BC /* JWStackTransitionAnimationShrink.swift */; };
 		64066CA793C90CA645A6D2031654D2CC /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = B8F22E5743DB936F0BCA885C3460A042 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		66EF0B661B19D461FAD3A0126EFDA536 /* JWStackTransitionAnimationTiledFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B5AC67558A1E2E20AC98AEBD1A0B9 /* JWStackTransitionAnimationTiledFlip.swift */; };
-		6CB37B95E86E9A489AC76C51891AF566 /* JWStackTransitionAnimationRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A8FFA7EF6EE97FCF80DC472458FF0D /* JWStackTransitionAnimationRotate.swift */; };
+		67FEB1DD9E5FCD34225E16A57754A25A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
+		6877D3FEA2B4AB227389D6D6503F8A88 /* JWST_CGRect++.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBBBE04904CCDE5072C498AD6D1D4CA /* JWST_CGRect++.swift */; };
+		69766B4D319C6718963E67A5B27E5861 /* JWStackTransitionAnimationPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A559E22A511CB5BE3DE4570AEF440E /* JWStackTransitionAnimationPuzzle.swift */; };
+		6CB344E0DD93977D83FE65E393359884 /* JWStackTransitionAnimationRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EBCDC5594D7D283C2BEDED93860559 /* JWStackTransitionAnimationRoll.swift */; };
 		6E39129FC8643A70C276801FEF4C280D /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE1A05CF4BACC0877A1EA406CEDF2C4 /* Constraint.swift */; };
-		721A4F25B2A22B44E6803F473D297BC1 /* JWStackTransitionAnimationAntiClockWise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BB82BC8C420EBFF918F9A1443AA90 /* JWStackTransitionAnimationAntiClockWise.swift */; };
+		7451D00855D7C81E852B34951632C36E /* JWStackTransitionAnimationExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F3E36D96707F742AA487661A7E83E /* JWStackTransitionAnimationExpand.swift */; };
 		76085620117E839C450E794DB3773D79 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D4E7EEA1BD809227585DCC9E42B481 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		766F6429966FBFF2E2E6A2991BDAFDA9 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A76141B6F2F22DCAC393C3AAB2F868 /* UIImage+Diff.m */; };
+		77AD9C87E4CC703DCEBF159B20D06F07 /* JWStackTransitionAnimationAntiClockWise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39AED748FB44A80F0C54A260414A4D /* JWStackTransitionAnimationAntiClockWise.swift */; };
 		7AF516B98D45391B909D507D0244104C /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09AC7D2D075BC9F42F4D03C71E09BDA /* ConstraintDescription.swift */; };
 		7CA66236CDA347ACA342DBCAA0F75C7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
+		7D357E2641211222E71B91AE9BA45C7D /* JWStackTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2CAE497C6FD1BA1F21ACAAB9F7EC190 /* JWStackTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D42390CDB4FA147504B03DA2A174A0C /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD7DB1E9F1834F3D3F9AB9E82F722A6 /* ConstraintViewDSL.swift */; };
-		7E3FC099F1AED755E21C1CAC8E1845E2 /* JWStackTransitionAnimationSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C6B9C3BF87F57ABF073672540F46C7 /* JWStackTransitionAnimationSplit.swift */; };
+		7E441E9B49F427F90FF1AE60E7514AC7 /* JWST_UINavigationController++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4012938BF74457641D82688B477F74 /* JWST_UINavigationController++.swift */; };
+		7E6D5E5791CCF98BD3CA376F311F79C3 /* JWStackTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1415615A9A6461F3CFD33323F1A2CAA /* JWStackTransition.swift */; };
+		7E88DA18B7EB1EA2FF1A45B4C3BE9DFA /* JWStackTransitionAnimationFold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73C824BED09F8F7136A79AAD6AA468 /* JWStackTransitionAnimationFold.swift */; };
 		868A9F524A7985BDA1EA124D9BF4CA63 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAFEA7715765B78C747FF1DFDA086D /* ConstraintDSL.swift */; };
 		86CAB01D950C8BC35EDE0BDC01A2500B /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E5E2F4998C6B7491389B1D0DBEDDF /* ConstraintView.swift */; };
-		87EC4935CC15254AADF9E25840618FD6 /* JWStackTransitionAnimationMultinest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F23396AC8C4203B411FFFC513E5E5 /* JWStackTransitionAnimationMultinest.swift */; };
-		8819017BA4E7C965CC386FFEB9F81153 /* JWStackTransition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CA7A5231ECFAAC57AB7A7863B2C078 /* JWStackTransition-dummy.m */; };
+		872A044933935959CD67752F8A9FA603 /* JWStackTransitionAnimationMultinest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BAE84C2608262B1CACFF6A93ABBB8 /* JWStackTransitionAnimationMultinest.swift */; };
 		883EDEE1C699497CF2A77C3B8A32A790 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672355A248953DA695230AAEF2967B46 /* ConstraintMultiplierTarget.swift */; };
 		8B19BD4B866E619E3C3D9C9B5CAC41D4 /* Pods-JWStackTransition_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 678FFDB2DC90871831D264891F8F482D /* Pods-JWStackTransition_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BABA32F7B94A25D8E9208C0A8D90B2E /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DA6F6137CADA36D0B14F6E1B2C896C /* ConstraintMakerRelatable+Extensions.swift */; };
 		8BD79BC716D540C0025BFD325080315F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
-		8FBEA0FFD465FEACF62C26C85D4B0B74 /* JWStackTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3A7C122B09FD244D979093F91D205 /* JWStackTransition.swift */; };
+		8E4F61CD3298837569E89EC3B1CC1D70 /* JWStackTransitionAnimationSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94550328F9CDDBF3DA1D4829FD1A3082 /* JWStackTransitionAnimationSplit.swift */; };
 		8FD1AB468AF7F87112C3674006F6BC6E /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162B8F58F6924BBB5EF513B71BD1270 /* SwiftSupport.swift */; };
-		960D1288FA33BA89458B071BFA444F73 /* JWStackTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94CF335AA5925C5CAA224FCD54121B /* JWStackTransitionType.swift */; };
+		9C2E5D5733EE367D6CFBFC118A330C07 /* JWStackTransitionAnimationClockWise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61585891F37F0FE077C140DADC963527 /* JWStackTransitionAnimationClockWise.swift */; };
 		9E0045B41BFE697DB4ADE151228024D2 /* SnapKit_Privacy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B9DCB5EC0B1CDADD221717CADDF62359 /* SnapKit_Privacy.bundle */; };
-		9E7935A4C0152801AA48FE8136EFCD6D /* JWStackTransitionAnimationRectangler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2FF3FC790F9B8A3A2E05BFC548349F /* JWStackTransitionAnimationRectangler.swift */; };
-		A0644F081E590781385C834BF6289C66 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1465CCC65F0DFEDB3F19D33CBD1FA4FC /* PrivacyInfo.xcprivacy */; };
-		A73DB3EF634221D103402F1D4FA220C6 /* JWStackTransitionAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CB23015F1044ABBA2D7BBAB938BBE /* JWStackTransitionAnimationDelegate.swift */; };
+		A370A8D926BB5D01F1378BE1E796CA78 /* JWStackTransitionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33909FAEDF3283AD906FB29A6993CA /* JWStackTransitionType.swift */; };
 		AABEF13464BA7F4621BD94736C1D057C /* ConstraintMakerPrioritizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B04296B00FA52E15A013EDF179FD5 /* ConstraintMakerPrioritizable.swift */; };
+		AB36DC1E81D4F30396AF3609E7D59410 /* JWStackTransitionAnimationTiledFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADE35955A72B333CADFD5F990476442 /* JWStackTransitionAnimationTiledFlip.swift */; };
 		AB59A1EAA1883CB19B8C9A4EC48E4603 /* Pods-JWStackTransition_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15055775AADCEB9C45F6A0B066852443 /* Pods-JWStackTransition_Tests-dummy.m */; };
-		AE0798912DFBFBDE00F818B6 /* JWStackTransitionAnimationFold.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0798902DFBFBD400F818B6 /* JWStackTransitionAnimationFold.swift */; };
-		AE0798932DFC216B00F818B6 /* JWStackTransitionAnimationFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0798922DFC216500F818B6 /* JWStackTransitionAnimationFlip.swift */; };
 		AE224EDB6D044C0FE86B086E950FC2F9 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8379CB49F3ECB945337DBBB17899321E /* Debugging.swift */; };
-		AE3B91D62E0BD754003ACFE0 /* JWStackTransitionAnimationShiftLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B91D52E0BD748003ACFE0 /* JWStackTransitionAnimationShiftLine.swift */; };
-		AE3B91D82E0CEC7F003ACFE0 /* JWStackTransitionAnimationExpand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B91D72E0CEC78003ACFE0 /* JWStackTransitionAnimationExpand.swift */; };
-		AE3B91DA2E0D1F01003ACFE0 /* JWStackTransitionAnimationShrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B91D92E0D1EF1003ACFE0 /* JWStackTransitionAnimationShrink.swift */; };
-		AEDD42752DFFE691000C9442 /* JWStackTransitionAnimationExplode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD42742DFFE680000C9442 /* JWStackTransitionAnimationExplode.swift */; };
-		AEDD42772DFFFCE1000C9442 /* JWStackTransitionAnimationDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD42762DFFFCDB000C9442 /* JWStackTransitionAnimationDoor.swift */; };
-		AEDD42792E01435A000C9442 /* JWStackTransitionAnimationCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD42782E01434F000C9442 /* JWStackTransitionAnimationCube.swift */; };
-		AEDD427B2E02AB8A000C9442 /* JWStackTransitionAnimationPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD427A2E02AB86000C9442 /* JWStackTransitionAnimationPan.swift */; };
-		AEDD427D2E02B7B2000C9442 /* JWStackTransitionAnimationNatGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDD427C2E02B7AA000C9442 /* JWStackTransitionAnimationNatGeo.swift */; };
+		AE3B91EA2E17BC63003ACFE0 /* JWStackTransitionAnimationParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3B91E92E17BC4F003ACFE0 /* JWStackTransitionAnimationParticle.swift */; };
 		AEFB700F9EE77EE9848A8AC8C3F00A7F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E46C2DADA071AFF1667156902800D1 /* FBSnapshotTestCasePlatform.m */; };
 		AF760C78F1C7E11BF7CB9E9B29903530 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474D34543D5539E6C5D5D294866A2E3 /* ConstraintInsets.swift */; };
 		B0875E3AB8718E7DFE5C53497C02A15E /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F85FF70453F689B79660F0F29CB429 /* ConstraintLayoutSupport.swift */; };
 		B903049E7C1BED7918DAB208754107C7 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6133543FF4FC68AB143CAA54705CF569 /* ConstraintMakerFinalizable.swift */; };
 		BA2FB695DEB0D179253EEB8DFCE3578B /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1623E9BDBADC7A1240D94ABAAEF24704 /* SnapKit-dummy.m */; };
-		BA429689ACAEEA3E1B955D8B37B43350 /* JWStackTransitionAnimationSwing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5D22E368046EEBBC26A649D99B618 /* JWStackTransitionAnimationSwing.swift */; };
 		BDA5C7CC91E86448237CF40954FAC5AF /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03604203722B5419888A09D7125E65E /* ConstraintMakerRelatable.swift */; };
+		BE1F94C5DAA12ED6ABD09D7F774A717C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1465CCC65F0DFEDB3F19D33CBD1FA4FC /* PrivacyInfo.xcprivacy */; };
 		BF1AE4D97E813B95C43EA4A298B973D1 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D1C7D922C544E7B427CC8F55F08A31 /* LayoutConstraint.swift */; };
 		C07CB3E9A4D1BF00F841E4285629A2B2 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD69DC703D07D0F3BE762DA9C650EC /* ConstraintRelatableTarget.swift */; };
 		C14F10B663FE2898EACAB90C202B3F50 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F7099EE5F261DD6C4A99C573C2B6E2 /* ConstraintMakerEditable.swift */; };
-		C3BFE57C2E3CD5615FEA30762BC5F563 /* JWStackTransitionAnimationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2D7DE12726CD2E53E42A61F71DB62 /* JWStackTransitionAnimationEnums.swift */; };
+		C535AFE06CB5D89F4E5B5D5105EB91EE /* JWStackTransitionAnimationFence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1299BF079D766CBECC1A316E49543322 /* JWStackTransitionAnimationFence.swift */; };
 		C6A4302ACE006C4E2CDD481287E2916B /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CA13AA651D9BFD46C921AAA05E7FF3 /* Typealiases.swift */; };
 		C6F45595676957ADBEC18EB3F23EAEC4 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740B392D1D3AEF791A392625C3C20C7D /* LayoutConstraintItem.swift */; };
 		CE0DC4614B4FF855B2101D7F74A710AC /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D45D0F9D679AC53595C10B098B25DDBC /* UIApplication+StrictKeyWindow.m */; };
 		CE593943A9E7CF83822CF60304BCAD43 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1E3031FFBC37A609C408965E47865 /* ConstraintConstantTarget.swift */; };
+		CECF1A5CA6820FB23CFDC18F3DDA08E8 /* JWStackTransitionAnimationSerrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B114493EA8E2D7861B7FDA9FF37D95BB /* JWStackTransitionAnimationSerrate.swift */; };
 		CF65A6A0F5F9A6A9FBF5501610AAD758 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DF4EDDCC2917EC822EE49665DF5E6BA /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4218DA55B2BA45937589200CC0DF1FB /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8C0C35619CDB662A62D4001CE00539 /* ConstraintMakerExtendable.swift */; };
-		D5718CA98DBE5C92C62D4D675715F8A2 /* JWStackTransition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DE94A40089FA17FD730A98DD53B5539 /* JWStackTransition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6437C90FA95442294E5E74676B09606 /* JWST_UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC956FD7D0B3FED6569E598747E2D6A /* JWST_UIView++.swift */; };
+		D6688D91B2385D87434FEB279FB60DF4 /* JWStackTransitionAnimationPan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEB24E6818C1C3CD30AECA3FF05FC9 /* JWStackTransitionAnimationPan.swift */; };
+		D9DDBCD2B0A4E184F9B1A2792ED9E463 /* JWStackTransitionAnimationRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5AB628D40EB102BA54F3FFA01D17B8A /* JWStackTransitionAnimationRotate.swift */; };
 		DA747A80391988F1202FF4989A0E12CF /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = FC7D7F2FE2D438735A5D3169B2163156 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DB60A9E6A731A11D458F98C744DF9848 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */; };
 		DBA4803F4765E1650B8C6841157F5D73 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62D5566EB1B17B53970782513AD72E /* ConstraintPriorityTarget.swift */; };
+		DD2CD41A40F048F866C1936D003D1A34 /* JWStackTransitionAnimationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CF13002800E55821F008C35D970A18 /* JWStackTransitionAnimationEnums.swift */; };
 		E37671A03B4C17A1CF3766A6125833BB /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5767F5989184A875A09F836151420 /* ConstraintDirectionalInsetTarget.swift */; };
 		E3D779DEE753C0B0D33BA8E73A980265 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5588CC35F16C637856E92DFC3B82306 /* ConstraintLayoutGuide+Extensions.swift */; };
-		E3F120E2B51C81D95C01B8EEFD7C80BD /* JWStackTransitionAnimationFence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F11385404E9FD3B70F0C7AFABCAAEEF /* JWStackTransitionAnimationFence.swift */; };
 		E4F6CF5EA1B12C55385D3CDC6BD1F4D8 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CE02E152C513EDAC493FB7A678CBC4 /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E759C2EC9B730E3C9C562BBB533B85DC /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A09A939656BEE96F2D21E75D1941374 /* FBSnapshotTestCase-dummy.m */; };
 		EA5924031A71EF807EC467903E26FAC0 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 38267193A3312568CE4581A6D1EAF94D /* UIImage+Snapshot.m */; };
 		ECC5C2ADC2682F9171FEA22AF10DCE53 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D783E57A7F53A5D5997C5A35B0E4EFED /* ConstraintRelation.swift */; };
-		EE1C7B23309B9E08790D1EFB390A284F /* JWStackTransitionAnimationRoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEB1E5609FAE80BA8368910F0A84A50 /* JWStackTransitionAnimationRoll.swift */; };
-		EECB81ED5DE14CEF408CB4120B72CA89 /* JWStackTransitionAnimationOfficial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3945F1451C96B411D3312AC7111FA513 /* JWStackTransitionAnimationOfficial.swift */; };
-		EEEE34AB23389459B2F3EC75EA764CFC /* JWST_CGRect++.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70562618FC664CC75A8896934B2CA0F /* JWST_CGRect++.swift */; };
 		F6F33E8B268F3D41075374D95B8088DC /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE7296EF03D602ACC3D5C09786D9EF9 /* UILayoutSupport+Extensions.swift */; };
 		F822382AB9E7B343C04964B313B1743D /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 42EC83795C861A6A7A5EB8266ADC8B02 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F9EBA65892D78A31C068D727D84BCB88 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7592C39C51A2948B409B0F33A5721500 /* ConstraintConfig.swift */; };
+		FEE3CA9BF391E588916A0EF550092778 /* JWStackTransitionAnimationRectangler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4F8957576C9956094BB577E617B306 /* JWStackTransitionAnimationRectangler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09C35958A9CEE1464576285943D4B1F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
-		4891117FE42C84A18522E3854888251A /* PBXContainerItemProxy */ = {
+		6F797B204123384B4418437348D0421B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B1CAED389CCDD3898C398A1929B0F760;
 			remoteInfo = "Pods-JWStackTransition_Example";
 		};
-		4B45B493278FFCDC1D8FF01F21A9B6B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
-			remoteInfo = FBSnapshotTestCase;
-		};
-		8CB601110843D92E4543335F2A95D884 /* PBXContainerItemProxy */ = {
+		916747E9448570E3FD08D17A721759EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8A8DB685241263AFDF5E6B20FE67B93A;
 			remoteInfo = "SnapKit-SnapKit_Privacy";
 		};
-		FA1066269729F54541FA9B9220CF2814 /* PBXContainerItemProxy */ = {
+		9C6AFA02B71AD0FEEBDBEEB09C990208 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
+			remoteInfo = FBSnapshotTestCase;
+		};
+		B844F12E7B54CA6BB21B2B950A62F1C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 398FFEBE4BAC0E2138088948930B355B;
 			remoteInfo = JWStackTransition;
 		};
+		FB7D050AC547EBA1DA2B92C694CCA663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		003AA32C7E90DF4016F38CCFD4DFD2BD /* Pods-JWStackTransition_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWStackTransition_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		00B92491E915ED9DA1FADC13CEB2BDE6 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Sources/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		02A8FFA7EF6EE97FCF80DC472458FF0D /* JWStackTransitionAnimationRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRotate.swift; sourceTree = "<group>"; };
 		048FE35C7ABD37A24508BF4A8D1C4AB1 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
 		0A0D178D75C6BAF2B306B4FC963D90A3 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		0B62D5566EB1B17B53970782513AD72E /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Sources/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		0B63DA881677BA1B87B641EDDFA529B9 /* Pods-JWStackTransition_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JWStackTransition_Tests.modulemap"; sourceTree = "<group>"; };
-		0D2D5064A7443C75CCB24F7163A8204B /* JWStackTransitionAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationBlank.swift; sourceTree = "<group>"; };
+		0F30DF0E511F70278DEAAD6A705848CB /* JWStackTransitionAnimationDoor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationDoor.swift; sourceTree = "<group>"; };
 		10452EAEFB03A5A0E2831761CD929A61 /* Pods-JWStackTransition_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JWStackTransition_Example-frameworks.sh"; sourceTree = "<group>"; };
-		1139E6386C91D3EBCF7998E7E31766FF /* JWStackTransition-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JWStackTransition-Info.plist"; sourceTree = "<group>"; };
+		1299BF079D766CBECC1A316E49543322 /* JWStackTransitionAnimationFence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationFence.swift; sourceTree = "<group>"; };
+		139A3DBD170C4D1ADA994101215D5789 /* JWStackTransitionAnimationFlip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationFlip.swift; sourceTree = "<group>"; };
 		1465CCC65F0DFEDB3F19D33CBD1FA4FC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Sources/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		15055775AADCEB9C45F6A0B066852443 /* Pods-JWStackTransition_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWStackTransition_Tests-dummy.m"; sourceTree = "<group>"; };
-		153D901F07C654CE823BFECC1AAF9CAE /* JWStackTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWStackTransition.release.xcconfig; sourceTree = "<group>"; };
+		154560CB2866AB9702374F697D44583F /* JWStackTransitionAnimationMultiCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationMultiCircle.swift; sourceTree = "<group>"; };
 		1623E9BDBADC7A1240D94ABAAEF24704 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
 		184E5E2F4998C6B7491389B1D0DBEDDF /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Sources/ConstraintView.swift; sourceTree = "<group>"; };
 		18CE02E152C513EDAC493FB7A678CBC4 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		1A09A939656BEE96F2D21E75D1941374 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		1BA2D7DE12726CD2E53E42A61F71DB62 /* JWStackTransitionAnimationEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationEnums.swift; sourceTree = "<group>"; };
-		1CAB80F537674E8B06E8C78AF11DA83E /* JWStackTransitionBasicAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionBasicAnimation.swift; sourceTree = "<group>"; };
 		1CD7DB1E9F1834F3D3F9AB9E82F722A6 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Sources/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		1EEB1E5609FAE80BA8368910F0A84A50 /* JWStackTransitionAnimationRoll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRoll.swift; sourceTree = "<group>"; };
-		1F2CB23015F1044ABBA2D7BBAB938BBE /* JWStackTransitionAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationDelegate.swift; sourceTree = "<group>"; };
 		1F5C9848D11DEA9504AED85614BA5DC8 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Sources/ConstraintMaker.swift; sourceTree = "<group>"; };
 		2162B8F58F6924BBB5EF513B71BD1270 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 		228BB7EC4E9CD074BD33D81059866020 /* Pods-JWStackTransition_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWStackTransition_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		259B5AC67558A1E2E20AC98AEBD1A0B9 /* JWStackTransitionAnimationTiledFlip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationTiledFlip.swift; sourceTree = "<group>"; };
 		26BC96F34E43FA0A3AE93B3C2C4595E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		289BCF82C7B2D45AFFFD6977016325BC /* JWStackTransitionAnimationShrink.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationShrink.swift; sourceTree = "<group>"; };
+		28A186E8CFD52C7705768B4BC36F60B2 /* JWStackTransition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWStackTransition.debug.xcconfig; sourceTree = "<group>"; };
+		291BAE84C2608262B1CACFF6A93ABBB8 /* JWStackTransitionAnimationMultinest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationMultinest.swift; sourceTree = "<group>"; };
 		29E46C2DADA071AFF1667156902800D1 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		2C94CF335AA5925C5CAA224FCD54121B /* JWStackTransitionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWStackTransitionType.swift; path = JWStackTransition/Classes/JWStackTransitionType.swift; sourceTree = "<group>"; };
+		3684E5F3E3E94B1038BCC4824FEAE7F8 /* JWStackTransitionAnimationExplode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationExplode.swift; sourceTree = "<group>"; };
 		38267193A3312568CE4581A6D1EAF94D /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		38A76141B6F2F22DCAC393C3AAB2F868 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		3945F1451C96B411D3312AC7111FA513 /* JWStackTransitionAnimationOfficial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationOfficial.swift; sourceTree = "<group>"; };
+		40D8EA2C223140D755D17E75550F4B6F /* JWStackTransitionAnimationBlank.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationBlank.swift; sourceTree = "<group>"; };
 		4138A0A13FF7F7B73435E87E54C56C18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		42CD69DC703D07D0F3BE762DA9C650EC /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		42EC83795C861A6A7A5EB8266ADC8B02 /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		4307E9FA547AB14497F9D95F319DF7ED /* Pods-JWStackTransition_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWStackTransition_Example.release.xcconfig"; sourceTree = "<group>"; };
-		44CA7A5231ECFAAC57AB7A7863B2C078 /* JWStackTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWStackTransition-dummy.m"; sourceTree = "<group>"; };
+		43119FD4C56C13AE84F6F515F9E73ECA /* JWStackTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWStackTransition-prefix.pch"; sourceTree = "<group>"; };
 		44DDCEE6746CAB4C20381CD780A649EC /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		468FCDDF5608C0042DF5A7525DBA879D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		47CA8FA41F913C9BC659F58F371171CB /* Pods-JWStackTransition_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JWStackTransition_Example-dummy.m"; sourceTree = "<group>"; };
-		4B9BB82BC8C420EBFF918F9A1443AA90 /* JWStackTransitionAnimationAntiClockWise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationAntiClockWise.swift; sourceTree = "<group>"; };
 		4C8C0C35619CDB662A62D4001CE00539 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Sources/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		4DB1E3031FFBC37A609C408965E47865 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Sources/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		4DBA554DABB39BDDE9349E77295988F0 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
@@ -201,78 +202,76 @@
 		50EB7C82F1255B9D67EF1933471EADF9 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Sources/ConstraintPriority.swift; sourceTree = "<group>"; };
 		51CA13AA651D9BFD46C921AAA05E7FF3 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Sources/Typealiases.swift; sourceTree = "<group>"; };
 		54E184F883BAA277B2296E72DD5A9762 /* Pods-JWStackTransition_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWStackTransition_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		558F24A0DA8B0FEE50B136FC3432B4EA /* JWStackTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JWStackTransition.modulemap; sourceTree = "<group>"; };
 		56034E209EEE1C9A0F5A38CF50091B6C /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Sources/ConstraintItem.swift; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4012938BF74457641D82688B477F74 /* JWST_UINavigationController++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JWST_UINavigationController++.swift"; sourceTree = "<group>"; };
+		5D79B5C58584D170F507734C1439AC20 /* JWStackTransitionHijack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWStackTransitionHijack.swift; path = JWStackTransition/Classes/JWStackTransitionHijack.swift; sourceTree = "<group>"; };
 		5E6B5E773973965C73BC40D4388B4C07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		5F11385404E9FD3B70F0C7AFABCAAEEF /* JWStackTransitionAnimationFence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationFence.swift; sourceTree = "<group>"; };
 		612F9E327A10D3EB9DEB67E42012B410 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		6133543FF4FC68AB143CAA54705CF569 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Sources/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		61585891F37F0FE077C140DADC963527 /* JWStackTransitionAnimationClockWise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationClockWise.swift; sourceTree = "<group>"; };
 		627AFD6FAD108FC2EBD8AE6C709DB440 /* Pods-JWStackTransition_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JWStackTransition_Example-umbrella.h"; sourceTree = "<group>"; };
-		634C0F98DC1A5F6D55834323E306CE6B /* JWST_UIView++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JWST_UIView++.swift"; sourceTree = "<group>"; };
-		64E5D22E368046EEBBC26A649D99B618 /* JWStackTransitionAnimationSwing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSwing.swift; sourceTree = "<group>"; };
 		672355A248953DA695230AAEF2967B46 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Sources/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		678FFDB2DC90871831D264891F8F482D /* Pods-JWStackTransition_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JWStackTransition_Tests-umbrella.h"; sourceTree = "<group>"; };
 		68CFD36606A35FB5BA28AB52EEB14982 /* Pods-JWStackTransition_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWStackTransition_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		692D29656528FA94A71ECFB8FEB6DC0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6DF4EDDCC2917EC822EE49665DF5E6BA /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		740B392D1D3AEF791A392625C3C20C7D /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Sources/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		7452B25ACD7F9AAF493BC760AF0A71BC /* JWStackTransitionAnimationMultiCircle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationMultiCircle.swift; sourceTree = "<group>"; };
+		74C60C9D7ADEC5464D3A8317E65BC8A3 /* JWStackTransitionAnimationSwing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSwing.swift; sourceTree = "<group>"; };
 		7592C39C51A2948B409B0F33A5721500 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Sources/ConstraintConfig.swift; sourceTree = "<group>"; };
 		76E2EA0DF4A0CD9610D96B7AB73473B5 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		76EC4FD544BF9BDAD1E8DEFEA9522B58 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
+		77A559E22A511CB5BE3DE4570AEF440E /* JWStackTransitionAnimationPuzzle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationPuzzle.swift; sourceTree = "<group>"; };
 		78D93D9E216FE5D077B2FF3E0DBAD138 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Sources/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		7948EABEBD06990DA8A93DF58FE02F1F /* JWStackTransition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWStackTransition-prefix.pch"; sourceTree = "<group>"; };
 		7B2B04296B00FA52E15A013EDF179FD5 /* ConstraintMakerPrioritizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPrioritizable.swift; path = Sources/ConstraintMakerPrioritizable.swift; sourceTree = "<group>"; };
-		7B4F23396AC8C4203B411FFFC513E5E5 /* JWStackTransitionAnimationMultinest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationMultinest.swift; sourceTree = "<group>"; };
+		7FDEB24E6818C1C3CD30AECA3FF05FC9 /* JWStackTransitionAnimationPan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationPan.swift; sourceTree = "<group>"; };
 		80B63C1371F28727F51B3CC13B91D656 /* JWStackTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JWStackTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81090C91052FB736F0B913A48F3C879D /* Pods-JWStackTransition_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JWStackTransition_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		82D1C7D922C544E7B427CC8F55F08A31 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Sources/LayoutConstraint.swift; sourceTree = "<group>"; };
 		8379CB49F3ECB945337DBBB17899321E /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Sources/Debugging.swift; sourceTree = "<group>"; };
+		8429EAAAB8ADF2BA2338FE0A27CF4EA3 /* JWStackTransitionAnimationNatGeo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationNatGeo.swift; sourceTree = "<group>"; };
 		863B569EA2044F25F75AA3E15805F5FD /* Pods_JWStackTransition_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWStackTransition_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87688B4793F3FC0E3DAD5C8296343729 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Sources/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		8ADE35955A72B333CADFD5F990476442 /* JWStackTransitionAnimationTiledFlip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationTiledFlip.swift; sourceTree = "<group>"; };
 		8CA5767F5989184A875A09F836151420 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Sources/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
-		8D539976872E88CD6E486906D79A1CD3 /* JWStackTransition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JWStackTransition.modulemap; sourceTree = "<group>"; };
-		8DE94A40089FA17FD730A98DD53B5539 /* JWStackTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWStackTransition-umbrella.h"; sourceTree = "<group>"; };
 		8FF6B6EA8B719A01577973F2F091CD64 /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		902A002EE06BCE5E5ECB224306593106 /* Pods-JWStackTransition_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWStackTransition_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		904BF2562D002B6AEC7A890FAFBCB913 /* Pods-JWStackTransition_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWStackTransition_Example-Info.plist"; sourceTree = "<group>"; };
+		92EBCDC5594D7D283C2BEDED93860559 /* JWStackTransitionAnimationRoll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRoll.swift; sourceTree = "<group>"; };
+		94550328F9CDDBF3DA1D4829FD1A3082 /* JWStackTransitionAnimationSplit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSplit.swift; sourceTree = "<group>"; };
 		9474D34543D5539E6C5D5D294866A2E3 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Sources/ConstraintInsets.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9819DAAAA440F652A9CAE007403542E2 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
+		995DC15592B6F6AC92C0CDC2379519E9 /* JWStackTransitionAnimationBarrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationBarrier.swift; sourceTree = "<group>"; };
+		9D73C824BED09F8F7136A79AAD6AA468 /* JWStackTransitionAnimationFold.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationFold.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F2856338BCF0D56D3CF62F4A3228C63 /* JWStackTransitionAnimationBarrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationBarrier.swift; sourceTree = "<group>"; };
+		9F3B121AD721DEBCC3536FB7B8406399 /* JWStackTransition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JWStackTransition-dummy.m"; sourceTree = "<group>"; };
 		A03604203722B5419888A09D7125E65E /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Sources/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		A0AB1B2B6E3558D8CF6C512A74A2102A /* JWST_UINavigationController++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JWST_UINavigationController++.swift"; sourceTree = "<group>"; };
-		A3624818F7B1704B2A71CB82F2CC9259 /* JWStackTransition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWStackTransition.debug.xcconfig; sourceTree = "<group>"; };
-		A3E85E4CCE02950A5CEC31CE4BD1DCC8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A4E6E96951C787D8C1CE795ACDBFF605 /* JWStackTransition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JWStackTransition.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1415615A9A6461F3CFD33323F1A2CAA /* JWStackTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWStackTransition.swift; path = JWStackTransition/Classes/JWStackTransition.swift; sourceTree = "<group>"; };
+		A178A75F90FC19B6665959ECF7EE2C98 /* JWStackTransitionAnimationShiftLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationShiftLine.swift; sourceTree = "<group>"; };
+		A5DC1CBBE70ECFDA0354EB9A1D8C863D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A8A05903BF72DE510E5DF1D6D5FC9D67 /* Pods-JWStackTransition_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JWStackTransition_Example.modulemap"; sourceTree = "<group>"; };
 		AB81B22EDD124284079BFC46623B012B /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Sources/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		AE0798902DFBFBD400F818B6 /* JWStackTransitionAnimationFold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationFold.swift; sourceTree = "<group>"; };
-		AE0798922DFC216500F818B6 /* JWStackTransitionAnimationFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationFlip.swift; sourceTree = "<group>"; };
-		AE3B91D52E0BD748003ACFE0 /* JWStackTransitionAnimationShiftLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationShiftLine.swift; sourceTree = "<group>"; };
-		AE3B91D72E0CEC78003ACFE0 /* JWStackTransitionAnimationExpand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationExpand.swift; sourceTree = "<group>"; };
-		AE3B91D92E0D1EF1003ACFE0 /* JWStackTransitionAnimationShrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationShrink.swift; sourceTree = "<group>"; };
-		AEDD42742DFFE680000C9442 /* JWStackTransitionAnimationExplode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationExplode.swift; sourceTree = "<group>"; };
-		AEDD42762DFFFCDB000C9442 /* JWStackTransitionAnimationDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationDoor.swift; sourceTree = "<group>"; };
-		AEDD42782E01434F000C9442 /* JWStackTransitionAnimationCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationCube.swift; sourceTree = "<group>"; };
-		AEDD427A2E02AB86000C9442 /* JWStackTransitionAnimationPan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationPan.swift; sourceTree = "<group>"; };
-		AEDD427C2E02B7AA000C9442 /* JWStackTransitionAnimationNatGeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationNatGeo.swift; sourceTree = "<group>"; };
-		B1B3A7C122B09FD244D979093F91D205 /* JWStackTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWStackTransition.swift; path = JWStackTransition/Classes/JWStackTransition.swift; sourceTree = "<group>"; };
+		ADBBBE04904CCDE5072C498AD6D1D4CA /* JWST_CGRect++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JWST_CGRect++.swift"; sourceTree = "<group>"; };
+		AE3B91E92E17BC4F003ACFE0 /* JWStackTransitionAnimationParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationParticle.swift; sourceTree = "<group>"; };
+		AEC956FD7D0B3FED6569E598747E2D6A /* JWST_UIView++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JWST_UIView++.swift"; sourceTree = "<group>"; };
+		B114493EA8E2D7861B7FDA9FF37D95BB /* JWStackTransitionAnimationSerrate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSerrate.swift; sourceTree = "<group>"; };
 		B802FD33231598633AC39DABB694D071 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Sources/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
-		B80F35E74E92314EB4990ED059BC80CE /* JWStackTransitionAnimationClockWise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationClockWise.swift; sourceTree = "<group>"; };
 		B8F22E5743DB936F0BCA885C3460A042 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		B9DCB5EC0B1CDADD221717CADDF62359 /* SnapKit_Privacy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapKit_Privacy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB7AB8044BF37B24466B60D8BD16D47B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		BD2FF3FC790F9B8A3A2E05BFC548349F /* JWStackTransitionAnimationRectangler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRectangler.swift; sourceTree = "<group>"; };
+		BC33909FAEDF3283AD906FB29A6993CA /* JWStackTransitionType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWStackTransitionType.swift; path = JWStackTransition/Classes/JWStackTransitionType.swift; sourceTree = "<group>"; };
 		BF1EB3728F46330ABB7F11B6980F370B /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Sources/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		C393C56DFD1E2CBD18F9C745C7105EEE /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Sources/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		C3D4E7EEA1BD809227585DCC9E42B481 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		C5501E5D2C7E3056372AFE0A04C85A55 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		C5AB628D40EB102BA54F3FFA01D17B8A /* JWStackTransitionAnimationRotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRotate.swift; sourceTree = "<group>"; };
+		C7B706A875B5F061006CC16EE5D81650 /* JWStackTransitionAnimationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationDelegate.swift; sourceTree = "<group>"; };
 		C7DFF2B528750DF0B88BFDADD300AF04 /* Pods-JWStackTransition_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JWStackTransition_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C8775A6578AED6345C823773DD971BDA /* JWStackTransition-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JWStackTransition-Info.plist"; sourceTree = "<group>"; };
 		C890B6578FC62159DE101D60E77F3A98 /* Pods-JWStackTransition_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JWStackTransition_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C99EC8A90B8299B6B066151593D07F65 /* Pods-JWStackTransition_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JWStackTransition_Tests-Info.plist"; sourceTree = "<group>"; };
-		CBD91E888CA906089E56388C33D6AABA /* JWStackTransitionHijack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JWStackTransitionHijack.swift; path = JWStackTransition/Classes/JWStackTransitionHijack.swift; sourceTree = "<group>"; };
+		CC4F8957576C9956094BB577E617B306 /* JWStackTransitionAnimationRectangler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationRectangler.swift; sourceTree = "<group>"; };
 		D0981DAB946780B49926B7BF57248401 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		D133F31FA35A627E4276233E023A7C6E /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		D1DA6F6137CADA36D0B14F6E1B2C896C /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
@@ -281,14 +280,21 @@
 		D45D0F9D679AC53595C10B098B25DDBC /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		D783E57A7F53A5D5997C5A35B0E4EFED /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Sources/ConstraintRelation.swift; sourceTree = "<group>"; };
 		DCE7296EF03D602ACC3D5C09786D9EF9 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Sources/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		E2C6B9C3BF87F57ABF073672540F46C7 /* JWStackTransitionAnimationSplit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationSplit.swift; sourceTree = "<group>"; };
+		E2CAE497C6FD1BA1F21ACAAB9F7EC190 /* JWStackTransition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JWStackTransition-umbrella.h"; sourceTree = "<group>"; };
 		E3F7099EE5F261DD6C4A99C573C2B6E2 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Sources/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		E4DE2ED869A914C12BAAB3BA378D038F /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		E5588CC35F16C637856E92DFC3B82306 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Sources/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		E5B23EB83872C19B22301CBA48996A62 /* JWStackTransition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWStackTransition.release.xcconfig; sourceTree = "<group>"; };
+		E5E2F4A591CF00FA25E9DD1EEE8DEF72 /* JWStackTransition.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JWStackTransition.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E64FADC143BCC6501CF73C5D0AA0ABDF /* JWStackTransitionAnimationOfficial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationOfficial.swift; sourceTree = "<group>"; };
+		E81F3E36D96707F742AA487661A7E83E /* JWStackTransitionAnimationExpand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationExpand.swift; sourceTree = "<group>"; };
+		E96BE4821880E26856121CE457391911 /* JWStackTransitionAnimationCube.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationCube.swift; sourceTree = "<group>"; };
+		EB39AED748FB44A80F0C54A260414A4D /* JWStackTransitionAnimationAntiClockWise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationAntiClockWise.swift; sourceTree = "<group>"; };
 		F09AC7D2D075BC9F42F4D03C71E09BDA /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Sources/ConstraintDescription.swift; sourceTree = "<group>"; };
+		F1F01F9EB40D402E7FB6E02BC67F7BC7 /* JWStackTransitionBasicAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionBasicAnimation.swift; sourceTree = "<group>"; };
 		F2F85FF70453F689B79660F0F29CB429 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Sources/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		F6D009F494B252A209EBCEF70376C93E /* Pods_JWStackTransition_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWStackTransition_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F70562618FC664CC75A8896934B2CA0F /* JWST_CGRect++.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "JWST_CGRect++.swift"; sourceTree = "<group>"; };
+		F8CF13002800E55821F008C35D970A18 /* JWStackTransitionAnimationEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JWStackTransitionAnimationEnums.swift; sourceTree = "<group>"; };
 		FC7D7F2FE2D438735A5D3169B2163156 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		FDE1A05CF4BACC0877A1EA406CEDF2C4 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Sources/Constraint.swift; sourceTree = "<group>"; };
 		FE3B4890451ABA7222993A62DEE682E1 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
@@ -331,59 +337,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0E5BB2B448DBD7C4AF0DA89291F5BCD /* Frameworks */ = {
+		E5416E5AD20426B3666E6779CAD2636F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67FEB1DD9E5FCD34225E16A57754A25A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA2F5DA58F0C168DD6C040D23E2BFE2B /* Frameworks */ = {
+		FDD7F24D5489F54C4D4916B21734B0C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FAEC021AC582372AA6CE4B8B20B325B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		010D4AB868500AF9F4D400583C1B58C8 /* JWStackTransitionAnimations */ = {
-			isa = PBXGroup;
-			children = (
-				4B9BB82BC8C420EBFF918F9A1443AA90 /* JWStackTransitionAnimationAntiClockWise.swift */,
-				9F2856338BCF0D56D3CF62F4A3228C63 /* JWStackTransitionAnimationBarrier.swift */,
-				0D2D5064A7443C75CCB24F7163A8204B /* JWStackTransitionAnimationBlank.swift */,
-				B80F35E74E92314EB4990ED059BC80CE /* JWStackTransitionAnimationClockWise.swift */,
-				AEDD42782E01434F000C9442 /* JWStackTransitionAnimationCube.swift */,
-				1F2CB23015F1044ABBA2D7BBAB938BBE /* JWStackTransitionAnimationDelegate.swift */,
-				AEDD42762DFFFCDB000C9442 /* JWStackTransitionAnimationDoor.swift */,
-				1BA2D7DE12726CD2E53E42A61F71DB62 /* JWStackTransitionAnimationEnums.swift */,
-				AE3B91D72E0CEC78003ACFE0 /* JWStackTransitionAnimationExpand.swift */,
-				AEDD42742DFFE680000C9442 /* JWStackTransitionAnimationExplode.swift */,
-				5F11385404E9FD3B70F0C7AFABCAAEEF /* JWStackTransitionAnimationFence.swift */,
-				AE0798922DFC216500F818B6 /* JWStackTransitionAnimationFlip.swift */,
-				AE0798902DFBFBD400F818B6 /* JWStackTransitionAnimationFold.swift */,
-				7452B25ACD7F9AAF493BC760AF0A71BC /* JWStackTransitionAnimationMultiCircle.swift */,
-				7B4F23396AC8C4203B411FFFC513E5E5 /* JWStackTransitionAnimationMultinest.swift */,
-				AEDD427C2E02B7AA000C9442 /* JWStackTransitionAnimationNatGeo.swift */,
-				3945F1451C96B411D3312AC7111FA513 /* JWStackTransitionAnimationOfficial.swift */,
-				AEDD427A2E02AB86000C9442 /* JWStackTransitionAnimationPan.swift */,
-				BD2FF3FC790F9B8A3A2E05BFC548349F /* JWStackTransitionAnimationRectangler.swift */,
-				1EEB1E5609FAE80BA8368910F0A84A50 /* JWStackTransitionAnimationRoll.swift */,
-				02A8FFA7EF6EE97FCF80DC472458FF0D /* JWStackTransitionAnimationRotate.swift */,
-				AE3B91D52E0BD748003ACFE0 /* JWStackTransitionAnimationShiftLine.swift */,
-				AE3B91D92E0D1EF1003ACFE0 /* JWStackTransitionAnimationShrink.swift */,
-				E2C6B9C3BF87F57ABF073672540F46C7 /* JWStackTransitionAnimationSplit.swift */,
-				64E5D22E368046EEBBC26A649D99B618 /* JWStackTransitionAnimationSwing.swift */,
-				259B5AC67558A1E2E20AC98AEBD1A0B9 /* JWStackTransitionAnimationTiledFlip.swift */,
-				1CAB80F537674E8B06E8C78AF11DA83E /* JWStackTransitionBasicAnimation.swift */,
-			);
-			name = JWStackTransitionAnimations;
-			path = JWStackTransition/Classes/JWStackTransitionAnimations;
-			sourceTree = "<group>";
-		};
 		0E6221C2071449ADAD355AB34AA46819 /* Pods-JWStackTransition_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,35 +393,12 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		295A5DB60FC0FB258BC70282773C2B78 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8D539976872E88CD6E486906D79A1CD3 /* JWStackTransition.modulemap */,
-				44CA7A5231ECFAAC57AB7A7863B2C078 /* JWStackTransition-dummy.m */,
-				1139E6386C91D3EBCF7998E7E31766FF /* JWStackTransition-Info.plist */,
-				7948EABEBD06990DA8A93DF58FE02F1F /* JWStackTransition-prefix.pch */,
-				8DE94A40089FA17FD730A98DD53B5539 /* JWStackTransition-umbrella.h */,
-				A3624818F7B1704B2A71CB82F2CC9259 /* JWStackTransition.debug.xcconfig */,
-				153D901F07C654CE823BFECC1AAF9CAE /* JWStackTransition.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JWStackTransition";
-			sourceTree = "<group>";
-		};
 		2CDCF519828C23A49328F1DFDC8E7D27 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				1465CCC65F0DFEDB3F19D33CBD1FA4FC /* PrivacyInfo.xcprivacy */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		32C795C95B832B0086074FA16BBBE0E8 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6859518BEC1EC3331F912642AF68FC18 /* JWStackTransition */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		37D559411ABEF7B8FD66E5FD3FADCB84 /* Pods */ = {
@@ -479,40 +427,19 @@
 			path = "Target Support Files/Pods-JWStackTransition_Tests";
 			sourceTree = "<group>";
 		};
-		5D10280000DE6A2B5D21D5A667A31837 /* JWST++ */ = {
+		5177C3FF50077689D7C91F1EE34EA195 /* JWStackTransition */ = {
 			isa = PBXGroup;
 			children = (
-				F70562618FC664CC75A8896934B2CA0F /* JWST_CGRect++.swift */,
-				A0AB1B2B6E3558D8CF6C512A74A2102A /* JWST_UINavigationController++.swift */,
-				634C0F98DC1A5F6D55834323E306CE6B /* JWST_UIView++.swift */,
-			);
-			name = "JWST++";
-			path = "JWStackTransition/Classes/JWST++";
-			sourceTree = "<group>";
-		};
-		6859518BEC1EC3331F912642AF68FC18 /* JWStackTransition */ = {
-			isa = PBXGroup;
-			children = (
-				B1B3A7C122B09FD244D979093F91D205 /* JWStackTransition.swift */,
-				CBD91E888CA906089E56388C33D6AABA /* JWStackTransitionHijack.swift */,
-				2C94CF335AA5925C5CAA224FCD54121B /* JWStackTransitionType.swift */,
-				5D10280000DE6A2B5D21D5A667A31837 /* JWST++ */,
-				010D4AB868500AF9F4D400583C1B58C8 /* JWStackTransitionAnimations */,
-				6BD3329BF127A7B92A7727F672A04474 /* Pod */,
-				295A5DB60FC0FB258BC70282773C2B78 /* Support Files */,
+				A1415615A9A6461F3CFD33323F1A2CAA /* JWStackTransition.swift */,
+				5D79B5C58584D170F507734C1439AC20 /* JWStackTransitionHijack.swift */,
+				BC33909FAEDF3283AD906FB29A6993CA /* JWStackTransitionType.swift */,
+				ABA4FA800891E63AF4F7E73CC88B0402 /* JWST++ */,
+				8146BB7D25596B822A558745BAAC9021 /* JWStackTransitionAnimations */,
+				88137895001083DE3649C785473691B2 /* Pod */,
+				CE48DCCA8D6A52CDAC4AB887279730CE /* Support Files */,
 			);
 			name = JWStackTransition;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		6BD3329BF127A7B92A7727F672A04474 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A4E6E96951C787D8C1CE795ACDBFF605 /* JWStackTransition.podspec */,
-				BB7AB8044BF37B24466B60D8BD16D47B /* LICENSE */,
-				A3E85E4CCE02950A5CEC31CE4BD1DCC8 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		6EEA8A8CC75F58F0B2815B68034B3569 /* FBSnapshotTestCase */ = {
@@ -523,6 +450,54 @@
 				B3EEE1DDA17669BD0C776E1F998594BA /* SwiftSupport */,
 			);
 			path = FBSnapshotTestCase;
+			sourceTree = "<group>";
+		};
+		8146BB7D25596B822A558745BAAC9021 /* JWStackTransitionAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				EB39AED748FB44A80F0C54A260414A4D /* JWStackTransitionAnimationAntiClockWise.swift */,
+				995DC15592B6F6AC92C0CDC2379519E9 /* JWStackTransitionAnimationBarrier.swift */,
+				40D8EA2C223140D755D17E75550F4B6F /* JWStackTransitionAnimationBlank.swift */,
+				61585891F37F0FE077C140DADC963527 /* JWStackTransitionAnimationClockWise.swift */,
+				E96BE4821880E26856121CE457391911 /* JWStackTransitionAnimationCube.swift */,
+				C7B706A875B5F061006CC16EE5D81650 /* JWStackTransitionAnimationDelegate.swift */,
+				0F30DF0E511F70278DEAAD6A705848CB /* JWStackTransitionAnimationDoor.swift */,
+				F8CF13002800E55821F008C35D970A18 /* JWStackTransitionAnimationEnums.swift */,
+				E81F3E36D96707F742AA487661A7E83E /* JWStackTransitionAnimationExpand.swift */,
+				3684E5F3E3E94B1038BCC4824FEAE7F8 /* JWStackTransitionAnimationExplode.swift */,
+				1299BF079D766CBECC1A316E49543322 /* JWStackTransitionAnimationFence.swift */,
+				139A3DBD170C4D1ADA994101215D5789 /* JWStackTransitionAnimationFlip.swift */,
+				9D73C824BED09F8F7136A79AAD6AA468 /* JWStackTransitionAnimationFold.swift */,
+				154560CB2866AB9702374F697D44583F /* JWStackTransitionAnimationMultiCircle.swift */,
+				291BAE84C2608262B1CACFF6A93ABBB8 /* JWStackTransitionAnimationMultinest.swift */,
+				8429EAAAB8ADF2BA2338FE0A27CF4EA3 /* JWStackTransitionAnimationNatGeo.swift */,
+				E64FADC143BCC6501CF73C5D0AA0ABDF /* JWStackTransitionAnimationOfficial.swift */,
+				7FDEB24E6818C1C3CD30AECA3FF05FC9 /* JWStackTransitionAnimationPan.swift */,
+				AE3B91E92E17BC4F003ACFE0 /* JWStackTransitionAnimationParticle.swift */,
+				77A559E22A511CB5BE3DE4570AEF440E /* JWStackTransitionAnimationPuzzle.swift */,
+				CC4F8957576C9956094BB577E617B306 /* JWStackTransitionAnimationRectangler.swift */,
+				92EBCDC5594D7D283C2BEDED93860559 /* JWStackTransitionAnimationRoll.swift */,
+				C5AB628D40EB102BA54F3FFA01D17B8A /* JWStackTransitionAnimationRotate.swift */,
+				B114493EA8E2D7861B7FDA9FF37D95BB /* JWStackTransitionAnimationSerrate.swift */,
+				A178A75F90FC19B6665959ECF7EE2C98 /* JWStackTransitionAnimationShiftLine.swift */,
+				289BCF82C7B2D45AFFFD6977016325BC /* JWStackTransitionAnimationShrink.swift */,
+				94550328F9CDDBF3DA1D4829FD1A3082 /* JWStackTransitionAnimationSplit.swift */,
+				74C60C9D7ADEC5464D3A8317E65BC8A3 /* JWStackTransitionAnimationSwing.swift */,
+				8ADE35955A72B333CADFD5F990476442 /* JWStackTransitionAnimationTiledFlip.swift */,
+				F1F01F9EB40D402E7FB6E02BC67F7BC7 /* JWStackTransitionBasicAnimation.swift */,
+			);
+			name = JWStackTransitionAnimations;
+			path = JWStackTransition/Classes/JWStackTransitionAnimations;
+			sourceTree = "<group>";
+		};
+		88137895001083DE3649C785473691B2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				E5E2F4A591CF00FA25E9DD1EEE8DEF72 /* JWStackTransition.podspec */,
+				A5DC1CBBE70ECFDA0354EB9A1D8C863D /* LICENSE */,
+				468FCDDF5608C0042DF5A7525DBA879D /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		89736692DF329F0B9BF3EFFCEA69EA54 /* iOS */ = {
@@ -582,6 +557,14 @@
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
+		96AD1FD781BD10535B3093F87E1BB18D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5177C3FF50077689D7C91F1EE34EA195 /* JWStackTransition */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		A3939C1700B33A1A44EA566F076F0FD5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +592,17 @@
 				B9DCB5EC0B1CDADD221717CADDF62359 /* SnapKit_Privacy.bundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ABA4FA800891E63AF4F7E73CC88B0402 /* JWST++ */ = {
+			isa = PBXGroup;
+			children = (
+				ADBBBE04904CCDE5072C498AD6D1D4CA /* JWST_CGRect++.swift */,
+				5D4012938BF74457641D82688B477F74 /* JWST_UINavigationController++.swift */,
+				AEC956FD7D0B3FED6569E598747E2D6A /* JWST_UIView++.swift */,
+			);
+			name = "JWST++";
+			path = "JWStackTransition/Classes/JWST++";
 			sourceTree = "<group>";
 		};
 		AF5E28C9BA0A49BAF5492214EE0F4732 /* Support Files */ = {
@@ -651,11 +645,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		CE48DCCA8D6A52CDAC4AB887279730CE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				558F24A0DA8B0FEE50B136FC3432B4EA /* JWStackTransition.modulemap */,
+				9F3B121AD721DEBCC3536FB7B8406399 /* JWStackTransition-dummy.m */,
+				C8775A6578AED6345C823773DD971BDA /* JWStackTransition-Info.plist */,
+				43119FD4C56C13AE84F6F515F9E73ECA /* JWStackTransition-prefix.pch */,
+				E2CAE497C6FD1BA1F21ACAAB9F7EC190 /* JWStackTransition-umbrella.h */,
+				28A186E8CFD52C7705768B4BC36F60B2 /* JWStackTransition.debug.xcconfig */,
+				E5B23EB83872C19B22301CBA48996A62 /* JWStackTransition.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JWStackTransition";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				32C795C95B832B0086074FA16BBBE0E8 /* Development Pods */,
+				96AD1FD781BD10535B3093F87E1BB18D /* Development Pods */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				37D559411ABEF7B8FD66E5FD3FADCB84 /* Pods */,
 				A974E11E2869318141FF62F7C050885B /* Products */,
@@ -705,11 +714,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E11A85C7A61C8908D7AA90C09EB1C555 /* Headers */ = {
+		A33F345329D0900FC4E93676F7D1B17C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5718CA98DBE5C92C62D4D675715F8A2 /* JWStackTransition-umbrella.h in Headers */,
+				7D357E2641211222E71B91AE9BA45C7D /* JWStackTransition-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,7 +737,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				55CE2B71D3EC2F592BBFF12A860232AC /* PBXTargetDependency */,
+				A12E724D8216405ED60A964C6394AC14 /* PBXTargetDependency */,
 			);
 			name = SnapKit;
 			productName = SnapKit;
@@ -737,12 +746,12 @@
 		};
 		398FFEBE4BAC0E2138088948930B355B /* JWStackTransition */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D63AB83E6C22E845B621B96FAF698C1D /* Build configuration list for PBXNativeTarget "JWStackTransition" */;
+			buildConfigurationList = 2D2527C9C2343917865A7A45028B6E15 /* Build configuration list for PBXNativeTarget "JWStackTransition" */;
 			buildPhases = (
-				E11A85C7A61C8908D7AA90C09EB1C555 /* Headers */,
-				CEBAF46B18B34E8915DA2DFA9DC17877 /* Sources */,
-				DA2F5DA58F0C168DD6C040D23E2BFE2B /* Frameworks */,
-				3F38EC248A23AD5C0F37947389823DF4 /* Resources */,
+				A33F345329D0900FC4E93676F7D1B17C /* Headers */,
+				915712E97FD227FB606BDCBF82FE9356 /* Sources */,
+				E5416E5AD20426B3666E6779CAD2636F /* Frameworks */,
+				C41D5B53CA6AEED2F44ADDAE348FBD3D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -765,8 +774,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				A7AA1481AF2C69A8E6777910A1EB4D2D /* PBXTargetDependency */,
-				F574016BDFE3B0CB2311F14A5779F6F1 /* PBXTargetDependency */,
+				E733DF4A9C52116A445AA5B0B8F7C5F9 /* PBXTargetDependency */,
+				025C965BE34642917A7E4DEB0A7652E9 /* PBXTargetDependency */,
 			);
 			name = "Pods-JWStackTransition_Tests";
 			productName = Pods_JWStackTransition_Tests;
@@ -775,11 +784,11 @@
 		};
 		8A8DB685241263AFDF5E6B20FE67B93A /* SnapKit-SnapKit_Privacy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32B2B9A06AEB9D00DFBF981252953A30 /* Build configuration list for PBXNativeTarget "SnapKit-SnapKit_Privacy" */;
+			buildConfigurationList = 23B0BD49949034BD68912C1E85EFC671 /* Build configuration list for PBXNativeTarget "SnapKit-SnapKit_Privacy" */;
 			buildPhases = (
-				C074B76F69D0BB27C3F4828F3AFCA199 /* Sources */,
-				A0E5BB2B448DBD7C4AF0DA89291F5BCD /* Frameworks */,
-				2351FA1019AAF542CFCC72E6B6AC175F /* Resources */,
+				4527BA0FD9573B233199680EA794AD01 /* Sources */,
+				FDD7F24D5489F54C4D4916B21734B0C7 /* Frameworks */,
+				8BDFEE7C94E765B21D11638F22A4D6C6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -820,8 +829,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				67CF6B9C0A66A6D65A5C3EA6934DDAC4 /* PBXTargetDependency */,
-				1D3C1A003A0829F7D024D62F3A8148BC /* PBXTargetDependency */,
+				EF498CEE71E7FA71ED680C2E1D6CC065 /* PBXTargetDependency */,
+				F7EDAB7FA06B9353A7EFEFEE71EE5F49 /* PBXTargetDependency */,
 			);
 			name = "Pods-JWStackTransition_Example";
 			productName = Pods_JWStackTransition_Example;
@@ -876,15 +885,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2351FA1019AAF542CFCC72E6B6AC175F /* Resources */ = {
+		8BDFEE7C94E765B21D11638F22A4D6C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0644F081E590781385C834BF6289C66 /* PrivacyInfo.xcprivacy in Resources */,
+				BE1F94C5DAA12ED6ABD09D7F774A717C /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F38EC248A23AD5C0F37947389823DF4 /* Resources */ = {
+		C41D5B53CA6AEED2F44ADDAE348FBD3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -916,6 +925,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4527BA0FD9573B233199680EA794AD01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7D9C35C9AB822511516CD6F4A5D159B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -932,59 +948,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		915712E97FD227FB606BDCBF82FE9356 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6877D3FEA2B4AB227389D6D6503F8A88 /* JWST_CGRect++.swift in Sources */,
+				7E441E9B49F427F90FF1AE60E7514AC7 /* JWST_UINavigationController++.swift in Sources */,
+				D6437C90FA95442294E5E74676B09606 /* JWST_UIView++.swift in Sources */,
+				7E6D5E5791CCF98BD3CA376F311F79C3 /* JWStackTransition.swift in Sources */,
+				28F77EBDAA4DC0BC7E0016F081E94A19 /* JWStackTransition-dummy.m in Sources */,
+				77AD9C87E4CC703DCEBF159B20D06F07 /* JWStackTransitionAnimationAntiClockWise.swift in Sources */,
+				533D950E127F4B81BCC52F3A7154B329 /* JWStackTransitionAnimationBarrier.swift in Sources */,
+				471B88FE7A029B22AE687B2128DDE9A5 /* JWStackTransitionAnimationBlank.swift in Sources */,
+				9C2E5D5733EE367D6CFBFC118A330C07 /* JWStackTransitionAnimationClockWise.swift in Sources */,
+				552B7641D5AA1BA67F509F3EBC048DD8 /* JWStackTransitionAnimationCube.swift in Sources */,
+				0DB5AE8A2CF38D5F5CF699DD7955F5FB /* JWStackTransitionAnimationDelegate.swift in Sources */,
+				33453990BE16258DF635109BCDD618B6 /* JWStackTransitionAnimationDoor.swift in Sources */,
+				DD2CD41A40F048F866C1936D003D1A34 /* JWStackTransitionAnimationEnums.swift in Sources */,
+				7451D00855D7C81E852B34951632C36E /* JWStackTransitionAnimationExpand.swift in Sources */,
+				3E161780EBAD28471563D0A3C5FB659E /* JWStackTransitionAnimationExplode.swift in Sources */,
+				C535AFE06CB5D89F4E5B5D5105EB91EE /* JWStackTransitionAnimationFence.swift in Sources */,
+				1CA9E02E8C835BC59C8279D71252624F /* JWStackTransitionAnimationFlip.swift in Sources */,
+				7E88DA18B7EB1EA2FF1A45B4C3BE9DFA /* JWStackTransitionAnimationFold.swift in Sources */,
+				5B9236B350AFA44ABAA80604092C836F /* JWStackTransitionAnimationMultiCircle.swift in Sources */,
+				872A044933935959CD67752F8A9FA603 /* JWStackTransitionAnimationMultinest.swift in Sources */,
+				260B495E0FDB4675BE41CC676B1C9A0D /* JWStackTransitionAnimationNatGeo.swift in Sources */,
+				323C4007FB0BA22A033E50D16269FE79 /* JWStackTransitionAnimationOfficial.swift in Sources */,
+				D6688D91B2385D87434FEB279FB60DF4 /* JWStackTransitionAnimationPan.swift in Sources */,
+				69766B4D319C6718963E67A5B27E5861 /* JWStackTransitionAnimationPuzzle.swift in Sources */,
+				FEE3CA9BF391E588916A0EF550092778 /* JWStackTransitionAnimationRectangler.swift in Sources */,
+				6CB344E0DD93977D83FE65E393359884 /* JWStackTransitionAnimationRoll.swift in Sources */,
+				AE3B91EA2E17BC63003ACFE0 /* JWStackTransitionAnimationParticle.swift in Sources */,
+				D9DDBCD2B0A4E184F9B1A2792ED9E463 /* JWStackTransitionAnimationRotate.swift in Sources */,
+				CECF1A5CA6820FB23CFDC18F3DDA08E8 /* JWStackTransitionAnimationSerrate.swift in Sources */,
+				05CA0FDA885812E56D35247C8CBDEDEE /* JWStackTransitionAnimationShiftLine.swift in Sources */,
+				5E9420EC4117EDEB7F07BEA0029DFF36 /* JWStackTransitionAnimationShrink.swift in Sources */,
+				8E4F61CD3298837569E89EC3B1CC1D70 /* JWStackTransitionAnimationSplit.swift in Sources */,
+				18D832F40A46DAE7FB516309731DB573 /* JWStackTransitionAnimationSwing.swift in Sources */,
+				AB36DC1E81D4F30396AF3609E7D59410 /* JWStackTransitionAnimationTiledFlip.swift in Sources */,
+				4AFA6BA96B922ABFBF4523BC31300684 /* JWStackTransitionBasicAnimation.swift in Sources */,
+				4B5957FA8E755686864BE6A66B8C10F8 /* JWStackTransitionHijack.swift in Sources */,
+				A370A8D926BB5D01F1378BE1E796CA78 /* JWStackTransitionType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AB545E93292E2C6281457565C4B67F69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB59A1EAA1883CB19B8C9A4EC48E4603 /* Pods-JWStackTransition_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C074B76F69D0BB27C3F4828F3AFCA199 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBAF46B18B34E8915DA2DFA9DC17877 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE3B91D62E0BD754003ACFE0 /* JWStackTransitionAnimationShiftLine.swift in Sources */,
-				EEEE34AB23389459B2F3EC75EA764CFC /* JWST_CGRect++.swift in Sources */,
-				AEDD427D2E02B7B2000C9442 /* JWStackTransitionAnimationNatGeo.swift in Sources */,
-				3F38111D12E2CF775CF8AED57A01FD11 /* JWST_UINavigationController++.swift in Sources */,
-				AE0798912DFBFBDE00F818B6 /* JWStackTransitionAnimationFold.swift in Sources */,
-				23617F9CC5B2FD08035265E82C534F70 /* JWST_UIView++.swift in Sources */,
-				8FBEA0FFD465FEACF62C26C85D4B0B74 /* JWStackTransition.swift in Sources */,
-				AEDD42772DFFFCE1000C9442 /* JWStackTransitionAnimationDoor.swift in Sources */,
-				8819017BA4E7C965CC386FFEB9F81153 /* JWStackTransition-dummy.m in Sources */,
-				721A4F25B2A22B44E6803F473D297BC1 /* JWStackTransitionAnimationAntiClockWise.swift in Sources */,
-				09B3813BBA366B747609A02EDE0D4EC8 /* JWStackTransitionAnimationBarrier.swift in Sources */,
-				4F459DFF9E9F0C2C6AD002845DD241D4 /* JWStackTransitionAnimationBlank.swift in Sources */,
-				17FC42D9F1A57C0800BE2043985BFB89 /* JWStackTransitionAnimationClockWise.swift in Sources */,
-				AE3B91DA2E0D1F01003ACFE0 /* JWStackTransitionAnimationShrink.swift in Sources */,
-				A73DB3EF634221D103402F1D4FA220C6 /* JWStackTransitionAnimationDelegate.swift in Sources */,
-				C3BFE57C2E3CD5615FEA30762BC5F563 /* JWStackTransitionAnimationEnums.swift in Sources */,
-				E3F120E2B51C81D95C01B8EEFD7C80BD /* JWStackTransitionAnimationFence.swift in Sources */,
-				2C6530EACEB499F3024FB96409D570B4 /* JWStackTransitionAnimationMultiCircle.swift in Sources */,
-				AEDD42792E01435A000C9442 /* JWStackTransitionAnimationCube.swift in Sources */,
-				87EC4935CC15254AADF9E25840618FD6 /* JWStackTransitionAnimationMultinest.swift in Sources */,
-				EECB81ED5DE14CEF408CB4120B72CA89 /* JWStackTransitionAnimationOfficial.swift in Sources */,
-				AEDD427B2E02AB8A000C9442 /* JWStackTransitionAnimationPan.swift in Sources */,
-				9E7935A4C0152801AA48FE8136EFCD6D /* JWStackTransitionAnimationRectangler.swift in Sources */,
-				EE1C7B23309B9E08790D1EFB390A284F /* JWStackTransitionAnimationRoll.swift in Sources */,
-				6CB37B95E86E9A489AC76C51891AF566 /* JWStackTransitionAnimationRotate.swift in Sources */,
-				7E3FC099F1AED755E21C1CAC8E1845E2 /* JWStackTransitionAnimationSplit.swift in Sources */,
-				BA429689ACAEEA3E1B955D8B37B43350 /* JWStackTransitionAnimationSwing.swift in Sources */,
-				AE3B91D82E0CEC7F003ACFE0 /* JWStackTransitionAnimationExpand.swift in Sources */,
-				AE0798932DFC216B00F818B6 /* JWStackTransitionAnimationFlip.swift in Sources */,
-				66EF0B661B19D461FAD3A0126EFDA536 /* JWStackTransitionAnimationTiledFlip.swift in Sources */,
-				AEDD42752DFFE691000C9442 /* JWStackTransitionAnimationExplode.swift in Sources */,
-				55BD83CD3BCB94E0986C6F89DB5626AB /* JWStackTransitionBasicAnimation.swift in Sources */,
-				57FEC3A293BD7D87CD0EE1EA2CBBBD6A /* JWStackTransitionHijack.swift in Sources */,
-				960D1288FA33BA89458B071BFA444F73 /* JWStackTransitionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,35 +1048,35 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1D3C1A003A0829F7D024D62F3A8148BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 09C35958A9CEE1464576285943D4B1F5 /* PBXContainerItemProxy */;
-		};
-		55CE2B71D3EC2F592BBFF12A860232AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SnapKit-SnapKit_Privacy";
-			target = 8A8DB685241263AFDF5E6B20FE67B93A /* SnapKit-SnapKit_Privacy */;
-			targetProxy = 8CB601110843D92E4543335F2A95D884 /* PBXContainerItemProxy */;
-		};
-		67CF6B9C0A66A6D65A5C3EA6934DDAC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JWStackTransition;
-			target = 398FFEBE4BAC0E2138088948930B355B /* JWStackTransition */;
-			targetProxy = FA1066269729F54541FA9B9220CF2814 /* PBXContainerItemProxy */;
-		};
-		A7AA1481AF2C69A8E6777910A1EB4D2D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSnapshotTestCase;
-			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
-			targetProxy = 4B45B493278FFCDC1D8FF01F21A9B6B4 /* PBXContainerItemProxy */;
-		};
-		F574016BDFE3B0CB2311F14A5779F6F1 /* PBXTargetDependency */ = {
+		025C965BE34642917A7E4DEB0A7652E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JWStackTransition_Example";
 			target = B1CAED389CCDD3898C398A1929B0F760 /* Pods-JWStackTransition_Example */;
-			targetProxy = 4891117FE42C84A18522E3854888251A /* PBXContainerItemProxy */;
+			targetProxy = 6F797B204123384B4418437348D0421B /* PBXContainerItemProxy */;
+		};
+		A12E724D8216405ED60A964C6394AC14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SnapKit-SnapKit_Privacy";
+			target = 8A8DB685241263AFDF5E6B20FE67B93A /* SnapKit-SnapKit_Privacy */;
+			targetProxy = 916747E9448570E3FD08D17A721759EC /* PBXContainerItemProxy */;
+		};
+		E733DF4A9C52116A445AA5B0B8F7C5F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FBSnapshotTestCase;
+			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
+			targetProxy = 9C6AFA02B71AD0FEEBDBEEB09C990208 /* PBXContainerItemProxy */;
+		};
+		EF498CEE71E7FA71ED680C2E1D6CC065 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JWStackTransition;
+			target = 398FFEBE4BAC0E2138088948930B355B /* JWStackTransition */;
+			targetProxy = B844F12E7B54CA6BB21B2B950A62F1C1 /* PBXContainerItemProxy */;
+		};
+		F7EDAB7FA06B9353A7EFEFEE71EE5F49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapKit;
+			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
+			targetProxy = FB7D050AC547EBA1DA2B92C694CCA663 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1208,6 +1220,23 @@
 			};
 			name = Debug;
 		};
+		448E25B65D77A1413A24ABF8B636FE75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF6B6EA8B719A01577973F2F091CD64 /* SnapKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapKit";
+				IBSC_MODULE = SnapKit;
+				INFOPLIST_FILE = "Target Support Files/SnapKit/ResourceBundle-SnapKit_Privacy-SnapKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = SnapKit_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1266,43 +1295,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		675685FE3B4A92137F011D4A4C996729 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 153D901F07C654CE823BFECC1AAF9CAE /* JWStackTransition.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_PREFIX_HEADER = "Target Support Files/JWStackTransition/JWStackTransition-prefix.pch";
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Target Support Files/JWStackTransition/JWStackTransition-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JWStackTransition/JWStackTransition.modulemap";
-				PRODUCT_MODULE_NAME = JWStackTransition;
-				PRODUCT_NAME = JWStackTransition;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1415,6 +1407,42 @@
 			};
 			name = Release;
 		};
+		93D2EA7195056D4FE2318D576EEC8B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A186E8CFD52C7705768B4BC36F60B2 /* JWStackTransition.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/JWStackTransition/JWStackTransition-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/JWStackTransition/JWStackTransition-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JWStackTransition/JWStackTransition.modulemap";
+				PRODUCT_MODULE_NAME = JWStackTransition;
+				PRODUCT_NAME = JWStackTransition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		986E74EF4B10A33C380F5B3FE41D3BB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 003AA32C7E90DF4016F38CCFD4DFD2BD /* Pods-JWStackTransition_Example.debug.xcconfig */;
@@ -1448,23 +1476,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9FC7AD3CCDDA9BA4BCC3AC878BB0411B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F735042A70DC70018E5B8555E2F29F2 /* SnapKit.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapKit";
-				IBSC_MODULE = SnapKit;
-				INFOPLIST_FILE = "Target Support Files/SnapKit/ResourceBundle-SnapKit_Privacy-SnapKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = SnapKit_Privacy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -1540,26 +1551,9 @@
 			};
 			name = Debug;
 		};
-		C3228DE5E4F3A6ABAF13DD0A5E337912 /* Release */ = {
+		C13BBC5808A207105C41FB63C526E0A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FF6B6EA8B719A01577973F2F091CD64 /* SnapKit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGNING_ALLOWED = NO;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapKit";
-				IBSC_MODULE = SnapKit;
-				INFOPLIST_FILE = "Target Support Files/SnapKit/ResourceBundle-SnapKit_Privacy-SnapKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				PRODUCT_NAME = SnapKit_Privacy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		F022C59E885C80A9C8BE0143E57D9FC8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3624818F7B1704B2A71CB82F2CC9259 /* JWStackTransition.debug.xcconfig */;
+			baseConfigurationReference = E5B23EB83872C19B22301CBA48996A62 /* JWStackTransition.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1586,16 +1580,43 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E7FBD6307D7C5DE902DBC499D0063AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F735042A70DC70018E5B8555E2F29F2 /* SnapKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SnapKit";
+				IBSC_MODULE = SnapKit;
+				INFOPLIST_FILE = "Target Support Files/SnapKit/ResourceBundle-SnapKit_Privacy-SnapKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_NAME = SnapKit_Privacy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		23B0BD49949034BD68912C1E85EFC671 /* Build configuration list for PBXNativeTarget "SnapKit-SnapKit_Privacy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7FBD6307D7C5DE902DBC499D0063AA7 /* Debug */,
+				448E25B65D77A1413A24ABF8B636FE75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AC516C05B9400D8A84F4CE51D02E9A3 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1605,11 +1626,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32B2B9A06AEB9D00DFBF981252953A30 /* Build configuration list for PBXNativeTarget "SnapKit-SnapKit_Privacy" */ = {
+		2D2527C9C2343917865A7A45028B6E15 /* Build configuration list for PBXNativeTarget "JWStackTransition" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9FC7AD3CCDDA9BA4BCC3AC878BB0411B /* Debug */,
-				C3228DE5E4F3A6ABAF13DD0A5E337912 /* Release */,
+				93D2EA7195056D4FE2318D576EEC8B0A /* Debug */,
+				C13BBC5808A207105C41FB63C526E0A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1646,15 +1667,6 @@
 			buildConfigurations = (
 				0A3B6455B7F8BDCE425F58FA12419DA7 /* Debug */,
 				018289042BA1FF43AB9CABE5133C78A8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D63AB83E6C22E845B621B96FAF698C1D /* Build configuration list for PBXNativeTarget "JWStackTransition" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F022C59E885C80A9C8BE0143E57D9FC8 /* Debug */,
-				675685FE3B4A92137F011D4A4C996729 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -52,9 +52,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "toVerticalCenter and width is 20", type: .barrierCustomized(.toVerticalCenter, width: 20)),
             ExampleItem(name: "toHorizontalCenter and width is 25", type: .barrierCustomized(.toHorizontalCenter, width: 25)),
         ]),
-        Examples(title: "Circle", list: [
-            ExampleItem(name: "default", type: .circle)
-        ]),
         Examples(title: "ClockWise", list: [
             ExampleItem(name: "default, start angle is 0.5", type: .clockWise),
             ExampleItem(name: "start angle is 0.0", type: .clockWiseCustomized(0.0)),
@@ -73,6 +70,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "horizontalClose and scale is 0.6", type: .doorCustomized(.horizontalClose, scale: 0.6)),
             ExampleItem(name: "verticalOpen and scale is 0.4", type: .doorCustomized(.verticalOpen, scale: 0.4)),
             ExampleItem(name: "verticalClose and scale is 0.2", type: .doorCustomized(.verticalClose, scale: 0.2)),
+            ExampleItem(name: "horizontal", type: .doorCustomized(.horizontal, scale: nil)),
+            ExampleItem(name: "vertical", type: .doorCustomized(.vertical, scale: nil)),
         ]),
         Examples(title: "Expand", list: [
             ExampleItem(name: "default, CGRect.zero", type: .expand),
@@ -91,10 +90,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "x: -screenWidth, y: -screenHeight, width: 100, height: 100", type: .expandCustomized(CGRect(x: -screenWidth, y: -screenHeight, width: 100, height: 100))),
         ]),
         Examples(title: "Explode", list: [
-            ExampleItem(name: "default, explode piece width is 30.0", type: .explode),
-            ExampleItem(name: "customized explode piece width, now is 10.0", type: .explodeCustomized(10.0)),
-            ExampleItem(name: "customized explode piece width, now is 45.0", type: .explodeCustomized(45.0)),
-            ExampleItem(name: "customized explode piece width, now is 60.0", type: .explodeCustomized(60.0)),
+            ExampleItem(name: "default, explode piece width is 50 and height is 100", type: .explode),
+            ExampleItem(name: "explode piece width is 10 and height is 10", type: .explodeCustomized(CGSizeMake(10, 20))),
+            ExampleItem(name: "explode piece width is screenWidth / 2 and height is 10", type: .explodeCustomized(CGSizeMake(screenWidth / 2, 10))),
+            ExampleItem(name: "explode piece width is 10 and height is screenHeight / 2", type: .explodeCustomized(CGSizeMake(10, screenHeight / 2))),
         ]),
         Examples(title: "Fence", list: [
             ExampleItem(name: "default, verticalLeft and width is 20", type: .fence),
@@ -140,7 +139,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "default, panLeft", type: .pan),
             ExampleItem(name: "panRight", type: .panCustomized(.panRight)),
             ExampleItem(name: "panTop", type: .panCustomized(.panTop)),
-            ExampleItem(name: "panBottom", type: .panCustomized(.panBottom))
+            ExampleItem(name: "panBottom", type: .panCustomized(.panBottom)),
+            ExampleItem(name: "panLeftWithShake", type: .panCustomized(.panLeftWithShake)),
+            ExampleItem(name: "panRightWithShake", type: .panCustomized(.panRightWithShake)),
+            ExampleItem(name: "panTopWithShake", type: .panCustomized(.panTopWithShake)),
+            ExampleItem(name: "panBottomWithShake", type: .panCustomized(.panBottomWithShake)),
+        ]),
+        Examples(title: "Particle", list: [
+            ExampleItem(name: "default, particle width is 20 and height is 20", type: .particle),
+            ExampleItem(name: "particle width is 10 and height is 20", type: .particleCustomized(CGPoint(x: screenWidth / 4, y: screenHeight / 4), size: CGSize(width: 10, height: 20))),
+            ExampleItem(name: "particle width is 20 and height is 10", type: .particleCustomized(CGPoint(x: screenWidth / 4 * 3, y: screenHeight / 4), size: CGSize(width: 20, height: 10))),
+            ExampleItem(name: "particle width is 10 and height is 10", type: .particleCustomized(CGPoint(x: screenWidth / 4, y: screenHeight / 4 * 3), size: CGSize(width: 10, height: 10))),
+            ExampleItem(name: "particle width is 5 and height is 20", type: .particleCustomized(CGPoint(x: screenWidth / 4 * 3, y: screenHeight / 4 * 3), size: CGSize(width: 5, height: 20))),
+            ExampleItem(name: "particle width is 50 and height is 50", type: .particleCustomized(CGPoint(x: screenWidth / 2, y: screenHeight / 2), size: CGSize(width: 50, height: 50))),
+            ExampleItem(name: "particle width is screenWidth / 2 and height is 15", type: .particleCustomized(CGPoint(x: screenWidth / 2, y: screenHeight / 2), size: CGSize(width: screenWidth / 2, height: 15))),
+            ExampleItem(name: "particle width is 15 and height is screenHeight / 2", type: .particleCustomized(CGPoint(x: screenWidth / 2, y: screenHeight / 2), size: CGSize(width: 15, height: screenHeight / 2)))
+        ]),
+        Examples(title: "Puzzle", list: [
+            ExampleItem(name: "default, random, column is 5 and row is 10", type: .puzzle),
+            ExampleItem(name: "fromLeft, column is 20 and row is 60", type: .puzzleCustomized(.fromLeft, column: 20, row: 60)),
+            ExampleItem(name: "fromTop, column is 10 and row is 120", type: .puzzleCustomized(.fromTop, column: 10, row: 120)),
+            ExampleItem(name: "fromRight, column is 50 and row is 50", type: .puzzleCustomized(.fromRight, column: 50, row: 50)),
+            ExampleItem(name: "fromBottom, column is 40 and row is 20", type: .puzzleCustomized(.fromBottom, column: 40, row: 20)),
+            ExampleItem(name: "fromTopLeft, column is 30 and row is 80", type: .puzzleCustomized(.fromTopLeft, column: 30, row: 80)),
+            ExampleItem(name: "fromTopRight, column is 10 and row is 100", type: .puzzleCustomized(.fromTopRight, column: 10, row: 100)),
+            ExampleItem(name: "fromBottomLeft, column is 80 and row is 10", type: .puzzleCustomized(.fromBottomLeft, column: 80, row: 10)),
+            ExampleItem(name: "fromBottomRight, column is 100 and row is 100", type: .puzzleCustomized(.fromBottomRight, column: 100, row: 100)),
+            ExampleItem(name: "horizontal, column is 60 and row is 20", type: .puzzleCustomized(.horizontal, column: 60, row: 20)),
+            ExampleItem(name: "vertical, column is 2 and row is 60", type: .puzzleCustomized(.vertical, column: 2, row: 60)),
+            ExampleItem(name: "fromHorizontalBoth, column is 20 and row is 2", type: .puzzleCustomized(.fromHorizontalBoth, column: 20, row: 2)),
+            ExampleItem(name: "fromVerticalBoth, column is 10 and row is 20", type: .puzzleCustomized(.fromVerticalBoth, column: 10, row: 20)),
+            ExampleItem(name: "quadrant, column is 10 and row is 20", type: .puzzleCustomized(.quadrant, column: 10, row: 20)),
         ]),
         Examples(title: "Rectangler", list: [
             ExampleItem(name: "default, waveIn", type: .rectangler),
@@ -156,6 +185,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "clockWise and rotate angle is 0.5", type: .rotateCustomized(.clockWise, rotateAngle: 0.5)),
             ExampleItem(name: "antiClockWise and rotate angle is 0.99", type: .rotateCustomized(.antiClockWise, rotateAngle: 0.99)),
             ExampleItem(name: "antiClockWise and rotate angle is 0.5", type: .rotateCustomized(.antiClockWise, rotateAngle: 0.5))
+        ]),
+        Examples(title: "Serrate", list: [
+            ExampleItem(name: "default, horizontal and serrate count is 7", type: .serrate),
+            ExampleItem(name: "horizontal and serrate count is 20", type: .serrateCustomized(.horizontal, count: 20)),
+            ExampleItem(name: "vertical and serrate count is 5", type: .serrateCustomized(.vertical, count: 5)),
+            ExampleItem(name: "vertical and serrate count is 10", type: .serrateCustomized(.vertical, count: 10)),
         ]),
         Examples(title: "ShiftLine", list: [
             ExampleItem(name: "default, toRight", type: .shiftLine),

@@ -34,9 +34,12 @@ The library currently contains the following animations, contents:
   * [NatGeo](#NatGeo)
   * [Official](#Official)
   * [Pan](#Pan)
+  * [Particle](#Particle)
+  * [Puzzle](#Puzzle)
   * [Rectangler](#Rectangler)
   * [Roll](#Roll)
   * [Rotate](#Rotate)
+  * [Serrate](#Serrate)
   * [ShiftLine](#ShiftLine)
   * [Shrink](#Shrink)
   * [Split](#Split)
@@ -154,7 +157,7 @@ The library currently contains the following animations, contents:
 
   + **door** - default case which is the same as `doorCustomized(.horizontalOpen, scale: 0.8)`
     
-  + **doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat)** - default animation case is `horizontalOpen`, default animation scale is `0.8` and range is `(0.0, 1.0]`.
+  + **doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat?)** - default animation case is `horizontalOpen`, default animation scale is `0.8` and range is `(0.0, 1.0]`.
 
 <table>
     <tr>
@@ -168,6 +171,17 @@ The library currently contains the following animations, contents:
         <th>horizontalClose and scale is 0.6</th>
         <th>verticalOpen and scale is 0.4</th>
         <th>verticalClose and scale is 0.2</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Door/horizontal.gif"></td>
+        <td><img src="image/animations/Door/vertical.gif"></td>
+    </tr>
+    <tr>
+        <th>horizontal</th>
+        <th>vertical</th>
     </tr>
 </table>
 
@@ -228,22 +242,22 @@ The library currently contains the following animations, contents:
 
 ### <a id="Explode"></a>Explode
 
-  + **explode** - default case which is the same as `explodeCustomized(30.0)`
+  + **explode** - default case which is the same as `explodeCustomized(CGSize(width: 50, height: 100))`
     
-  + **explodeCustomized(_ pieceWidth: CGFloat)** - default explode piece width is 30.0.
+  + **explodeCustomized(_ pieceSize: CGSize)** - default explode piece width is 50 and height is 100.
 
 <table>
     <tr>
-        <td><img src="image/animations/Explode/width_30.gif"></td>
-        <td><img src="image/animations/Explode/width10.gif"></td>
-        <td><img src="image/animations/Explode/width45.gif"></td>
-        <td><img src="image/animations/Explode/width60.gif"></td>
+        <td><img src="image/animations/Explode/0.gif"></td>
+        <td><img src="image/animations/Explode/1.gif"></td>
+        <td><img src="image/animations/Explode/2.gif"></td>
+        <td><img src="image/animations/Explode/3.gif"></td>
     </tr>
     <tr>
-        <th>explode piece width is 30.0</th>
-        <th>explode piece width is 10.0</th>
-        <th>explode piece width is 45.0</th>
-        <th>explode piece width is 60.0</th>
+        <th>explode piece width is 50 and height is 100</th>
+        <th>explode piece width is 10 and height is 10</th>
+        <th>explode piece width is screenWidth / 2 and height is 10</th>
+        <th>explode piece width is 10 and height is screenHeight / 2</th>
     </tr>
 </table>
 
@@ -434,6 +448,116 @@ The library currently contains the following animations, contents:
     </tr>
 </table>
 
+<table>
+    <tr>
+        <td><img src="image/animations/Pan/panLeftWithShake.gif"></td>
+        <td><img src="image/animations/Pan/panRightWithShake.gif"></td>
+        <td><img src="image/animations/Pan/panTopWithShake.gif"></td>
+        <td><img src="image/animations/Pan/panBottomWithShake.gif"></td>
+    </tr>
+    <tr>
+        <th>panLeftWithShake</th>
+        <th>panRightWithShake</th>
+        <th>panTopWithShake</th>
+        <th>panBottomWithShake</th>
+    </tr>
+</table>
+
+****
+
+### <a id="Pan"></a>Particle
+
+  + **particle** - default case which is the same as `particleCustomized(.zero, size: CGSize(width: 20, height: 20))`
+    
+  + **particleCustomized(_ from: CGPoint, size: CGSize)** - default particle ejected from point is `CGPoint.zero`, particle width is `20` and height is `20`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Particle/0.gif"></td>
+        <td><img src="image/animations/Particle/1.gif"></td>
+        <td><img src="image/animations/Particle/2.gif"></td>
+        <td><img src="image/animations/Particle/3.gif"></td>
+    </tr>
+    <tr>
+        <th>particle width is 20 and height is 20</th>
+        <th>particle width is 10 and height is 20</th>
+        <th>particle width is 20 and height is 10</th>
+        <th>particle width is 10 and height is 10</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Particle/4.gif"></td>
+        <td><img src="image/animations/Particle/5.gif"></td>
+        <td><img src="image/animations/Particle/6.gif"></td>
+        <td><img src="image/animations/Particle/7.gif"></td>
+    </tr>
+    <tr>
+        <th>particle width is 5 and height is 20</th>
+        <th>particle width is 50 and height is 50</th>
+        <th>particle width is screenWidth / 2 and height is 15</th>
+        <th>particle width is 15 and height is screenHeight / 2</th>
+    </tr>
+</table>
+
+****
+
+### <a id="Pan"></a>Puzzle
+
+  + **puzzle** - default case which is the same as `puzzleCustomized(.random, column: 5, row: 10)`
+    
+  + **puzzleCustomized(_ type: JWStackTransitionAnimationPuzzleType, column: Int, row: Int)** - default animation type is `random`, column is `5` and row is `10`.
+
+<table>
+    <tr>
+        <td><img src="image/animations/Puzzle/random.gif"></td>
+        <td><img src="image/animations/Puzzle/fromLeft.gif"></td>
+        <td><img src="image/animations/Puzzle/fromRight.gif"></td>
+        <td><img src="image/animations/Puzzle/fromTop.gif"></td>
+        <td><img src="image/animations/Puzzle/fromBottom.gif"></td>
+    </tr>
+    <tr>
+        <th>random</th>
+        <th>fromLeft</th>
+        <th>fromRight</th>
+        <th>fromTop</th>
+        <th>fromBottom</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Puzzle/fromTopLeft.gif"></td>
+        <td><img src="image/animations/Puzzle/fromTopRight.gif"></td>
+        <td><img src="image/animations/Puzzle/fromBottomlEFT.gif"></td>
+        <td><img src="image/animations/Puzzle/fromBottomRight.gif"></td>
+    </tr>
+    <tr>
+        <th>fromTopLeft</th>
+        <th>fromTopRight</th>
+        <th>fromBottomlEFT</th>
+        <th>fromBottomRight</th>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td><img src="image/animations/Puzzle/horizontal.gif"></td>
+        <td><img src="image/animations/Puzzle/vertical.gif"></td>
+        <td><img src="image/animations/Puzzle/fromHorizontalBoth.gif"></td>
+        <td><img src="image/animations/Puzzle/fromVerticalBoth.gif"></td>
+        <td><img src="image/animations/Puzzle/quadrant.gif"></td>
+    </tr>
+    <tr>
+        <th>horizontal</th>
+        <th>vertical</th>
+        <th>fromHorizontalBoth</th>
+        <th>fromVerticalBoth</th>
+        <th>quadrant</th>
+    </tr>
+</table>
+
 ****
 
 ### <a id="Rectangler"></a>Rectangler
@@ -498,6 +622,29 @@ The library currently contains the following animations, contents:
         <th>clockWise and rotate angle is 0.5</th>
         <th>antiClockWise and rotate angle is 0.99</th>
         <th>antiClockWise and rotate angle is 0.5</th>
+    </tr>
+</table>
+  
+****
+
+### <a id="Rotate"></a>Serrate
+
+  + **serrate** - default case which is the same as `serrateCustomized(.horizontal, count: 7)`
+    
+  + **serrateCustomized(_ type: JWStackTransitionAnimationSerrateType, count: Int)** - default animation type is `horizontal` and default serrate count is `7`.
+  
+<table>
+    <tr>
+        <td><img src="image/animations/Serrate/0.gif"></td>
+        <td><img src="image/animations/Serrate/1.gif"></td>
+        <td><img src="image/animations/Serrate/2.gif"></td>
+        <td><img src="image/animations/Serrate/3.gif"></td>
+    </tr>
+    <tr>
+        <th>horizontal and serrate count is 7</th>
+        <th>horizontal and serrate count is 20</th>
+        <th>vertical and serrate count is 5</th>
+        <th>vertical and serrate count is 10</th>
     </tr>
 </table>
   
