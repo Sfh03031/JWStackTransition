@@ -193,7 +193,7 @@ The library currently contains the following animations, contents:
     
   + **expandCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
   
-    ```
+  ```
   let a = UIScreen.main.bounds.width
   let b = UIScreen.main.bounds.height
   
@@ -201,7 +201,7 @@ The library currently contains the following animations, contents:
   let d = b / 2
   
   ```
-
+  
 <table>
     <tr>
         <td><img src="image/animations/Expand/1.gif"></td>
