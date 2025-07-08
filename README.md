@@ -169,24 +169,24 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Door/horOpen.gif"></td>
         <td><img src="image/animations/Door/horClose.gif"></td>
         <td><img src="image/animations/Door/verOpen.gif"></td>
-        <td><img src="image/animations/Door/verClose.gif"></td>
     </tr>
     <tr>
         <th>horizontalOpen, scale is 0.8</th>
         <th>horizontalClose, scale is 0.6</th>
         <th>verticalOpen, scale is 0.4</th>
-        <th>verticalClose, scale is 0.2</th>
     </tr>
 </table>
 
 <table>
     <tr>
+        <td><img src="image/animations/Door/verClose.gif"></td>
         <td><img src="image/animations/Door/horizontal.gif"></td>
         <td><img src="image/animations/Door/vertical.gif"></td>
     </tr>
     <tr>
-        <th>horizontal</th>
-        <th>vertical</th>
+        <th>verticalClose, scale is 0.2</th>
+        <th>horizontal, scale is nil</th>
+        <th>vertical, scale is nil</th>
     </tr>
 </table>
 
