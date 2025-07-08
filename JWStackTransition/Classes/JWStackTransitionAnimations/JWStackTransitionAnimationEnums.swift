@@ -139,8 +139,8 @@ public enum JWStackTransitionAnimationPuzzleType {
     case fromBottomRight
     case fromBottomLeft
     case fromTopLeft
-    case fromHorizontalBoth
-    case fromVerticalBoth
+    case fromHorBoth
+    case fromVerBoth
     case vertical
     case horizontal
     case quadrant

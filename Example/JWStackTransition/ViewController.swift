@@ -167,8 +167,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ExampleItem(name: "fromBottomRight, column is 100 and row is 100", type: .puzzleCustomized(.fromBottomRight, column: 100, row: 100)),
             ExampleItem(name: "horizontal, column is 60 and row is 20", type: .puzzleCustomized(.horizontal, column: 60, row: 20)),
             ExampleItem(name: "vertical, column is 2 and row is 60", type: .puzzleCustomized(.vertical, column: 2, row: 60)),
-            ExampleItem(name: "fromHorizontalBoth, column is 20 and row is 2", type: .puzzleCustomized(.fromHorizontalBoth, column: 20, row: 2)),
-            ExampleItem(name: "fromVerticalBoth, column is 10 and row is 20", type: .puzzleCustomized(.fromVerticalBoth, column: 10, row: 20)),
+            ExampleItem(name: "fromHorBoth, column is 20 and row is 2", type: .puzzleCustomized(.fromHorBoth, column: 20, row: 2)),
+            ExampleItem(name: "fromVerBoth, column is 10 and row is 20", type: .puzzleCustomized(.fromVerBoth, column: 10, row: 20)),
             ExampleItem(name: "quadrant, column is 10 and row is 20", type: .puzzleCustomized(.quadrant, column: 10, row: 20)),
         ]),
         Examples(title: "Rectangler", list: [

@@ -96,13 +96,13 @@ public class JWStackTransitionAnimationPuzzle: JWStackTransitionAnimationDelegat
                 views[index].frame = CGRect(x: x - toView.frame.width, y: y + toView.frame.height, width: w, height: h)
             case .fromBottomRight:
                 views[index].frame = CGRect(x: x + toView.frame.width, y: y + toView.frame.height, width: w, height: h)
-            case .fromHorizontalBoth:
+            case .fromHorBoth:
                 if x > toView.frame.width / 2 {
                     views[index].frame = CGRect(x: x + toView.frame.width / 2, y: y, width: w, height: h)
                 } else {
                     views[index].frame = CGRect(x: x - toView.frame.width / 2, y: y, width: w, height: h)
                 }
-            case .fromVerticalBoth:
+            case .fromVerBoth:
                 if y > toView.frame.height / 2 {
                     views[index].frame = CGRect(x: x, y: y + toView.frame.height / 2, width: w, height: h)
                 } else {

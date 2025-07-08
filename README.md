@@ -536,7 +536,7 @@ The library currently contains the following animations, contents:
     <tr>
         <th>fromTopLeft</th>
         <th>fromTopRight</th>
-        <th>fromBottomlEFT</th>
+        <th>fromBottomLeft</th>
         <th>fromBottomRight</th>
     </tr>
 </table>
