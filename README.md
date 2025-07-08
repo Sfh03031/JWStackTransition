@@ -11,7 +11,7 @@ JWStackTransition is a library that provides transition animations for navigatio
 
 Its principle is provide transition classes that comply with the `UIViewControlAnimatedTransitioning` protocol for the delegate method `navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController)` of UINavigationController. 
 
-It currently has 23 different kind of transition animation types, most of them can be customized.
+It currently has many different kind of transition animation types, most of them can be customized.
 
 This library was inspired by [VCTransitionsLibrary](https://github.com/ColinEberhardt/VCTransitionsLibrary) and [RetroTransition](https://github.com/wcgray/RetroTransition)
 
@@ -45,6 +45,13 @@ The library currently contains the following animations, contents:
   * [Split](#Split)
   * [Swing](#Swing)
   * [TiledFlip](#TiledFlip)
+  
+  ```swift
+  
+  let WIDTH = UIScreen.main.bounds.width
+  let HEIGHT = UIScreen.main.bounds.height
+  
+  ```
 
 ### <a id="AntiClockWise"></a>AntiClockWise
 
@@ -202,9 +209,9 @@ The library currently contains the following animations, contents:
     </tr>
     <tr>
         <th>default, CGRect.zero</th>
-        <th>x: screenWidth, y: 0, width: 0, height: 0</th>
-        <th>x: screenWidth, y: screenHeight, width: 0, height: 0</th>
-        <th>x: 0, y: screenHeight, width: 0, height: 0</th>
+        <th>x: WIDTH, y: 0, width: 0, height: 0</th>
+        <th>x: WIDTH, y: HEIGHT, width: 0, height: 0</th>
+        <th>x: 0, y: HEIGHT, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -216,10 +223,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Expand/8.gif"></td>
     </tr>
     <tr>
-        <th>x: screenWidth / 2, y: 0, width: 0, height: 0</th>
-        <th>x: screenWidth, y: screenHeight / 2, width: 0, height: 0</th>
-        <th>x: screenWidth / 2, y: screenHeight, width: 0, height: 0</th>
-        <th>x: 0, y: screenHeight / 2, width: 0, height: 0</th>
+        <th>x: WIDTH/2, y: 0, width: 0, height: 0</th>
+        <th>x: WIDTH, y: HEIGHT/2, width: 0, height: 0</th>
+        <th>x: WIDTH/2, y: HEIGHT, width: 0, height: 0</th>
+        <th>x: 0, y: HEIGHT/2, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -231,10 +238,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Expand/12.gif"></td>
     </tr>
     <tr>
-        <th>x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0</th>
-        <th>x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100</th>
-        <th>x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100</th>
-        <th>x: -screenWidth, y: -screenHeight, width: 100, height: 100</th>
+        <th>x: WIDTH/2, y: HEIGHT/2, width: 0, height: 0</th>
+        <th>x: WIDTH/2-50, y: HEIGHT/2-50, width: 100, height: 100</th>
+        <th>x: WIDTH*2, y: HEIGHT*2, width: 100, height: 100</th>
+        <th>x: -WIDTH, y: -HEIGHT, width: 100, height: 100</th>
     </tr>
 </table>
 
@@ -245,7 +252,7 @@ The library currently contains the following animations, contents:
   + **explode** - default case which is the same as `explodeCustomized(CGSize(width: 50, height: 100))`
     
   + **explodeCustomized(_ pieceSize: CGSize)** - default explode piece width is 50 and height is 100.
-
+  
 <table>
     <tr>
         <td><img src="image/animations/Explode/0.gif"></td>
@@ -256,8 +263,8 @@ The library currently contains the following animations, contents:
     <tr>
         <th>explode piece width is 50 and height is 100</th>
         <th>explode piece width is 10 and height is 10</th>
-        <th>explode piece width is screenWidth / 2 and height is 10</th>
-        <th>explode piece width is 10 and height is screenHeight / 2</th>
+        <th>explode piece width is halfW and height is 10</th>
+        <th>explode piece width is 10 and height is halfH</th>
     </tr>
 </table>
 
@@ -496,8 +503,8 @@ The library currently contains the following animations, contents:
     <tr>
         <th>particle width is 5 and height is 20</th>
         <th>particle width is 50 and height is 50</th>
-        <th>particle width is screenWidth / 2 and height is 15</th>
-        <th>particle width is 15 and height is screenHeight / 2</th>
+        <th>particle width is WIDTH/2 and height is 15</th>
+        <th>particle width is 15 and height is HEIGHT/2</th>
     </tr>
 </table>
 
@@ -552,8 +559,8 @@ The library currently contains the following animations, contents:
     <tr>
         <th>horizontal</th>
         <th>vertical</th>
-        <th>fromHorizontalBoth</th>
-        <th>fromVerticalBoth</th>
+        <th>fromHorBoth</th>
+        <th>fromVerBoth</th>
         <th>quadrant</th>
     </tr>
 </table>
@@ -703,9 +710,9 @@ The library currently contains the following animations, contents:
     </tr>
     <tr>
         <th>default, CGRect.zero</th>
-        <th>x: screenWidth, y: 0, width: 0, height: 0</th>
-        <th>x: screenWidth, y: screenHeight, width: 0, height: 0</th>
-        <th>x: 0, y: screenHeight, width: 0, height: 0</th>
+        <th>x: WIDTH, y: 0, width: 0, height: 0</th>
+        <th>x: WIDTH, y: HEIGHT, width: 0, height: 0</th>
+        <th>x: 0, y: HEIGHT, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -717,10 +724,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Shrink/8.gif"></td>
     </tr>
     <tr>
-        <th>x: screenWidth / 2, y: 0, width: 0, height: 0</th>
-        <th>x: screenWidth, y: screenHeight / 2, width: 0, height: 0</th>
-        <th>x: screenWidth / 2, y: screenHeight, width: 0, height: 0</th>
-        <th>x: 0, y: screenHeight / 2, width: 0, height: 0</th>
+        <th>x: WIDTH/2, y: 0, width: 0, height: 0</th>
+        <th>x: WIDTH, y: HEIGHT/2, width: 0, height: 0</th>
+        <th>x: WIDTH/2, y: HEIGHT, width: 0, height: 0</th>
+        <th>x: 0, y: HEIGHT/2, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -732,10 +739,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Shrink/12.gif"></td>
     </tr>
     <tr>
-        <th>x: screenWidth / 2, y: screenHeight / 2, width: 0, height: 0</th>
-        <th>x: screenWidth / 2 - 50, y: screenHeight / 2 - 50, width: 100, height: 100</th>
-        <th>x: screenWidth * 2, y: screenHeight * 2, width: 100, height: 100</th>
-        <th>x: -screenWidth, y: -screenHeight, width: 100, height: 100</th>
+        <th>x: WIDTH/2, y: HEIGHT/2, width: 0, height: 0</th>
+        <th>x: WIDTH/2 - 50, y: HEIGHT/2-50, width: 100, height: 100</th>
+        <th>x: WIDTH*2, y: HEIGHT*2, width: 100, height: 100</th>
+        <th>x: -WIDTH, y: -HEIGHT, width: 100, height: 100</th>
     </tr>
 </table>
 
