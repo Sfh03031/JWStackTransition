@@ -52,6 +52,7 @@ The library currently contains the following animations, contents:
     
   + **antiClockWiseCustomized(_ startAngle: Double)** - default animation start angle is `1.5`, angle range is `[0.0, 2.0]`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/AntiClockWise/custom_0.gif"></td>
@@ -76,6 +77,7 @@ The library currently contains the following animations, contents:
   + **barrier** - default case which is the same as `barrierCustomized(.toTop, width: 20.0)`.
   
   + **barrierCustomized(_ type: JWStackTransitionAnimationBarrierFadeDirectionType, width: CGFloat)** - default animation type is `toTop`, default barrier width is `20.0`.
+
 
 <table>
     <tr>
@@ -111,6 +113,7 @@ The library currently contains the following animations, contents:
     
   + **clockWiseCustomized(_ startAngle: Double)** - default animation start angle is `0.5`, angle range is `[0.0, 2.0]`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/ClockWise/custom_00.gif"></td>
@@ -136,6 +139,7 @@ The library currently contains the following animations, contents:
     
   + **cubeCustomized(_ type: JWStackTransitionAnimationCubeType)** - default animation case is `fromLeftToRight`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/Cube/fromLeftToRight.gif"></td>
@@ -158,6 +162,7 @@ The library currently contains the following animations, contents:
   + **door** - default case which is the same as `doorCustomized(.horizontalOpen, scale: 0.8)`
     
   + **doorCustomized(_ type: JWStackTransitionAnimationDoorType, scale: CGFloat?)** - default animation case is `horizontalOpen`, default animation scale is `0.8` and range is `(0.0, 1.0]`.
+
 
 <table>
     <tr>
@@ -193,14 +198,15 @@ The library currently contains the following animations, contents:
     
   + **expandCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
   
+  
   ```
   let a = UIScreen.main.bounds.width
   let b = UIScreen.main.bounds.height
   
   let c = a / 2
   let d = b / 2
-  
   ```
+  
   
 <table>
     <tr>
@@ -255,11 +261,12 @@ The library currently contains the following animations, contents:
     
   + **explodeCustomized(_ pieceSize: CGSize)** - default explode piece width is 50 and height is 100.
   
+  
   ```
   let aa = UIScreen.main.bounds.width / 2
   let bb = UIScreen.main.bounds.height / 2
-  
   ```
+  
   
 <table>
     <tr>
@@ -283,6 +290,7 @@ The library currently contains the following animations, contents:
   + **fence** - default case which is the same as `fenceCustomized(.verticalLeft, width: 20.0)`
     
   + **fenceCustomized(_ type: JWStackTransitionAnimationFenceType, width: CGFloat)** - default animation type is `verticalLeft`, default fence width is `20.0`.
+
 
 <table>
     <tr>
@@ -318,6 +326,7 @@ The library currently contains the following animations, contents:
     
   + **flipCustomized(_ type: JWStackTransitionAnimationFoldType)** - default animation type is `fromLeftToRight`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/Flip/fromLeftToRight.gif"></td>
@@ -336,6 +345,7 @@ The library currently contains the following animations, contents:
   + **fold** - default case which is the same as `foldCustomized(.fromLeftToRight, foldNum: 2)`
     
   + **foldCustomized(_ type: JWStackTransitionAnimationFoldType, foldNum: Int)** - default animation type is `fromLeftToRight`, default fold number is `2`.
+
 
 <table>
     <tr>
@@ -360,6 +370,7 @@ The library currently contains the following animations, contents:
     
   + **multiCircleCustomized(_ diameter: CGFloat)** - default single circle diameter is `20.0`, diameter range is `(0, 100]`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/MultiCircle/diameter20.gif"></td>
@@ -381,6 +392,7 @@ The library currently contains the following animations, contents:
 
   + **multinest**
   
+  
 <div align="left" >
   <img width="20%" src="image/animations/Multinest/default.gif" />
 </div>
@@ -392,6 +404,7 @@ The library currently contains the following animations, contents:
   + **natGeo** - default case which is the same as `natGeoCustomized(.geoLeft)`
     
   + **natGeoCustomized(_ type: JWStackTransitionAnimationNatGeoType)** - default animation type is `geoLeft`.
+
 
 <table>
     <tr>
@@ -411,6 +424,7 @@ The library currently contains the following animations, contents:
   + **official** - default case which is the same as `officialCustomized(.crossDissolve)`
     
   + **officialCustomized(_ type: JWStackTransitionAnimationOfficialType)** - default animation type is `crossDissolve`.
+
 
 <table>
     <tr>
@@ -447,6 +461,7 @@ The library currently contains the following animations, contents:
   + **pan** - default case which is the same as `panCustomized(.panLeft)`
     
   + **panCustomized(_ type: JWStackTransitionAnimationPanType)** - default animation type is `panLeft`.
+
 
 <table>
     <tr>
@@ -486,11 +501,12 @@ The library currently contains the following animations, contents:
     
   + **particleCustomized(_ from: CGPoint, size: CGSize)** - default particle ejected from point is `CGPoint.zero`, particle width is `20` and height is `20`.
   
+  
   ```
   let aa = UIScreen.main.bounds.width / 2
   let bb = UIScreen.main.bounds.height / 2
-  
   ```
+
 
 <table>
     <tr>
@@ -529,6 +545,7 @@ The library currently contains the following animations, contents:
   + **puzzle** - default case which is the same as `puzzleCustomized(.random, column: 5, row: 10)`
     
   + **puzzleCustomized(_ type: JWStackTransitionAnimationPuzzleType, column: Int, row: Int)** - default animation type is `random`, column is `5` and row is `10`.
+
 
 <table>
     <tr>
@@ -587,6 +604,7 @@ The library currently contains the following animations, contents:
     
   + **rectanglerCustomized(_ wave: JWStackTransitionAnimationRectanglerWave)** - default animation type is `waveIn`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/Rectangler/waveIn.gif"></td>
@@ -605,6 +623,7 @@ The library currently contains the following animations, contents:
   + **roll** - default case which is the same as `rollCustomized(.y)`
     
   + **rollCustomized(_ axis: JWStackTransitionAnimationRollAxis)** - default animation roll axis is `y`.
+
 
 <table>
     <tr>
@@ -627,9 +646,6 @@ The library currently contains the following animations, contents:
     
   + **rotateCustomized(_ type: JWStackTransitionAnimationRotateType, rotateAngle: Double)** - default animation rotate type is `clockWise`, default rotate angle is `0.99`, angle range is `(0.0, 1.0)`.
   
-<div align="left" >
-  <img width="20%" src="image/animations/Rotate/default.gif" />
-</div>
 
 <table>
     <tr>
@@ -654,6 +670,7 @@ The library currently contains the following animations, contents:
     
   + **serrateCustomized(_ type: JWStackTransitionAnimationSerrateType, count: Int)** - default animation type is `horizontal` and default serrate count is `7`.
   
+  
 <table>
     <tr>
         <td><img src="image/animations/Serrate/0.gif"></td>
@@ -676,6 +693,7 @@ The library currently contains the following animations, contents:
   + **shiftLine** - default case which is the same as `shiftLineCustomized(.toRight)`
     
   + **shiftLineCustomized(_ type: JWStackTransitionAnimationShiftLineType)** - default animation type is `toRight`.
+
 
 <table>
     <tr>
@@ -715,14 +733,15 @@ The library currently contains the following animations, contents:
     
   + **shrinkCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
   
+  
   ```
   let a = UIScreen.main.bounds.width
   let b = UIScreen.main.bounds.height
   
   let c = a / 2
   let d = b / 2
-  
   ```
+
 
 <table>
     <tr>
@@ -777,6 +796,7 @@ The library currently contains the following animations, contents:
     
   + **splitCustomized(_ type: JWStackTransitionAnimationSplitType)** - default split type is `horizontal`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/Split/horizontal.gif"></td>
@@ -815,6 +835,7 @@ The library currently contains the following animations, contents:
     
   + **swingCustomized(_ edge: JWStackTransitionAnimationRectEdge)** - default animation rect edge is `left`.
 
+
 <table>
     <tr>
         <td><img src="image/animations/Swing/left.gif"></td>
@@ -837,6 +858,7 @@ The library currently contains the following animations, contents:
   + **tiledFlip** - default case which is the same as `tiledFlipCustomized(.flipFromRight, tiledRow: 10, tiledColumn: 5)`
     
   + **tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)** - default animation type is `flipFromRight`, default tiled row is `10` and range is `(0, 20]`, default tiled column is `5` and range is `(0, 10]`.
+
 
 <table>
     <tr>
