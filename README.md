@@ -45,13 +45,6 @@ The library currently contains the following animations, contents:
   * [Split](#Split)
   * [Swing](#Swing)
   * [TiledFlip](#TiledFlip)
-  
-  ```swift
-  
-  let WIDTH = UIScreen.main.bounds.width
-  let HEIGHT = UIScreen.main.bounds.height
-  
-  ```
 
 ### <a id="AntiClockWise"></a>AntiClockWise
 
@@ -174,10 +167,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Door/verClose.gif"></td>
     </tr>
     <tr>
-        <th>horizontalOpen and scale is 0.8</th>
-        <th>horizontalClose and scale is 0.6</th>
-        <th>verticalOpen and scale is 0.4</th>
-        <th>verticalClose and scale is 0.2</th>
+        <th>horizontalOpen, scale is 0.8</th>
+        <th>horizontalClose, scale is 0.6</th>
+        <th>verticalOpen, scale is 0.4</th>
+        <th>verticalClose, scale is 0.2</th>
     </tr>
 </table>
 
@@ -199,6 +192,15 @@ The library currently contains the following animations, contents:
   + **expand** - default case which is the same as `expandCustomized(.zero)`
     
   + **expandCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
+  
+    ```
+  let a = UIScreen.main.bounds.width
+  let b = UIScreen.main.bounds.height
+  
+  let c = a / 2
+  let d = b / 2
+  
+  ```
 
 <table>
     <tr>
@@ -208,10 +210,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Expand/4.gif"></td>
     </tr>
     <tr>
-        <th>default, CGRect.zero</th>
-        <th>x: WIDTH, y: 0, width: 0, height: 0</th>
-        <th>x: WIDTH, y: HEIGHT, width: 0, height: 0</th>
-        <th>x: 0, y: HEIGHT, width: 0, height: 0</th>
+        <th>x: 0, y: 0, width: 0, height: 0</th>
+        <th>x: a, y: 0, width: 0, height: 0</th>
+        <th>x: a, y: b, width: 0, height: 0</th>
+        <th>x: 0, y: b, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -223,10 +225,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Expand/8.gif"></td>
     </tr>
     <tr>
-        <th>x: WIDTH/2, y: 0, width: 0, height: 0</th>
-        <th>x: WIDTH, y: HEIGHT/2, width: 0, height: 0</th>
-        <th>x: WIDTH/2, y: HEIGHT, width: 0, height: 0</th>
-        <th>x: 0, y: HEIGHT/2, width: 0, height: 0</th>
+        <th>x: c, y: 0, width: 0, height: 0</th>
+        <th>x: a, y: d, width: 0, height: 0</th>
+        <th>x: c, y: b, width: 0, height: 0</th>
+        <th>x: 0, y: d, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -238,10 +240,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Expand/12.gif"></td>
     </tr>
     <tr>
-        <th>x: WIDTH/2, y: HEIGHT/2, width: 0, height: 0</th>
-        <th>x: WIDTH/2-50, y: HEIGHT/2-50, width: 100, height: 100</th>
-        <th>x: WIDTH*2, y: HEIGHT*2, width: 100, height: 100</th>
-        <th>x: -WIDTH, y: -HEIGHT, width: 100, height: 100</th>
+        <th>x: c, y: d, width: 0, height: 0</th>
+        <th>x: c-50, y: d-50, width: 100, height: 100</th>
+        <th>x: a*2, y: b*2, width: 100, height: 100</th>
+        <th>x: -a, y: -b, width: 100, height: 100</th>
     </tr>
 </table>
 
@@ -253,6 +255,12 @@ The library currently contains the following animations, contents:
     
   + **explodeCustomized(_ pieceSize: CGSize)** - default explode piece width is 50 and height is 100.
   
+  ```
+  let aa = UIScreen.main.bounds.width / 2
+  let bb = UIScreen.main.bounds.height / 2
+  
+  ```
+  
 <table>
     <tr>
         <td><img src="image/animations/Explode/0.gif"></td>
@@ -261,10 +269,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Explode/3.gif"></td>
     </tr>
     <tr>
-        <th>explode piece width is 50 and height is 100</th>
-        <th>explode piece width is 10 and height is 10</th>
-        <th>explode piece width is halfW and height is 10</th>
-        <th>explode piece width is 10 and height is halfH</th>
+        <th>width is 50, height is 100</th>
+        <th>width is 10, height is 10</th>
+        <th>width is aa, height is 10</th>
+        <th>width is 10, height is bb</th>
     </tr>
 </table>
 
@@ -283,9 +291,9 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Fence/verCross.gif"></td>
     </tr>
     <tr>
-        <th>verticalLeft and width is 20.0</th>
-        <th>verticalRight and width is 5.0</th>
-        <th>verticalCross and width is 10.0</th>
+        <th>verticalLeft, width is 20.0</th>
+        <th>verticalRight, width is 5.0</th>
+        <th>verticalCross, width is 10</th>
     </tr>
 </table>
 
@@ -296,9 +304,9 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Fence/horCross.gif"></td>
     </tr>
     <tr>
-        <th>horizontalTop and width is 15.0</th>
-        <th>horizontalBottom and width is 20.0</th>
-        <th>horizontalCross and width is 25.0</th>
+        <th>horizontalTop, width is 15.0</th>
+        <th>horizontalBottom, width is 20</th>
+        <th>horizontalCross, width is 25</th>
     </tr>
 </table>
 
@@ -337,10 +345,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Fold/rl8.gif"></td>
     </tr>
     <tr>
-        <th>fromLeftToRight and fold number is 2</th>
-        <th>fromLeftToRight and fold number is 4</th>
-        <th>fromRightToLeft and fold number is 6</th>
-        <th>fromRightToLeft and fold number is 8</th>
+        <th>fromLeftToRight, fold number is 2</th>
+        <th>fromLeftToRight, fold number is 4</th>
+        <th>fromRightToLeft, fold number is 6</th>
+        <th>fromRightToLeft, fold number is 8</th>
     </tr>
 </table>
 
@@ -477,6 +485,12 @@ The library currently contains the following animations, contents:
   + **particle** - default case which is the same as `particleCustomized(.zero, size: CGSize(width: 20, height: 20))`
     
   + **particleCustomized(_ from: CGPoint, size: CGSize)** - default particle ejected from point is `CGPoint.zero`, particle width is `20` and height is `20`.
+  
+  ```
+  let aa = UIScreen.main.bounds.width / 2
+  let bb = UIScreen.main.bounds.height / 2
+  
+  ```
 
 <table>
     <tr>
@@ -486,10 +500,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Particle/3.gif"></td>
     </tr>
     <tr>
-        <th>particle width is 20 and height is 20</th>
-        <th>particle width is 10 and height is 20</th>
-        <th>particle width is 20 and height is 10</th>
-        <th>particle width is 10 and height is 10</th>
+        <th>width is 20, height is 20</th>
+        <th>width is 10, height is 20</th>
+        <th>width is 20, height is 10</th>
+        <th>width is 10, height is 10</th>
     </tr>
 </table>
 
@@ -501,10 +515,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Particle/7.gif"></td>
     </tr>
     <tr>
-        <th>particle width is 5 and height is 20</th>
-        <th>particle width is 50 and height is 50</th>
-        <th>particle width is WIDTH/2 and height is 15</th>
-        <th>particle width is 15 and height is HEIGHT/2</th>
+        <th>width is 5, height is 20</th>
+        <th>width is 50, height is 50</th>
+        <th>width is aa, height is 15</th>
+        <th>width is 15, height is bb</th>
     </tr>
 </table>
 
@@ -625,10 +639,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Rotate/antiClockWise050.gif"></td>
     </tr>
     <tr>
-        <th>clockWise and rotate angle is 0.99</th>
-        <th>clockWise and rotate angle is 0.5</th>
-        <th>antiClockWise and rotate angle is 0.99</th>
-        <th>antiClockWise and rotate angle is 0.5</th>
+        <th>clockWise, rotate angle is 0.99</th>
+        <th>clockWise, rotate angle is 0.5</th>
+        <th>antiClockWise, rotate angle is 0.99</th>
+        <th>antiClockWise, rotate angle is 0.5</th>
     </tr>
 </table>
   
@@ -648,10 +662,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Serrate/3.gif"></td>
     </tr>
     <tr>
-        <th>horizontal and serrate count is 7</th>
-        <th>horizontal and serrate count is 20</th>
-        <th>vertical and serrate count is 5</th>
-        <th>vertical and serrate count is 10</th>
+        <th>horizontal, serrate count is 7</th>
+        <th>horizontal, serrate count is 20</th>
+        <th>vertical, serrate count is 5</th>
+        <th>vertical, serrate count is 10</th>
     </tr>
 </table>
   
@@ -700,6 +714,15 @@ The library currently contains the following animations, contents:
   + **shrink** - default case which is the same as `shrinkCustomized(.zero)`
     
   + **shrinkCustomized(_ fromRect: CGRect)** - default from rect is `CGRect.zero`.
+  
+  ```
+  let a = UIScreen.main.bounds.width
+  let b = UIScreen.main.bounds.height
+  
+  let c = a / 2
+  let d = b / 2
+  
+  ```
 
 <table>
     <tr>
@@ -709,10 +732,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Shrink/4.gif"></td>
     </tr>
     <tr>
-        <th>default, CGRect.zero</th>
-        <th>x: WIDTH, y: 0, width: 0, height: 0</th>
-        <th>x: WIDTH, y: HEIGHT, width: 0, height: 0</th>
-        <th>x: 0, y: HEIGHT, width: 0, height: 0</th>
+        <th>x: 0, y: 0, width: 0, height: 0</th>
+        <th>x: a, y: 0, width: 0, height: 0</th>
+        <th>x: a, y: b, width: 0, height: 0</th>
+        <th>x: 0, y: b, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -724,10 +747,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Shrink/8.gif"></td>
     </tr>
     <tr>
-        <th>x: WIDTH/2, y: 0, width: 0, height: 0</th>
-        <th>x: WIDTH, y: HEIGHT/2, width: 0, height: 0</th>
-        <th>x: WIDTH/2, y: HEIGHT, width: 0, height: 0</th>
-        <th>x: 0, y: HEIGHT/2, width: 0, height: 0</th>
+        <th>x: c, y: 0, width: 0, height: 0</th>
+        <th>x: a, y: d, width: 0, height: 0</th>
+        <th>x: c, y: b, width: 0, height: 0</th>
+        <th>x: 0, y: d, width: 0, height: 0</th>
     </tr>
 </table>
 
@@ -739,10 +762,10 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Shrink/12.gif"></td>
     </tr>
     <tr>
-        <th>x: WIDTH/2, y: HEIGHT/2, width: 0, height: 0</th>
-        <th>x: WIDTH/2 - 50, y: HEIGHT/2-50, width: 100, height: 100</th>
-        <th>x: WIDTH*2, y: HEIGHT*2, width: 100, height: 100</th>
-        <th>x: -WIDTH, y: -HEIGHT, width: 100, height: 100</th>
+        <th>x: c, y: d, width: 0, height: 0</th>
+        <th>x: c-50, y: d-50, width: 100, height: 100</th>
+        <th>x: a*2, y: b*2, width: 100, height: 100</th>
+        <th>x: -a, y: -b, width: 100, height: 100</th>
     </tr>
 </table>
 
