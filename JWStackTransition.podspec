@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JWStackTransition'
-  s.version          = '0.1.3'
-  s.summary          = 'A swift library that provides transition animations for navigation controllers, offering various transition effects such as clocks, fences, flips, and folds.'
+  s.version          = '0.1.5'
+  s.summary          = 'A swift library that provides transition animations for navigation controllers, offering various transition effects such as clocks, fences, flips, folds and so on.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  JWStackTransition is a library that provides transition animations for navigation controllers, offering various transition effects such as clocks, fences, flips, and folds.
+  JWStackTransition is a library that provides transition animations for navigation controllers, offering various transition effects such as clocks, fences, flips, folds and so on.
   
-  It currently has 24 different kind of transition animation types, most of them can be customized.
+  It currently has many different kind of transition animation types, most of them can be customized.
                        DESC
 
   s.homepage         = 'https://github.com/Sfh03031/JWStackTransition'
