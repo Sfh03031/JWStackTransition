@@ -84,28 +84,24 @@ The library currently contains the following animations, contents:
         <td><img src="image/animations/Barrier/default.gif"></td>
         <td><img src="image/animations/Barrier/custom_toLeft.gif"></td>
         <td><img src="image/animations/Barrier/custom_toRight.gif"></td>
-        <td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
-        <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
-        <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
     </tr>
     <tr>
-        <th>toTop and width is 20</th>
-        <th>toLeft and width is 5</th>
-        <th>toRight and width is 10</th>
-        <th>toBottom and width is 15</th>
-        <th>toVerticalCenter, 20</th>
-        <th>toHorizontalCenter, 25</th>
+        <th>toTop, width is 20</th>
+        <th>toLeft, width is 5</th>
+        <th>toRight, width is 10</th>
     </tr>
 </table>
 
 <table>
     <tr>
+        <td><img src="image/animations/Barrier/custom_toBottom.gif"></td>
         <td><img src="image/animations/Barrier/custom_toVerticalCenter.gif"></td>
         <td><img src="image/animations/Barrier/custom_toHorizontalCenter.gif"></td>
     </tr>
     <tr>
-        <th>toVerticalCenter, 20</th>
-        <th>toHorizontalCenter, 25</th>
+        <th>toBottom, width is 15</th>
+        <th>toVerticalCenter, width is 20</th>
+        <th>toHorizontalCenter, width is 25</th>
     </tr>
 </table>
 
