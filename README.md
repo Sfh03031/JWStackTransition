@@ -946,10 +946,13 @@ self.navigationController?.pop(JWStackTransition(type: .antiClockWise, duration:
 
 ## Change log
 
+2025.07.23, 0.1.6
+
+- add new transition animations and fix bug
+
 2025.07.08, 0.1.4
 
 - add new transition animations
-
 
 2025.05.20, 0.1.1
 
