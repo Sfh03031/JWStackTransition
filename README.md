@@ -898,7 +898,7 @@ Directory structure of JWStackTransition:
   <img width="85%" src="image/tree.png" />
 </div>
 
-also, [DeepWiki](https://deepwiki.com/Sfh03031/SFStyleKit/) may help you better understand JWStackTransition.
+also, [DeepWiki](https://deepwiki.com/Sfh03031/JWStackTransition/) may help you better understand JWStackTransition.
 
 ## Requirements
 
@@ -945,6 +945,11 @@ self.navigationController?.pop(JWStackTransition(type: .antiClockWise, duration:
 ```
 
 ## Change log
+
+2025.07.08, 0.1.4
+
+- add new transition animations
+
 
 2025.05.20, 0.1.1
 

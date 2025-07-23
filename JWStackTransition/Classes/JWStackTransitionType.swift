@@ -384,6 +384,7 @@ public enum JWStackTransitionType {
      - returns: Instance of JWStackTransitionAnimationTiledFlip.
      */
     case tiledFlipCustomized(_ type: JWStackTransitionAnimationOfficialType, tiledRow: Int, tiledColumn: Int)
+    
 }
 
 extension JWStackTransitionType {

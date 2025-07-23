@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JWStackTransition'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'A swift library that provides transition animations for navigation controllers, offering various transition effects such as clocks, fences, flips, folds and so on.'
 
 # This description is used to generate tags and improve search results.
